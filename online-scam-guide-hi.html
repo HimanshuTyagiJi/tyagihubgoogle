@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ऑनलाइन स्कैम गाइड: UPI धोखाधड़ी, फिशिंग और नकली कस्टमर केयर से कैसे बचें? - TyagiHub Blog</title>
+    <meta name="description" content="भारत ऑनलाइन घोटालों का सबसे बड़ा निशाना बन चुका है। यह मास्टर गाइड हर प्रमुख स्कैम को कवर करती है — UPI धोखाधड़ी, फिशिंग, नकली कस्टमर केयर, निवेश घोटाले, नौकरी धोखाधड़ी — और सुरक्षित रहने के लिए जरूरी कदम बताती है।">
+    
+    <link rel="stylesheet" href="assets/css/discover.css">
+    <link rel="stylesheet" href="assets/css/shield-discover.css">
+    
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; margin: 0; padding: 0; }
+        header { background: #fff; padding: 1rem 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        header h1 { margin: 0; font-size: 1.5rem; }
+        header h1 a { color: #2c3e50; text-decoration: none; }
+        nav { margin-top: 10px; }
+        nav a { color: #2c3e50; text-decoration: none; margin-left: 15px; font-weight: bold; padding: 8px 16px; background: #f8f9fa; border: 1px solid #eaeaea; border-radius: 6px; transition: all 0.3s; display: inline-block; }
+        nav a:hover { background: #3498db; color: #fff; border-color: #3498db; }
+        .post-container { max-width: 800px; margin: 2rem auto; padding: 2rem; background: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .post-header { margin-bottom: 2rem; text-align: center; }
+        .post-header h1 { color: #2c3e50; font-size: 2.2rem; margin-bottom: 1rem; }
+        .post-header img { max-width: 100%; border-radius: 8px; margin-top: 1rem; }
+        footer { text-align: center; padding: 2rem; background: #fff; margin-top: 3rem; border-top: 1px solid #eaeaea; color: #777; }
+        @media (max-width: 768px) { 
+            header { flex-direction: column; text-align: center; padding: 1rem 0.5rem; } 
+            nav { margin-top: 15px; display: flex; gap: 8px 12px; justify-content: center; flex-wrap: wrap; padding: 0 0.5rem; } 
+            nav a { margin: 0; font-size: 0.95rem; padding: 6px 10px; background: #f8f9fa; border: 1px solid #eaeaea; border-radius: 5px; } 
+            .page-container, .post-container { padding: 1rem !important; margin: 1rem 0.5rem !important; box-sizing: border-box; } 
+            .post-section { padding: 1.2rem !important; margin-bottom: 1.5rem !important; }
+            .hero { padding: 2.5rem 1rem !important; }
+            .container { padding: 0 0.5rem !important; }
+            .grid { gap: 1.5rem !important; }
+        }
+    
+        /* Force Light Theme Overrides for Post Content ONLY */
+        .post-container .post-section, 
+        .post-container .page-content, 
+        .post-container .discover-content, 
+        .post-container .shield-container, 
+        .post-container .shield-card, 
+        .post-container .post-wrap,
+        .post-container [class*="discover-"], 
+        .post-container [class*="shield-"],
+        .post-container .step-card,
+        .post-container .stat-card,
+        .post-container .stat-strip,
+        .post-container .checklist,
+        .post-container .post-hero {
+            background-color: #ffffff !important;
+            color: #333333 !important;
+        }
+        
+        .post-container .post-section {
+            background-color: #ffffff !important;
+            border: 1px solid #eaeaea !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02) !important;
+            border-radius: 8px !important;
+            padding: 2rem !important;
+            margin-bottom: 2rem !important;
+        }
+
+        .post-container .device-card, 
+        .post-container .step-card, 
+        .post-container .stat-card,
+        .post-container .checklist {
+            background-color: #fdfdfd !important;
+            border: 1px solid #eaeaea !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03) !important;
+            color: #444 !important;
+        }
+        
+        .post-container .step-card h3, .post-container .step-card h4,
+        .post-container .stat-val, .post-container .stat-label {
+            color: #2c3e50 !important;
+        }
+        
+        .post-container .step-num {
+            background-color: #3498db !important;
+            color: #fff !important;
+        }
+
+        .post-container .highlight-box {
+            background-color: #fdfbf7 !important;
+            border-left: 4px solid #f39c12 !important;
+            border: 1px solid #eaeaea !important;
+            color: #444 !important;
+        }
+        .post-container .highlight-box.tip {
+            background-color: #f0f8ff !important;
+            border-left-color: #3498db !important;
+        }
+        .post-container .highlight-box.info {
+            background-color: #f1f8ff !important;
+            border-left-color: #2980b9 !important;
+        }
+        .post-container .highlight-box.warn {
+            background-color: #fff5f5 !important;
+            border-left-color: #e74c3c !important;
+        }
+
+        .post-container h1, .post-container h2, .post-container h3, 
+        .post-container h4, .post-container h5, .post-container h6, 
+        .post-container .post-section h2, .post-container .device-card h4, 
+        .post-container .hb-label {
+            color: #2c3e50 !important;
+        }
+        
+        .post-container p, .post-container li, .post-container .device-card p,
+        .post-container .step-card p, .post-container .stat-card p {
+            color: #444444 !important;
+        }
+
+        /* SVG fixes - force icons to show properly */
+        .post-container svg, .post-container path, .post-container rect {
+            fill: currentColor;
+        }
+        .post-container .d-icon {
+            color: var(--card-color, #3498db) !important;
+        }
+
+        /* Increase Width */
+        .post-container, .page-content { 
+            max-width: 1000px !important; 
+        }
+        
+        /* Table fixes */
+        .post-container .styled-table {
+            background-color: #fff !important;
+        }
+        .post-container .styled-table th {
+            background-color: #f1f8ff !important;
+            color: #2c3e50 !important;
+            border-bottom: 2px solid #b3d7ff !important;
+        }
+        .post-container .styled-table td {
+            background-color: #ffffff !important;
+            color: #444 !important;
+            border-bottom: 1px solid #eaeaea !important;
+        }
+        
+        .post-container .post-tags .ptag {
+            background-color: #f1f8ff !important;
+            color: #2980b9 !important;
+            border: 1px solid #d4e6f1 !important;
+        }
+    </style>
+    <link rel="canonical" href="https://tyagihub.in/online-scam-guide-hi.html" />
+    <meta name="robots" content="index, follow">
+    <meta name="google-adsense-account" content="ca-pub-7067722696020503">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">TyagiHub Blog</a></h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="privacy-policy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <div class="post-container">
+        <div class="post-header">
+            <h1>ऑनलाइन स्कैम गाइड: UPI धोखाधड़ी, फिशिंग और नकली कस्टमर केयर से कैसे बचें?</h1>
+        <p style="text-align:center; color:#7f8c8d; font-size:0.95rem; margin-top:-10px; margin-bottom:20px; font-weight:500;">प्रकाशित: 21 अगस्त 2026</p>
+            <img src="assets/images/online-scam-guide-banner.webp" alt="ऑनलाइन स्कैम गाइड: UPI धोखाधड़ी, फिशिंग और नकली कस्टमर केयर से कैसे बचें?">
+        </div>
+        
+<!-- Google AdSense Ad Block -->
+<div style="text-align: center; margin: 2rem 0; padding: 1rem; border: 1px dashed #ccc; background: #fdfdfd;">
+    <span style="color: #999; font-size: 0.8rem; text-transform: uppercase;">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7067722696020503"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        
+        <main class="page-content" aria-label="Content">
+            <div class="post-wrap">
+
+  <!-- SECTION 1 -->
+  <div class="post-section" id="intro">
+    <h2>1. भारत ऑनलाइन स्कैम का सबसे बड़ा निशाना क्यों है?</h2>
+    <p>पिछले एक दशक में भारत में 30 करोड़ से अधिक नए इंटरनेट उपयोगकर्ता जुड़े। इनमें से बड़ी संख्या सीमित डिजिटल साक्षरता के साथ ऑनलाइन आई — UPI, डिजिटल बैंकिंग और सोशल मीडिया जैसे माहौल में जहाँ स्कैमर पहले से मौजूद थे। डिजिटल प्लेटफॉर्म जो गति, गुमनामी और पैमाना प्रदान करते हैं, वह भारत को वैश्विक स्तर पर साइबर धोखाधड़ी के सबसे निशाना बने देशों में से एक बनाता है।</p>
+    <p>भारतीय साइबर अपराध समन्वय केंद्र (I4C) के अनुसार, भारतीयों ने केवल 2024 के पहले छह महीनों में ऑनलाइन धोखाधड़ी में <strong>₹7,000 करोड़ से अधिक</strong> गंवाए — यानी हर महीने लगभग ₹1,300 करोड़। ये केवल रिपोर्ट किए गए मामले हैं।</p>
+
+    <div class="stat-strip">
+      <div class="stat-card"><span class="stat-val">₹7,061 करोड़</span>
+        <div class="stat-label">2024 के पहले 6 महीनों में साइबर धोखाधड़ी से नुकसान</div>
+      </div>
+      <div class="stat-card"><span class="stat-val">7.4 लाख</span>
+        <div class="stat-label">साइबर अपराध शिकायतें भारत में दर्ज (2023)</div>
+      </div>
+      <div class="stat-card"><span class="stat-val">67.8%</span>
+        <div class="stat-label">साइबर धोखाधड़ी शिकायतें वित्तीय धोखाधड़ी से संबंधित</div>
+      </div>
+      <div class="stat-card"><span class="stat-val">1930</span>
+        <div class="stat-label">राष्ट्रीय साइबर धोखाधड़ी हेल्पलाइन — तुरंत रिपोर्ट करें</div>
+      </div>
+    </div>
+
+    <!-- SVG: स्कैम रडार -->
+    <div class="svg-diagram">
+      <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" width="500" height="300">
+        <defs>
+          <radialGradient id="radarGradHi" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#005B99" stop-opacity=".3"/>
+            <stop offset="100%" stop-color="transparent"/>
+          </radialGradient>
+        </defs>
+        <rect width="500" height="300" fill="#0a0c10" rx="12"/>
+        <circle cx="250" cy="155" r="120" fill="none" stroke="#1e3a5f" stroke-width="1"/>
+        <circle cx="250" cy="155" r="80" fill="none" stroke="#1e3a5f" stroke-width="1"/>
+        <circle cx="250" cy="155" r="40" fill="none" stroke="#1e3a5f" stroke-width="1"/>
+        <circle cx="250" cy="155" r="120" fill="url(#radarGradHi)"/>
+        <line x1="250" y1="155" x2="370" y2="55" stroke="#005B99" stroke-width="2" opacity=".8">
+          <animateTransform attributeName="transform" type="rotate" from="0 250 155" to="360 250 155" dur="4s" repeatCount="indefinite"/>
+        </line>
+        <circle cx="250" cy="155" r="5" fill="#005B99">
+          <animate attributeName="opacity" values="1;.3;1" dur="1s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="300" cy="100" r="5" fill="#f87171" opacity=".9">
+          <animate attributeName="opacity" values=".9;.2;.9" dur="1.8s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="180" cy="200" r="4" fill="#fbbf24" opacity=".9">
+          <animate attributeName="opacity" values=".9;.2;.9" dur="2.2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="330" cy="195" r="6" fill="#f87171" opacity=".9">
+          <animate attributeName="opacity" values=".9;.1;.9" dur="1.4s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="170" cy="110" r="4" fill="#fbbf24" opacity=".8">
+          <animate attributeName="opacity" values=".8;.2;.8" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+        <text x="310" y="90" fill="#f87171" font-size="9">UPI धोखाधड़ी</text>
+        <text x="335" y="200" fill="#f87171" font-size="9">फिशिंग</text>
+        <text x="100" y="205" fill="#fbbf24" font-size="9">नौकरी घोटाला</text>
+        <text x="95" y="105" fill="#fbbf24" font-size="9">निवेश धोखाधड़ी</text>
+        <text x="250" y="295" text-anchor="middle" fill="#606880" font-size="9">खतरा रडार — अभी आपको निशाना बनाने वाले स्कैम</text>
+        <text x="250" y="30" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="700">भारत साइबर खतरा परिदृश्य</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="post-section" id="upi-scams">
+    <h2>2. UPI धोखाधड़ी — भारत का सबसे व्यापक स्कैम</h2>
+    <p>UPI ने भारत के भुगतान परिदृश्य को बदल दिया लेकिन नए धोखाधड़ी के रास्ते भी खोल दिए जो प्रौद्योगिकी से अपरिचित उपयोगकर्ताओं का फायदा उठाते हैं।</p>
+
+    <h3>🔴 "कलेक्ट रिक्वेस्ट" ट्रिक</h3>
+    <p>एक स्कैमर आपको <strong>UPI कलेक्ट रिक्वेस्ट</strong> (पैसे मांगने का अनुरोध, भुगतान नहीं) भेजता है। वे इसे "₹5,000 कैशबैक पाने के लिए स्कैन करें" या "पैसे प्राप्त करने के लिए PIN डालें" जैसे संदेश के साथ छुपाते हैं। जो उपयोगकर्ता नहीं समझते कि UPI PIN दर्ज करना पैसे <em>काटता</em> है, <em>नहीं मिलते</em>, वे तुरंत पैसे खो देते हैं।</p>
+
+    <div class="highlight-box warn">
+      <div class="hb-label">⚠️ सुनहरा नियम</div>
+      <p><strong>पैसे प्राप्त करने के लिए आपको कभी भी UPI PIN दर्ज करने की आवश्यकता नहीं है।</strong> अगर कोई "पैसे पाने के लिए स्कैन करें और PIN डालें" कहे — यह 100% स्कैम है। अस्वीकार करें और रिपोर्ट करें।</p>
+    </div>
+
+    <h3>🔴 नकली कस्टमर केयर नंबर</h3>
+    <p>यह सबसे लाभदायक और परिष्कृत UPI स्कैम है। पीड़ित Google पर अपने बैंक, Paytm, PhonePe या IRCTC के कस्टमर केयर नंबर खोजते हैं। धोखेबाज Google Ads खरीदकर नकली नंबर को खोज परिणामों के शीर्ष पर रखते हैं। "कस्टमर केयर एजेंट" फिर आपको "समस्या ठीक करने" के लिए रिमोट एक्सेस ऐप (AnyDesk, TeamViewer) डाउनलोड करने के लिए कहता है — और आपके देखते-देखते UPI लेनदेन शुरू कर देता है।</p>
+
+    <h3>🔴 स्क्रीन शेयरिंग स्कैम</h3>
+    <p>अपराधी टेलीकॉम ऑपरेटर, बैंक प्रतिनिधि या सरकारी अधिकारियों का रूप धारण करके कॉल करते हैं। वे "KYC सत्यापित करने" या "आधार वेरीफाई करने" के लिए आपसे स्क्रीन शेयरिंग ऐप इंस्टॉल करने का अनुरोध करते हैं। एक बार स्क्रीन शेयरिंग सक्रिय होने पर, वे प्रतीक्षा करते हैं जब आप बैंकिंग ऐप खोलें और आपका PIN, खाता नंबर और शेष राशि कैप्चर कर लेते हैं।</p>
+
+    <div class="step-grid">
+      <div class="step-card">
+        <div class="step-num">✅</div>
+        <h4>UPI स्कैम से कैसे बचें</h4>
+        <p>Google पर कभी कस्टमर केयर नंबर न खोजें। हमेशा आधिकारिक बैंक वेबसाइट या ऐप पर जाएं। अज्ञात लोगों द्वारा भेजे QR कोड कभी स्कैन न करें। किसी को भी — यहाँ तक कि "बैंक अधिकारियों" को भी — अपना UPI PIN न बताएं।</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">🚫</div>
+        <h4>रिमोट एक्सेस ऐप कभी न डालें</h4>
+        <p>कोई भी वैध बैंक, IRCTC या सरकारी अधिकारी कभी भी AnyDesk, QuickSupport या TeamViewer इंस्टॉल करने के लिए नहीं कहेगा। यह अनुरोध हमेशा एक स्कैम है — तुरंत फोन काट दें।</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="post-section" id="phishing">
+    <h2>3. फिशिंग — डिजिटल धोखे की कला</h2>
+    <p>फिशिंग वैध वेबसाइटों, ईमेल या SMS संदेशों के convincing नकली संस्करण बनाने की प्रथा है ताकि आपके लॉगिन क्रेडेंशियल, बैंकिंग विवरण या व्यक्तिगत जानकारी चुराई जा सके।</p>
+
+    <h3>📧 ईमेल फिशिंग</h3>
+    <p>आपको आपके बैंक — SBI, HDFC — या Amazon या Netflix जैसी सेवा का रूप धारण करने वाला ईमेल मिलता है। ईमेल "संदिग्ध गतिविधि" या "खाता निलंबन" की चेतावनी देता है और "खाता सत्यापित करने" के लिए एक लिंक प्रदान करता है। वह लिंक एक pixel-perfect नकली वेबसाइट पर ले जाता है जो आपकी हर चीज कैप्चर करती है।</p>
+
+    <h3>📱 स्मिशिंग (SMS फिशिंग)</h3>
+    <p>आपको SMS मिलता है: "आपकी KYC समाप्त हो गई है। तुरंत अपडेट करें नहीं तो खाता बंद होगा: [short URL]।" लिंक एक नकली बैंकिंग पोर्टल पर ले जाता है। भारतीय स्मिशिंग अभियान अक्सर SBI, IPPB और Jio उपयोगकर्ताओं को भारी पैमाने पर निशाना बनाते हैं।</p>
+
+    <h3>📞 विशिंग (Voice फिशिंग)</h3>
+    <p>कॉलर RBI अधिकारियों, बैंक धोखाधड़ी विभागों, TRAI अधिकारियों, या यहाँ तक कि CBI/ED एजेंटों का रूप धारण करते हैं। वे दावा करते हैं कि आपका खाता मनी लॉन्ड्रिंग में शामिल है। वे अत्यधिक मनोवैज्ञानिक दबाव बनाते हैं ("2 घंटे में आपका खाता फ्रीज होगा") ताकि आपकी तर्कशक्ति को दरकिनार किया जा सके।</p>
+
+    <div class="table-wrap">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>फिशिंग प्रकार</th>
+            <th>कैसे पहुंचता है</th>
+            <th>कैसे पहचानें</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ईमेल फिशिंग</td>
+            <td>"बैंक" से नकली ईमेल</td>
+            <td>प्रेषक डोमेन जांचें — असली बैंक Gmail/Yahoo उपयोग नहीं करते</td>
+          </tr>
+          <tr>
+            <td>स्मिशिंग</td>
+            <td>Short link वाला SMS</td>
+            <td>बैंक आधिकारिक ID से भेजते हैं (जैसे VM-HDFCBK), व्यक्तिगत नंबर से नहीं</td>
+          </tr>
+          <tr>
+            <td>विशिंग</td>
+            <td>फोन कॉल</td>
+            <td>RBI/CBI/ED कभी खाता सत्यापन के लिए कॉल नहीं करते। फोन काट दें।</td>
+          </tr>
+          <tr>
+            <td>नकली वेबसाइट</td>
+            <td>ईमेल/SMS में नकली URL</td>
+            <td>URL ध्यान से जांचें — hdfcban<strong>k</strong>.com vs hdfcban<strong>ks</strong>.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="post-section" id="investment-scams">
+    <h2>4. निवेश और ट्रेडिंग घोटाले — नई महामारी</h2>
+
+    <h3>📈 "टास्क-आधारित" स्कैम</h3>
+    <p>WhatsApp या Telegram पर "सरल ऑनलाइन टास्क" जैसे ऐप रेटिंग देने या YouTube वीडियो लाइक करने के लिए छोटे भुगतान (₹50–500 प्रति टास्क) के साथ भर्ती की जाती है। छोटे असली भुगतानों से विश्वास बनाने के बाद, पीड़ितों को एक "विशेष निवेश प्लेटफॉर्म" से परिचित कराया जाता है जहाँ उच्च भुगतान वाले टास्क के लिए पैसे जमा करने होते हैं। ऐप बढ़ते "मुनाफे" दिखाता है लेकिन सभी निकासी प्रयासों के लिए और जमा राशि चाहिए। सब नकली है।</p>
+
+    <h3>💰 पिग बचरिंग स्कैम (Sha Zhu Pan)</h3>
+    <p>यह सबसे परिष्कृत और विनाशकारी निवेश स्कैम है। एक अजनबी आपसे संपर्क करता है (अक्सर dating apps पर रोमांटिक रूप से या LinkedIn पर)। हफ्तों या महीनों में वे एक गहरा रिश्ता बनाते हैं। फिर एक "शानदार क्रिप्टो ट्रेडिंग प्लेटफॉर्म" से परिचित कराते हैं और भारी रिटर्न दिखाने वाले शुरुआती निवेशों के माध्यम से मार्गदर्शन करते हैं। जब आप बड़ी राशि निकालने की कोशिश करते हैं, तो ऐप "टैक्स" या "शुल्क" मांगता है — और फिर आपके पैसे के साथ गायब हो जाता है।</p>
+
+    <div class="highlight-box warn">
+      <div class="hb-label">⚠️ मुख्य पहचान</div>
+      <p>कोई भी निवेश प्लेटफॉर्म जो निश्चित दैनिक/साप्ताहिक रिटर्न की गारंटी देता है, मुनाफा निकालने के लिए जमा राशि मांगता है, या केवल एक विशिष्ट ऐप लिंक के माध्यम से उपलब्ध है — वह <strong>स्कैम है</strong>। वैध SEBI-पंजीकृत दलाल sebi.gov.in पर सूचीबद्ध हैं।</p>
+    </div>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="post-section" id="job-scams">
+    <h2>5. नौकरी घोटाले और वर्क-फ्रॉम-होम धोखाधड़ी</h2>
+
+    <h3>🖥️ डेटा एंट्री वर्क-फ्रॉम-होम घोटाले</h3>
+    <p>Facebook या WhatsApp पर विज्ञापन साधारण घर से काम के लिए ₹20,000–40,000/माह का वादा करते हैं। पीड़ितों से "सॉफ्टवेयर एक्सेस" या "प्रशिक्षण सामग्री" के लिए ₹500–5,000 का "पंजीकरण शुल्क" लिया जाता है। सॉफ्टवेयर कभी नहीं आता और स्कैमर गायब हो जाता है।</p>
+
+    <h3>📦 पार्सल री-शिपिंग स्कैम (म्यूल नौकरियां)</h3>
+    <p>पीड़ितों को पार्सल प्राप्त करने और आगे भेजने के लिए रखा जाता है। उन्हें नहीं पता कि पार्सल में चुराए गए क्रेडिट कार्ड से खरीदा गया सामान है। पीड़ित आपराधिक अभियानों में अनजाने साझेदार बन जाते हैं — संभवतः कानूनी परिणामों का सामना करते हुए।</p>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="post-section" id="how-to-report">
+    <h2>6. धोखा हो जाए तो क्या करें?</h2>
+    <p>गति सब कुछ है। जितनी जल्दी रिपोर्ट करेंगे, पैसा देश से बाहर जाने से पहले वापस मिलने की संभावना उतनी अधिक होगी।</p>
+
+    <div class="step-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h4>📞 तुरंत 1930 पर कॉल करें</h4>
+        <p>राष्ट्रीय साइबर धोखाधड़ी हेल्पलाइन 1930 कुछ घंटों के भीतर रिपोर्ट होने पर धोखाधड़ी के लेनदेन को फ्रीज कर सकती है। अगर संभव हो तो पहले 30 मिनट के भीतर इसका उपयोग करें।</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h4>🌐 ऑनलाइन शिकायत दर्ज करें</h4>
+        <p><strong>cybercrime.gov.in</strong> पर transaction IDs, स्क्रीनशॉट और स्कैमर संपर्क विवरण के साथ विस्तृत शिकायत दर्ज करें।</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h4>🏦 बैंक से संपर्क करें</h4>
+        <p>अपने बैंक की धोखाधड़ी लाइन पर कॉल करें और चार्जबैक या अनधिकृत लेनदेन विवाद उठाएं। UPI के लिए UPI ऐप के सपोर्ट से संपर्क करें।</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <h4>📋 FIR दर्ज करें</h4>
+        <p>बड़ी राशि या पहचान से संबंधित स्कैम के लिए, स्थानीय पुलिस स्टेशन पर FIR दर्ज करें। बीमा दावों और औपचारिक बैंक विवाद के लिए FIR आवश्यक है।</p>
+      </div>
+    </div>
+
+    <div class="highlight-box tip">
+      <div class="hb-label">✅ सबूत सुरक्षित करें</div>
+      <p>कुछ भी करने से पहले, स्कैमर के साथ हर बातचीत, लेनदेन रिकॉर्ड और संदेश का स्क्रीनशॉट लें। स्कैमर का फोन नंबर, ईमेल और कोई भी वेबसाइट URL सहेजें। WhatsApp बातचीत को ऐप सेटिंग से टेक्स्ट फाइल के रूप में export किया जा सकता है।</p>
+    </div>
+  </div>
+
+  <!-- TAGS -->
+  <div class="post-tags">
+    <span class="ptag">#ऑनलाइनस्कैम</span>
+    <span class="ptag">#UPIधोखाधड़ी</span>
+    <span class="ptag">#फिशिंग</span>
+    <span class="ptag">#साइबरधोखाधड़ीभारत</span>
+    <span class="ptag">#नकलीकस्टमरकेयर</span>
+    <span class="ptag">#निवेशघोटाला</span>
+    <span class="ptag">#नौकरीघोटाला</span>
+    <span class="ptag">#साइबरजागरूकता</span>
+    <span class="ptag">#1930हेल्पलाइन</span>
+    <span class="ptag">#cybercrimegov</span>
+  </div>
+
+</div><!-- end .post-wrap -->
+        </div>
+    </div>
+    
+    
+    
+    <footer style="background: #2c3e50; color: #ecf0f1; padding: 4rem 2rem 2rem; margin-top: 4rem; font-family: 'Segoe UI', sans-serif;">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: left;">
+            <div>
+                <h3 style="color: #fff; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.4rem;">TyagiHub Blog</h3>
+                <p style="color: #bdc3c7; line-height: 1.6;">TyagiHub एक डिजिटल इकोसिस्टम है जो शिक्षा, साइबर सुरक्षा और आधुनिक तकनीकों पर केंद्रित है। सीखें, बनाएं और आगे बढ़ें।</p>
+            </div>
+            <div>
+                <h3 style="color: #fff; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.4rem;">महत्वपूर्ण लिंक</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 0.8rem;"><a href="index.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">होम (Home)</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="about.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">हमारे बारे में (About Us)</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="contact.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">संपर्क करें (Contact)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="color: #fff; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.4rem;">कानूनी (Legal)</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 0.8rem;"><a href="privacy-policy.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">प्राइवेसी पॉलिसी (Privacy)</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="terms.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">नियम और शर्तें (Terms)</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="disclaimer.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">डिस्क्लेमर (Disclaimer)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 2rem; margin-top: 3rem; border-top: 1px solid #34495e; color: #95a5a6;">
+            <p style="margin: 0;">&copy; 2026 TyagiHub Blog. सर्वाधिकार सुरक्षित (All rights reserved).</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

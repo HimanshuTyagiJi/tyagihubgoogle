@@ -1,0 +1,469 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  background: var(--bg-1);
+  border-bottom: 1px solid var(--border-1);
+  z-index: 1000;
+  transition: background var(--ease-normal), border-color var(--ease-normal);
+}
+
+.navbar.scrolled {
+  background: var(--bg-2);
+  border-bottom-color: var(--border-2);
+}
+
+.navbar .container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  height: 100%;
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  gap: var(--space-4);
+  min-width: 0; /* Allow shrinking */
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-display);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-lg);
+  color: var(--text-heading);
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+.navbar__logo span {
+  color: var(--clr-accent);
+}
+
+.navbar__logo-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent-2));
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--fw-black);
+  font-size: var(--fs-sm);
+  color: var(--text-inverse);
+  flex-shrink: 0;
+}
+
+/* ── NAV WRAPPER: scrollable center section ── */
+.navbar__nav-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  justify-content: center;
+  min-width: 0;
+  overflow: hidden; /* clip scroll arrows edges */
+}
+
+/* Scroll arrow buttons – hidden by default, shown via JS */
+.nav-scroll-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-paragraph);
+  width: 28px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.nav-scroll-btn.visible {
+  display: flex;
+}
+
+.nav-scroll-btn--left:hover {
+  transform: translateX(-3px) scale(1.15);
+  color: var(--clr-accent);
+}
+
+.nav-scroll-btn--right:hover {
+  transform: translateX(3px) scale(1.15);
+  color: var(--clr-accent);
+}
+
+/* The scrollable nav strip */
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  
+  scroll-behavior: smooth;
+  /* Fade edges so arrows feel integrated */
+  mask-image: linear-gradient(to right, transparent 0px, black 24px, black calc(100% - 24px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0px, black 24px, black calc(100% - 24px), transparent 100%);
+}
+
+.navbar__nav::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide edge-fade when no overflow present */
+.navbar__nav.no-overflow {
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+
+.navbar__link {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--fs-md);
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  transition: color var(--ease-fast), background var(--ease-fast);
+  position: relative;
+}
+
+.navbar__link:hover,
+.navbar__link.active {
+  background: var(--hover-bg-2);
+  color: var(--text-heading);
+}
+
+/* ── ACTIONS: right-side controls ── */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+/* ── HAMBURGER (desktop hidden) ── */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.navbar__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-heading);
+  border-radius: 2px;
+  transition: transform var(--ease-normal), opacity var(--ease-normal), width var(--ease-normal);
+  transform-origin: center;
+}
+
+/* Animate hamburger → X when open */
+.navbar__hamburger.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.navbar__hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+.navbar__hamburger.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── THEME OVERRIDES ── */
+[data-theme="light"] .navbar {
+  background: var(--bg-1);
+  box-shadow: none !important;
+  border-bottom: 1px solid var(--border-1) !important;
+}
+
+[data-theme="light"] .navbar.scrolled {
+  background: var(--bg-2);
+  box-shadow: none !important;
+  border-bottom: 1px solid var(--border-2) !important;
+}
+
+[data-theme="light"] .navbar__logo {
+  color: var(--text-heading);
+}
+
+[data-theme="light"] .navbar__link {
+  color: var(--text-muted);
+}
+
+[data-theme="light"] .navbar__hamburger span {
+  background: var(--text-heading);
+}
+
+/* ── RESPONSIVE: 1025px – 1200px (compact but still desktop) ── */
+@media (max-width: 1200px) and (min-width: 1025px) {
+  .navbar__actions {
+    gap: var(--space-2);
+  }
+}
+
+/* ── RESPONSIVE: tablet & mobile (<= 1024px) ── */
+@media (max-width: 1024.98px) {
+  .navbar .container {
+    padding: 0 var(--space-3);
+  }
+  .navbar__nav-wrapper {
+    display: none;
+  }
+  .navbar__hamburger {
+    display: flex;
+  }
+  .navbar__inner {
+    gap: var(--space-2);
+  }
+  .navbar__logo {
+    font-size: var(--fs-md);
+    gap: var(--space-2);
+  }
+  .navbar__logo-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .navbar__actions {
+    gap: var(--space-2);
+  }
+  .navbar__actions .navbar__docs-link {
+    display: none;
+  }
+  .navbar__actions .btn-sm {
+    padding: var(--space-2) var(--space-3);
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar__logo {
+    font-size: var(--fs-sm);
+  }
+  .navbar__logo span {
+    display: none;
+  }
+  .navbar__actions {
+    gap: var(--space-1);
+  }
+}
+
+/* ── MOBILE MENU TOGGLE (legacy class, kept for compat) ── */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: var(--space-2);
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text-heading);
+  border-radius: 2px;
+  transition: all var(--ease-normal);
+}
+
+/* ── OVERLAYS (MOBILE NAV & LEFT SIDEBAR) ── */
+.mobile-nav-overlay,
+.left-sidebar-overlay,
+.layout-sidebar-overlay-shield {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 998;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.mobile-nav-overlay.active,
+.left-sidebar-overlay.active,
+.layout-sidebar-overlay-shield.active {
+  display: block;
+}
+
+/* ── LAYOUT MENU TRIGGER (left sidebar open button) ── */
+.layout-menu-trigger-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  position: fixed;
+  left: 12px;
+  top: 62px;
+  z-index: 990;
+  padding: 0 var(--space-4);
+  height: 36px;
+  background: var(--hover-bg-2);
+  color: var(--text-heading);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-xs);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--ease-fast);
+  cursor: pointer;
+}
+
+.layout-menu-trigger-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+}
+
+.layout-menu-trigger-btn:hover {
+  background: var(--hover-bg-1);
+  border-color: var(--clr-accent);
+}
+
+/* ── MOBILE NAV DRAWER – opens from RIGHT ── */
+.mobile-nav {
+  position: fixed;
+  top: var(--nav-height);
+  right: -280px;      /* start off-screen to the right */
+  left: auto;
+  bottom: 0;
+  width: 280px;
+  background: var(--bg-1);
+  z-index: 999;
+  border-left: 1px solid var(--border-1);
+  display: flex;
+  flex-direction: column;
+  transition: right var(--ease-normal); /* slide from right */
+  overflow-y: auto;
+}
+
+.mobile-nav.open {
+  right: 0;           /* slide into view */
+}
+
+.mobile-nav__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--space-4) 0;
+}
+
+.mobile-nav__menu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: 0 var(--space-4);
+}
+
+.mobile-nav__link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-base);
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  transition: all var(--ease-fast);
+}
+
+.mobile-nav__link:hover {
+  background: var(--hover-bg-2);
+  color: var(--text-heading);
+}
+
+.mobile-nav__link.active {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  background: transparent;
+}
+
+/* ── FLOATING LANG SWITCH ── */
+.floating-lang-switch {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 35px;
+  z-index: 1400;
+}
+
+.floating-lang-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--hover-bg-2);
+  border: 1px solid var(--border-2);
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-xs);
+  box-shadow: var(--shadow-md);
+  transition: all var(--ease-normal);
+  cursor: pointer;
+  letter-spacing: 0.05em;
+}
+
+.floating-lang-btn:hover {
+  transform: scale(1.08);
+  border-color: var(--clr-accent);
+  box-shadow: var(--shadow-lg);
+  color: var(--text-heading);
+}
+
+/* ── LIGHT-THEME OVERRIDES ── */
+[data-theme="light"] .layout-menu-trigger-btn {
+   
+  border-color: var(--border-2);
+}
+
+[data-theme="light"] .mobile-nav {
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="light"] .mobile-nav__link {
+  color: var(--text-muted);
+}
+
+[data-theme="light"] .floating-lang-btn {
+  border-color: var(--border-2);
+}
+
+/* Show layout trigger btn on non-desktop */
+@media (max-width: 1024.98px) {
+  .layout-menu-trigger-btn {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  .floating-lang-switch {
+    display: block;
+    bottom: 35px;
+  }
+}

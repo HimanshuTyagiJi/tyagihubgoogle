@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="TyagiHub logo">
+    <title>TyagiHub</title>
+    <circle cx="150" cy="150" r="150" fill="#ffffff"></circle>
+    <defs>
+        <clipPath id="circle-clip-main">
+            <circle cx="150" cy="150" r="150"></circle>
+        </clipPath>
+    </defs>
+    <g clip-path="url(#circle-clip-main)">
+        <!-- Wave 1 (Light Cyan/Blue) -->
+        <path fill="#4dc4ff" fill-opacity="1">
+            <animate attributeName="d" dur="8s" repeatCount="indefinite" values="M0 230 Q 75 210,150 230 T 300 210 L 300 300 L 0 300 Z;M0 240 Q 75 260,150 240 T 300 250 L 300 300 L 0 300 Z;M0 230 Q 75 210,150 230 T 300 210 L 300 300 L 0 300 Z"></animate>
+        </path>
+        <!-- Wave 2 (Dark Blue) -->
+        <path fill="#005B99" fill-opacity="0.9">
+            <animate attributeName="d" dur="7s" repeatCount="indefinite" values="M0 220 Q 75 245,150 220 T 300 235 L 300 300 L 0 300 Z;M0 250 Q 75 220,150 250 T 300 220 L 300 300 L 0 300 Z;M0 220 Q 75 245,150 220 T 300 235 L 300 300 L 0 300 Z"></animate>
+        </path>
+    </g>
+    
+    <!-- Animated 3D Text "TH" -->
+    <g style="transform-origin: 150px 105px" opacity="1">
+        <!-- Animation fix for static readers (App Icon): Default is opacity 1. Set forces it to 0 at start for web browsers. -->
+        <set attributeName="opacity" to="0" begin="0s" dur="0.35s" fill="freeze" />
+        <animate attributeName="opacity" from="0" to="1" begin="0.35s" dur="1.2s" fill="freeze"></animate>
+        <animateTransform attributeName="transform" type="rotate" from="-15 150 90" to="0 150 90" begin="0.35s" dur="1.2s" fill="freeze" additive="sum"></animateTransform>
+        <animateTransform attributeName="transform" type="scale" from="0.55 0.55" to="1 1" begin="0.35s" dur="1.2s" fill="freeze" additive="sum"></animateTransform>
+
+        <!-- 3D Geometric Extrusion (Back to Front) -->
+        <text x="50%" y="42%" dx="-10" dy="10" font-size="110" font-weight="900" fill="#001833" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif">TH</text>
+        <text x="50%" y="42%" dx="-8" dy="8" font-size="110" font-weight="900" fill="#00254d" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif">TH</text>
+        <text x="50%" y="42%" dx="-6" dy="6" font-size="110" font-weight="900" fill="#003366" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif">TH</text>
+        <text x="50%" y="42%" dx="-4" dy="4" font-size="110" font-weight="900" fill="#004080" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif">TH</text>
+        <text x="50%" y="42%" dx="-2" dy="2" font-size="110" font-weight="900" fill="#004c99" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif">TH</text>
+        
+        <!-- Top Face (Cyan with White Stroke) -->
+        <text x="50%" y="42%" font-size="110" font-weight="900" fill="#00d2ff" stroke="#ffffff" stroke-width="2" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif">TH</text>
+    </g>
+    
+    <!-- Text 2: TyagiHub -->
+    <text x="50%" y="65%" font-size="42" font-weight="700" fill="#002b66" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" style="transform-origin: 150px 195px" opacity="1">
+        TyagiHub
+        <set attributeName="opacity" to="0" begin="0s" dur="0.8s" fill="freeze" />
+        <animate attributeName="opacity" from="0" to="1" begin="0.8s" dur="1.2s" fill="freeze"></animate>
+        <animateTransform attributeName="transform" type="scale" from="0.75 0.75" to="1 1" begin="0.8s" dur="1.2s" fill="freeze"></animateTransform>
+    </text>
+    
+    <!-- Outer Border -->
+    <circle cx="150" cy="150" r="145" fill="none" stroke="#e0f2fe" stroke-width="4" opacity="0.6"></circle>
+</svg>

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>इंटरनेट ट्रैकिंग क्या है: जानें वेबसाइट्स आपको ऑनलाइन कैसे ट्रैक करती हैं - TyagiHub Blog</title>
+    <meta name="description" content="जानिए कुकीज़ (cookies), फ़िंगरप्रिंटिंग और ट्रैकर्स आपके इंटरनेट इस्तेमाल पर नज़र कैसे रखते हैं, कौन सा">
+    
+    <link rel="stylesheet" href="assets/css/discover.css">
+    <link rel="stylesheet" href="assets/css/shield-discover.css">
+    
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; margin: 0; padding: 0; }
+        header { background: #fff; padding: 1rem 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        header h1 { margin: 0; font-size: 1.5rem; }
+        header h1 a { color: #2c3e50; text-decoration: none; }
+        nav { margin-top: 10px; }
+        nav a { color: #2c3e50; text-decoration: none; margin-left: 15px; font-weight: bold; padding: 8px 16px; background: #f8f9fa; border: 1px solid #eaeaea; border-radius: 6px; transition: all 0.3s; display: inline-block; }
+        nav a:hover { background: #3498db; color: #fff; border-color: #3498db; }
+        .post-container { max-width: 800px; margin: 2rem auto; padding: 2rem; background: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .post-header { margin-bottom: 2rem; text-align: center; }
+        .post-header h1 { color: #2c3e50; font-size: 2.2rem; margin-bottom: 1rem; }
+        .post-header img { max-width: 100%; border-radius: 8px; margin-top: 1rem; }
+        footer { text-align: center; padding: 2rem; background: #fff; margin-top: 3rem; border-top: 1px solid #eaeaea; color: #777; }
+        @media (max-width: 768px) { 
+            header { flex-direction: column; text-align: center; padding: 1rem 0.5rem; } 
+            nav { margin-top: 15px; display: flex; gap: 8px 12px; justify-content: center; flex-wrap: wrap; padding: 0 0.5rem; } 
+            nav a { margin: 0; font-size: 0.95rem; padding: 6px 10px; background: #f8f9fa; border: 1px solid #eaeaea; border-radius: 5px; } 
+            .page-container, .post-container { padding: 1rem !important; margin: 1rem 0.5rem !important; box-sizing: border-box; } 
+            .post-section { padding: 1.2rem !important; margin-bottom: 1.5rem !important; }
+            .hero { padding: 2.5rem 1rem !important; }
+            .container { padding: 0 0.5rem !important; }
+            .grid { gap: 1.5rem !important; }
+        }
+    
+        /* Force Light Theme Overrides for Post Content ONLY */
+        .post-container .post-section, 
+        .post-container .page-content, 
+        .post-container .discover-content, 
+        .post-container .shield-container, 
+        .post-container .shield-card, 
+        .post-container .post-wrap,
+        .post-container [class*="discover-"], 
+        .post-container [class*="shield-"],
+        .post-container .step-card,
+        .post-container .stat-card,
+        .post-container .stat-strip,
+        .post-container .checklist,
+        .post-container .post-hero {
+            background-color: #ffffff !important;
+            color: #333333 !important;
+        }
+        
+        .post-container .post-section {
+            background-color: #ffffff !important;
+            border: 1px solid #eaeaea !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02) !important;
+            border-radius: 8px !important;
+            padding: 2rem !important;
+            margin-bottom: 2rem !important;
+        }
+
+        .post-container .device-card, 
+        .post-container .step-card, 
+        .post-container .stat-card,
+        .post-container .checklist {
+            background-color: #fdfdfd !important;
+            border: 1px solid #eaeaea !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03) !important;
+            color: #444 !important;
+        }
+        
+        .post-container .step-card h3, .post-container .step-card h4,
+        .post-container .stat-val, .post-container .stat-label {
+            color: #2c3e50 !important;
+        }
+        
+        .post-container .step-num {
+            background-color: #3498db !important;
+            color: #fff !important;
+        }
+
+        .post-container .highlight-box {
+            background-color: #fdfbf7 !important;
+            border-left: 4px solid #f39c12 !important;
+            border: 1px solid #eaeaea !important;
+            color: #444 !important;
+        }
+        .post-container .highlight-box.tip {
+            background-color: #f0f8ff !important;
+            border-left-color: #3498db !important;
+        }
+        .post-container .highlight-box.info {
+            background-color: #f1f8ff !important;
+            border-left-color: #2980b9 !important;
+        }
+        .post-container .highlight-box.warn {
+            background-color: #fff5f5 !important;
+            border-left-color: #e74c3c !important;
+        }
+
+        .post-container h1, .post-container h2, .post-container h3, 
+        .post-container h4, .post-container h5, .post-container h6, 
+        .post-container .post-section h2, .post-container .device-card h4, 
+        .post-container .hb-label {
+            color: #2c3e50 !important;
+        }
+        
+        .post-container p, .post-container li, .post-container .device-card p,
+        .post-container .step-card p, .post-container .stat-card p {
+            color: #444444 !important;
+        }
+
+        /* SVG fixes - force icons to show properly */
+        .post-container svg, .post-container path, .post-container rect {
+            fill: currentColor;
+        }
+        .post-container .d-icon {
+            color: var(--card-color, #3498db) !important;
+        }
+
+        /* Increase Width */
+        .post-container, .page-content { 
+            max-width: 1000px !important; 
+        }
+        
+        /* Table fixes */
+        .post-container .styled-table {
+            background-color: #fff !important;
+        }
+        .post-container .styled-table th {
+            background-color: #f1f8ff !important;
+            color: #2c3e50 !important;
+            border-bottom: 2px solid #b3d7ff !important;
+        }
+        .post-container .styled-table td {
+            background-color: #ffffff !important;
+            color: #444 !important;
+            border-bottom: 1px solid #eaeaea !important;
+        }
+        
+        .post-container .post-tags .ptag {
+            background-color: #f1f8ff !important;
+            color: #2980b9 !important;
+            border: 1px solid #d4e6f1 !important;
+        }
+    </style>
+    <link rel="canonical" href="https://tyagihub.in/internet-tracking-explained-hi.html" />
+    <meta name="robots" content="index, follow">
+    <meta name="google-adsense-account" content="ca-pub-7067722696020503">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">TyagiHub Blog</a></h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="privacy-policy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <div class="post-container">
+        <div class="post-header">
+            <h1>इंटरनेट ट्रैकिंग क्या है: जानें वेबसाइट्स आपको ऑनलाइन कैसे ट्रैक करती हैं</h1>
+        <p style="text-align:center; color:#7f8c8d; font-size:0.95rem; margin-top:-10px; margin-bottom:20px; font-weight:500;">प्रकाशित: 21 अगस्त 2026</p>
+            <img src="assets/images/internet-tracking-explained-how-websites-track-you-online-banner.avif" alt="इंटरनेट ट्रैकिंग क्या है: जानें वेबसाइट्स आपको ऑनलाइन कैसे ट्रैक करती हैं">
+        </div>
+        
+<!-- Google AdSense Ad Block -->
+<div style="text-align: center; margin: 2rem 0; padding: 1rem; border: 1px dashed #ccc; background: #fdfdfd;">
+    <span style="color: #999; font-size: 0.8rem; text-transform: uppercase;">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7067722696020503"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        
+        <main class="page-content" aria-label="Content">
+            <div class="post-wrap">
+
+
+  <div class="post-section" id="tracking-everywhere">
+    <h2>1. ट्रैकिंग हर जगह है — कड़वी हकीकत</h2>
+    <p>आप जो भी वेबसाइट देखते हैं, लगभग हर एक वेबसाइट बिना किसी अपवाद के आपके बारे में डेटा इकट्ठा कर रही होती है। यह
+      ज़रूरी नहीं कि दुर्भावनापूर्ण ही हो — इसमें से अधिकांश डेटा उन फायदों के लिए आवश्यक होता है जो आप वास्तव में चाहते
+      हैं, जैसे कि लॉग इन रहना या अपनी पसंद का कंटेंट देखना (जैसे सिफ़ारिशें)। लेकिन आधुनिक ट्रैकिंग का दायरा और उसकी
+      जटिलता लोगों की आम समझ या उनकी वास्तविक सहमति से कहीं अधिक बढ़ चुकी है।</p>
+    <p>एक साधारण समाचार वेबसाइट विज्ञापन नेटवर्क, एनालिटिक्स कंपनियों, सोशल मीडिया विजेट्स और डेटा दलालों (data brokers)
+      से जुड़े 40-80 अलग-अलग ट्रैकिंग स्क्रिप्ट्स लोड कर सकती है — जिनमें से प्रत्येक आपके विजिट के बारे में जानकारी
+      एकत्र करती है और अक्सर एक ऐसा प्रोफाइल बनाती है जो सिर्फ उसी साइट पर नहीं बल्कि पूरे इंटरनेट पर आपका पीछा करता है।
+    </p>
+
+    <div class="stat-strip">
+      <div class="stat-card"><span class="stat-val">75%</span>
+        <div class="stat-label">वेबसाइटें थर्ड-पार्टी ट्रैकर्स का उपयोग करती हैं</div>
+      </div>
+      <div class="stat-card"><span class="stat-val">40+</span>
+        <div class="stat-label">एक प्रमुख समाचार वेबसाइट पर औसत ट्रैकर्स की संख्या</div>
+      </div>
+      <div class="stat-card"><span class="stat-val">$240B</span>
+        <div class="stat-label">ट्रैकिंग डेटा से संचालित वैश्विक डिजिटल विज्ञापन बाज़ार</div>
+      </div>
+      <div class="stat-card"><span class="stat-val">5,000+</span>
+        <div class="stat-label">डेटा प्वाइंट्स जो एक अकेला डेटा ब्रोकर प्रति व्यक्ति रख सकता है</div>
+      </div>
+    </div>
+  </div>
+  <div class="post-hero">
+    <svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg">
+      <rect width="480" height="220" fill="#0a0c10" />
+
+      <!-- PERSON walking (left) -->
+      <circle cx="48" cy="80" r="16" fill="#1a2030" stroke="#60a5fa" stroke-width="1.5" />
+      <text x="48" y="86" text-anchor="middle" font-size="18">🧑</text>
+
+      <!-- FOOTPRINT TRAIL -->
+      <ellipse cx="90" cy="124" rx="10" ry="6" fill="#2a3348" transform="rotate(-15 90 124)" />
+      <ellipse cx="130" cy="118" rx="10" ry="6" fill="#2a3348" transform="rotate(15 130 118)" />
+      <ellipse cx="170" cy="124" rx="10" ry="6" fill="#2a3348" transform="rotate(-15 170 124)" />
+      <ellipse cx="210" cy="118" rx="10" ry="6" fill="#2a3348" transform="rotate(15 210 118)" />
+      <ellipse cx="250" cy="124" rx="10" ry="6" fill="#2a3348" transform="rotate(-15 250 124)" />
+      <ellipse cx="290" cy="118" rx="10" ry="6" fill="#2a3348" transform="rotate(15 290 118)" />
+      <ellipse cx="330" cy="124" rx="10" ry="6" fill="#2a3348" transform="rotate(-15 330 124)" />
+
+      <!-- SPYING EYES hovering above footprints (animated) -->
+      <!-- eye 1 -->
+      <g opacity=".8">
+        <ellipse cx="90" cy="96" rx="14" ry="8" fill="#0f1219" stroke="#f87171" stroke-width="1.2" />
+        <circle cx="90" cy="96" r="4" fill="#f87171" opacity=".8" />
+        <circle cx="91.5" cy="94.5" r="1.5" fill="#fff" opacity=".6" />
+        <animate attributeName="opacity" values=".8;.4;.8" dur="2.5s" repeatCount="indefinite" xlink:href="g" />
+      </g>
+      <!-- eye 2 -->
+      <ellipse cx="170" cy="96" rx="14" ry="8" fill="#0f1219" stroke=" #005B99" stroke-width="1.2" />
+      <circle cx="170" cy="96" r="4" fill=" #005B99" opacity=".8">
+        <animate attributeName="opacity" values=".8;.3;.8" dur="2s" begin=".5s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="171.5" cy="94.5" r="1.5" fill="#fff" opacity=".6" />
+      <!-- eye 3 -->
+      <ellipse cx="250" cy="96" rx="14" ry="8" fill="#0f1219" stroke="#a78bfa" stroke-width="1.2" />
+      <circle cx="250" cy="96" r="4" fill="#a78bfa" opacity=".8">
+        <animate attributeName="opacity" values=".8;.3;.8" dur="1.8s" begin="1s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="251.5" cy="94.5" r="1.5" fill="#fff" opacity=".6" />
+      <!-- eye 4 -->
+      <ellipse cx="330" cy="96" rx="14" ry="8" fill="#0f1219" stroke="#f87171" stroke-width="1.2" />
+      <circle cx="330" cy="96" r="4" fill="#f87171" opacity=".8">
+        <animate attributeName="opacity" values=".8;.3;.8" dur="2.2s" begin=".3s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="331.5" cy="94.5" r="1.5" fill="#fff" opacity=".6" />
+
+      <!-- DATA FLOWS up to server (top right) -->
+      <rect x="394" y="20" width="72" height="56" rx="8" fill="#1a2030" stroke="#f87171" stroke-width="1.2" />
+      <text x="430" y="42" text-anchor="middle" font-size="8" fill="#f87171" font-weight="700">विज्ञापन सर्वर</text>
+      <text x="430" y="56" text-anchor="middle" font-size="7" fill="#606880">डेटा ब्रोकर</text>
+      <rect x="404" y="62" width="52" height="6" rx="2" fill="#f87171" opacity=".3" />
+
+      <!-- data flow lines -->
+      <path d="M90,88 Q200,40 392,42" fill="none" stroke="#f87171" stroke-width="1" stroke-dasharray="3,3" opacity=".5">
+        <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="1.2s" repeatCount="indefinite" />
+      </path>
+      <path d="M250,88 Q320,50 392,44" fill="none" stroke="#a78bfa" stroke-width="1" stroke-dasharray="3,3"
+        opacity=".4">
+        <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="1s" begin=".3s" repeatCount="indefinite" />
+      </path>
+
+      <!-- TRACKING TYPES labels bottom -->
+      <rect x="20" y="155" width="90" height="36" rx="6" fill="#1a2030" stroke="#f87171" stroke-width=".8" />
+      <text x="65" y="170" text-anchor="middle" font-size="8" fill="#f87171" font-weight="700">थर्ड-पार्टी</text>
+      <text x="65" y="183" text-anchor="middle" font-size="7" fill="#606880">कुकीज़</text>
+      <rect x="122" y="155" width="90" height="36" rx="6" fill="#1a2030" stroke=" #005B99" stroke-width=".8" />
+      <text x="167" y="170" text-anchor="middle" font-size="8" fill=" #005B99" font-weight="700">ब्राउज़र</text>
+      <text x="167" y="183" text-anchor="middle" font-size="7" fill="#606880">फ़िंगरप्रिंट</text>
+      <rect x="224" y="155" width="90" height="36" rx="6" fill="#1a2030" stroke="#a78bfa" stroke-width=".8" />
+      <text x="269" y="170" text-anchor="middle" font-size="8" fill="#a78bfa" font-weight="700">ट्रैकिंग</text>
+      <text x="269" y="183" text-anchor="middle" font-size="7" fill="#606880">पिक्सल्स</text>
+      <rect x="326" y="155" width="90" height="36" rx="6" fill="#1a2030" stroke="#34d399" stroke-width=".8" />
+      <text x="371" y="170" text-anchor="middle" font-size="8" fill="#34d399" font-weight="700">क्रॉस-डिवाइस</text>
+      <text x="371" y="183" text-anchor="middle" font-size="7" fill="#606880">लिंकिंग</text>
+
+      <text x="240" y="208" text-anchor="middle" font-size="10" fill="#a0a8bc">हर क्लिक, स्क्रॉल और सर्च एक निशान छोड़
+        जाता है</text>
+    </svg>
+
+  </div>
+
+  <div class="post-section" id="cookies">
+    <h2>2. कुकीज़ (Cookies) कैसे काम करती हैं</h2>
+    <p>कुकीज़ छोटी टेक्स्ट फाइलें होती हैं जिन्हें वेबसाइटें आपके ब्राउज़र में स्टोर करती हैं। ट्रैकिंग को समझने के लिए
+      कुकीज़ के प्रकारों के बीच अंतर को समझना आवश्यक है:</p>
+
+    <div class="table-wrap">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>कुकी का प्रकार (Cookie Type)</th>
+            <th>किसके द्वारा सेट (Set By)</th>
+            <th>मुख्य उद्देश्य (Purpose)</th>
+            <th>प्राइवेसी प्रभाव (Privacy Impact)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>फ़र्स्ट-पार्टी कुकीज़ (First-party Cookies)</td>
+            <td>वह वेबसाइट जिस पर आप विज़िट कर रहे हैं</td>
+            <td>लॉगिन सेशन, कार्ट की चीज़ें, प्राथमिकताएं (preferences)</td>
+            <td>कम — सामान्य रूप से कार्यात्मक और अपेक्षित</td>
+          </tr>
+          <tr>
+            <td>थर्ड-पार्टी कुकीज़ (Third-party Cookies)</td>
+            <td>पेज में एम्बेड किए गए अन्य डोमेन (जैसे विज्ञापन, विजेट्स)</td>
+            <td>आपको कई अलग-अलग और असंबंधित वेबसाइटों पर ट्रैक करना</td>
+            <td>उच्च — क्रॉस-साइट ट्रैकिंग के लिए मुख्य तंत्र</td>
+          </tr>
+          <tr>
+            <td>सेशन कुकीज़ (Session Cookies)</td>
+            <td>कोई भी साइट</td>
+            <td>अस्थायी, ब्राउज़र बंद होने पर डिलीट हो जाती हैं</td>
+            <td>कम — स्वाभाविक रूप से कम समय के लिए उपयोगी</td>
+          </tr>
+          <tr>
+            <td>पर्सिस्टेंट कुकीज़ (Persistent Cookies)</td>
+            <td>कोई भी साइट</td>
+            <td>निश्चित अवधि (दिनों से लेकर वर्षों तक) के लिए बनी रहती हैं</td>
+            <td>मध्यम से उच्च — अवधि और उपयोग पर निर्भर</td>
+          </tr>
+          <tr>
+            <td>ज़ोंबी/सुपरकुकीज़ (Zombie/Supercookies)</td>
+            <td>आक्रामक ट्रैकर्स</td>
+            <td>डिलीट होने के बाद भी खुद को दोबारा बना लेती हैं</td>
+            <td>बहुत उच्च — यूजर कंट्रोल से बचने के लिए डिज़ाइन की गई</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>थर्ड-पार्टी कुकी मैकेनिज्म (क्रॉस-साइट ट्रैकिंग)</h3>
+    <p>व्यवहार में थर्ड-पार्टी ट्रैकिंग वास्तव में इस प्रकार काम करती है: मान लीजिए वेबसाइट A, कंपनी X का एक विज्ञापन
+      स्क्रिप्ट एम्बेड करती है। जब आप वेबसाइट A पर जाते हैं, तो वह स्क्रिप्ट आपके ब्राउज़र में कंपनी X के डोमेन की एक
+      कुकी सेट कर देती है। बाद में, आप किसी अन्य असंबंधित वेबसाइट B पर जाते हैं, जिसमें उसी कंपनी X की विज्ञापन
+      स्क्रिप्ट भी एम्बेड है। आपका ब्राउज़र कंपनी X को वही कुकी वापस भेजता है, जिससे कंपनी X यह पहचान लेती है कि "यह वही
+      ब्राउज़र है जिसने वेबसाइट A का दौरा किया था" — इस प्रकार, भले ही आपने कंपनी X के साथ कभी सीधे बातचीत न की हो,
+      दोनों वेबसाइटों पर आपके ब्राउज़िंग अनुभवों को जोड़कर एक संपूर्ण प्रोफाइल बना ली जाती है।
+    </p>
+
+    <div class="highlight-box info">
+      <div class="hb-label">ℹ️ कुकीपोकलिप्स (The Cookiepocalypse)</div>
+      <p>गूगल क्रोम (Google Chrome) थर्ड-पार्टी कुकीज़ को धीरे-धीरे चरणबद्ध तरीके से समाप्त कर रहा है (सफारी और
+        फ़ायरफ़ॉक्स के बाद, जिन्होंने सालों पहले इन्हें ब्लॉक कर दिया था)। यह एक बड़ा बदलाव है जो विज्ञापन उद्योग को
+        वैकल्पिक ट्रैकिंग तरीकों की ओर बढ़ने के लिए मजबूर कर रहा है — जिनमें से कई तरीके, जैसे फिंगरप्रिंटिंग, वास्तव
+        में उपयोगकर्ताओं के लिए पहचानना या ब्लॉक करना और भी कठिन है।</p>
+    </div>
+  </div>
+
+  <div class="post-section" id="fingerprinting">
+    <h2>3. ब्राउज़र फ़िंगरप्रिंटिंग (Browser Fingerprinting) क्या है?</h2>
+    <p>जैसे-वैसे कुकी-आधारित ट्रैकिंग पर प्रतिबंध बढ़ रहे हैं, ब्राउज़र फ़िंगरप्रिंटिंग एक अधिक आक्रामक विकल्प के रूप
+      में उभरी है। फ़िंगरप्रिंटिंग आपके डिवाइस और ब्राउज़र के बारे में दर्जनों तकनीकी विवरण एकत्र करके काम करती है जो
+      मिलकर एक विशिष्ट सिग्नेचर (पहचान) बनाते हैं — इसके लिए आपके डिवाइस पर कुछ भी स्टोर करने की बिल्कुल आवश्यकता नहीं
+      होती है।
+    </p>
+
+    <div class="tracker-grid">
+      <div class="tracker-card" style="--tc:#f87171">
+        <div class="t-icon">🖥️</div>
+        <h3>स्क्रीन रेजोल्यूशन</h3>
+        <p>आपके डिस्प्ले के सटीक पिक्सेल आयाम, कलर डेप्थ और पिक्सेल अनुपात।</p>
+      </div>
+      <div class="tracker-card" style="--tc: #005B99">
+        <div class="t-icon">🔤</div>
+        <h3>इंस्टॉल किए गए फ़ॉन्ट्स</h3>
+        <p>आपके सिस्टम पर इंस्टॉल किए गए फ़ॉन्ट्स का विशिष्ट संयोजन अक्सर अद्वितीय होता है।</p>
+      </div>
+      <div class="tracker-card" style="--tc:#a78bfa">
+        <div class="t-icon">🎨</div>
+        <h3>कैनवास फ़िंगरप्रिंटिंग</h3>
+        <p>आपके ब्राउज़र को एक छिपी हुई छवि बनाने के लिए मजबूर करता है — GPU/ड्राइवर के अंतर एक अद्वितीय सिग्नेचर बनाते
+          हैं।</p>
+      </div>
+      <div class="tracker-card" style="--tc:#60a5fa">
+        <div class="t-icon">🌐</div>
+        <h3>ब्राउज़र और ओएस वर्जन</h3>
+        <p>सटीक ब्राउज़र संस्करण, ऑपरेटिंग सिस्टम और भाषा सेटिंग्स का संयोजन।</p>
+      </div>
+      <div class="tracker-card" style="--tc:#34d399">
+        <div class="t-icon">🔌</div>
+        <h3>इंस्टॉल किए गए प्लगइन्स</h3>
+        <p>ब्राउज़र एक्सटेंशन और प्लगइन्स जो अप्रत्यक्ष रूप से भी पहचाने जा सकते हैं।</p>
+      </div>
+      <div class="tracker-card" style="--tc:#fb923c">
+        <div class="t-icon">🔋</div>
+        <h3>हार्डवेयर सिग्नल्स</h3>
+        <p>बैटरी की स्थिति, सीपीयू कोर संख्या, उपलब्ध मेमोरी और जीपीयू विवरण।</p>
+      </div>
+    </div>
+
+    <p>व्यक्तिगत रूप से इनमें से कोई भी जानकारी अद्वितीय नहीं है। लेकिन जब इन सबको मिला दिया जाता है — स्क्रीन
+      रेजोल्यूशन + फॉन्ट्स + टाइमज़ोन + ब्राउज़र वर्जन + जीेपीयू मॉडल + दर्जनों अन्य सिग्नल्स — तो यह संयोजन एक ऐसा
+      डिजिटल फ़िंगरप्रिंट बन जाता है जो लाखों अन्य डिवाइसों के बीच आपके विशिष्ट डिवाइस की विशिष्ट पहचान करता है। शोध
+      बताते हैं कि 85% से अधिक फ़िंगरप्रिंट पूरी तरह अनूठे होते हैं।</p>
+  </div>
+
+  <div class="post-section" id="tracking-pixels">
+    <h2>4. ट्रैकिंग पिक्सल्स और वेब बीकन्स</h2>
+    <p>एक ट्रैकिंग पिक्सेल वेबपेज या ईमेल में एम्बेड की गई एक बहुत ही छोटी (अक्सर सचमुच केवल 1x1 पिक्सेल, अदृश्य) इमेज
+      होती है। जब आपका ब्राउज़र या ईमेल क्लाइंट इस छवि को लोड करता है, तो यह ट्रैकर के सर्वर पर एक अनुरोध भेजता है — और
+      वह अनुरोध आपके बारे में जानकारी उजागर करता है: आपका आईपी एड्रेस, आपने ईमेल/पेज कब खोला, आपके डिवाइस का प्रकार, और
+      कभी-कभी आपका अनुमानित स्थान।</p>
+    <p>मार्केटिंग ईमेल में "रीड रिसीप्ट" (read receipts) ठीक इसी तरह काम करते हैं — जब आप ट्रैकिंग पिक्सेल वाला ईमेल
+      खोलते हैं, तो प्रेषक को तुरंत सूचित कर दिया जाता है, भले ही आपने किसी लिंक पर क्लिक न किया हो या उत्तर न दिया हो।
+      फेसबुक पिक्सेल, गूगल एनालिटिक्स टैग और लिंक्डइन इनसाइट टैग इसी तकनीक के अलग-अलग रूप हैं, जो विज्ञापनों और
+      उपयोगकर्ता प्रोफाइल बनाने के लिए लाखों वेबसाइटों पर एम्बेड किए जाते हैं।</p>
+  </div>
+
+  <div class="post-section" id="cross-device">
+    <h2>5. क्रॉस-डिवाइस ट्रैकिंग</h2>
+    <p>विज्ञापनदाता आपकी सभी गतिविधियों को आपके सभी डिवाइसों — फोन, लैपटॉप, टैबलेट, स्मार्ट टीवी — से जोड़ना चाहते हैं
+      ताकि एक एकल एकीकृत प्रोफाइल बनाई जा सके। ऐसा कई तरीकों से होता है:</p>
+    <ul>
+      <li><strong>लॉग-इन ट्रैकिंग:</strong> यदि आप कई डिवाइसों पर गूगल या फेसबुक में लॉग इन हैं, तो वे सीधे तौर पर जानते
+        हैं कि इन सभी डिवाइसों को चलाने वाला व्यक्ति एक ही है</li>
+      <li><strong>प्रोबेबिलिस्टिक मैचिंग (अनुमानित मिलान):</strong> एल्गोरिदम साझा आईपी पते (जैसे एक ही घर का वाईफाई),
+        समान ब्राउज़िंग समय और लोकेशन ओवरलैप पैटर्न का विश्लेषण करके अनुमान लगाते हैं कि ये डिवाइस एक ही व्यक्ति के हैं
+      </li>
+      <li><strong>डेटा ब्रोकर मैचिंग:</strong> जो कंपनियां विभिन्न स्रोतों से डेटा एकत्र करती हैं, वे विभिन्न सेवाओं के
+        लिए उपयोग किए जाने वाले आपके ईमेल पते या फोन नंबर का उपयोग करके आपके अलग-अलग डिवाइसों का मिलान कर सकती हैं</li>
+    </ul>
+  </div>
+
+  <div class="post-section" id="who-tracks">
+    <h2>6. आपको कौन और क्यों ट्रैक कर रहा है</h2>
+    <div class="table-wrap">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>ट्रैकर श्रेणी</th>
+            <th>उदाहरण</th>
+            <th>प्राथमिक उद्देश्य</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>विज्ञापन नेटवर्क (Advertising Networks)</td>
+            <td>Google Ads, Meta Ads</td>
+            <td>लक्षित विज्ञापन दिखाने और उनकी प्रभावशीलता मापने के लिए प्रोफाइल बनाना</td>
+          </tr>
+          <tr>
+            <td>विश्लेषण कंपनियाँ (Analytics Companies)</td>
+            <td>Google Analytics, Mixpanel</td>
+            <td>वेबसाइट मालिकों को विज़िटर्स के व्यवहार को समझने में मदद करना</td>
+          </tr>
+          <tr>
+            <td>सोशल मीडिया विजेट्स (Social Media Widgets)</td>
+            <td>Facebook Like बटन, Twitter एम्बेड</td>
+            <td>बिना क्लिक किए भी, केवल विजेट लोड होने पर आपको ट्रैक करना</td>
+          </tr>
+          <tr>
+            <td>डेटा ब्रोकर्स (Data Brokers)</td>
+            <td>Acxiom, Experian Marketing</td>
+            <td>अन्य कंपनियों को बेचने के लिए विस्तृत ग्राहक प्रोफाइल एकत्र करना</td>
+          </tr>
+          <tr>
+            <td>सरकार/आईएसपी (ISPs)</td>
+            <td>अलग-अलग देशों के अनुसार</td>
+            <td>निगरानी, कानून प्रवर्तन, और कुछ मामलों में सेंसरशिप के लिए</td>
+          </tr>
+          <tr>
+            <td>आपका इंटरनेट प्रदाता (Your ISP)</td>
+            <td>Jio, Airtel, अन्य</td>
+            <td>अनएन्क्रिप्टेड ट्रैफ़िक देख सकते हैं, जिसका उपयोग विज्ञापनों या डेटा बिक्री के लिए किया जा सकता है</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="post-section" id="data-used">
+    <h2>7. आपके ट्रैक किए गए डेटा का क्या होता है</h2>
+    <p>डेटा एकत्र होने के बाद, यह आमतौर पर कई चरणों से गुजरता है: एकत्रीकरण (विभिन्न वेबसाइटों के डेटा को मिलाकर एक
+      प्रोफाइल बनाना), वर्गीकरण (आपको विशिष्ट श्रेणियों या रुचियों में डालना — जैसे "यात्रा में रुचि," "पारिवारिक आय
+      वर्ग," या "स्वास्थ्य समस्याएं"), और मुद्रीकरण (उन विज्ञापनदाताओं को डेटा बेचना जो आपके प्रोफाइल से मेल खाने वाले
+      लोगों को लक्षित करना चाहते हैं)।</p>
+    <p>यह डेटा केवल विज्ञापन दिखाने तक सीमित नहीं है। यह उन कीमतों को भी प्रभावित करता है जो आपको उत्पादों के लिए दिखाई
+      जाती हैं (प्राइस डिस्क्रिमिनेशन), सोशल मीडिया पर दिखने वाला कंटेंट (जुड़ाव अनुकूलन, कभी-कभी आक्रोश या उत्तेजना के
+      लिए), कुछ देशों में आपके बीमा प्रीमियम की गणना, और यहाँ तक कि क्रेडिट स्कोरिंग के फैसलों को भी प्रभावित कर सकता
+      है।</p>
+
+    <div class="highlight-box warn">
+      <div class="hb-label">⚠️ वास्तविक चिंता</div>
+      <p>कुछ डेटा ब्रोकर्स ने केवल आपके घूमने और खरीदारी के पैटर्न से बेहद संवेदनशील श्रेणियों का अनुमान लगा लिया है —
+        जैसे गर्भावस्था की स्थिति, मानसिक स्वास्थ्य की स्थिति, वित्तीय संकट, या यौन रुझान — भले ही आपने कभी इन
+        जानकारियों को सीधे तौर पर साझा न किया हो।</p>
+    </div>
+  </div>
+
+  <div class="post-section" id="laws">
+    <h2>8. प्राइवेसी कानून — GDPR, DPDP एक्ट, और अन्य नियम</h2>
+    <p>दुनिया भर के नियामकों ने इन ट्रैकिंग चिंताओं का जवाब नए प्राइवेसी कानूनों के माध्यम से दिया है। इस परिदृश्य को
+      समझने से आपको अपने अधिकारों के बारे में जानने में मदद मिलेगी:</p>
+
+    <h3>GDPR (यूरोपीय संघ)</h3>
+    <p>जनरल डेटा प्रोटेक्शन रेगुलेशन (GDPR) के तहत गैर-आवश्यक कुकीज़ के लिए स्पष्ट सहमति की आवश्यकता होती है, और यह
+      उपयोगकर्ताओं को उनके डेटा तक पहुँचने और उसे हटाने का अधिकार देता है। यही कारण है कि आज आप लगभग हर वेबसाइट पर कुकी
+      सहमति (cookie consent) बैनर देखते हैं — यहाँ तक कि गैर-यूरोपीय संघ की साइटें भी इसका पालन करती हैं क्योंकि उनके
+      पास ईयू के विज़िटर्स हो सकते हैं।</p>
+
+    <h3>भारत का डिजिटल पर्सनल डेटा प्रोटेक्शन (DPDP) एक्ट</h3>
+    <p>भारत का DPDP अधिनियम, जिसे 2023 में पारित किया गया और अब धीरे-धीरे लागू किया जा रहा है, व्यक्तिगत डेटा की सुरक्षा
+      के लिए एक मजबूत ढांचा स्थापित करता है। यह डेटा एकत्र करने के लिए स्पष्ट सहमति अनिवार्य करता है, व्यक्तियों को अपने
+      डेटा को देखने और सुधारने का अधिकार देता है, तथा उल्लंघन होने पर सूचित करना अनिवार्य बनाता है। जैसे-जैसे इसके नियम
+      2025-2026 तक पूरी तरह लागू हो रहे हैं, भारतीय कंपनियाँ अपनी डेटा नीतियों में बड़ा बदलाव कर रही हैं और अपनी डेटा
+      उपयोग प्रक्रियाओं को कड़ा बना रही हैं।</p>
+
+    <h3>कैलिफ़ोर्निया का CCPA/CPRA</h3>
+    <p>कैलिफ़ोर्निया का प्राइवेसी कानून वहां के निवासियों को यह जानने का अधिकार देता है कि उनका कौन सा डेटा एकत्र किया
+      जा रहा है, डेटा की बिक्री से बाहर निकलने (opt out) और उसे डिलीट करने का अधिकार देता है। यह कानून प्रभावशाली है
+      क्योंकि वैश्विक कंपनियां अपनी नीतियों में निरंतरता के लिए इसे सभी यूज़र्स पर लागू करती हैं।</p>
+  </div>
+
+  <div class="post-section" id="protect-tracking">
+    <h2>9. ट्रैकिंग को कैसे कम करें?</h2>
+    <ul class="checklist">
+      <li>डिफ़ॉल्ट रूप से बेहतर ट्रैकिंग सुरक्षा सक्षम करने वाले <strong>Brave</strong> या <strong>Firefox</strong> जैसे
+        प्राइवेसी-केंद्रित ब्राउज़र का उपयोग करें</li>
+      <li><strong>uBlock Origin</strong> इंस्टॉल करें — यह अधिकांश ट्रैकर्स, विज्ञापनों और ट्रैकिंग पिक्सल्स को प्रभावी
+        ढंग से ब्लॉक करता है</li>
+      <li>EFF द्वारा बनाए गए <strong>Privacy Badger</strong> का उपयोग करें, जो ब्राउज़ करते समय स्वचालित रूप से ट्रैकर्स
+        को ब्लॉक करना सीखता है</li>
+      <li><strong>DuckDuckGo</strong> जैसे गोपनीयता-सुरक्षित सर्च इंजन का उपयोग करें ताकि आपके ब्राउज़िंग अनुभवों की
+        प्रोफाइल न बन सके</li>
+      <li>समय-समय पर कुकीज़ डिलीट करें या अपने ब्राउज़र के "Clear browsing data" फीचर का उपयोग करें</li>
+      <li>अलग-अलग ब्राउज़िंग संदर्भों (जैसे काम, व्यक्तिगत, शॉपिंग) को अलग करने के लिए <strong>Firefox
+          Containers</strong> जैसी सुविधाओं का उपयोग करें</li>
+      <li>अपने गूगल और मेटा अकाउंट की सेटिंग्स में जाकर "विज्ञापन वैयक्तिकरण" (Ad personalization) को बंद करें (यह पूरी
+        ट्रैकिंग तो नहीं रोकता लेकिन उपयोग सीमित करता है)</li>
+      <li>अपने आईपी एड्रेस और आईएसपी (ISP) से ट्रैफिक छिपाने के लिए एक विश्वसनीय <strong>VPN</strong> का उपयोग करें।
+        ध्यान रखें कि वीपीएन प्रदाता आपका ट्रैफ़िक देख सकते हैं</li>
+      <li>संवेदनशील सर्च के लिए इनकॉग्निटो/प्राइवेट मोड का उपयोग करें, यह ध्यान में रखते हुए कि यह केवल लोकल हिस्ट्री को
+        छुपाता है, वेबसाइटों को दिखने वाले डेटा को नहीं</li>
+      <li>अपने फोन में ऐप्स को दी गई लोकेशन और विज्ञापन आईडी (Ad ID) ट्रैकिंग की अनुमतियों की समीक्षा करें और उन्हें
+        सीमित करें</li>
+    </ul>
+  </div>
+
+  <div class="post-section" id="future-privacy">
+    <h2>10. ऑनलाइन प्राइवेसी का भविष्य</h2>
+    <p>ऑनलाइन दुनिया में गोपनीयता के नियम अब धीरे-धीरे बदल रहे हैं। ऐप्पल के ऐप ट्रैकिंग ट्रांसपेरेंसी (App Tracking
+      Transparency) ढांचे ने क्रॉस-ऐप ट्रैकिंग के लिए स्पष्ट सहमति की मांग की, और इसके परिणामस्वरूप विज्ञापन ट्रैकिंग
+      सहमति पर केवल 25% से भी कम यूज़र्स ने सहमति दी — जो सर्विलांस-आधारित विज्ञापन मॉडल के लिए एक गहरा झटका था। दूसरी
+      ओर, गूगल की प्राइवेसी सैंडबॉक्स (Privacy Sandbox) पहल थर्ड-पार्टी कुकीज़ को सुरक्षित गोपनीयता-संरक्षण विकल्पों के
+      साथ बदलने का प्रयास कर रही है, हालांकि प्राइवेसी डेवलपर इसकी असली प्रभावशीलता पर अभी भी चिंतित हैं।</p>
+    <p>उद्योग अब व्यक्तिगत-स्तर की ट्रैकिंग के बिना विज्ञापन देने वाली "गोपनीयता-अनुकूल" विज्ञापन तकनीकों जैसे कि
+      ऑन-डिवाइस प्रोसेसिंग, डिफरेंशियल प्राइवेसी और समूह-आधारित (Cohort-based) विज्ञापन की ओर बढ़ रहा है। ये
+      प्रौद्योगिकियां प्राइवेसी सुरक्षित रख पाती हैं या ट्रैकिंग को नए रूप में पेश करती हैं, यह आगे देखने की बात होगी।
+    </p>
+
+    <div class="highlight-box tip">
+      <div class="hb-label">✅ व्यावहारिक सलाह</div>
+      <p>आधुनिक इंटरनेट सेवाओं का उपयोग करते हुए ऑनलाइन पूरी तरह से अदृश्य या गुमनाम रहना असंभव है। इसके पीछे भागना केवल
+        निराशा का कारण बनेगा। एक अधिक व्यावहारिक लक्ष्य ऊपर बताए गए उपकरणों का उपयोग करके अपने ट्रैकिंग फुटप्रिंट को
+        महत्वपूर्ण रूप से कम करना है — यह कदम ही आपको सुरक्षा के मामले में एक औसत इंटरनेट उपभोक्ता से काफी आगे खड़ा कर
+        देगा।</p>
+    </div>
+  </div>
+
+  <div class="post-tags">
+    <span class="ptag">#InternetTracking</span>
+    <span class="ptag">#OnlinePrivacy</span>
+    <span class="ptag">#Cookies</span>
+    <span class="ptag">#BrowserFingerprinting</span>
+    <span class="ptag">#DataPrivacy</span>
+    <span class="ptag">#GDPR</span>
+    <span class="ptag">#DPDPAct</span>
+    <span class="ptag">#DigitalPrivacy</span>
+  </div>
+
+</div>
+        </div>
+    </div>
+    
+    
+    
+    <footer style="background: #2c3e50; color: #ecf0f1; padding: 4rem 2rem 2rem; margin-top: 4rem; font-family: 'Segoe UI', sans-serif;">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: left;">
+            <div>
+                <h3 style="color: #fff; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.4rem;">TyagiHub Blog</h3>
+                <p style="color: #bdc3c7; line-height: 1.6;">TyagiHub एक डिजिटल इकोसिस्टम है जो शिक्षा, साइबर सुरक्षा और आधुनिक तकनीकों पर केंद्रित है। सीखें, बनाएं और आगे बढ़ें।</p>
+            </div>
+            <div>
+                <h3 style="color: #fff; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.4rem;">महत्वपूर्ण लिंक</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 0.8rem;"><a href="index.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">होम (Home)</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="about.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">हमारे बारे में (About Us)</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="contact.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">संपर्क करें (Contact)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="color: #fff; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.4rem;">कानूनी (Legal)</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 0.8rem;"><a href="privacy-policy.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">प्राइवेसी पॉलिसी (Privacy)</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="terms.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">नियम और शर्तें (Terms)</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="disclaimer.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">डिस्क्लेमर (Disclaimer)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 2rem; margin-top: 3rem; border-top: 1px solid #34495e; color: #95a5a6;">
+            <p style="margin: 0;">&copy; 2026 TyagiHub Blog. सर्वाधिकार सुरक्षित (All rights reserved).</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

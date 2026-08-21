@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CapCut वीडियो एडिटिंग मास्टरक्लास 2026: हर एक टूल, फीचर और स्टेप की विस्तृत गाइड - TyagiHub Blog</title>
+    <meta name="description" content="CapCut ऐप से प्रोफेशनल वीडियो एडिट करने की संपूर्ण हिंदी गाइड। सभी 50+ टूल्स, कीफ्रेम, वेलोसिटी कर्व, क्रोमा की, ऑटो-कैप्शन और 4K एक्सपोर्ट सेटिंग्स का पूरा विवरण।">
+    
+    <link rel="stylesheet" href="assets/css/discover.css">
+    <link rel="stylesheet" href="assets/css/shield-discover.css">
+    
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; margin: 0; padding: 0; }
+        header { background: #fff; padding: 1rem 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        header h1 { margin: 0; font-size: 1.5rem; }
+        header h1 a { color: #2c3e50; text-decoration: none; }
+        nav { margin-top: 10px; }
+        nav a { color: #2c3e50; text-decoration: none; margin-left: 15px; font-weight: bold; padding: 8px 16px; background: #f8f9fa; border: 1px solid #eaeaea; border-radius: 6px; transition: all 0.3s; display: inline-block; }
+        nav a:hover { background: #3498db; color: #fff; border-color: #3498db; }
+        .post-container { max-width: 800px; margin: 2rem auto; padding: 2rem; background: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .post-header { margin-bottom: 2rem; text-align: center; }
+        .post-header h1 { color: #2c3e50; font-size: 2.2rem; margin-bottom: 1rem; }
+        .post-header img { max-width: 100%; border-radius: 8px; margin-top: 1rem; }
+        footer { text-align: center; padding: 2rem; background: #fff; margin-top: 3rem; border-top: 1px solid #eaeaea; color: #777; }
+        @media (max-width: 768px) { 
+            header { flex-direction: column; text-align: center; padding: 1rem 0.5rem; } 
+            nav { margin-top: 15px; display: flex; gap: 8px 12px; justify-content: center; flex-wrap: wrap; padding: 0 0.5rem; } 
+            nav a { margin: 0; font-size: 0.95rem; padding: 6px 10px; background: #f8f9fa; border: 1px solid #eaeaea; border-radius: 5px; } 
+            .page-container, .post-container { padding: 1rem !important; margin: 1rem 0.5rem !important; box-sizing: border-box; } 
+            .post-section { padding: 1.2rem !important; margin-bottom: 1.5rem !important; }
+            .hero { padding: 2.5rem 1rem !important; }
+            .container { padding: 0 0.5rem !important; }
+            .grid { gap: 1.5rem !important; }
+        }
+    
+        /* Force Light Theme Overrides for Post Content ONLY */
+        .post-container .post-section, 
+        .post-container .page-content, 
+        .post-container .discover-content, 
+        .post-container .shield-container, 
+        .post-container .shield-card, 
+        .post-container .post-wrap,
+        .post-container [class*="discover-"], 
+        .post-container [class*="shield-"],
+        .post-container .step-card,
+        .post-container .stat-card,
+        .post-container .stat-strip,
+        .post-container .checklist,
+        .post-container .post-hero {
+            background-color: #ffffff !important;
+            color: #333333 !important;
+        }
+        
+        .post-container .post-section {
+            background-color: #ffffff !important;
+            border: 1px solid #eaeaea !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02) !important;
+            border-radius: 8px !important;
+            padding: 2rem !important;
+            margin-bottom: 2rem !important;
+        }
+
+        .post-container .device-card, 
+        .post-container .step-card, 
+        .post-container .stat-card,
+        .post-container .checklist {
+            background-color: #fdfdfd !important;
+            border: 1px solid #eaeaea !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03) !important;
+            color: #444 !important;
+        }
+        
+        .post-container .step-card h3, .post-container .step-card h4,
+        .post-container .stat-val, .post-container .stat-label {
+            color: #2c3e50 !important;
+        }
+        
+        .post-container .step-num {
+            background-color: #3498db !important;
+            color: #fff !important;
+        }
+
+        .post-container .highlight-box {
+            background-color: #fdfbf7 !important;
+            border-left: 4px solid #f39c12 !important;
+            border: 1px solid #eaeaea !important;
+            color: #444 !important;
+        }
+        .post-container .highlight-box.tip {
+            background-color: #f0f8ff !important;
+            border-left-color: #3498db !important;
+        }
+        .post-container .highlight-box.info {
+            background-color: #f1f8ff !important;
+            border-left-color: #2980b9 !important;
+        }
+        .post-container .highlight-box.warn {
+            background-color: #fff5f5 !important;
+            border-left-color: #e74c3c !important;
+        }
+
+        .post-container h1, .post-container h2, .post-container h3, 
+        .post-container h4, .post-container h5, .post-container h6, 
+        .post-container .post-section h2, .post-container .device-card h4, 
+        .post-container .hb-label {
+            color: #2c3e50 !important;
+        }
+        
+        .post-container p, .post-container li, .post-container .device-card p,
+        .post-container .step-card p, .post-container .stat-card p {
+            color: #444444 !important;
+        }
+
+        /* SVG fixes - force icons to show properly */
+        .post-container svg, .post-container path, .post-container rect {
+            fill: currentColor;
+        }
+        .post-container .d-icon {
+            color: var(--card-color, #3498db) !important;
+        }
+
+        /* Increase Width */
+        .post-container, .page-content { 
+            max-width: 1000px !important; 
+        }
+        
+        /* Table fixes */
+        .post-container .styled-table {
+            background-color: #fff !important;
+        }
+        .post-container .styled-table th {
+            background-color: #f1f8ff !important;
+            color: #2c3e50 !important;
+            border-bottom: 2px solid #b3d7ff !important;
+        }
+        .post-container .styled-table td {
+            background-color: #ffffff !important;
+            color: #444 !important;
+            border-bottom: 1px solid #eaeaea !important;
+        }
+        
+        .post-container .post-tags .ptag {
+            background-color: #f1f8ff !important;
+            color: #2980b9 !important;
+            border: 1px solid #d4e6f1 !important;
+        }
+    </style>
+    <link rel="canonical" href="https://tyagihub.in/capcut-video-editing-guide-hi.html" />
+    <meta name="robots" content="index, follow">
+    <meta name="google-adsense-account" content="ca-pub-7067722696020503">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">TyagiHub Blog</a></h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="privacy-policy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <div class="post-container">
+        <div class="post-header">
+            <h1>CapCut वीडियो एडिटिंग मास्टरक्लास 2026: हर एक टूल, फीचर और स्टेप की विस्तृत गाइड</h1>
+        <p style="text-align:center; color:#7f8c8d; font-size:0.95rem; margin-top:-10px; margin-bottom:20px; font-weight:500;">प्रकाशित: 21 अगस्त 2026</p>
+            <img src="assets/images/capcut-video-editing-guide.jpg" alt="CapCut वीडियो एडिटिंग मास्टरक्लास 2026: हर एक टूल, फीचर और स्टेप की विस्तृत गाइड">
+        </div>
+        
+<!-- Google AdSense Ad Block -->
+<div style="text-align: center; margin: 2rem 0; padding: 1rem; border: 1px dashed #ccc; background: #fdfdfd;">
+    <span style="color: #999; font-size: 0.8rem; text-transform: uppercase;">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7067722696020503"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+        
+        <main class="page-content" aria-label="Content">
+            <div class="post-wrap">
+
+  <!-- ============ SECTION 1: INTRODUCTION ============ -->
+  <div class="post-section" id="intro">
+    <h2>1. CapCut मास्टरक्लास 2026 — परिचय और इंटरफ़ेस की पूरी जानकारी</h2>
+    <p>यदि आप मोबाइल या पीसी पर प्रोफेशनल लेवल की वीडियो एडिटिंग सीखना चाहते हैं, तो <strong>CapCut</strong> आज के समय का सबसे शक्तिशाली, बहुआयामी और लोकप्रिय टूल है। चाहे आप इंस्टाग्राम रील्स, यूट्यूब शॉट्स, व्लॉग्स, पॉडकास्ट या कमर्शियल एड्स एडिट करना चाहते हों — CapCut में हर प्रकार की एडिटिंग के लिए एडवांस फीचर्स मौजूद हैं।</p>
+    <p>यह गाइड केवल सामान्य जानकारी नहीं है, बल्कि एक <strong>प्रैक्टिकल मास्टरक्लास (Practical Masterclass)</strong> है जिसमें हम CapCut के हर एक टूल, बटन, मेनू और सब-टूल्स को विस्तार से समझेंगे।</p>
+
+    <div class="stat-strip">
+      <div class="stat-card">
+        <span class="stat-val">50+</span>
+        <div class="stat-label">एडवांस एडिटिंग टूल्स और फीचर्स</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-val">100%</span>
+        <div class="stat-label">वाटरमार्क रहित एक्सपोर्ट की सुविधा</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-val">4K 60FPS</span>
+        <div class="stat-label">अल्ट्रा एचडी वीडियो आउटपुट</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-val">AI Powered</span>
+        <div class="stat-label">स्मार्ट ऑटो-कैप्शन और कटआउट</div>
+      </div>
+    </div>
+
+    <h3>CapCut के इंटरफ़ेस (Workspace Layout) को समझें:</h3>
+    <ul>
+      <li><strong>प्लेयर विंडो (Preview Window):</strong> स्क्रीन के ऊपरी हिस्से में आपकी वीडियो का लाइव प्रिव्यू दिखाई देता है।</li>
+      <li><strong>टाइमलाइन विंडो (Timeline Track):</strong> बीच का हिस्सा जहाँ आपकी वीडियो क्लिप्स, ऑडियो ट्रैक्स, ओवरले और कैप्शन्स परत-दर-परत (Layers) व्यवस्थित होते हैं।</li>
+      <li><strong>प्लेहेड (Playhead / Red Line):</strong> टाइमलाइन पर लंबवत सफेद/लाल रेखा जो दर्शाती है कि इस समय कौन सा फ्रेम प्रिव्यू हो रहा है।</li>
+      <li><strong>मेन टूलबार (Main Toolbar):</strong> स्क्रीन के नीचे स्थित मुख्य मेनू (Edit, Audio, Text, Overlay, Effects, Ratio, Filters, Adjust, Canvas)।</li>
+    </ul>
+  </div>
+
+  <!-- ============ SECTION 2: BASIC CONTROLS ============ -->
+  <div class="post-section" id="basic-tools">
+    <h2>2. टाइमलाइन और बेसिक एडिटिंग टूल्स (Basic Editing Functions)</h2>
+    <p>जब आप टाइमलाइन पर किसी भी वीडियो क्लिप पर टैप करते हैं, तो नीचे <strong>"Edit Menu"</strong> खुलता है। इसके हर एक फंक्शन की कार्यप्रणाली इस प्रकार है:</p>
+
+    <div class="device-grid">
+      <div class="device-card" style="--card-color:#34d399">
+        <div class="d-icon">✂️</div>
+        <h4>1. Split (स्पिलिट / कट लगाना)</h4>
+        <p>प्लेहेड को वीडियो के उस हिस्से पर लाएं जहाँ से काटना हो और 'Split' दबाएं। यह वीडियो को दो अलग-अलग क्लिप्स में विभाजित कर देता है। फालतू हिस्से को हटाने के लिए Delete का उपयोग करें।</p>
+      </div>
+
+      <div class="device-card" style="--card-color:#60a5fa">
+        <div class="d-icon">📐</div>
+        <h4>2. Trim &amp; Crop (ट्रिम और क्रॉप)</h4>
+        <p>क्लिप के किनारों (Handles) को आगे-पीछे खींचकर लम्बाई छोटी-बड़ी करें। 'Crop' टूल से वीडियो के अनचाहे फ्रेम किनारों को काटकर अलग करें।</p>
+      </div>
+
+      <div class="device-card" style="--card-color:#a78bfa">
+        <div class="d-icon">🔊</div>
+        <h4>3. Volume (वॉल्यूम नियंत्रण)</h4>
+        <p>मूल वीडियो के साउंड को 0% से 1000% तक बढ़ाएं या घटाएं। यदि वॉयस-ओवर अलग से जोड़ रहे हैं तो मूल वीडियो का वॉल्यूम 0 कर दें।</p>
+      </div>
+
+      <div class="device-card" style="--card-color:#fb923c">
+        <div class="d-icon">🔄</div>
+        <h4>4. Rotate &amp; Mirror (रोटेट और मिरर)</h4>
+        <p>वीडियो को 90°, 180°, 270° पर घुमाएं। 'Mirror' बटन से वीडियो को क्षैतिज रूप से (Horizontally Flip) उल्टा करें।</p>
+      </div>
+
+      <div class="device-card" style="--card-color:#0891b2">
+        <div class="d-icon">⏪</div>
+        <h4>5. Reverse (रिवर्स प्लेबैक)</h4>
+        <p>वीडियो को उल्टा (पीछे से आगे) चलाएं। यह मैजिक ट्रिक्स, वॉटर फॉल और जंपिंग रील्स में बेहतरीन विजुअल इफ़ेक्ट देता है।</p>
+      </div>
+
+      <div class="device-card" style="--card-color:#f87171">
+        <div class="d-icon">❄️</div>
+        <h4>6. Freeze Frame (फ्रीज फ्रेम)</h4>
+        <p>चलती वीडियो के किसी एक खास फ्रेम को 3 सेकंड के लिए स्थिर चित्र (Still Image) में बदलें। सिनेमैटिक पॉज़ के लिए यह बेस्ट है।</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SECTION 3: VELOCITY & SPEED ============ -->
+  <div class="post-section" id="speed-velocity">
+    <h2>3. स्पीड कंट्रोल और वेलोसिटी एडिट (Speed Curves &amp; Smooth Slow-Mo)</h2>
+    <p>ट्रेंडिंग रील्स में वीडियो का कभी तेज होना और कभी अचानक स्लो-मोशन में चले जाना <strong>Velocity Editing</strong> कहलाता है। CapCut में स्पीड कंट्रोल के दो मोड होते हैं:</p>
+
+    <h3>क) Normal Speed (सामान्य गति)</h3>
+    <p>इसके द्वारा आप पूरी वीडियो क्लिप की स्पीड को एक समान (0.1x स्लो-मोशन से 100x फास्ट-फॉरवर्ड) बदल सकते हैं।</p>
+
+    <h3>ख) Curve Speed (वेलोसिटी कर्व मोड)</h3>
+    <p>'Curve' विकल्प चुनने पर आपको कई प्रीसेट और कस्टम ऑप्शन मिलते हैं:</p>
+    <ul>
+      <li><strong>Montage Pre-set:</strong> स्पोर्ट्स और एक्शन क्लिप्स के लिए स्पीड में उछाल देता है।</li>
+      <li><strong>Hero / Bullet Time:</strong> वीडियो को पहले नॉर्मल, फिर एकदम स्लो और अंत में फिर से फ़ास्ट करता है।</li>
+      <li><strong>Custom Curve Edit:</strong> आप खुद 5 पॉइंट्स को ऊपर-नीचे खींचकर अपनी बीट के अनुसार स्पीड बदल सकते हैं। पॉइंट को ऊपर करने पर फ़ास्ट और नीचे करने पर स्लो होगा।</li>
+    </ul>
+
+    <div class="highlight-tip">
+      <div class="hb-label">🚀 Smooth Slow-Mo (Optical Flow) का जादुई इस्तेमाल</div>
+      <p>जब आप वीडियो को बहुत ज्यादा स्लो (जैसे 0.2x या 0.1x) करते हैं तो वीडियो अटकने (Stutter/Lag) लगती है। इसे मक्खन जैसा स्मूथ बनाने के लिए <strong>Speed -> Normal -> Make it Smoother -> Optical Flow</strong> विकल्प चुनें। CapCut एआई की मदद से बीच के गायब फ्रेम्स खुद बनाकर वीडियो को 60fps स्मूथ बना देगा!</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION 4: KEYFRAMING ============ -->
+  <div class="post-section" id="keyframing">
+    <h2>4. कीफ़्रेम एनिमेशन (Keyframing Masterclass)</h2>
+    <p>कीफ़्रेमिंग किसी भी वीडियो एडिटर का सबसे पावरफुल हथियार है। प्ले बटन के पास दिखने वाला छोटा डायमंड आइकन <strong>Keyframe (+◆)</strong> होता है। इसके जरिए आप किसी भी स्थिर चीज़ में मूवमेंट (गति) ला सकते हैं।</p>
+
+    <h3>कीफ़्रेम काम कैसे करता है? (Step-by-Step):</h3>
+    <ol>
+      <li>टाइमलाइन पर क्लिप के उस बिंदु पर जाएं जहाँ से एनिमेशन शुरू करना है।</li>
+      <li>ऊपर दिख रहे **+◆ (Diamond Icon)** पर टैप करें। टाइमलाइन पर एक लाल/सफेद डायमंड बन जाएगा।</li>
+      <li>अब टाइमलाइन में थोड़ा आगे जाएं (जहाँ एनिमेशन खत्म करना है)।</li>
+      <li>प्रिव्यू स्क्रीन पर वीडियो को ज़ूम करें, किसी भी दिशा में खिसकाएं (Pan), या रोटेट करें। CapCut अपने आप दूसरा कीफ़्रेम लगा देगा।</li>
+      <li>जब आप वीडियो प्ले करेंगे, तो पहला कीफ़्रेम अपने आप दूसरे कीफ़्रेम तक स्मूथली मूव करता हुआ दिखाई देगा!</li>
+    </ol>
+
+    <div class="highlight-tip">
+      <div class="hb-label">💡 कीफ़्रेम से क्या-क्या कर सकते हैं?</div>
+      <p>1. किसी इमेज या टेक्स्ट को स्क्रीन पर बाएं से दाएं स्लाइड करना।<br>
+      2. टॉकिंग-हेड वीडियो में धीरे-धीरे चेहरे पर ज़ूम-इन (Zoom-in) प्रभाव बनाना।<br>
+      3. सिनेमाई इंट्रो में ब्लैक स्क्रीन से वीडियो को अनफेड (Opacity 0% to 100%) करना।</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION 5: MASKING & CUTOUT ============ -->
+  <div class="post-section" id="mask-cutout">
+    <h2>5. मास्किंग, बैकग्राउंड रिमूवल और क्रोमा की (Mask &amp; Cutout)</h2>
+    
+    <h3>क) Cutout / Background Removal (कटआउट टूल)</h3>
+    <p>CapCut में बैकग्राउंड हटाने के 3 तरीके हैं:</p>
+    <ul>
+      <li><strong>Auto Cutout:</strong> केवल 1 टैप में बिना किसी ग्रीन स्क्रीन के इंसान/सब्जेक्ट का बैकग्राउंड गायब कर देता है।</li>
+      <li><strong>Chroma Key (Color Picker):</strong> 'Color Picker' से हरे या किसी विशेष रंग को चुनें, फिर 'Intensity' और 'Shadow' को बढ़ाकर ग्रीन स्क्रीन पूरी तरह हटा दें।</li>
+      <li><strong>Custom Cutout (Brush Tool):</strong> अपनी उंगली से उस हिस्से को पेंट करें जिसे आप काटना चाहते हैं।</li>
+    </ul>
+
+    <h3>ख) Masking Tools (मास्किंग टूल्स)</h3>
+    <p>मास्क का उपयोग वीडियो के किसी विशेष हिस्से को छुपाने या दिखाने के लिए किया जाता है:</p>
+
+    <div class="device-grid">
+      <div class="device-card" style="--card-color:#16a34a">
+        <div class="d-icon">📏</div>
+        <h4>Linear Mask</h4>
+        <p>सीधी रेखा में स्क्रीन को दो हिस्सों में बांटता है। क्लोन (Clone Effects) और बिफोर-आफ्टर वीडियो में इस्तेमाल होता है।</p>
+      </div>
+
+      <div class="device-card" style="--card-color:#1d4ed8">
+        <div class="d-icon">⭕</div>
+        <h4>Circle / Circle Mask</h4>
+        <p>गोलाकार मास्क जो गेमिंग व्लॉग्स या रिएक्शन वीडियो में चेहरा दिखाने के लिए कोने में लगाया जाता है।</p>
+      </div>
+
+      <div class="device-card" style="--card-color:#7c3aed">
+        <div class="d-icon">🎞️</div>
+        <h4>Filmstrip &amp; Rectangle</h4>
+        <p>सिनेमैटिक ब्लैक बार्स (Cinematic Bars) और आयताकार फ्रेम्स बनाने के लिए उपयोग होता है।</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SECTION 6: AUDIO & SOUND DESIGN ============ -->
+  <div class="post-section" id="audio-design">
+    <h2>6. साउंड डिजाइन, वॉइस इफेक्ट्स और नॉइज़ रिडक्शन (Audio Mastery)</h2>
+    <p>एक बेहतरीन वीडियो में 50% योगदान उसकी आवाज़ का होता है। CapCut का <strong>Audio Menu</strong> अत्यंत समृद्ध है:</p>
+
+    <ul>
+      <li><strong>Extract Audio (ऑडियो एक्सट्रैक्ट):</strong> किसी भी वीडियो का केवल MP3 साउंड अलग करके टाइमलाइन पर लाएं।</li>
+      <li><strong>Auto Beats (बीट सिंक):</strong> संगीत की बीट पर अपने आप पीले बिंदु (Yellow Dots) लगाता है, जहाँ आप परफेक्ट वीडियो कट लगा सकते हैं।</li>
+      <li><strong>Noise Reduction (शोर कम करना):</strong> बैकग्राउंड में आ रहे पंखे, ट्रैफिक या हवा के शोर को 1 क्लिक में साफ करता है।</li>
+      <li><strong>Voice Effects (आवाज़ बदलना):</strong> अपनी आवाज़ को Deep, Chipmunk, Robot, Echo, Mic, या Elf जैसी विभिन्न आवाज़ों में बदलें।</li>
+      <li><strong>Fade In / Fade Out:</strong> आवाज़ की शुरुआत और अंत को धीरे-धीरे तेज़ या धीमा करें ताकि कट अजीब न लगे।</li>
+    </ul>
+  </div>
+
+  <!-- ============ SECTION 7: TEXT & AUTO CAPTIONS ============ -->
+  <div class="post-section" id="text-captions">
+    <h2>7. टेक्स्ट, ऑटो-कैप्शन और एनिमेटेड टाइटल्स (Text &amp; Auto Captions)</h2>
+    <p>सोशल मीडिया पर 70% लोग बिना आवाज़ के रील्स देखते हैं, इसलिए कैप्शन्स लगाना अनिवार्य है:</p>
+
+    <div class="highlight-tip">
+      <div class="hb-label">📝 ऑटो-कैप्शन लगाने का सबसे आसान तरीका</div>
+      <p>1. मेन टूलबार में <strong>Text -> Auto Captions</strong> पर क्लिक करें।<br>
+      2. अपनी भाषा चुनें (English / Hindi / Mixed)।<br>
+      3. **"Start"** पर क्लिक करें। CapCut कुछ सेकंड में आपकी वॉयस को कैप्शन्स में बदल देगा।<br>
+      4. **"Batch Edit"** में जाकर यदि कोई स्पेलिंग गलत हो तो सुधार लें।<br>
+      5. **"Style &amp; Animation"** में जाकर मनपसंद फॉन्ट, ग्लो, शैडो और काइनेटिक एनिमेशन (जैसे 1-1 शब्द का चमकना) सेट करें!</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION 8: FILTERS & COLOR GRADING ============ -->
+  <div class="post-section" id="color-grading">
+    <h2>8. कलर करेक्शन और सिनेमैटिक कलर ग्रेडिंग (Adjust &amp; Filters)</h2>
+    <p>अपनी वीडियो को बॉलीवुड या हॉलीवुड जैसी रिच रंगत देने के लिए <strong>Adjust Menu</strong> का उपयोग करें:</p>
+
+    <div class="table-wrap">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>टूल का नाम</th>
+            <th>कार्य और उपयोग</th>
+            <th>अनुशंसित वैल्यू</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Brightness / Contrast</strong></td>
+            <td>लाइट कम-ज़्यादा करना और डार्क टोन को गहरा करना</td>
+            <td>Contrast +5 से +15</td>
+          </tr>
+          <tr>
+            <td><strong>Saturation / Vibrance</strong></td>
+            <td>रंगों को ज्यादा चटकीला और जीवंत बनाना</td>
+            <td>Vibrance +10 से +20</td>
+          </tr>
+          <tr>
+            <td><strong>Sharpen</strong></td>
+            <td>धुंधली वीडियो में डिटेल्स और शार्पनेस बढ़ाना</td>
+            <td>+15 से +30</td>
+          </tr>
+          <tr>
+            <td><strong>HSL Color Wheels</strong></td>
+            <td>किसी एक विशेष रंग (जैसे लाल, हरा, नीला) की टोन बदलना</td>
+            <td>हरा रंग (Background Grass) +30</td>
+          </tr>
+          <tr>
+            <td><strong>Temperature (WB)</strong></td>
+            <td>वीडियो को वार्म (पीला/सूरज) या कूल (नीला/सिनेमैटिक) बनाना</td>
+            <td>कूल लुक के लिए -10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ============ SECTION 9: EXPORT SETTINGS ============ -->
+  <div class="post-section" id="export-guide">
+    <h2>9. 4K एक्सपोर्ट सेटिंग्स (Export in Highest Quality)</h2>
+    <p>सब कुछ एडिट करने के बाद स्क्रीन के ऊपर दाईं ओर **1080p** बटन पर टैप करें और ये सेटिंग्स रखें:</p>
+
+    <ul>
+      <li><strong>Resolution:</strong> 1080p (यदि यूट्यूब/रील्स है) या 2K/4K (यदि बहुत हाई क्वालिटी कैमरा है)।</li>
+      <li><strong>Frame Rate:</strong> 30 fps (स्टैंडर्ड) या 60 fps (स्मूथ स्लो-मोशन के लिए)।</li>
+      <li><strong>Code Rate (Bitrate):</strong> High / Recommended (बिटरेट ज्यादा रखने से वीडियो पिक्सल फटती नहीं है)।</li>
+      <li><strong>Smart HDR:</strong> यदि आपकी डिवाइस सपोर्ट करती है तो इसे ऑन रखें।</li>
+    </ul>
+    <p>इसके बाद **Export Button (Arrow Up)** पर टैप करें। आपकी वीडियो बिना किसी वाटरमार्क के गैलरी में सेव हो जाएगी!</p>
+  </div>
+
+  <!-- ============ SECTION 10: CONCLUSION ============ -->
+  <div class="post-section" id="conclusion">
+    <h2>10. निष्कर्ष और अगले कदम</h2>
+    <p>CapCut केवल एक ऐप नहीं है, बल्कि यह एक पूरा एडिटिंग स्टूडियो है। इस गाइड में बताए गए हर एक टूल का अभ्यास करें, कीफ़्रेम और वेलोसिटी कर्व को समझें और आज ही अपनी पहली प्रोफेशनल वीडियो एडिट करें!</p>
+
+    <div style="margin-top:2rem; display:flex; flex-wrap:wrap; gap:1rem; justify-content:center;">
+      <a href="/hi/learn/video-editing-earning-guide/"
+        style="display:inline-flex; align-items:center; gap:0.6rem; padding:0.85rem 1.8rem; background:linear-gradient(135deg,#005B99,#0077cc); color:#fff; font-weight:700; font-size:1rem; border-radius:50px; text-decoration:none; box-shadow:0 4px 15px rgba(0,91,153,0.4);">
+        🎬 वीडियो एडिटिंग से कमाई की पूरी गाइड
+      </a>
+      <a href="/tools/"
+        style="display:inline-flex; align-items:center; gap:0.6rem; padding:0.85rem 1.8rem; background:linear-gradient(135deg,#34d399,#059669); color:#fff; font-weight:700; font-size:1rem; border-radius:50px; text-decoration:none; box-shadow:0 4px 15px rgba(52,211,153,0.4);">
+        🛠️ TyagiHub Free Online Tools
+      </a>
+    </div>
+  </div>
+
+</div>
+        </div>
+    </div>
+    
+    
+    
+    <footer style="background: #2c3e50; color: #ecf0f1; padding: 4rem 2rem 2rem; margin-top: 4rem; font-family: 'Segoe UI', sans-serif;">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: left;">
+            <div>
+                <h3 style="color: #fff; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.4rem;">TyagiHub Blog</h3>
+                <p style="color: #bdc3c7; line-height: 1.6;">TyagiHub एक डिजिटल इकोसिस्टम है जो शिक्षा, साइबर सुरक्षा और आधुनिक तकनीकों पर केंद्रित है। सीखें, बनाएं और आगे बढ़ें।</p>
+            </div>
+            <div>
+                <h3 style="color: #fff; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.4rem;">महत्वपूर्ण लिंक</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 0.8rem;"><a href="index.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">होम (Home)</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="about.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">हमारे बारे में (About Us)</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="contact.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">संपर्क करें (Contact)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="color: #fff; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.4rem;">कानूनी (Legal)</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 0.8rem;"><a href="privacy-policy.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">प्राइवेसी पॉलिसी (Privacy)</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="terms.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">नियम और शर्तें (Terms)</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="disclaimer.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">डिस्क्लेमर (Disclaimer)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 2rem; margin-top: 3rem; border-top: 1px solid #34495e; color: #95a5a6;">
+            <p style="margin: 0;">&copy; 2026 TyagiHub Blog. सर्वाधिकार सुरक्षित (All rights reserved).</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
