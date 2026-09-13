@@ -295,3 +295,44 @@ ul { list-style: none; }
 .author-box { margin-top:50px; padding:30px; background:var(--bg-alt); border-radius:12px; border:1px solid var(--border-color); }
 .author-box-inner { display:flex; gap:25px; align-items:center; flex-wrap:wrap; }
 .author-box img { width:85px !important; height:85px !important; max-width:85px !important; border-radius:50%; border:3px solid var(--primary-color); object-fit:cover; display:block; }
+
+
+/* --- Mobile Responsive Fixes --- */
+@media (max-width: 768px) {
+    .layout-wrapper, .layout-mega, .container {
+        padding: 0 10px !important;
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+    .blog-container, .seo-content-block, .author-profile {
+        padding: 15px !important;
+    }
+    .blog-header h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.4 !important;
+    }
+    .blog-content h2 {
+        font-size: 1.5rem !important;
+        margin-top: 30px !important;
+    }
+    .blog-content h3 {
+        font-size: 1.3rem !important;
+    }
+    .blog-content p, .blog-content li {
+        font-size: 1.05rem !important;
+        line-height: 1.6 !important;
+    }
+}
+
+/* --- Table Overflow Fix --- */
+.blog-content table {
+    display: block !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap; /* Forces table to not wrap text, creating the scroll effect */
+}
+.blog-content th, .blog-content td {
+    white-space: normal; /* Allow some wrapping inside cells if needed, but the table can still scroll */
+    min-width: 150px; /* Ensures columns don't crush to zero width */
+}
