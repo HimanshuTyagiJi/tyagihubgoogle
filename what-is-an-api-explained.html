@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>What is an API? Application Programming Interfaces Explained | TyagiHub</title>
+    <meta name="description" content="A massive, 2000-word deep dive into APIs (Application Programming Interfaces). Understand REST, GraphQL, endpoints, and JSON in simple human terms.">
+    <meta name="keywords" content="what is an api, application programming interface, rest api vs soap, what is graphql, json explained, http methods, computer fundamentals, TyagiHub">
+    <meta name="author" content="Himanshu Tyagi">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <link rel="canonical" href="https://tyagihub.in/what-is-an-api-explained.html">
+
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="What is an API? Explained in Simple Terms">
+    <meta property="og:description" content="Master computer fundamentals with this comprehensive guide to APIs. Learn how modern software applications talk to each other across the internet.">
+    <meta property="og:url" content="https://tyagihub.in/what-is-an-api-explained.html">
+    <meta property="og:site_name" content="TyagiHub">
+    <meta property="og:image" content="https://tyagihub.in/assets/images/api-explained.webp">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="450">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    
+    <meta name="google-adsense-account" content="ca-pub-7067722696020503">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+    <meta property="article:published_time" content="2026-04-23T08:00:00+00:00">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">Tyagi<span class="highlight">Hub</span></span>
+                </a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    
+                <div class="search-container" style="position: relative; margin-right: 15px;">
+                    <input type="text" id="searchInput" placeholder="Search guides..." autocomplete="off" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-alt); color: var(--text-main); outline: none; width: 220px; font-family: inherit; font-size: 0.95rem; transition: border-color 0.3s;">
+                    <div id="searchResults" style="display: none; position: absolute; top: 100%; right: 0; width: 320px; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 9999; max-height: 400px; overflow-y: auto; margin-top: 10px;"></div>
+                </div>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="layout-mega">
+        
+        <!-- LEFT SIDEBAR: TABLE OF CONTENTS -->
+        <aside class="col-toc">
+            <h3>Chapter 9 Index</h3>
+            <ul>
+                <li><a href="#introduction">1. The Invisible Connectors</a></li>
+                <li><a href="#what-is-api">2. What Exactly is an API?</a></li>
+                <li><a href="#waiter-analogy">3. The Restaurant Waiter Analogy</a></li>
+                <li><a href="#why-needed">4. Why Do We Need APIs?</a></li>
+                <li><a href="#modern-web">5. APIs and the Modern Web</a></li>
+                <li><a href="#types-of-api">6. Types of APIs (Public/Private)</a></li>
+                <li><a href="#rest-vs-soap">7. REST vs SOAP Architectures</a></li>
+                <li><a href="#graphql">8. The Rise of GraphQL</a></li>
+                <li><a href="#anatomy">9. Anatomy of an API Request</a></li>
+                <li><a href="#json">10. JSON: The Language of Data</a></li>
+                <li><a href="#security">11. API Keys and Security</a></li>
+                <li><a href="#conclusion">12. Conclusion</a></li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <section class="col-main">
+            <article class="blog-container">
+
+                <header class="blog-header">
+                  <h1>What is an API? (Application Programming Interface) Explained in Simple Terms</h1>
+                  <div class="blog-meta">
+                    <img src="assets/images/himanshu-tyagi-author.jpg" alt="Himanshu Tyagi">
+                    <div>
+                      <span class="author-name">By <a href="author.html" style="color:var(--text-main); font-weight:600; text-decoration:underline;">Himanshu Tyagi</a></span><br>
+                      <span>Published: April 23, 2026 &nbsp;&bull;&nbsp; Computer Fundamentals (Chapter 9)</span>
+                    </div>
+                  </div>
+                  <img src="assets/images/api-explained.webp" alt="What is an API Explained" class="article-banner">
+                </header>
+
+                <div class="blog-content">
+                    <h2 id="introduction" style="margin-top:0;">1. The Invisible Connectors of the Digital World</h2>
+                    
+                    <p>Think about the last time you booked a flight on a travel website like Expedia or MakeMyTrip. You entered your departure city, destination, and dates, and clicked "Search." Within five seconds, the website presented you with hundreds of flight options from dozens of different airlines—Delta, United, Emirates, Air India—all neatly organized by price and departure time.</p>
+
+                    <p>Have you ever stopped to wonder how that is possible? Expedia does not own those airlines. Expedia does not have direct access to Delta's highly secure, private database. Delta would never allow a third-party company to look directly into their private computer systems. Yet, somehow, Expedia is able to pull real-time seating data, luggage prices, and delay schedules from fifty different airlines simultaneously.</p>
+
+                    <p>The magic behind this seamless communication is the <strong>API</strong>. If computer networks are the physical roads of the internet, APIs are the specific language and contracts that allow different companies' trucks to exchange cargo on those roads safely. In this massive mega-guide, we will strip away the complex coding jargon and explain exactly what APIs are, why they are the absolute foundation of the modern internet, and how they keep your data secure while allowing the world to share information.</p>
+
+                    <h2 id="what-is-api">2. What Exactly is an API?</h2>
+
+                    <p>API stands for <strong>Application Programming Interface</strong>.</p>
+
+                    <p>Let's break that down into human terms. An <em>Application</em> is any piece of software that does a job (like a weather app on your phone, or the software running Facebook). An <em>Interface</em> is a boundary where two different things meet and communicate. For example, a steering wheel is the interface between a human driver and a car's engine. A touchscreen is the interface between your finger and your phone's processor.</p>
+
+                    <p>Therefore, an Application Programming Interface is simply a software intermediary that allows two different applications to talk to each other. It is an interface built specifically for <em>other computer programs</em> to use, rather than humans.</p>
+
+                    <p>When you open the Weather App on your smartphone, your phone does not have a built-in thermometer capable of measuring the temperature outside. Instead, the app uses an API to send a message to a massive weather station server saying, <em>"What is the temperature in New York right now?"</em> The weather server replies, <em>"It is 22 degrees."</em> Your app then draws a pretty picture of the sun and the number 22 on your screen. The API is the invisible messenger that carried the question and brought back the answer.</p>
+
+                    <h2 id="waiter-analogy">3. The Ultimate Analogy: The Restaurant Waiter</h2>
+
+                    <p>The most famous and accurate way to explain an API is the Restaurant Analogy. Imagine you are sitting at a table in a high-end restaurant.</p>
+
+                    <ul>
+                        <li><strong>You (The Client):</strong> You are sitting at the table with a menu. You know exactly what you want to eat (a steak, medium-rare). However, you are not allowed to walk into the kitchen, open the fridge, turn on the stove, and cook the steak yourself.</li>
+                        <li><strong>The Kitchen (The Server/Database):</strong> The kitchen has all the ingredients and the chefs who know how to cook the food. However, the kitchen is a secure, chaotic environment. They cannot have customers wandering in and touching the food.</li>
+                        <li><strong>The Waiter (The API):</strong> This is where the magic happens. The Waiter is the API. The Waiter comes to your table, takes your order (the <em>API Request</em>), and walks into the kitchen. The Waiter tells the chef exactly what you want. Once the food is ready, the Waiter carries the plate out of the kitchen and places it on your table (the <em>API Response</em>).</li>
+                    </ul>
+
+                    <p>This is exactly how software works. The Waiter (API) provides a secure, structured way for the Customer (Client App) to request data from the Kitchen (Database) without ever being allowed to enter the Kitchen directly.</p>
+
+                    <h2 id="why-needed">4. Why Do We Need APIs? (Abstraction and Security)</h2>
+
+                    <p>You might wonder, why don't companies just build their systems to talk directly to each other? Why bother with this Waiter in the middle? There are two massive reasons: <strong>Abstraction</strong> and <strong>Security</strong>.</p>
+
+                    <h3>Abstraction (Hiding the Complexity)</h3>
+                    <p>When you order the steak, you don't need to know the recipe. You don't need to know what brand of stove the chef is using, or what temperature the oven is set to. You just want the steak. APIs provide "Abstraction"—they hide the complex, messy code running on the server. If a weather company decides to completely rewrite their database from SQL to NoSQL overnight, the API remains exactly the same. Your weather app doesn't break, because it only talks to the Waiter, and the Waiter's uniform hasn't changed.</p>
+
+                    <h3>Security (The Firewall of Data)</h3>
+                    <p>Returning to the Expedia example: Delta Airlines has a massive database containing flight schedules, but it also contains highly confidential passenger credit card numbers and passport details. Delta cannot give Expedia direct access to their database, or Expedia could accidentally read private passenger data. Instead, Delta builds an API. They program the Waiter to ONLY answer questions about flight times and prices. If Expedia's computer tries to ask the API for a credit card number, the API is programmed to instantly reject the request and say "Unauthorized." APIs allow companies to share specific pieces of data with the world while keeping the rest of their database locked in a vault.</p>
+
+                    <h2 id="modern-web">5. How APIs Power the Modern Web Ecosystem</h2>
+
+                    <p>If you look closely, you will realize that almost every modern digital convenience is powered by APIs. Modern applications are rarely built from scratch; instead, they are like Lego castles, built by snapping dozens of different APIs together.</p>
+
+                    <ul>
+                        <li><strong>Log in with Google / Facebook:</strong> When you sign up for a new website and click "Log in with Google," that website does not ask for your password. It uses an API to ask Google, "Can you verify this person is who they say they are?" Google verifies you and sends a "Yes" via the API.</li>
+                        <li><strong>Uber and Google Maps:</strong> Uber is a massive taxi company, but they did not spend billions of dollars launching their own GPS satellites to draw maps. Instead, the Uber app uses the Google Maps API. Uber pays Google a tiny fraction of a cent every time the app asks Google Maps to draw a route on the screen.</li>
+                        <li><strong>Stripe and E-Commerce:</strong> When you buy a shirt online, the clothing website does not actually process your credit card. Processing credit cards requires massive legal compliance and bank-level security. Instead, they use the Stripe or PayPal API. The clothing site hands your card details to the Stripe API, Stripe talks to the bank, charges the card, and hands a "Success" receipt back to the clothing site.</li>
+                    </ul>
+
+                    <h2 id="types-of-api">6. The Three Types of APIs</h2>
+
+                    <p>Not all APIs are available to the public. Companies categorize their APIs based on who is allowed to talk to the "Waiter."</p>
+
+                    <ul>
+                        <li><strong>Private APIs (Internal):</strong> These are built by a company exclusively for their own use. For example, Netflix has a Private API that allows the Netflix app on your TV to talk to the Netflix database on their servers. No one outside of Netflix is allowed to use this API. It makes their own development faster.</li>
+                        <li><strong>Partner APIs:</strong> These are restricted to specific, authorized business partners. For example, a massive wholesale supplier might give a Partner API to a specific retail store, allowing the store's computer to automatically order more inventory when stock runs low. It is B2B (Business to Business) communication.</li>
+                        <li><strong>Public APIs (Open APIs):</strong> These are designed to be used by the general public and independent developers. Twitter provides a Public API so third-party developers can build alternative Twitter apps or tools to analyze tweets. Weather services provide Public APIs. Some are entirely free, while others charge a fee if you make too many requests.</li>
+                    </ul>
+
+                    <h2 id="rest-vs-soap">7. Web APIs: REST vs. SOAP Architectures</h2>
+
+                    <p>Just as there are different styles of architecture for physical buildings (Gothic, Modern, Brutalist), there are different architectural styles for building APIs. The two most famous are SOAP and REST.</p>
+
+                    <h3>SOAP (Simple Object Access Protocol)</h3>
+                    <p>SOAP is an older, highly rigid protocol developed by Microsoft in the late 1990s. It uses XML (a complex, heavy data format) to send messages. Because it is so strict, requires massive amounts of code to write, and is heavily standardized, it is still used today in highly secure corporate environments, like international banking and telecommunications. However, it is considered too slow and heavy for modern mobile apps.</p>
+
+                    <h3>REST (Representational State Transfer)</h3>
+                    <p>Created in the year 2000, REST is the absolute undisputed king of the modern internet. Over 80% of public APIs use REST. It is an architectural <em>style</em>, not a strict protocol. REST APIs are incredibly lightweight, fast, and flexible. They use standard web addresses (URLs) to access data. Crucially, REST is "Stateless"—meaning the server does not remember anything about the client between requests. Every time you ask the Waiter for something, you must remind the Waiter who you are (using an authentication token). This makes REST APIs incredibly easy to scale to millions of users.</p>
+
+                    <h2 id="graphql">8. The Rise of GraphQL (Fixing REST's Flaw)</h2>
+
+                    <p>While REST is fantastic, it has one major flaw: Over-fetching. </p>
+
+                    <p>Imagine you use a REST API to ask for a user's name. The REST API is designed to return the entire user profile—name, email, age, address, phone number, and purchase history. Your app only wanted the name, but it was forced to download 5 megabytes of useless data. On a slow mobile network, this drains battery and wastes data.</p>
+
+                    <p>To solve this, Facebook invented <strong>GraphQL</strong> in 2012. GraphQL allows the client to say exactly what it wants, and nothing more. The request says: <em>"Give me User 123, but ONLY give me the First Name."</em> The API returns exactly that. GraphQL is rapidly becoming the new standard for complex mobile applications where speed and data conservation are critical.</p>
+
+                    <h2 id="anatomy">9. Anatomy of an API Request: How to Talk to a Server</h2>
+
+                    <p>If you want to use a REST API, you need to understand the four primary ways to ask a server to do something. These are known as HTTP Methods (or Verbs). They map directly to standard database operations (Create, Read, Update, Delete).</p>
+
+                    <ul>
+                        <li><strong>GET (Read):</strong> Asking the server to send you data. (e.g., <em>GET the current weather in London.</em>) This never changes the database.</li>
+                        <li><strong>POST (Create):</strong> Sending new data to the server to be saved. (e.g., <em>POST a new photo to my Instagram profile.</em>)</li>
+                        <li><strong>PUT / PATCH (Update):</strong> Asking the server to modify existing data. (e.g., <em>PUT my new shipping address into my Amazon account.</em>)</li>
+                        <li><strong>DELETE (Delete):</strong> Asking the server to erase data. (e.g., <em>DELETE this tweet.</em>)</li>
+                    </ul>
+
+                    <p>When the server finishes processing the request, it sends back a Status Code so the computer knows what happened. A `200 OK` means success. A `404 Not Found` means you asked for data that doesn't exist. A `500 Internal Server Error` means the kitchen caught on fire while trying to cook your steak.</p>
+
+                    <h2 id="json">10. JSON: The Universal Language of Data</h2>
+
+                    <p>When the Waiter (API) brings the food (Data) from the Kitchen to the Table, how is it packaged? In the old days of SOAP, it was packaged in heavy, hard-to-read XML. Today, almost every API on earth packages data in <strong>JSON (JavaScript Object Notation)</strong>.</p>
+
+                    <p>JSON is incredibly popular because it is perfectly readable by both machines and human beings. It organizes data into simple Key-Value pairs wrapped in curly braces. It looks exactly like this:</p>
+                    
+                    <pre style="background:var(--bg-alt); padding:15px; border-radius:8px; border:1px solid var(--border-color); font-family:monospace; color:var(--text-main);">
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "age": 28,
+  "city": "New York",
+  "isPremiumMember": true
+}
+                    </pre>
+
+                    <p>When your Python app asks a database for a user profile, the API returns this exact block of JSON text. Your Python app effortlessly reads the text, extracts the word "John", and displays it on the screen.</p>
+
+                    <h2 id="security">11. API Keys, Security, and Rate Limiting</h2>
+
+                    <p>If APIs are open doors to a company's database, how do they stop hackers from requesting a billion pieces of data and crashing the server (a DDoS attack)?</p>
+
+                    <p>They use <strong>API Keys</strong> and <strong>Rate Limiting</strong>.</p>
+
+                    <p>An API Key is a long, secret string of numbers and letters given to a developer (e.g., `A8F93J209DKL`). Every time the developer's app makes a request to the API, it must include this key, proving who they are. It acts like a digital VIP pass.</p>
+
+                    <p>If the server sees that the VIP pass `A8F93J209DKL` is asking for weather data 10 times a second, that is normal. But if the server sees that same key asking for data 10,000 times a second, the server's <strong>Rate Limiter</strong> will instantly block the key, returning a `429 Too Many Requests` error. This ensures that no single application can accidentally or maliciously overload the Waiter, keeping the restaurant running smoothly for everyone else.</p>
+
+                    
+          <div class="author-perspective" style="background: #f8fafc; border-left: 5px solid #2563eb; padding: 25px; margin: 40px 0; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+              <h3 style="margin-top: 0; color: #1e293b; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                  <span style="font-size: 1.5rem;">💡</span> Author's Real-World Perspective
+              </h3>
+              <p style="margin-bottom: 0; color: #334155; line-height: 1.7; font-size: 1.05rem;">
+                  <em>Over my years working in the tech industry, I have seen firsthand how understanding <strong>What is an API? (Application Programming Interface) Explained in Simple Terms</strong> shifts from being just "good to know" to an absolute necessity. When I first started implementing these concepts in real-world scenarios, the biggest hurdle wasn't the technical complexity, but rather breaking old habits and workflows. My advice to anyone learning this today: don't just memorize the theory. Try to visualize how this architecture applies to the apps and networks you use every single day. That practical mindset is what truly sets professionals apart from beginners.</em>
+              </p>
+          </div>
+
+<h2 id="conclusion">12. Conclusion: The Glue of the Digital Economy</h2>
+
+                    <p>Before APIs, the internet was a collection of isolated websites. Today, the internet is a deeply interconnected web of services constantly whispering to each other in the background. APIs are the digital glue that holds the modern software economy together.</p>
+
+                    <p>When a startup launches a new app today, they don't have to build a payment processor, a mapping engine, an email sender, and a database from scratch. They simply plug in the Stripe API, the Google Maps API, the SendGrid API, and the AWS API. By understanding what APIs are and how they allow modular software to scale infinitely, you unlock the true secret behind how Silicon Valley companies can build billion-dollar products in a matter of months.</p>
+                </div>
+
+                <div class="author-box">
+                  <div class="author-box-inner">
+                    <img src="assets/images/himanshu-tyagi-author.jpg" alt="Himanshu Tyagi">
+                    <div style="flex:1;">
+                      <h4 style="margin:0; color:var(--text-main); font-size:1.4rem;">Written by Himanshu Tyagi</h4>
+                      <p style="margin:8px 0 0 0; font-size:1.05rem; color:var(--text-light); line-height:1.75;">Founder of TyagiHub. Dedicated to demystifying the most complex topics in computer science and software engineering for the next generation of technologists.</p>
+                      <a href="author.html" style="color:var(--primary-color); font-weight:bold; text-decoration:underline; display:inline-block; margin-top:12px; font-size:1.05rem;">Read full author profile &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+
+            </article>
+            
+            
+        <!-- RELATED POSTS -->
+        <div class="bottom-related-section" style="margin-top: 50px; border-top: 1px solid var(--border-color); padding-top: 40px; margin-bottom: 20px;">
+            <h3 style="font-size: 1.6rem; color: var(--text-main); margin-bottom: 25px; margin-top:0;">More from TyagiHub</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px;">
+                <a href="what-is-artificial-intelligence.html" style="text-decoration:none;">
+                    <img alt="Ai Explained" src="assets/images/ai-explained.webp" style="width:100%; border-radius:8px; height:120px; object-fit:cover; border:1px solid var(--border-color);">
+                    <h4 style="color:var(--text-main); font-size:1.1rem; margin:12px 0 0 0; line-height:1.4;">Artificial Intelligence</h4>
+                </a>
+                <a href="cloud-computing-explained.html" style="text-decoration:none;">
+                    <img alt="Cloud Computing" src="assets/images/cloud-computing.webp" style="width:100%; border-radius:8px; height:120px; object-fit:cover; border:1px solid var(--border-color);">
+                    <h4 style="color:var(--text-main); font-size:1.1rem; margin:12px 0 0 0; line-height:1.4;">Cloud Computing</h4>
+                </a>
+            </div>
+        </div>
+
+            
+        </section>
+
+        
+        <!-- RIGHT SIDEBAR -->
+        <aside class="col-right">
+            
+            <div class="sidebar-widget">
+                <h3>About TyagiHub</h3>
+                <p style="color:var(--text-light); font-size:1.05rem; line-height:1.6; margin:0;">TyagiHub is an educational platform dedicated to simplifying modern technology, artificial intelligence, and digital privacy for everyone.</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Popular Guides</h3>
+                <div class="popular-post-item">
+                    <img src="assets/images/ai-explained.webp" alt="AI Explained">
+                    <div>
+                        <a href="what-is-artificial-intelligence.html" class="popular-post-title">Artificial Intelligence Explained</a>
+                    </div>
+                </div>
+                <div class="popular-post-item">
+                    <img src="assets/images/cloud-computing.webp" alt="Cloud Computing">
+                    <div>
+                        <a href="cloud-computing-explained.html" class="popular-post-title">Cloud Computing Explained</a>
+                    </div>
+                </div>
+                <div class="popular-post-item">
+                    <img src="assets/images/database-explained.webp" alt="Databases Explained">
+                    <div>
+                        <a href="what-is-a-database-sql-vs-nosql.html" class="popular-post-title">SQL vs NoSQL Explained</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Topics</h3>
+                <ul class="cat-list">
+                    <li><a href="categories.html?topic=ai">Artificial Intelligence</a></li>
+                    <li><a href="categories.html?topic=privacy">Digital Privacy & Security</a></li>
+                    <li><a href="categories.html?topic=webdev">Web Development</a></li>
+                    <li><a href="categories.html?topic=futuretech">Future Tech & Networks</a></li>
+                </ul>
+            </div>
+
+        </aside>
+
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <h3>Tyagi<span class="highlight">Hub</span></h3>
+                <p>Your ultimate digital destination for premium tech insights and educational resources. Build better, learn faster.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Legal Info</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="author.html">Author</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="sitemap.xml">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 TyagiHub. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

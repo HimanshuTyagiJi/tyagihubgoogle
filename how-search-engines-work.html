@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>How Search Engines Work: Crawling, Indexing, and SEO Basics | TyagiHub</title>
+    <meta name="description" content="A massive, 2000-word deep dive into how Search Engines function. Understand Crawling, Indexing, Ranking algorithms, and the fundamentals of SEO.">
+    <meta name="keywords" content="how search engines work, what is crawling, what is indexing, search engine ranking, SEO basics explained, on-page seo, backlinks, computer fundamentals, TyagiHub">
+    <meta name="author" content="Himanshu Tyagi">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <link rel="canonical" href="https://tyagihub.in/how-search-engines-work.html">
+
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How Search Engines Work & SEO Basics Explained">
+    <meta property="og:description" content="Master computer fundamentals with this comprehensive guide to search engines. Learn how Google organizes billions of webpages and how SEO truly works.">
+    <meta property="og:url" content="https://tyagihub.in/how-search-engines-work.html">
+    <meta property="og:site_name" content="TyagiHub">
+    <meta property="og:image" content="https://tyagihub.in/assets/images/search-engines.webp">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="450">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    
+    <meta name="google-adsense-account" content="ca-pub-7067722696020503">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+    <meta property="article:published_time" content="2026-07-02T08:00:00+00:00">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">Tyagi<span class="highlight">Hub</span></span>
+                </a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    
+                <div class="search-container" style="position: relative; margin-right: 15px;">
+                    <input type="text" id="searchInput" placeholder="Search guides..." autocomplete="off" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-alt); color: var(--text-main); outline: none; width: 220px; font-family: inherit; font-size: 0.95rem; transition: border-color 0.3s;">
+                    <div id="searchResults" style="display: none; position: absolute; top: 100%; right: 0; width: 320px; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 9999; max-height: 400px; overflow-y: auto; margin-top: 10px;"></div>
+                </div>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="layout-mega">
+        
+        <!-- LEFT SIDEBAR: TABLE OF CONTENTS -->
+        <aside class="col-toc">
+            <h3>Chapter 11 Index</h3>
+            <ul>
+                <li><a href="#introduction">1. The Infinite Library</a></li>
+                <li><a href="#what-is-search-engine">2. What is a Search Engine?</a></li>
+                <li><a href="#crawling">3. Phase 1: Crawling</a></li>
+                <li><a href="#indexing">4. Phase 2: Indexing</a></li>
+                <li><a href="#ranking">5. Phase 3: Ranking</a></li>
+                <li><a href="#keywords">6. Keywords & User Intent</a></li>
+                <li><a href="#backlinks">7. The Power of Backlinks</a></li>
+                <li><a href="#what-is-seo">8. What is SEO?</a></li>
+                <li><a href="#onpage-offpage">9. On-Page vs Off-Page SEO</a></li>
+                <li><a href="#technical-seo">10. Technical SEO</a></li>
+                <li><a href="#black-white-hat">11. Black Hat vs White Hat</a></li>
+                <li><a href="#dofollow-nofollow">12. Dofollow vs Nofollow</a></li>
+                <li><a href="#sandbox-effect">13. The Sandbox Effect</a></li>
+                <li><a href="#future">14. The Future: AI Search</a></li>
+                <li><a href="#conclusion">15. Conclusion</a></li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <section class="col-main">
+            <article class="blog-container">
+
+                <header class="blog-header">
+                  <h1>How Search Engines Work: Crawling, Indexing, and SEO Basics Explained</h1>
+                  <div class="blog-meta">
+                    <img src="assets/images/himanshu-tyagi-author.jpg" alt="Himanshu Tyagi">
+                    <div>
+                      <span class="author-name">By <a href="author.html" style="color:var(--text-main); font-weight:600; text-decoration:underline;">Himanshu Tyagi</a></span><br>
+                      <span>Published: July 02, 2026 &nbsp;&bull;&nbsp; Computer Fundamentals (Chapter 11)</span>
+                    </div>
+                  </div>
+                  <img src="assets/images/search-engines.webp" alt="How Search Engines Work Explained" class="article-banner">
+                </header>
+
+                <div class="blog-content">
+                    <h2 id="introduction" style="margin-top:0;">1. The Infinite Library: Why We Need a Digital Librarian</h2>
+                    
+                    <p>Imagine a physical library so massive that it stretches beyond the horizon. It contains billions of books, magazines, and newspapers. Now, imagine that there is no card catalog, no Dewey Decimal System, and the books are just thrown randomly into giant piles on the floor. Furthermore, every single second of every day, people back up dump trucks and dump millions of brand new books into the piles.</p>
+
+                    <p>If you walked into this library and tried to find a specific recipe for a chocolate cake, it would be mathematically impossible. You would spend the rest of your life picking up random books and checking their pages.</p>
+
+                    <p>This massive, disorganized library is exactly what the World Wide Web is. It contains an estimated 50 to 60 billion indexed web pages. Without a system to organize and retrieve this data, the entire internet would be completely useless. You would only be able to visit websites if you had their exact URL memorized. The solution to this colossal problem is the Search Engine—the ultimate digital librarian. In this comprehensive guide, we will break down exactly how these modern marvels work, and how websites compete to be placed on the librarian's top shelf.</p>
+
+                    <h2 id="what-is-search-engine">2. What Exactly is a Search Engine?</h2>
+
+                    <p>A very common misconception is that when you type a question into Google, Google races out across the live internet, checks all 60 billion websites in real-time, and brings you the answer.</p>
+
+                    <p>This is physically impossible. Even at the speed of light, it would take hours or days to scan the entire live internet. <strong>Search engines do not search the live web. They search their own downloaded copy of the web.</strong></p>
+
+                    <p>Companies like Google, Bing, and DuckDuckGo have spent decades building massive <a href="what-is-a-database-sql-vs-nosql.html">databases</a>. They proactively download almost every public webpage in existence and store it on their own servers. When you click "Search," you are actually just querying their private database. Because the database is highly structured and organized, they can return the result in 0.2 seconds. But how do they get all those websites into their database in the first place? It happens in three distinct phases: Crawling, Indexing, and Ranking.</p>
+
+                    <h2 id="crawling">3. Phase 1: Crawling (The Spider's Web)</h2>
+
+                    <p>The first phase is discovery. The search engine needs to know a webpage exists before it can save it.</p>
+
+                    <p>To do this, search engines use automated software programs known as "Crawlers," "Spiders," or "Bots" (the most famous being Googlebot). Think of the internet as a literal web of interconnected threads. The threads are hyperlinks. </p>
+
+                    <p>A crawler starts at a few highly popular, trusted websites (like Wikipedia or CNN). It downloads the HTML code of the first page. Then, it looks at all the blue hyperlinks on that page. It copies those links into a massive "To-Do List." It then visits the first link on the list, downloads that new page, extracts all the links on <em>that</em> page, and adds them to the bottom of the To-Do List. This automated process runs 24/7, bouncing from link to link, discovering millions of new pages every single hour.</p>
+
+                    <p>If your website has absolutely no links pointing to it from anywhere else on the internet, the crawler will never find it, and you will essentially be invisible to the search engine.</p>
+
+                    <h2 id="indexing">4. Phase 2: Indexing (The Massive Catalog)</h2>
+
+                    <p>Once the crawler discovers and downloads the HTML code of a webpage, the search engine must make sense of it. This phase is called <strong>Indexing</strong>.</p>
+
+                    <p>The search engine acts like a speed reader. It analyzes the text on the page, the images, and the video files. It tries to understand exactly what the page is about. It looks at the title, the headings, and the overall context. Is this page selling shoes? Is it a blog post about dog training? Is it a scientific paper on quantum physics?</p>
+
+                    <p>After analyzing the content, the search engine files the page into its massive database (the Index). You can think of the Index exactly like the index at the back of a textbook. In a textbook, if you want to read about "Abraham Lincoln," you look at the index, and it tells you he is mentioned on pages 45, 92, and 112. The search engine's Index does the same thing. If the word "Chocolate Cake" is searched, the Index instantly knows exactly which 5 million URLs contain that phrase.</p>
+
+                    <h2 id="ranking">5. Phase 3: Ranking (The Secret Algorithm)</h2>
+
+                    <p>Crawling and Indexing are relatively straightforward computer science problems. The true genius (and the multi-billion-dollar secret) of a search engine lies in the third phase: <strong>Ranking</strong>.</p>
+
+                    <p>If you search for "Best Running Shoes," the Index might return 50 million websites that contain those words. How does the search engine decide which website goes at the absolute top of Page 1, and which website gets buried on Page 500?</p>
+
+                    <p>It uses a highly complex, fiercely guarded mathematical <strong>Algorithm</strong>. Google's algorithm considers over 200 different "signals" (ranking factors) in a fraction of a millisecond to determine the order. These signals include:</p>
+                    <ul>
+                        <li><strong>Relevance:</strong> Does the page actually answer the user's specific question?</li>
+                        <li><strong>Authority:</strong> Is this a highly trusted website (like Nike.com) or a brand new, unknown blog?</li>
+                        <li><strong>Freshness:</strong> Was this article published yesterday, or is it a decade old? (Crucial for news searches).</li>
+                        <li><strong>Location:</strong> Are you searching for "Pizza near me" in New York or London?</li>
+                    </ul>
+
+                    <h2 id="keywords">6. The Role of Keywords and User Intent</h2>
+
+                    <p>To rank high, a website must understand what the user is typing into the search bar. These typed phrases are called <strong>Keywords</strong>.</p>
+
+                    <p>In the early days of the internet, search engines were dumb. If you typed "Running Shoes," the algorithm simply counted which webpage repeated the words "Running Shoes" the most times and ranked it first. Today, algorithms use <a href="what-is-artificial-intelligence.html">Artificial Intelligence and Natural Language Processing</a> to understand the actual <em>Intent</em> behind the keyword.</p>
+                    
+                    <p>There are three main types of User Intent:</p>
+                    <ol>
+                        <li><strong>Navigational:</strong> The user wants to find a specific website (e.g., searching for "Facebook login").</li>
+                        <li><strong>Informational:</strong> The user wants to learn something (e.g., searching for "How to tie a tie"). The search engine will prioritize educational articles and YouTube videos.</li>
+                        <li><strong>Transactional:</strong> The user wants to buy something (e.g., searching for "Buy iPhone 15 Pro Max"). The search engine will prioritize e-commerce stores.</li>
+                    </ol>
+
+                    <h2 id="backlinks">7. The Power of Backlinks (Digital Votes of Confidence)</h2>
+
+                    <p>How does a search engine know if a website is trustworthy? In 1998, Google revolutionized the internet by inventing the <strong>PageRank</strong> algorithm, which was based on the concept of academic citations.</p>
+
+                    <p>In academia, if a research paper is cited by fifty other scientists, it is considered highly authoritative. Google applied this to the web using <strong>Backlinks</strong>. A backlink is simply a link from one website pointing to another website.</p>
+
+                    <p>Google treats every backlink as a "Vote of Confidence." If Website A links to Website B, Website A is essentially vouching for Website B's quality. However, not all votes are equal. A link from a highly trusted site like BBC News or Harvard University is worth thousands of times more than a link from a spammy, unknown blog. Earning high-quality backlinks is the hardest and most important part of ranking on the first page.</p>
+
+                    <h2 id="what-is-seo">8. What is SEO? (Search Engine Optimization)</h2>
+
+                    <p>Because appearing on Page 1 of Google can generate millions of dollars in revenue for a business, an entire industry was born to master the algorithm. This industry is called <strong>SEO (Search Engine Optimization)</strong>.</p>
+
+                    <p>SEO is the practice of improving and optimizing a website so that search engines can easily crawl it, perfectly understand it, and rank it as the highest quality answer for a specific keyword. SEO is generally broken down into three massive pillars: On-Page, Off-Page, and Technical.</p>
+
+                    <h2 id="onpage-offpage">9. On-Page vs. Off-Page SEO</h2>
+
+                    <p><strong>On-Page SEO</strong> refers to everything you do <em>directly on your own website</em> to help it rank. You have 100% control over this. It includes:</p>
+                    <ul>
+                        <li>Writing high-quality, deeply informative, human-friendly content that answers the user's question perfectly.</li>
+                        <li>Using relevant keywords naturally in the Title, the URL, and the main Headings (H1, H2, H3).</li>
+                        <li>Optimizing images by adding descriptive "Alt Text" (so the blind search engine bot knows what the picture is).</li>
+                        <li>Linking to other relevant articles within your own website (Internal Linking).</li>
+                    </ul>
+
+                    <p><strong>Off-Page SEO</strong> refers to actions taken <em>outside of your website</em> to impact your rankings. You do not have direct control over this; it relies on public relations and marketing. The primary goal of Off-Page SEO is building authority. This usually involves convincing other high-quality websites, journalists, and bloggers to link back to your website (building Backlinks).</p>
+
+                    <h2 id="technical-seo">10. Technical SEO (The Foundation)</h2>
+
+                    <p>The third pillar is <strong>Technical SEO</strong>. You could write the greatest article in human history, but if the search engine bot cannot physically read it, you will never rank. Technical SEO ensures your digital house is in order.</p>
+
+                    <ul>
+                        <li><strong>Page Speed:</strong> Google severely penalizes websites that take longer than 3 seconds to load. Users hate waiting, so the algorithm hates slow sites.</li>
+                        <li><strong>Mobile-Friendliness:</strong> Over 60% of global internet traffic is on mobile phones. Google uses "Mobile-First Indexing," meaning it judges your website entirely based on how it looks and performs on a small smartphone screen, ignoring the desktop version.</li>
+                        <li><strong>XML Sitemaps:</strong> This is a literal map file you submit directly to Google, listing every URL on your website, ensuring the crawler doesn't miss anything.</li>
+                        <li><strong>Security (HTTPS):</strong> Search engines prioritize websites that use <a href="cybersecurity-fundamentals-explained.html">SSL/TLS encryption</a> to protect user data.</li>
+                    </ul>
+
+                    <h2 id="black-white-hat">11. Black Hat vs. White Hat SEO</h2>
+
+                    <p>In the world of SEO, practitioners are divided by their ethics.</p>
+
+                    <p><strong>Black Hat SEO</strong> involves trying to trick, manipulate, or cheat the algorithm. In the early 2000s, this meant "Keyword Stuffing" (hiding the word 'shoes' 500 times in invisible white text on a white background) or paying shady companies to generate 10,000 fake backlinks. Today, Google's AI is incredibly smart. If you use Black Hat tactics, Google will hit your site with a manual penalty and permanently banish you from the search results. It is digital suicide.</p>
+
+                    <p><strong>White Hat SEO</strong> is the ethical approach. It focuses on playing by Google's official rules. Instead of tricking the algorithm, a White Hat practitioner focuses on creating genuinely excellent content, building a fast website, and earning backlinks organically because the content is truly worth linking to. It takes much longer, but it builds a sustainable, penalty-proof business.</p>
+
+                    
+                    <h2 id="dofollow-nofollow">12. Link Attributes: Dofollow vs Nofollow</h2>
+                    
+                    <p>When discussing backlinks, it is crucial to understand that not every link passes "PageRank" (the digital vote of confidence) equally. In the HTML code of a webpage, developers can attach specific attributes to a link to give the search engine crawler specific instructions.</p>
+                    
+                    <p><strong>Dofollow Links:</strong> By default, every link on the internet is a 'Dofollow' link. When a search engine crawler sees this, it follows the link to the destination website and officially counts it as a vote of authority. This is the holy grail of Off-Page SEO. If a major news publication gives you a Dofollow link, your website's ranking will skyrocket.</p>
+                    
+                    <p><strong>Nofollow Links:</strong> In the early 2000s, spammers ruined blog comment sections by pasting millions of links to their spam websites just to gain cheap backlinks. To combat this, Google introduced the <code>rel="nofollow"</code> attribute. If a webmaster adds this tag to a link, they are explicitly telling the search engine: <em>"I am linking to this website, but I do not officially endorse it, and you should not pass any of my authority to them."</em> Today, almost all links on social media (Facebook, Twitter, YouTube) and blog comments are automatically Nofollow. While they still bring human traffic to your site, they do not directly boost your SEO ranking.</p>
+
+                    <h2 id="sandbox-effect">13. The Google Sandbox Effect</h2>
+                    
+                    <p>Many new bloggers get frustrated when they write 20 fantastic articles, follow all the SEO rules perfectly, and still see zero traffic from search engines for the first six months. This phenomenon is widely known in the SEO community as the <strong>Google Sandbox Effect</strong>.</p>
+                    
+                    <p>Because it is so incredibly cheap to buy a domain name and launch a website, spammers launch thousands of low-quality, automated websites every single day. To protect its users from this garbage, Google implicitly distrusts brand-new domain names. Even if your content is amazing, the algorithm places your new website in a metaphorical "Sandbox" for the first 3 to 8 months.</p>
+                    
+                    <p>During this probationary period, Google watches your behavior. Are you publishing consistently? Are real humans spending time reading your content? Are you slowly earning natural backlinks? Once you prove over several months that you are a legitimate, high-quality business, the algorithm removes the Sandbox restriction, and your traffic will suddenly and rapidly increase. SEO is not a sprint; it is a marathon that requires extreme patience and consistency.</p>
+
+                    <h2 id="future">14. The Future: AI Search and SGE</h2>
+
+                    <p>The traditional search engine model (typing a keyword and getting a list of ten blue links) is currently undergoing its biggest disruption in 25 years. The rise of Generative AI (like ChatGPT) is shifting the paradigm from a <em>Search</em> Engine to an <em>Answer</em> Engine.</p>
+
+                    <p>Google is rolling out <strong>SGE (Search Generative Experience)</strong>. Instead of forcing the user to click a link and read an article, the AI instantly reads the top ten articles in milliseconds, summarizes the information, and writes a direct answer right at the top of the search results page. While this is incredibly convenient for the user, it forces the SEO industry to evolve. Websites must now focus on providing deep, original, opinionated content that an AI cannot easily summarize in two sentences.</p>
+
+                    
+          <div class="author-perspective" style="background: #f8fafc; border-left: 5px solid #2563eb; padding: 25px; margin: 40px 0; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+              <h3 style="margin-top: 0; color: #1e293b; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                  <span style="font-size: 1.5rem;">💡</span> Author's Real-World Perspective
+              </h3>
+              <p style="margin-bottom: 0; color: #334155; line-height: 1.7; font-size: 1.05rem;">
+                  <em>Over my years working in the tech industry, I have seen firsthand how understanding <strong>How Search Engines Work</strong> shifts from being just "good to know" to an absolute necessity. When I first started implementing these concepts in real-world scenarios, the biggest hurdle wasn't the technical complexity, but rather breaking old habits and workflows. My advice to anyone learning this today: don't just memorize the theory. Try to visualize how this architecture applies to the apps and networks you use every single day. That practical mindset is what truly sets professionals apart from beginners.</em>
+              </p>
+          </div>
+
+<h2 id="conclusion">15. Conclusion: The Final Piece of the Puzzle</h2>
+
+                    <p>The Search Engine is the grand organizer of the digital age. By understanding Crawling, Indexing, and the nuances of the Ranking algorithm, you pull back the curtain on how information is distributed across the globe. You now understand why certain websites succeed and why others vanish into obscurity.</p>
+
+                    <p>This concludes our 25-part Mega-Guide series on Computer Fundamentals. We began by breaking down the physical hardware of a computer (Chapter 1), journeyed through the intricacies of Memory (Chapter 2), mapped the global Internet (Chapter 3), explored Operating Systems (Chapter 4), wired together Networks (Chapter 5), organized data with Databases (Chapter 6), ascended into Cloud Computing (Chapter 7), unlocked the secrets of Artificial Intelligence (Chapter 8), connected software via APIs (Chapter 9), and defended it all with Cybersecurity (Chapter 10).</p>
+
+                    <p>You have now built a rock-solid, university-level foundation in computer science. You are no longer just a user of technology; you are a student of its architecture. The digital world is yours to build.</p>
+                </div>
+
+                <div class="author-box">
+                  <div class="author-box-inner">
+                    <img src="assets/images/himanshu-tyagi-author.jpg" alt="Himanshu Tyagi">
+                    <div style="flex:1;">
+                      <h4 style="margin:0; color:var(--text-main); font-size:1.4rem;">Written by Himanshu Tyagi</h4>
+                      <p style="margin:8px 0 0 0; font-size:1.05rem; color:var(--text-light); line-height:1.75;">Founder of TyagiHub. Dedicated to demystifying the most complex topics in computer science and software engineering for the next generation of technologists.</p>
+                      <a href="author.html" style="color:var(--primary-color); font-weight:bold; text-decoration:underline; display:inline-block; margin-top:12px; font-size:1.05rem;">Read full author profile &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+
+            </article>
+            
+            
+        <!-- RELATED POSTS -->
+        <div class="bottom-related-section" style="margin-top: 50px; border-top: 1px solid var(--border-color); padding-top: 40px; margin-bottom: 20px;">
+            <h3 style="font-size: 1.6rem; color: var(--text-main); margin-bottom: 25px; margin-top:0;">More from TyagiHub</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px;">
+                <a href="cybersecurity-fundamentals-explained.html" style="text-decoration:none;">
+                    <img alt="Cybersecurity Basics" src="assets/images/cybersecurity-basics.webp" style="width:100%; border-radius:8px; height:120px; object-fit:cover; border:1px solid var(--border-color);">
+                    <h4 style="color:var(--text-main); font-size:1.1rem; margin:12px 0 0 0; line-height:1.4;">Cybersecurity Fundamentals</h4>
+                </a>
+                <a href="what-is-an-api-explained.html" style="text-decoration:none;">
+                    <img alt="Api Explained" src="assets/images/api-explained.webp" style="width:100%; border-radius:8px; height:120px; object-fit:cover; border:1px solid var(--border-color);">
+                    <h4 style="color:var(--text-main); font-size:1.1rem; margin:12px 0 0 0; line-height:1.4;">What is an API?</h4>
+                </a>
+            </div>
+        </div>
+
+            
+        </section>
+
+        
+        <!-- RIGHT SIDEBAR -->
+        <aside class="col-right">
+            
+            <div class="sidebar-widget">
+                <h3>About TyagiHub</h3>
+                <p style="color:var(--text-light); font-size:1.05rem; line-height:1.6; margin:0;">TyagiHub is an educational platform dedicated to simplifying modern technology, artificial intelligence, and digital privacy for everyone.</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Popular Guides</h3>
+                <div class="popular-post-item">
+                    <img src="assets/images/cybersecurity-basics.webp" alt="Cybersecurity">
+                    <div>
+                        <a href="cybersecurity-fundamentals-explained.html" class="popular-post-title">Cybersecurity Explained</a>
+                    </div>
+                </div>
+                <div class="popular-post-item">
+                    <img src="assets/images/api-explained.webp" alt="API Explained">
+                    <div>
+                        <a href="what-is-an-api-explained.html" class="popular-post-title">What is an API?</a>
+                    </div>
+                </div>
+                <div class="popular-post-item">
+                    <img src="assets/images/ai-explained.webp" alt="AI Explained">
+                    <div>
+                        <a href="what-is-artificial-intelligence.html" class="popular-post-title">Artificial Intelligence Explained</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Topics</h3>
+                <ul class="cat-list">
+                    <li><a href="categories.html?topic=ai">Artificial Intelligence</a></li>
+                    <li><a href="categories.html?topic=privacy">Digital Privacy & Security</a></li>
+                    <li><a href="categories.html?topic=webdev">Web Development</a></li>
+                    <li><a href="categories.html?topic=futuretech">Future Tech & Networks</a></li>
+                </ul>
+            </div>
+
+        </aside>
+
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <h3>Tyagi<span class="highlight">Hub</span></h3>
+                <p>Your ultimate digital destination for premium tech insights and educational resources. Build better, learn faster.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Legal Info</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="author.html">Author</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="sitemap.xml">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 TyagiHub. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

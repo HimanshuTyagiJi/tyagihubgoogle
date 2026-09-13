@@ -2,127 +2,194 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tyagihub.in/about.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tyagihub.in/ai-voice-cloning-risks-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://tyagihub.in/ai-impact-on-healthcare.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tyagihub.in/android-spyware-detection-guide-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://tyagihub.in/author.html</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tyagihub.in/best-productivity-apps-guide-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://tyagihub.in/automation-to-boost-productivity.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tyagihub.in/capcut-video-editing-guide-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://tyagihub.in/categories.html</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tyagihub.in/complete-privacy-center-guide-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://tyagihub.in/cloud-computing-explained.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tyagihub.in/computer-memory-and-storage.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tyagihub.in/computer-networks-explained.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tyagihub.in/computer-vision-how-machines-see.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tyagihub.in/contact.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tyagihub.in/dark-web-data-breach-guide-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tyagihub.in/deepfake-detection-guide-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://tyagihub.in/cybersecurity-fundamentals-explained.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tyagihub.in/disclaimer.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tyagihub.in/future-of-smart-devices-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://tyagihub.in/frontend-vs-backend-development.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tyagihub.in/how-ai-is-changing-everyday-life-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://tyagihub.in/how-machine-learning-works.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tyagihub.in/how-generative-ai-works-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://tyagihub.in/how-search-engines-work.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tyagihub.in/how-password-managers-work-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tyagihub.in/how-phishing-websites-steal-your-data-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tyagihub.in/how-sim-swap-attacks-work-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tyagihub.in/identity-theft-guide-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://tyagihub.in/how-the-internet-works.html</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tyagihub.in/index.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://tyagihub.in/internet-tracking-explained-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://tyagihub.in/introduction-to-computers.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tyagihub.in/online-scam-guide-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://tyagihub.in/natural-language-processing-explained.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tyagihub.in/operating-systems-explained.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tyagihub.in/privacy-policy.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tyagihub.in/terms.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tyagihub.in/up-deled-complete-guide-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://tyagihub.in/two-factor-authentication-explained.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tyagihub.in/video-editing-earning-guide-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://tyagihub.in/understanding-end-to-end-encryption.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tyagihub.in/what-is-edge-computing-hi.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://tyagihub.in/what-is-6g-technology.html</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tyagihub.in/what-is-a-database-sql-vs-nosql.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tyagihub.in/what-is-a-password-manager.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tyagihub.in/what-is-an-api-explained.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tyagihub.in/what-is-artificial-intelligence.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tyagihub.in/what-is-edge-computing.html</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tyagihub.in/what-is-quantum-computing.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tyagihub.in/what-is-web3-explained.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>

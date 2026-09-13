@@ -1,314 +1,452 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TyagiHub Blog - Latest Posts</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; margin: 0; padding: 0; }
-        header { background: #fff; padding: 1rem 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        header h1 { margin: 0; font-size: 1.5rem; }
-        header h1 a { color: #2c3e50; text-decoration: none; }
-        nav { margin-top: 10px; }
-        nav a { color: #2c3e50; text-decoration: none; margin-left: 15px; font-weight: bold; padding: 8px 16px; background: #f8f9fa; border: 1px solid #eaeaea; border-radius: 6px; transition: all 0.3s; display: inline-block; }
-        nav a:hover { background: #3498db; color: #fff; border-color: #3498db; }
-        
-        .hero { background: #34495e; color: #fff; text-align: center; padding: 4rem 1rem; margin-bottom: 3rem; box-shadow: inset 0 -5px 15px rgba(0,0,0,0.1); }
-        .hero h2 { margin: 0; font-size: 2.8rem; font-weight: 700; letter-spacing: -0.5px; }
-        .hero p { margin-top: 15px; font-size: 1.25rem; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto; }
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TyagiHub | Master Technology, Privacy, and Computer Science</title>
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; margin-bottom: 4rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2.5rem; }
-        .card { background: #fff; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid #f0f0f0; display: flex; flex-direction: column; overflow: hidden; text-decoration: none; color: inherit; }
-        .card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-        .card img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid #f0f0f0; }
-        .card-content { padding: 1.8rem; display: flex; flex-direction: column; flex-grow: 1; }
-        .card h3 { margin: 0 0 12px 0; font-size: 1.4rem; color: #2c3e50; line-height: 1.4; font-weight: 600; }
-        .card p { margin: 0; color: #666; font-size: 1rem; flex-grow: 1; line-height: 1.6; }
-        .read-more { margin-top: 20px; color: #3498db; font-weight: bold; font-size: 0.95rem; display: flex; align-items: center; }
-        .read-more::after { content: '→'; margin-left: 5px; transition: transform 0.2s; }
-        .card:hover .read-more::after { transform: translateX(5px); }
-        
-        @media (max-width: 768px) { 
-            header { flex-direction: column; text-align: center; padding: 1rem 0.5rem; } 
-            nav { margin-top: 15px; display: flex; gap: 8px 12px; justify-content: center; flex-wrap: wrap; padding: 0 0.5rem; } 
-            nav a { margin: 0; font-size: 0.95rem; padding: 6px 10px; background: #f8f9fa; border: 1px solid #eaeaea; border-radius: 5px; } 
-            .page-container, .post-container { padding: 1rem !important; margin: 1rem 0.5rem !important; box-sizing: border-box; } 
-            .post-section { padding: 1.2rem !important; margin-bottom: 1.5rem !important; }
-            .hero { padding: 2.5rem 1rem !important; }
-            .container { padding: 0 0.5rem !important; }
-            .grid { gap: 1.5rem !important; }
-        } nav a { margin: 0; } .hero h2 { font-size: 2rem; }
-    </style>
-    <link rel="canonical" href="https://tyagihub.in/index.html" />
+    
+    <meta name="keywords" content="Computer Science, BCA, MCA, Artificial Intelligence, Cybersecurity, Web Development, Tech Guides">
+    <meta name="author" content="Himanshu Tyagi">
     <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph (Facebook/LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tyagihub.in/">
+    <meta property="og:title" content="TyagiHub | Master Technology, Privacy, and Computer Science">
+    <meta property="og:description" content="The ultimate destination for learning computer fundamentals, artificial intelligence, cybersecurity, and digital privacy.">
+    <meta property="og:image" content="https://tyagihub.in/assets/images/default.jpg">
+    <meta property="og:site_name" content="TyagiHub">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TyagiHub">
+    <meta name="twitter:title" content="TyagiHub | Master Technology, Privacy, and Computer Science">
+    <meta name="twitter:description" content="The ultimate destination for learning computer fundamentals, artificial intelligence, cybersecurity, and digital privacy.">
+    <meta name="twitter:image" content="https://tyagihub.in/assets/images/default.jpg">
+
+    <meta name="description" content="The ultimate destination for learning computer fundamentals, artificial intelligence, cybersecurity, and digital privacy. Explore our comprehensive tech guides.">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+<style>
+.article-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important; }
+.article-card:hover .card-img-wrapper img { transform: scale(1.05); }
+.home-hero { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, var(--bg-main) 0%, var(--bg-alt) 100%); border-bottom: 1px solid var(--border-color); }
+.home-hero h1 { font-size: 2.8rem; color: var(--primary-color); margin-bottom: 15px; }
+.home-hero p { font-size: 1.15rem; color: var(--text-light); max-width: 700px; margin: 0 auto; line-height: 1.6; }
+.content-section { max-width: 900px; margin: 0 auto; padding: 50px 20px; }
+.content-section h2 { color: var(--primary-color); font-size: 1.8rem; margin-top: 40px; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed var(--border-color); }
+.content-section p { font-size: 1.1rem; line-height: 1.8; color: var(--text-main); margin-bottom: 20px; text-align: justify; }
+
+/* FAQ Styles */
+.faq-section { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+.faq-section h2 { color: var(--primary-color); font-size: 2.2rem; text-align: center; margin-bottom: 30px; }
+.faq-item { background: var(--bg-alt); border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 15px; padding: 20px; }
+.faq-question { font-size: 1.25rem; font-weight: 700; color: var(--text-main); margin: 0 0 10px 0; }
+.faq-answer { font-size: 1.1rem; color: var(--text-light); line-height: 1.7; margin: 0; }
+</style>
+
+    <link rel="canonical" href="https://tyagihub.in/index.html">
+
+    
     <meta name="google-adsense-account" content="ca-pub-7067722696020503">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1><a href="index.html">TyagiHub Blog</a></h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="privacy-policy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-            <a href="disclaimer.html">Disclaimer</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+    <header class="main-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">Tyagi<span class="highlight">Hub</span></span>
+                </a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    
+                <div class="search-container" style="position: relative; margin-right: 15px;">
+                    <input type="text" id="searchInput" placeholder="Search guides..." autocomplete="off" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-alt); color: var(--text-main); outline: none; width: 220px; font-family: inherit; font-size: 0.95rem; transition: border-color 0.3s;">
+                    <div id="searchResults" style="display: none; position: absolute; top: 100%; right: 0; width: 320px; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 9999; max-height: 400px; overflow-y: auto; margin-top: 10px;"></div>
+                </div>
+
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <div class="hero">
-        <h2>TyagiHub Blog में आपका स्वागत है</h2>
-        <p>तकनीक, साइबर सुरक्षा और भविष्य की जानकारी का आपका सबसे विश्वसनीय स्रोत।</p>
-    </div>
-    
-    
-    
-<!-- Google AdSense Ad Block -->
-<div style="text-align: center; margin: 2rem 0; padding: 1rem; border: 1px dashed #ccc; background: #fdfdfd;">
-    <span style="color: #999; font-size: 0.8rem; text-transform: uppercase;">Advertisement</span>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-7067722696020503"
-         data-ad-slot="XXXXXXXXXX"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+    <main>
+        <!-- Hero Section -->
+        <section class="home-hero">
+            <h1>Master the Digital World</h1>
+            <p>Your ultimate resource for crystal-clear, deep-dive educational guides on Computer Science, Artificial Intelligence, Cybersecurity, and Web Development.</p>
+        </section>
+
+        <!-- Article Library Grid -->
+        <section style="max-width: 1200px; margin: 0 auto; padding: 0 20px; padding-top: 50px;">
+            <h2 style="font-size: 2.2rem; color: var(--primary-color); text-align: center; margin-bottom: 10px;">Our Complete Technical Library (24 Guides)</h2>
+            <p style="text-align: center; color: var(--text-light); font-size: 1.1rem; margin-bottom: 40px;">Browse our massive collection of in-depth guides covering everything from hardware basics to advanced AI algorithms.</p>
+            
+            <div class="article-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; padding-bottom: 60px;">
+    <a href="cloud-computing-explained.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/cloud-computing.webp" alt="Cloud Computing Explained: IaaS, PaaS, and SaaS" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">Cloud Computing Explained: IaaS, PaaS, and SaaS</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="computer-networks-explained.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/computer-networks.webp" alt="Computer Networks Explained: LAN, WAN, and Wi-Fi Basics" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">Computer Networks Explained: LAN, WAN, and Wi-Fi Basics</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="computer-vision-how-machines-see.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/cv-banner.webp" alt="Computer Vision: How Machines and Computers See the World" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">Computer Vision: How Machines and Computers See the World</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="computer-memory-and-storage.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/memory-storage.webp" alt="How Computer Memory Works: RAM, ROM, and Storage Explained" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">How Computer Memory Works: RAM, ROM, and Storage Explained</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="how-machine-learning-works.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/ml-banner.webp" alt="How Machine Learning Works: A Simple Beginner's Guide" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">How Machine Learning Works: A Simple Beginner's Guide</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="how-search-engines-work.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/search-engines.webp" alt="How Search Engines Work & SEO Basics Explained" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">How Search Engines Work & SEO Basics Explained</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="how-the-internet-works.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/how-internet-works.webp" alt="How the Internet Works: A Complete Guide" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">How the Internet Works: A Complete Guide</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="introduction-to-computers.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/intro-to-computers.webp" alt="Introduction to Computers: A Complete Beginner's Guide" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">Introduction to Computers: A Complete Beginner's Guide</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="cybersecurity-fundamentals-explained.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/cybersecurity-basics.webp" alt="Introduction to Cybersecurity: Firewalls & Encryption" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">Introduction to Cybersecurity: Firewalls & Encryption</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="natural-language-processing-explained.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/nlp-banner.webp" alt="Natural Language Processing (NLP) Explained Simply" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">Natural Language Processing (NLP) Explained Simply</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="operating-systems-explained.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/operating-systems.webp" alt="Operating Systems Explained: Windows, macOS, and Linux" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">Operating Systems Explained: Windows, macOS, and Linux</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="frontend-vs-backend-development.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/frontend-vs-backend.webp" alt="The Difference Between Frontend and Backend Web Development" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">The Difference Between Frontend and Backend Web Development</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="ai-impact-on-healthcare.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/ai-healthcare-banner.webp" alt="The Impact of Artificial Intelligence on the Healthcare Industry" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">The Impact of Artificial Intelligence on the Healthcare Industry</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="automation-to-boost-productivity.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/automation-banner.webp" alt="Top 5 Uses of Automation to Boost Daily Productivity" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">Top 5 Uses of Automation to Boost Daily Productivity</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="two-factor-authentication-explained.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/2fa-banner.webp" alt="Two-Factor Authentication (2FA) Explained: A Security Must-Have" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">Two-Factor Authentication (2FA) Explained: A Security Must-Have</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="understanding-end-to-end-encryption.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/e2e-encryption-banner.webp" alt="Understanding End-to-End Encryption in Messaging Apps" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">Understanding End-to-End Encryption in Messaging Apps</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="what-is-edge-computing.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/edge-computing-banner.webp" alt="What Is Edge Computing" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">What Is Edge Computing</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="what-is-6g-technology.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/6g-banner.webp" alt="What is 6G Technology? The Ultimate Guide" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">What is 6G Technology? The Ultimate Guide</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="what-is-artificial-intelligence.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/ai-explained.webp" alt="What is Artificial Intelligence? ML vs Deep Learning" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">What is Artificial Intelligence? ML vs Deep Learning</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="what-is-quantum-computing.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/quantum-banner.webp" alt="What is Quantum Computing? The Ultimate Guide" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">What is Quantum Computing? The Ultimate Guide</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="what-is-web3-explained.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/web3-banner.webp" alt="What is Web 3.0? The Complete Beginner's Guide" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">What is Web 3.0? The Complete Beginner's Guide</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="what-is-a-database-sql-vs-nosql.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/database-explained.webp" alt="What is a Database? SQL vs NoSQL Explained" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">What is a Database? SQL vs NoSQL Explained</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="what-is-a-password-manager.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/password-manager-banner.webp" alt="What is a Password Manager? Your Guide to Smarter Digital Account Management" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">What is a Password Manager? Your Guide to Smarter Digital Account Management</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
+    <a href="what-is-an-api-explained.html" class="article-card" style="text-decoration: none; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column;">
+        <div class="card-img-wrapper" style="width: 100%; height: 180px; overflow: hidden; border-bottom: 1px solid var(--border-color);">
+            <img src="assets/images/api-explained.webp" alt="What is an API? Explained in Simple Terms" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+        </div>
+        <div class="card-content" style="padding: 20px;">
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-main); line-height: 1.4;">What is an API? Explained in Simple Terms</h3>
+            <p style="margin: 12px 0 0 0; color: var(--primary-color); font-weight: 600; font-size: 0.95rem;">Read Guide &rarr;</p>
+        </div>
+    </a>
 </div>
+            
+        </section>
 
-<div class="container">
-        <div style="background: #fff; padding: 2.5rem; margin-bottom: 3rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eaeaea;">
-            <h2 style="color: #2c3e50; margin-top: 0; font-size: 1.8rem;">तकनीक, AI और साइबर सुरक्षा की दुनिया में आपका स्वागत है</h2>
-            <p style="color: #444; font-size: 1.15rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                <strong>TyagiHub Blog</strong> भारत का एक उभरता हुआ प्रीमियम तकनीकी ब्लॉग है, जिसका मुख्य उद्देश्य तकनीकी ज्ञान को आसान हिंदी भाषा में हर व्यक्ति तक पहुँचाना है। आज के तेजी से बदलते डिजिटल युग में खुद को अपडेट रखना और सुरक्षित रखना बेहद ज़रूरी है। 
-            </p>
-            <p style="color: #444; font-size: 1.15rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                यहाँ हम आपको <strong>आर्टिफिशियल इंटेलिजेंस (AI), मशीन लर्निंग, साइबर सुरक्षा (Cybersecurity), ऑनलाइन स्कैम से बचने के तरीके, और वीडियो एडिटिंग (Video Editing)</strong> जैसे महत्वपूर्ण और आधुनिक विषयों पर विस्तृत और उच्च-गुणवत्ता वाले (High-Quality) लेख प्रदान करते हैं। हमारे सभी आर्टिकल्स गहन रिसर्च (Deep Research) के बाद लिखे गए हैं ताकि आपको सटीक और विश्वसनीय जानकारी मिल सके।
-            </p>
-            <p style="color: #444; font-size: 1.15rem; line-height: 1.8; margin-bottom: 0;">
-                चाहे आप एक स्टूडेंट हों, प्रोफेशनल हों, या तकनीक में रुचि रखने वाले व्यक्ति हों, हमारे विस्तृत गाइड्स और ट्यूटोरियल्स आपके डिजिटल सफर को और भी बेहतर बनाएंगे। नीचे दिए गए हमारे नवीनतम लेख पढ़ें और अपने ज्ञान को नई ऊंचाइयों पर ले जाएं।
-            </p>
-        </div>
+        <!-- Main Educational Content -->
+        
+<section class="content-section">
+    <h2 style="margin-top:0;">1. Welcome to TyagiHub: The Ultimate Digital Literacy Hub</h2>
+    <p>Welcome to TyagiHub, your premier destination for mastering the complex world of modern technology, computer science fundamentals, and digital privacy. In an era where technology evolves faster than the human brain can naturally adapt, staying informed is no longer a luxury; it is an absolute necessity for personal and professional survival. We built this platform with a singular, unwavering mission: to strip away the intimidating jargon, the confusing acronyms, and the elite gatekeeping that often surrounds the tech industry, and present you with crystal-clear, deeply researched, and highly accessible educational guides.</p>
+    <p>Whether you are a university student embarking on a Bachelor of Computer Applications (BCA) or Master of Computer Applications (MCA) degree, a curious professional trying to understand why your company is moving to "the cloud," or an everyday internet user who wants to secure their family's digital privacy, you have arrived at the right place. Our massive library of comprehensive guides is designed to take you from absolute beginner to confident technologist.</p>
 
-        <div class="grid">
-            
-            <a href="ai-voice-cloning-risks-hi.html" class="card">
-                <img src="assets/images/ai-voice-cloning-risks-banner.avif" alt="AI वॉइस क्लोनिंग के खतरे: जालसाज कैसे आवाज कॉपी करते हैं और सुरक्षित रहने के उपाय">
-                <div class="card-content">
-                    <h3>AI वॉइस क्लोनिंग के खतरे: जालसाज कैसे आवाज कॉपी करते हैं और सुरक्षित रहने के उपाय</h3>
-                    <p>समझें कि एआई वॉइस क्लोनिंग तकनीक कैसे काम करती है, क्लोन की गई आवाजों का उपयोग करके होने वाले वास्तविक धोखाधड़ी के मामले...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-            <a href="android-spyware-detection-guide-hi.html" class="card">
-                <img src="assets/images/android-spyware-signs-you-should-never-ignore-banner.avif" alt="Android Phone से छुपा हुआ Spyware कैसे पता करें और हटाएं: 2026 का पूरा गाइड">
-                <div class="card-content">
-                    <h3>Android Phone से छुपा हुआ Spyware कैसे पता करें और हटाएं: 2026 का पूरा गाइड</h3>
-                    <p>अपने Android फोन में छिपे हुए स्पाईवेयर (Spyware) और स्टॉकरवेयर को खोजने, हानिकारक ऐप्स को सुरक्षित रूप से हटाने और अपने...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-            <a href="best-productivity-apps-guide-hi.html" class="card">
-                <img src="assets/images/best-free-apps-for-productivity-in-2026-banner.avif" alt="बेस्ट प्रोडक्टिविटी ऐप्स गाइड 2026: अपने जीवन को व्यवस्थित करने के सर्वश्रेष्ठ टूल्स">
-                <div class="card-content">
-                    <h3>बेस्ट प्रोडक्टिविटी ऐप्स गाइड 2026: अपने जीवन को व्यवस्थित करने के सर्वश्रेष्ठ टूल्स</h3>
-                    <p>2026 में टास्क मैनेजमेंट, नोट-मेकिंग, टाइम ट्रैकिंग और फोकस के लिए सबसे बेहतरीन प्रोडक्टिविटी ऐप्स खोजें —...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-            <a href="capcut-video-editing-guide-hi.html" class="card">
-                <img src="assets/images/capcut-video-editing-guide.jpg" alt="CapCut वीडियो एडिटिंग मास्टरक्लास 2026: हर एक टूल, फीचर और स्टेप की विस्तृत गाइड">
-                <div class="card-content">
-                    <h3>CapCut वीडियो एडिटिंग मास्टरक्लास 2026: हर एक टूल, फीचर और स्टेप की विस्तृत गाइड</h3>
-                    <p>CapCut ऐप से प्रोफेशनल वीडियो एडिट करने की संपूर्ण हिंदी गाइड। सभी 50+ टूल्स, कीफ्रेम, वेलोसिटी कर्व, क्रोमा की, ऑटो-कैप...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-            <a href="complete-privacy-center-guide-hi.html" class="card">
-                <img src="assets/images/privacy-guide-banner.webp" alt="संपूर्ण प्राइवेसी सेंटर गाइड: ब्राउज़र सुरक्षा, ऐप परमिशन और लोकेशन ट्रैकिंग">
-                <div class="card-content">
-                    <h3>संपूर्ण प्राइवेसी सेंटर गाइड: ब्राउज़र सुरक्षा, ऐप परमिशन और लोकेशन ट्रैकिंग</h3>
-                    <p>आपकी डिजिटल प्राइवेसी की पूरी गाइड। ब्राउज़र को ट्रैकर्स से सुरक्षित करना, स्मार्टफोन ऐप परमिशन लॉक करना, लोकेशन ट्रैकिं...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-            <a href="dark-web-data-breach-guide-hi.html" class="card">
-                <img src="assets/images/data-breach-guide-banner.webp" alt="डार्क वेब और डेटा ब्रीच गाइड: आपका चोरा हुआ डेटा कहाँ जाता है और कैसे बचें?">
-                <div class="card-content">
-                    <h3>डार्क वेब और डेटा ब्रीच गाइड: आपका चोरा हुआ डेटा कहाँ जाता है और कैसे बचें?</h3>
-                    <p>जब कोई कंपनी हैक होती है और आपका डेटा लीक होता है, तो वह डार्क वेब पर बिकता है। यह विस्तृत गाइड बताती है कि डार्क वेब कै...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-            <a href="deepfake-detection-guide-hi.html" class="card">
-                <img src="assets/images/deepfake-detection-guide-banner.webp" alt="2026 में AI डीपफेक वीडियो की पहचान कैसे करें: एक गाइड">
-                <div class="card-content">
-                    <h3>2026 में AI डीपफेक वीडियो की पहचान कैसे करें: एक गाइड</h3>
-                    <p>जानिए डीपफेक वीडियो कैसे बनाए जाते हैं, कौन से विजुअल और तकनीकी संकेत इन्हें उजागर करते हैं, और AI-आधारित...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-            <a href="future-of-smart-devices-hi.html" class="card">
-                <img src="assets/images/future-of-smart-devices-banner.avif" alt="स्मार्ट डिवाइसेज का भविष्य: IoT, वियरेबल्स और कनेक्टेड लिविंग">
-                <div class="card-content">
-                    <h3>स्मार्ट डिवाइसेज का भविष्य: IoT, वियरेबल्स और कनेक्टेड लिविंग</h3>
-                    <p>जानिए कैसे स्मार्ट डिवाइसेज, IoT इकोसिस्टम, वियरेबल टेक और कनेक्टेड होम विकसित हो रहे हैं — और भारतीय घरों...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-            <a href="how-ai-is-changing-everyday-life-hi.html" class="card">
-                <img src="assets/images/how-ai-is-changing-online-jobs-banner.webp" alt="2026 में AI हमारी रोजमर्रा की जिंदगी कैसे बदल रहा है">
-                <div class="card-content">
-                    <h3>2026 में AI हमारी रोजमर्रा की जिंदगी कैसे बदल रहा है</h3>
-                    <p>जानिए कैसे आर्टिफिशियल इंटेलिजेंस हेल्थकेयर, एजुकेशन, फाइनेंस, ट्रांसपोर्ट और हमारे डेली रुटीन को बदल रहा...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-            <a href="how-generative-ai-works-hi.html" class="card">
-                <img src="assets/images/how-generative-ai-works-banner.webp" alt="जेनरेटिव AI कैसे काम करता है: शुरुआती लोगों के लिए कम्पलीट गाइड">
-                <div class="card-content">
-                    <h3>जेनरेटिव AI कैसे काम करता है: शुरुआती लोगों के लिए कम्पलीट गाइड</h3>
-                    <p>समझें कि चैटजीपीटी (ChatGPT), मिडजर्नी (Midjourney) और सोरा (Sora) जैसे जेनरेटिव एआई मॉडल वास्तव में कैसे...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-            <a href="how-password-managers-work-hi.html" class="card">
-                <img src="assets/images/password-managers-work-and-why-you-need-one-banner.avif" alt="इंटरनेट सिक्योरिटी: पासवर्ड मैनेजर कैसे काम करते हैं और आपको इसकी आवश्यकता क्यों है">
-                <div class="card-content">
-                    <h3>इंटरनेट सिक्योरिटी: पासवर्ड मैनेजर कैसे काम करते हैं और आपको इसकी आवश्यकता क्यों है</h3>
-                    <p>जानें कि कैसे पासवर्ड मैनेजर आपके क्रेडेंशियल्स को एन्क्रिप्ट और स्टोर करते हैं, वे पासवर्ड याद रखने से...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-            <a href="how-phishing-websites-steal-your-data-hi.html" class="card">
-                <img src="assets/images/phishing-websites-guide-banner.avif" alt="फ़िशिंग वेबसाइटें (Phishing) कैसे आपका डेटा चुराती हैं और इनसे कैसे सुरक्षित रहें">
-                <div class="card-content">
-                    <h3>फ़िशिंग वेबसाइटें (Phishing) कैसे आपका डेटा चुराती हैं और इनसे कैसे सुरक्षित रहें</h3>
-                    <p>समझें कि नकली फ़िशिंग वेबसाइटें कैसे बनाई जाती हैं, वे आपके पासवर्ड और क्रेडिट कार्ड की डिटेल्स कैसे...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-            <a href="how-sim-swap-attacks-work-hi.html" class="card">
-                <img src="assets/images/sim-swap-attack-guide-banner.avif" alt="सिम स्वैप हमला (SIM Swap Attack) क्या है और इससे खुद को कैसे सुरक्षित रखें?">
-                <div class="card-content">
-                    <h3>सिम स्वैप हमला (SIM Swap Attack) क्या है और इससे खुद को कैसे सुरक्षित रखें?</h3>
-                    <p>जानें सिम स्वैप हमला क्या है, अपराधी आपके फोन नंबर को कैसे हाईजैक करते हैं, और अपने बैंक खातों, सोशल...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-            <a href="identity-theft-guide-hi.html" class="card">
-                <img src="assets/images/identity-theft-guide-banner.webp" alt="पहचान चोरी (Identity Theft) गाइड: डिजिटल युग में आपकी पहचान कैसे चुराई जाती है और कैसे बचें?">
-                <div class="card-content">
-                    <h3>पहचान चोरी (Identity Theft) गाइड: डिजिटल युग में आपकी पहचान कैसे चुराई जाती है और कैसे बचें?</h3>
-                    <p>पहचान चोरी डिजिटल युग में सबसे तेजी से बढ़ता अपराध है। यह विस्तृत गाइड बताती है कि आधुनिक पहचान चोरी कैसे काम करती है, इ...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-            <a href="internet-tracking-explained-hi.html" class="card">
-                <img src="assets/images/internet-tracking-explained-how-websites-track-you-online-banner.avif" alt="इंटरनेट ट्रैकिंग क्या है: जानें वेबसाइट्स आपको ऑनलाइन कैसे ट्रैक करती हैं">
-                <div class="card-content">
-                    <h3>इंटरनेट ट्रैकिंग क्या है: जानें वेबसाइट्स आपको ऑनलाइन कैसे ट्रैक करती हैं</h3>
-                    <p>जानिए कुकीज़ (cookies), फ़िंगरप्रिंटिंग और ट्रैकर्स आपके इंटरनेट इस्तेमाल पर नज़र कैसे रखते हैं, कौन सा...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-            <a href="online-scam-guide-hi.html" class="card">
-                <img src="assets/images/online-scam-guide-banner.webp" alt="ऑनलाइन स्कैम गाइड: UPI धोखाधड़ी, फिशिंग और नकली कस्टमर केयर से कैसे बचें?">
-                <div class="card-content">
-                    <h3>ऑनलाइन स्कैम गाइड: UPI धोखाधड़ी, फिशिंग और नकली कस्टमर केयर से कैसे बचें?</h3>
-                    <p>भारत ऑनलाइन घोटालों का सबसे बड़ा निशाना बन चुका है। यह मास्टर गाइड हर प्रमुख स्कैम को कवर करती है — UPI धोखाधड़ी, फिशिंग...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-            <a href="up-deled-complete-guide-hi.html" class="card">
-                <img src="https://updeledstudy.in/assets/images/og-banner.jpg" alt="UP DELED स्टडी मटेरियल और संपूर्ण गाइड 2026: परीक्षा की तैयारी का सबसे अच्छा प्लेटफॉर्म">
-                <div class="card-content">
-                    <h3>UP DELED स्टडी मटेरियल और संपूर्ण गाइड 2026: परीक्षा की तैयारी का सबसे अच्छा प्लेटफॉर्म</h3>
-                    <p>UP DELED (BTC) की 2026 में तैयारी के लिए संपूर्ण मार्गदर्शिका। सेमेस्टर-वार पाठ्यक्रम, इंटर्नशिप की जानकारी और updeledst...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-            <a href="video-editing-earning-guide-hi.html" class="card">
-                <img src="assets/images/video-editing-earning-guide.jpg" alt="वीडियो एडिटिंग से पैसे कैसे कमाएं (2026): मोबाइल और कंप्यूटर से कमाने का पूरा रोडमैप">
-                <div class="card-content">
-                    <h3>वीडियो एडिटिंग से पैसे कैसे कमाएं (2026): मोबाइल और कंप्यूटर से कमाने का पूरा रोडमैप</h3>
-                    <p>वीडियो एडिटिंग सीखकर 2026 में पैसे कैसे कमाएं। मोबाइल (VN, CapCut) और पीसी (Premiere Pro) से एडिटिंग, यूट्यूब, फ्रीलांसि...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-            <a href="what-is-edge-computing-hi.html" class="card">
-                <img src="assets/images/what-is-edge-computing-banner.avif" alt="एज कंप्यूटिंग क्या है? यह कैसे काम करता है और यह क्यों महत्वपूर्ण है">
-                <div class="card-content">
-                    <h3>एज कंप्यूटिंग क्या है? यह कैसे काम करता है और यह क्यों महत्वपूर्ण है</h3>
-                    <p>एज कंप्यूटिंग को समझें — यह क्या है, यह क्लाउड कंप्यूटिंग से कैसे अलग है, टेलीकॉम, मैन्युफैक्चरिंग,...</p>
-                    <div class="read-more">और पढ़ें</div>
-                </div>
-            </a>
-        </div>
+    <h2>2. Why Digital Literacy is the Most Important Skill of the 21st Century</h2>
+    <p>We are currently living through the Fourth Industrial Revolution. The first revolution gave us steam power; the second brought mass production and electricity; the third introduced basic computing and the early internet. Today, the fourth revolution is characterized by a fusion of technologies that is blurring the lines between the physical, digital, and biological spheres. Artificial Intelligence, quantum computing, biotechnology, the Internet of Things (IoT), and decentralized networks are reshaping human society at an unprecedented scale.</p>
+    <p>In this new world, digital literacy is just as critical as the ability to read and write was in the 20th century. If you do not understand how an algorithm determines what news articles you see on your social media feed, you are susceptible to manipulation. If you do not understand the basic principles of cybersecurity and encryption, you risk having your financial identity stolen. If you do not understand the difference between hardware and software, or between a local network and the global internet, you will struggle to adapt to the modern workplace, regardless of your chosen profession.</p>
+    <p>Digital literacy goes beyond simply knowing how to tap a screen or swipe right on an application. True digital literacy means understanding the underlying architecture of the tools you use every single day. It means understanding the invisible data exchanges occurring in the background, the physical infrastructure that powers the "cloud," and the ethical implications of handing over our decision-making processes to artificial neural networks.</p>
+
+    <h2>3. The Evolution of the Web: From Read-Only to Decentralized</h2>
+    <p>To understand where we are going, we must understand where we came from. The internet has undergone massive evolutionary phases, each completely disrupting the global economy.</p>
+    <p><strong>Web 1.0 (The Read-Only Web):</strong> Spanning roughly from 1990 to 2004, the early internet was essentially a massive, static encyclopedia. Websites were built using basic HTML, hosted on single servers, and provided information that users could only consume. There was no interactivity, no social media, and no way for the average person to publish content without knowing how to write complex code. You visited a webpage, read the text, and left.</p>
+    <p><strong>Web 2.0 (The Social and Interactive Web):</strong> Starting around 2004, the internet shifted dramatically. The invention of dynamic databases, JavaScript, and user-friendly platforms gave rise to the interactive web. Suddenly, users were not just reading content; they were creating it. Blogs, social media networks (Facebook, Twitter), video sharing platforms (YouTube), and e-commerce giants dominated this era. While Web 2.0 connected the globe, it also led to massive centralization. A handful of massive tech corporations gained total control over the world's data, leading to severe privacy concerns and monopolistic behavior.</p>
+    <p><strong>Web 3.0 (The Decentralized Future):</strong> We are currently at the dawn of the next evolution. Web 3.0 seeks to strip power away from the massive centralized tech giants and hand it back to the individual users. Built on the principles of blockchain technology, cryptography, and decentralized networks, Web 3.0 promises an internet where users actually own their data, their digital assets, and their online identities. While still in its infancy, concepts like decentralized finance (DeFi), smart contracts, and distributed ledgers are poised to rebuild the financial and social infrastructure of the internet from the ground up.</p>
+
+    <h2>4. Hardware vs Software: The Eternal Dance</h2>
+    <p>Everything in the digital world can be boiled down to a fundamental dichotomy: Hardware and Software. Understanding the boundary between the two is the first step in diagnosing any technological issue.</p>
+    <p><strong>Hardware</strong> is the physical, tangible reality of computing. It is the silicon microprocessors, the spinning magnetic platters of a hard drive, the microscopic transistors in a Solid State Drive, the copper wires running through your walls, and the glass fiber-optic cables resting at the bottom of the ocean. Hardware is bound by the laws of physics. A processor can only run as fast as thermodynamics allows before it melts. A hard drive can only store as many electrons as its physical surface area permits. Hardware degrades over time, requires electricity, and can be physically destroyed.</p>
+    <p><strong>Software</strong>, on the other hand, is pure logic. It is the intangible set of mathematical instructions that tells the hardware what to do. Software has no mass, no physical shape, and does not degrade over time. An Operating System, a web browser, and a video game are all software. They are written by human beings using complex programming languages, translated into binary code (1s and 0s), and executed by the hardware.</p>
+    <p>The magic of modern computing lies in the Operating System—the ultimate manager that bridges the gap between human-friendly software applications and the cold, electrical reality of the hardware.</p>
+
+    <h2>5. The Critical Importance of Cybersecurity</h2>
+    <p>As we move our entire lives—our banking, our medical records, our personal communications, and our business secrets—onto internet-connected databases, we create massive, lucrative targets for malicious actors. Cybersecurity is no longer an optional feature; it is the absolute foundation of the digital economy.</p>
+    <p>The core philosophy of modern cybersecurity is "Defense in Depth." We can no longer rely on a single firewall to protect our networks. Modern architecture assumes that the network is already hostile. This is known as the Zero-Trust architecture. In a Zero-Trust environment, the system strictly follows the rule: <em>"Never trust, always verify."</em> Every single time a user, a device, or a piece of software attempts to access data, it must cryptographically prove its identity and authorization, regardless of whether it is outside the building or plugged directly into the CEO's desk.</p>
+    <p>Furthermore, encryption has become the ultimate safeguard. By scrambling data using highly complex asymmetric mathematical algorithms (like RSA or AES), we ensure that even if a malicious actor successfully intercepts our data while it is traveling across a public Wi-Fi network, they cannot read it. It remains useless mathematical gibberish without the private decryption key.</p>
+
+    <h2>6. Data: The New Oil of the 21st Century</h2>
+    <p>In the physical economy, oil fueled the industrial machines. In the digital economy, data fuels the algorithms. Every time you click a link, hover your mouse over an image, use your credit card, or walk into a store with your smartphone in your pocket, you are generating data.</p>
+    <p>This data is harvested, structured, and stored in massive Database Management Systems (DBMS). For decades, we relied on Relational Databases (SQL), which organized data into strict, highly structured tables. SQL databases prioritize perfect accuracy and data integrity, making them the gold standard for banks and financial institutions (adhering to strict ACID properties).</p>
+    <p>However, the explosion of social media and mobile apps generated unstructured data at a scale previously thought impossible. To handle this, engineers invented Non-Relational Databases (NoSQL). NoSQL threw away the strict tables in favor of flexible documents, allowing databases to scale horizontally across thousands of cheap servers. Understanding how these massive databases collect, store, and query billions of records in milliseconds is the key to understanding how companies like Amazon and Facebook operate at a global scale.</p>
+
+    <h2>7. The Rise of Artificial Intelligence (AI)</h2>
+    <p>We are currently witnessing a paradigm shift that will likely dwarf the invention of the internet itself: the mainstream explosion of Artificial Intelligence, specifically Machine Learning and Deep Learning.</p>
+    <p>For the history of computing, machines could only do exactly what human programmers explicitly told them to do via strict algorithms. Machine Learning flipped this model entirely. Instead of writing rules, programmers feed massive amounts of data and correct answers into a computer, and force the computer to use statistics to figure out the rules for itself.</p>
+    <p>Deep Learning took this a step further by utilizing Artificial Neural Networks—massive, multi-layered mathematical structures inspired by the synapses of the human brain. These networks are capable of learning incredibly complex patterns without human intervention. They are the technology behind computer vision (allowing self-driving cars to see), natural language processing (allowing voice assistants to understand human speech), and generative AI (allowing large language models like ChatGPT to write essays, code software, and hold human-like conversations).</p>
+    
+    <h2>8. The Mathematics of Algorithms</h2>
+    <p>Behind the glossy interfaces of modern applications are incredibly sophisticated algorithms. An algorithm is simply a step-by-step recipe for solving a specific problem. Some of the most famous algorithms in history, like Google's original PageRank, completely reshaped the global flow of information. PageRank treated backlinks as academic citations, allowing the search engine to mathematically determine which website was the most authoritative source on a given topic.</p>
+    <p>Understanding algorithmic efficiency (often denoted by Big O Notation) is crucial for software engineers. A poorly designed algorithm might be able to sort a hundred names in a database instantly, but if asked to sort a million names, it might take several years. Efficient algorithms ensure that when you search for a video on a platform with billions of uploads, you receive the result in mere milliseconds.</p>
+
+    <h2>9. Cloud Computing: The Invisible Infrastructure</h2>
+    <p>None of the massive databases or artificial intelligence models we use today would be possible without Cloud Computing. Twenty years ago, if a company wanted to launch a website, they had to spend hundreds of thousands of dollars buying physical servers, renting a building, paying for industrial cooling, and hiring security guards.</p>
+    <p>Today, companies rely on the Cloud—a massive network of data centers owned by tech giants like Amazon Web Services (AWS), Microsoft Azure, and Google Cloud. Instead of buying hardware, a developer can rent a fraction of a supercomputer for just pennies per hour. This "pay-as-you-go" elasticity means a tiny startup can access the exact same world-class infrastructure as a Fortune 500 company.</p>
+    <p>Whether you are using Infrastructure as a Service (IaaS) to rent raw servers, Platform as a Service (PaaS) to instantly deploy code, or Software as a Service (SaaS) to watch Netflix in your web browser, the Cloud is the invisible engine powering the modern internet.</p>
+
+    <h2>10. The Power of APIs (Application Programming Interfaces)</h2>
+    <p>If you have ever booked a flight online and seen prices from twenty different airlines instantly populate on your screen, you have witnessed the power of APIs. APIs act as the digital waiters of the internet, securely carrying requests and responses between entirely different computer systems.</p>
+    <p>Instead of building every feature from scratch, modern software developers use APIs to snap together complex applications like Lego bricks. They use Stripe's API to process credit cards, Google Maps' API to provide navigation, and Twilio's API to send text messages. APIs abstract away the immense complexity of backend infrastructure, allowing developers to focus solely on the user experience.</p>
+    
+    <h2>11. The Horizon: Quantum Computing and Beyond</h2>
+    <p>As we push traditional silicon microchips to their physical limits, the next frontier of computer science is already on the horizon: Quantum Computing. While classical computers process information using binary "Bits" that can be either a 0 or a 1, quantum computers use "Qubits" which can exist as a 0, a 1, or both simultaneously (a state known as superposition).</p>
+    <p>This allows quantum computers to process massive amounts of variables at the same time. Problems that would take the world's fastest classical supercomputer 10,000 years to solve (such as discovering new pharmaceutical drugs, mapping complex protein structures, or cracking modern cryptographic keys) could potentially be solved by a quantum computer in a matter of seconds. While this technology is currently largely restricted to experimental laboratories, it represents the next massive leap in human computational capability.</p>
+
+    <h2>12. Ethics in the Digital Age</h2>
+    <p>With great computational power comes profound ethical responsibility. The decisions made by software engineers and algorithm designers today have massive, real-world consequences on human society. Algorithmic bias can unjustly deny a person a bank loan or a job interview. Generative AI can be used to mass-produce misinformation and deepfakes. Data harvesting practices can strip individuals of their fundamental right to privacy.</p>
+    <p>Digital literacy involves not just understanding how a tool works, but questioning whether the tool should be built in the first place. At TyagiHub, we believe that education is the key to holding technology accountable. By understanding the inner workings of the systems that govern our lives, we empower ourselves to demand better, more ethical software from the companies that build it.</p>
+
+    <h2>13. The Role of Open Source in Modern Software</h2>
+    <p>It is impossible to discuss the modern technological landscape without acknowledging the monumental impact of the Open Source movement. Unlike proprietary software (where the source code is kept as a closely guarded corporate secret), open-source software makes its underlying code freely available for anyone in the world to view, modify, and distribute. This philosophy of radical transparency and global collaboration has fundamentally accelerated human progress.</p>
+    <p>Consider the Linux operating system, the internet's most critical piece of software. It was not built by a single corporation aiming for profit. It was built by a global community of thousands of passionate engineers voluntarily collaborating over the internet. Today, Linux powers the vast majority of the world's web servers, supercomputers, and even the Android operating system running on billions of smartphones. By understanding the open-source ethos, you understand that technology is at its best when it is democratic, accessible, and built for the collective benefit of humanity.</p>
+
+    <h2>14. How to Use TyagiHub to Master Technology</h2>
+    <p>The sheer volume of information in the technology sector can be paralyzing. Where do you start? What should you learn first? We have structured the guides on TyagiHub to take you on a logical, step-by-step journey through the world of computer science.</p>
+    <p>We recommend starting with our foundational hardware guides, understanding the difference between the CPU, RAM, and long-term storage. Once you understand the physical machine, move on to our Networking and Internet guides to understand how those physical machines connect to each other across oceans. From there, explore the software layer: Operating Systems, Databases, and APIs. Finally, dive into our advanced topics: Cybersecurity, Cloud Computing, and Artificial Intelligence.</p>
+    <p>Technology is not magic; it is mathematics, logic, and engineering. By taking the time to read through the deep-dive articles below, you will build a rock-solid foundation of digital literacy that will serve you for the rest of your life. Welcome to the digital revolution. Welcome to TyagiHub.</p>
+</section>
+
+        
+        <!-- FAQ Section -->
+        
+<section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <h3 class="faq-question">What is Computer Science, and why is it important?</h3>
+        <p class="faq-answer">Computer Science is the study of computers and computational systems, focusing on both the hardware architecture and the software algorithms that power our digital world. It is essential because it drives modern innovation in every sector, from healthcare to finance and entertainment.</p>
     </div>
-    
-    
-    
-    <div class="container" style="margin-top: 2rem;">
-        <div style="background: #ffffff; padding: 3rem; margin-bottom: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #f0f0f0;">
-            <h2 style="color: #2c3e50; margin-top: 0; font-size: 1.8rem; text-align: center; margin-bottom: 1.5rem;">TyagiHub Blog को क्यों चुनें?</h2>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-                <div>
-                    <h3 style="color: #3498db; font-size: 1.3rem; margin-bottom: 0.8rem;">1. सरल और आसान भाषा</h3>
-                    <p style="color: #555; line-height: 1.7;">हम जानते हैं कि टेक्नोलॉजी को समझना कई बार मुश्किल हो सकता है। इसलिए हम अपने सभी आर्टिकल्स बिल्कुल आसान और आम बोलचाल की हिंदी भाषा में लिखते हैं ताकि हर कोई इसे आसानी से समझ सके।</p>
-                </div>
-                <div>
-                    <h3 style="color: #3498db; font-size: 1.3rem; margin-bottom: 0.8rem;">2. सटीक और प्रमाणित जानकारी</h3>
-                    <p style="color: #555; line-height: 1.7;">इंटरनेट पर मौजूद आधी-अधूरी जानकारी से बचाते हुए, हम आपको पूरी तरह से जांची-परखी (Verified) और सटीक जानकारी देते हैं। हमारे गाइड्स आपको स्टेप-बाय-स्टेप हर प्रक्रिया सिखाते हैं।</p>
-                </div>
-                <div>
-                    <h3 style="color: #3498db; font-size: 1.3rem; margin-bottom: 0.8rem;">3. साइबर सुरक्षा (Cybersecurity) पर विशेष ध्यान</h3>
-                    <p style="color: #555; line-height: 1.7;">आज के समय में ऑनलाइन फ्रॉड और स्कैम तेजी से बढ़ रहे हैं। TyagiHub Blog आपको लेटेस्ट स्कैम्स, फिशिंग अटैक्स (Phishing Attacks) और पहचान की चोरी (Identity Theft) से बचने के सबसे बेहतरीन उपाय बताता है।</p>
-                </div>
-            </div>
-            
-            <hr style="border: 0; border-top: 1px solid #eaeaea; margin: 2rem 0;">
-            
-            <h2 style="color: #2c3e50; font-size: 1.6rem; margin-bottom: 1rem;">हमारी नवीनतम डिजिटल गाइड्स</h2>
-            <p style="color: #444; font-size: 1.1rem; line-height: 1.8;">
-                हमारा मानना है कि डिजिटल युग में खुद को अपडेट रखना एक आवश्यकता है। हमारे ब्लॉग पर आपको CapCut वीडियो एडिटिंग ट्यूटोरियल, पासवर्ड मैनेजर्स का सही इस्तेमाल, डार्क वेब से डेटा लीक से बचाव, और भविष्य की स्मार्ट डिवाइसेस (IoT) से जुड़ी विस्तृत जानकारियां मिलेंगी। हम अपने रीडर्स (Readers) के लिए समय-समय पर नई और उपयोगी पोस्ट्स अपडेट करते रहते हैं।
-            </p>
-        </div>
+    <div class="faq-item">
+        <h3 class="faq-question">What is the difference between Web 2.0 and Web 3.0?</h3>
+        <p class="faq-answer">Web 2.0 is the interactive, social internet we use today, heavily centralized and controlled by large tech corporations. Web 3.0 is the upcoming decentralized internet, built on blockchain technology, which aims to give users true ownership of their data and digital assets.</p>
     </div>
-    
-    
-    <footer style="background: #2c3e50; color: #ecf0f1; padding: 4rem 2rem 2rem; margin-top: 4rem; font-family: 'Segoe UI', sans-serif;">
-        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: left;">
-            <div>
-                <h3 style="color: #fff; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.4rem;">TyagiHub Blog</h3>
-                <p style="color: #bdc3c7; line-height: 1.6;">TyagiHub एक डिजिटल इकोसिस्टम है जो शिक्षा, साइबर सुरक्षा और आधुनिक तकनीकों पर केंद्रित है। सीखें, बनाएं और आगे बढ़ें।</p>
+    <div class="faq-item">
+        <h3 class="faq-question">How does Cloud Computing actually work?</h3>
+        <p class="faq-answer">Cloud computing allows you to rent computing resources (like servers, storage, and databases) over the internet instead of buying physical hardware. You connect to massive, highly secure data centers managed by companies like AWS, Microsoft, or Google on a pay-as-you-go basis.</p>
+    </div>
+    <div class="faq-item">
+        <h3 class="faq-question">What is Artificial Intelligence vs Machine Learning?</h3>
+        <p class="faq-answer">Artificial Intelligence (AI) is the broad concept of machines simulating human intelligence. Machine Learning (ML) is a specific subset of AI where computers are trained on massive amounts of data and use statistical patterns to "learn" and make predictions without being explicitly programmed.</p>
+    </div>
+    <div class="faq-item">
+        <h3 class="faq-question">Is TyagiHub suitable for BCA and MCA students?</h3>
+        <p class="faq-answer">Absolutely. Our guides are specifically designed to align with foundational university curriculums for Bachelor of Computer Applications (BCA) and Master of Computer Applications (MCA) degrees, providing clear, jargon-free explanations of complex topics.</p>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <h3>Tyagi<span class="highlight">Hub</span></h3>
+                <p>Your ultimate digital destination for premium tech insights and educational resources. Build better, learn faster.</p>
             </div>
-            <div>
-                <h3 style="color: #fff; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.4rem;">महत्वपूर्ण लिंक</h3>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 0.8rem;"><a href="index.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">होम (Home)</a></li>
-                    <li style="margin-bottom: 0.8rem;"><a href="about.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">हमारे बारे में (About Us)</a></li>
-                    <li style="margin-bottom: 0.8rem;"><a href="contact.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">संपर्क करें (Contact)</a></li>
+            <div class="footer-col">
+                <h4>Legal Info</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
                 </ul>
             </div>
-            <div>
-                <h3 style="color: #fff; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.4rem;">कानूनी (Legal)</h3>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 0.8rem;"><a href="privacy-policy.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">प्राइवेसी पॉलिसी (Privacy)</a></li>
-                    <li style="margin-bottom: 0.8rem;"><a href="terms.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">नियम और शर्तें (Terms)</a></li>
-                    <li style="margin-bottom: 0.8rem;"><a href="disclaimer.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">डिस्क्लेमर (Disclaimer)</a></li>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="author.html">Author</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="sitemap.xml">Sitemap</a></li>
                 </ul>
             </div>
         </div>
-        <div style="text-align: center; padding-top: 2rem; margin-top: 3rem; border-top: 1px solid #34495e; color: #95a5a6;">
-            <p style="margin: 0;">&copy; 2026 TyagiHub Blog. सर्वाधिकार सुरक्षित (All rights reserved).</p>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 TyagiHub. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
-
-
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

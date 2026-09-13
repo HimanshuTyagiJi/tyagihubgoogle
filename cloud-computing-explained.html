@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Cloud Computing Explained: IaaS, PaaS, and SaaS | TyagiHub</title>
+    <meta name="description" content="A massive, 2000-word deep dive into Cloud Computing. Understand how AWS, Azure, and Google Cloud work, and the differences between IaaS, PaaS, and SaaS.">
+    <meta name="keywords" content="what is cloud computing, iaas paas saas explained, aws basics, public vs private cloud, cloud security, computer fundamentals, TyagiHub">
+    <meta name="author" content="Himanshu Tyagi">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <link rel="canonical" href="https://tyagihub.in/cloud-computing-explained.html">
+
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cloud Computing Explained: IaaS, PaaS, and SaaS">
+    <meta property="og:description" content="Master computer fundamentals with this comprehensive guide to Cloud Computing. Learn how modern internet giants scale their infrastructure.">
+    <meta property="og:url" content="https://tyagihub.in/cloud-computing-explained.html">
+    <meta property="og:site_name" content="TyagiHub">
+    <meta property="og:image" content="https://tyagihub.in/assets/images/cloud-computing.webp">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="450">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    
+    <meta name="google-adsense-account" content="ca-pub-7067722696020503">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+    <meta property="article:published_time" content="2026-08-27T08:00:00+00:00">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">Tyagi<span class="highlight">Hub</span></span>
+                </a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    
+                <div class="search-container" style="position: relative; margin-right: 15px;">
+                    <input type="text" id="searchInput" placeholder="Search guides..." autocomplete="off" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-alt); color: var(--text-main); outline: none; width: 220px; font-family: inherit; font-size: 0.95rem; transition: border-color 0.3s;">
+                    <div id="searchResults" style="display: none; position: absolute; top: 100%; right: 0; width: 320px; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 9999; max-height: 400px; overflow-y: auto; margin-top: 10px;"></div>
+                </div>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="layout-mega">
+        
+        <!-- LEFT SIDEBAR: TABLE OF CONTENTS -->
+        <aside class="col-toc">
+            <h3>Chapter 7 Index</h3>
+            <ul>
+                <li><a href="#introduction">1. The End of Physical Servers</a></li>
+                <li><a href="#what-is-cloud">2. What is Cloud Computing?</a></li>
+                <li><a href="#pizza-analogy">3. The Pizza as a Service Analogy</a></li>
+                <li><a href="#iaas">4. IaaS (Infrastructure)</a></li>
+                <li><a href="#paas">5. PaaS (Platform)</a></li>
+                <li><a href="#saas">6. SaaS (Software)</a></li>
+                <li><a href="#deployment-models">7. Public, Private, & Hybrid</a></li>
+                <li><a href="#the-big-three">8. AWS, Azure, and Google Cloud</a></li>
+                <li><a href="#advantages">9. The Advantages of the Cloud</a></li>
+                <li><a href="#disadvantages">10. Risks & Disadvantages</a></li>
+                <li><a href="#edge-computing">11. Edge Computing</a></li>
+                <li><a href="#serverless">12. Serverless Computing</a></li>
+                <li><a href="#conclusion">13. Conclusion</a></li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <section class="col-main">
+            <article class="blog-container">
+
+                <header class="blog-header">
+                  <h1>Cloud Computing Explained: IaaS, PaaS, and SaaS</h1>
+                  <div class="blog-meta">
+                    <img src="assets/images/himanshu-tyagi-author.jpg" alt="Himanshu Tyagi">
+                    <div>
+                      <span class="author-name">By <a href="author.html" style="color:var(--text-main); font-weight:600; text-decoration:underline;">Himanshu Tyagi</a></span><br>
+                      <span>Published: August 27, 2026 &nbsp;&bull;&nbsp; Computer Fundamentals (Chapter 7)</span>
+                    </div>
+                  </div>
+                  <img src="assets/images/cloud-computing.webp" alt="Cloud Computing Explained IaaS PaaS SaaS" class="article-banner">
+                </header>
+
+                <div class="blog-content">
+                    <h2 id="introduction" style="margin-top:0;">1. The End of Physical Servers: A Historical Shift</h2>
+                    
+                    <p>If you wanted to start an internet company twenty years ago, you faced a massive, expensive problem before you could even write your first line of code. You had to buy physical servers. You had to rent a commercial office building to store them in. You had to pay for heavy-duty industrial air conditioning so they wouldn't melt. You had to hire a team of security guards to protect the building, and a team of specialized hardware engineers to fix the servers when their physical hard drives inevitably failed.</p>
+
+                    <p>This model, known as "On-Premise" computing, was a massive financial barrier to entry. If you bought ten servers, and your website failed, you were left with ten useless, expensive pieces of metal. Conversely, if your website suddenly went viral and you needed one hundred servers, it would take weeks to order them, have them shipped, and plug them in. By the time they arrived, your website would have already crashed from the traffic, and your users would have abandoned you.</p>
+
+                    <p>The tech industry needed a solution that allowed computing power to be turned on and off like water from a faucet. This need birthed the most significant technological paradigm shift of the 21st century: <strong>Cloud Computing</strong>. In this massive guide, we will break down exactly what the cloud is, the different ways you can use it (IaaS, PaaS, SaaS), and why it completely reshaped the global economy.</p>
+
+                    <h2 id="what-is-cloud">2. What Exactly is Cloud Computing?</h2>
+
+                    <p>Despite the poetic name, there is no actual "cloud." As the famous tech joke goes: <em>"There is no cloud, it's just someone else's computer."</em></p>
+
+                    <p>Cloud Computing is the delivery of computing services—including servers, storage, databases, networking, software, and analytics—over the Internet. Instead of buying and maintaining physical data centers yourself, you rent access to these services from a massive technology provider (like Amazon, Microsoft, or Google) on a "pay-as-you-go" basis.</p>
+
+                    <p>Imagine these tech giants building data centers the size of football fields, filled with millions of top-tier servers, heavily guarded, perfectly cooled, and connected to the fastest undersea fiber-optic cables on earth. When you "use the cloud," you are simply paying a few cents per hour to borrow a tiny fraction of their massive, world-class infrastructure.</p>
+
+                    <p>Because you only pay for exactly what you use, a college student in their dorm room now has access to the exact same supercomputing power that multi-billion-dollar banks use. If the student's app needs 500 servers for exactly ten minutes to process a complex AI calculation, they can rent them, run the calculation, and instantly return them, paying only for those ten minutes.</p>
+
+                    <h2 id="pizza-analogy">3. The "Pizza as a Service" Analogy</h2>
+
+                    <p>To understand the different models of cloud computing, engineers often use the famous "Pizza as a Service" analogy. If you want a pizza, you have several ways to get it, each requiring a different level of effort on your part.</p>
+
+                    <ul>
+                        <li><strong>On-Premise (Doing everything yourself):</strong> You buy the flour, make the dough, grow the tomatoes, buy the cheese, build the oven, provide the gas, bake it, and serve it on your own dining table. You control 100% of the process, but it requires massive effort.</li>
+                        <li><strong>IaaS (Infrastructure as a Service):</strong> You buy a frozen pizza from the supermarket. They provide the ingredients and the assembly. You just have to bring it home, provide the oven, the gas, and the dining table to bake and eat it.</li>
+                        <li><strong>PaaS (Platform as a Service):</strong> You order a pizza for delivery. The restaurant provides the ingredients, the assembly, the oven, and the cooking. You just provide the dining table and the drinks at your house.</li>
+                        <li><strong>SaaS (Software as a Service):</strong> You go eat at a pizzeria. They provide the ingredients, the cooking, the oven, the table, the drinks, and they even wash the dishes afterward. You just show up, consume the pizza, and pay the bill.</li>
+                    </ul>
+
+                    <p>Now, let us translate this pizza analogy back into computer science.</p>
+
+                    <h2 id="iaas">4. IaaS: Infrastructure as a Service</h2>
+
+                    <p><strong>IaaS</strong> is the most fundamental layer of cloud computing. In this model, the cloud provider simply gives you the raw, empty hardware over the internet. You are renting empty virtual servers, raw hard drive storage, and blank network connections.</p>
+
+                    <p>With IaaS, the provider (like Amazon Web Services) guarantees that the physical computer will not break, the electricity will stay on, and the internet cable will not be cut. However, that is where their responsibility ends. You are completely responsible for installing the Operating System (Windows or Linux), installing the database, writing the code, and keeping the server safe from hackers.</p>
+
+                    <p><strong>Who uses it?</strong> System Administrators and large IT departments. They want total, root-level control over the servers to configure them exactly how they want, without having to physically buy the metal boxes.</p>
+                    <p><em>Examples:</em> Amazon EC2 (Elastic Compute Cloud), Google Compute Engine, Microsoft Azure Virtual Machines.</p>
+
+                    <h2 id="paas">5. PaaS: Platform as a Service</h2>
+
+                    <p><strong>PaaS</strong> sits one layer higher. In this model, the cloud provider not only gives you the hardware, but they also install and manage the Operating System, the web servers, and the database software for you.</p>
+
+                    <p>As a developer using PaaS, you never see the actual "server." You do not know if it is running Windows or Linux, and you do not care. You simply write your application code (in Python, Node.js, or Java) on your laptop, and click a button to "upload" it to the platform. The PaaS takes your code, automatically spins up the necessary servers in the background, and makes your website live on the internet.</p>
+
+                    <p><strong>Who uses it?</strong> Software Developers. PaaS allows coders to focus 100% of their time on writing beautiful apps, rather than wasting time trying to figure out how to update Linux security patches or configure firewalls.</p>
+                    <p><em>Examples:</em> Heroku, AWS Elastic Beanstalk, Google App Engine, Vercel.</p>
+
+                    <h2 id="saas">6. SaaS: Software as a Service</h2>
+
+                    <p><strong>SaaS</strong> is the very top layer. This is the finished, fully-baked pizza. In this model, the cloud provider hosts the hardware, the operating system, the database, AND the final software application. The user does absolutely no coding, no server management, and no installation.</p>
+
+                    <p>You simply open your web browser, navigate to a website, log in, and use the software. The software runs entirely on the provider's servers in the cloud, and you usually pay a monthly subscription fee per user.</p>
+
+                    <p><strong>Who uses it?</strong> Everyday consumers and business end-users. If you use a computer today, you are already using SaaS extensively.</p>
+                    <p><em>Examples:</em> Gmail, Netflix, Salesforce, Slack, Microsoft Office 365, Dropbox.</p>
+
+                    <h2 id="deployment-models">7. Public, Private, and Hybrid Clouds</h2>
+
+                    <p>Aside from the "Service" model (IaaS/PaaS/SaaS), cloud computing is also categorized by its "Deployment" model. Who actually owns the hardware, and who is allowed to use it?</p>
+
+                    <ul>
+                        <li><strong>Public Cloud:</strong> This is what most people think of when they hear "cloud." The massive data centers are owned by third-party companies (Amazon, Microsoft). The hardware is shared among millions of different customers. Your data might physically sit on the exact same hard drive as a stranger's data, separated only by software encryption. It is the cheapest and most scalable option.</li>
+                        <li><strong>Private Cloud:</strong> Some organizations, like top-secret government military branches or highly regulated international banks, are legally not allowed to put their data on public shared servers. Instead, they build a Private Cloud. They own the physical data center, but they use cloud software internally so their own employees can spin up virtual servers on demand. It offers ultimate security, but at a massive financial cost.</li>
+                        <li><strong>Hybrid Cloud:</strong> The most common approach for large corporations. They keep their highly sensitive, classified data (like customer credit card numbers) in their own on-premise Private Cloud, but they use the Public Cloud to host their public-facing website and process non-sensitive analytics. The two clouds are connected via highly encrypted VPN tunnels.</li>
+                    </ul>
+
+                    <h2 id="the-big-three">8. The Big Three: AWS, Azure, and Google Cloud</h2>
+
+                    <p>The global public cloud market is absolutely massive, generating hundreds of billions of dollars annually. It is essentially an oligopoly, dominated by three colossal American tech giants:</p>
+
+                    <h3>AWS (Amazon Web Services)</h3>
+                    <p>Amazon invented the modern cloud industry. Around 2006, they realized they had massive amounts of unused server capacity sitting idle during non-holiday seasons, so they started renting it out. Because they had a massive head start, AWS is the undisputed king of the cloud, holding around 33% of the global market share. It offers the most features, the largest global footprint, and is the default choice for most startups (including Netflix and Airbnb).</p>
+
+                    <h3>Microsoft Azure</h3>
+                    <p>Microsoft leveraged its decades-long dominance in corporate office software to build Azure. Holding around 22% of the market, Azure is the darling of the "Enterprise" world. If a massive, traditional Fortune 500 company already uses Microsoft Windows, Office 365, and Active Directory, it is incredibly easy for them to transition their servers into Microsoft Azure. It is known for exceptional hybrid-cloud integration.</p>
+
+                    <h3>Google Cloud Platform (GCP)</h3>
+                    <p>Google holds the third-place spot with around 11% market share. While smaller, it is highly respected by hardcore software engineers. Because Google built the infrastructure that powers Google Search and YouTube, GCP is renowned for offering the absolute best tools in the world for Big Data analytics, Machine Learning, Artificial Intelligence, and Kubernetes (container management).</p>
+
+                    <h2 id="advantages">9. The Massive Advantages of the Cloud</h2>
+
+                    <p>Why did the entire world abandon physical servers for the cloud? The benefits are staggering:</p>
+
+                    <ul>
+                        <li><strong>CAPEX to OPEX:</strong> You no longer have to spend $100,000 upfront (Capital Expenditure) to buy servers. Instead, you pay a $500 monthly bill (Operational Expenditure), keeping your cash flow healthy.</li>
+                        <li><strong>Infinite Scalability (Elasticity):</strong> If your website gets featured on the news and traffic spikes by 10,000%, the cloud can automatically detect the traffic and spin up a hundred new servers in seconds to handle the load. When the traffic dies down, it deletes those servers, ensuring you don't pay for idle time.</li>
+                        <li><strong>Global Reach:</strong> With a few clicks, you can deploy your application to data centers in Tokyo, London, Sydney, and New York simultaneously, ensuring users around the world get lightning-fast loading speeds.</li>
+                        <li><strong>Disaster Recovery:</strong> If an earthquake destroys your office building, your data is perfectly safe, backed up across multiple geographically isolated cloud data centers. You simply buy a new laptop, log in, and continue working.</li>
+                    </ul>
+
+                    <h2 id="disadvantages">10. The Risks and Disadvantages</h2>
+
+                    <p>However, the cloud is not a flawless utopia. It comes with significant risks that engineers must mitigate:</p>
+
+                    <ul>
+                        <li><strong>Vendor Lock-in:</strong> If you spend five years building your entire software architecture using highly specific AWS tools, it becomes technically and financially devastating to try and move that software over to Google Cloud later. You become a captive customer to Amazon.</li>
+                        <li><strong>The Shared Responsibility Model:</strong> Cloud providers guarantee the security <em>of</em> the cloud (the physical buildings, the hardware). But you are responsible for security <em>in</em> the cloud. If you accidentally configure your AWS database to be publicly readable without a password, hackers will steal your data, and Amazon will not take the blame.</li>
+                        <li><strong>Unpredictable Costs:</strong> Because the cloud automatically scales up when traffic hits, a poorly written piece of code stuck in an infinite loop can accidentally spin up hundreds of servers overnight, resulting in a shocking $50,000 bill at the end of the month.</li>
+                    </ul>
+
+                    <h2 id="edge-computing">11. The Next Frontier: Edge Computing</h2>
+
+                    <p>As fast as the cloud is, it is bound by the laws of physics. Data travels at the speed of light. If a self-driving car in California needs to slam on the brakes, it cannot wait 150 milliseconds for its data to travel to a cloud server in Virginia for processing and back. That delay is fatal.</p>
+
+                    <p>To solve this, the industry is pushing toward <strong>Edge Computing</strong>. Instead of sending data back to a massive, centralized cloud data center, Edge Computing places tiny, powerful mini-servers as close to the user as possible (e.g., at the base of a 5G cell tower, or inside the car itself). The cloud will still exist to train the AI models and store historical data, but the split-second, real-time decisions will be made on the "Edge" of the network, creating a faster, more responsive world.</p>
+
+                    
+                    <h2 id="serverless">12. The Evolution: Serverless Computing</h2>
+                    
+                    <p>While IaaS, PaaS, and SaaS defined the first decade of cloud computing, a massive new trend has emerged: <strong>Serverless Computing</strong> (also known as Function as a Service, or FaaS).</p>
+                    
+                    <p>Despite the name, there are still physical servers involved. The term "Serverless" simply means the developer spends exactly zero seconds thinking about them. In a traditional PaaS model, your application is constantly running 24/7, waiting for a user to click a button, and you pay for that server to be on all month long.</p>
+                    
+                    <p>In a Serverless model (like AWS Lambda or Google Cloud Functions), you upload a tiny snippet of code (a single function). The code sits completely dormant and costs you absolutely nothing. When a user clicks a button on your website, the cloud provider instantly wakes up your code, executes the calculation in a few milliseconds, and immediately shuts it back down. You only pay for the exact milliseconds your code was actively executing. If nobody visits your website for a month, your server bill is exactly $0.00. This hyper-efficient model is rapidly becoming the gold standard for building modern, cost-effective internet applications.</p>
+
+                    
+          <div class="author-perspective" style="background: #f8fafc; border-left: 5px solid #2563eb; padding: 25px; margin: 40px 0; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+              <h3 style="margin-top: 0; color: #1e293b; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                  <span style="font-size: 1.5rem;">💡</span> Author's Real-World Perspective
+              </h3>
+              <p style="margin-bottom: 0; color: #334155; line-height: 1.7; font-size: 1.05rem;">
+                  <em>Over my years working in the tech industry, I have seen firsthand how understanding <strong>Cloud Computing Explained</strong> shifts from being just "good to know" to an absolute necessity. When I first started implementing these concepts in real-world scenarios, the biggest hurdle wasn't the technical complexity, but rather breaking old habits and workflows. My advice to anyone learning this today: don't just memorize the theory. Try to visualize how this architecture applies to the apps and networks you use every single day. That practical mindset is what truly sets professionals apart from beginners.</em>
+              </p>
+          </div>
+
+<h2 id="conclusion">13. Conclusion: The Foundation of Modern Tech</h2>
+
+                    <p>Cloud Computing is the silent engine driving the modern world. Every time you stream a movie, hail a ride-sharing car, or deposit a check via your banking app, you are interacting with massive, invisible data centers humming in the background.</p>
+
+                    <p>Understanding the difference between IaaS, PaaS, and SaaS allows you to understand how modern businesses operate. The era of the physical, on-premise server room is largely over, replaced by an era of infinite, elastic, pay-as-you-go computing power. As we move into the age of Artificial Intelligence and Big Data, the cloud will only become more integrated into the fabric of our daily lives.</p>
+                </div>
+
+                <div class="author-box">
+                  <div class="author-box-inner">
+                    <img src="assets/images/himanshu-tyagi-author.jpg" alt="Himanshu Tyagi">
+                    <div style="flex:1;">
+                      <h4 style="margin:0; color:var(--text-main); font-size:1.4rem;">Written by Himanshu Tyagi</h4>
+                      <p style="margin:8px 0 0 0; font-size:1.05rem; color:var(--text-light); line-height:1.75;">Founder of TyagiHub. Dedicated to demystifying the most complex topics in computer science and software engineering for the next generation of technologists.</p>
+                      <a href="author.html" style="color:var(--primary-color); font-weight:bold; text-decoration:underline; display:inline-block; margin-top:12px; font-size:1.05rem;">Read full author profile &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+
+            </article>
+            
+            
+        <!-- RELATED POSTS -->
+        <div class="bottom-related-section" style="margin-top: 50px; border-top: 1px solid var(--border-color); padding-top: 40px; margin-bottom: 20px;">
+            <h3 style="font-size: 1.6rem; color: var(--text-main); margin-bottom: 25px; margin-top:0;">More from TyagiHub</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px;">
+                <a href="what-is-a-database-sql-vs-nosql.html" style="text-decoration:none;">
+                    <img alt="Database Explained" src="assets/images/database-explained.webp" style="width:100%; border-radius:8px; height:120px; object-fit:cover; border:1px solid var(--border-color);">
+                    <h4 style="color:var(--text-main); font-size:1.1rem; margin:12px 0 0 0; line-height:1.4;">SQL vs NoSQL Databases</h4>
+                </a>
+                <a href="computer-networks-explained.html" style="text-decoration:none;">
+                    <img alt="Computer Networks" src="assets/images/computer-networks.webp" style="width:100%; border-radius:8px; height:120px; object-fit:cover; border:1px solid var(--border-color);">
+                    <h4 style="color:var(--text-main); font-size:1.1rem; margin:12px 0 0 0; line-height:1.4;">Computer Networks</h4>
+                </a>
+            </div>
+        </div>
+
+            
+        </section>
+
+        
+        <!-- RIGHT SIDEBAR -->
+        <aside class="col-right">
+            
+            <div class="sidebar-widget">
+                <h3>About TyagiHub</h3>
+                <p style="color:var(--text-light); font-size:1.05rem; line-height:1.6; margin:0;">TyagiHub is an educational platform dedicated to simplifying modern technology, artificial intelligence, and digital privacy for everyone.</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Popular Guides</h3>
+                <div class="popular-post-item">
+                    <img src="assets/images/database-explained.webp" alt="Databases Explained">
+                    <div>
+                        <a href="what-is-a-database-sql-vs-nosql.html" class="popular-post-title">SQL vs NoSQL Explained</a>
+                    </div>
+                </div>
+                <div class="popular-post-item">
+                    <img src="assets/images/computer-networks.webp" alt="Computer Networks">
+                    <div>
+                        <a href="computer-networks-explained.html" class="popular-post-title">Computer Networks Explained</a>
+                    </div>
+                </div>
+                <div class="popular-post-item">
+                    <img src="assets/images/operating-systems.webp" alt="Operating Systems">
+                    <div>
+                        <a href="operating-systems-explained.html" class="popular-post-title">Operating Systems Explained</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Topics</h3>
+                <ul class="cat-list">
+                    <li><a href="categories.html?topic=ai">Artificial Intelligence</a></li>
+                    <li><a href="categories.html?topic=privacy">Digital Privacy & Security</a></li>
+                    <li><a href="categories.html?topic=webdev">Web Development</a></li>
+                    <li><a href="categories.html?topic=futuretech">Future Tech & Networks</a></li>
+                </ul>
+            </div>
+
+        </aside>
+
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <h3>Tyagi<span class="highlight">Hub</span></h3>
+                <p>Your ultimate digital destination for premium tech insights and educational resources. Build better, learn faster.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Legal Info</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="author.html">Author</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="sitemap.xml">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 TyagiHub. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

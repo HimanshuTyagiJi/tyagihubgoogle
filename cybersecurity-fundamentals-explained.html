@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Introduction to Cybersecurity: Firewalls, Encryption, and Zero-Trust | TyagiHub</title>
+    <meta name="description" content="A massive, 2000-word deep dive into Cybersecurity fundamentals. Learn how firewalls, encryption, and the Zero-Trust architecture keep the internet safe.">
+    <meta name="keywords" content="what is cybersecurity, how firewalls work, encryption explained, zero trust architecture, CIA triad, computer fundamentals, TyagiHub">
+    <meta name="author" content="Himanshu Tyagi">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <link rel="canonical" href="https://tyagihub.in/cybersecurity-fundamentals-explained.html">
+
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Introduction to Cybersecurity: Firewalls & Encryption">
+    <meta property="og:description" content="Master computer fundamentals with this comprehensive guide to Cybersecurity. Learn how digital fortresses are built to protect the modern web.">
+    <meta property="og:url" content="https://tyagihub.in/cybersecurity-fundamentals-explained.html">
+    <meta property="og:site_name" content="TyagiHub">
+    <meta property="og:image" content="https://tyagihub.in/assets/images/cybersecurity-basics.webp">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="450">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    
+    <meta name="google-adsense-account" content="ca-pub-7067722696020503">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+    <meta property="article:published_time" content="2026-07-30T08:00:00+00:00">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">Tyagi<span class="highlight">Hub</span></span>
+                </a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    
+                <div class="search-container" style="position: relative; margin-right: 15px;">
+                    <input type="text" id="searchInput" placeholder="Search guides..." autocomplete="off" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-alt); color: var(--text-main); outline: none; width: 220px; font-family: inherit; font-size: 0.95rem; transition: border-color 0.3s;">
+                    <div id="searchResults" style="display: none; position: absolute; top: 100%; right: 0; width: 320px; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 9999; max-height: 400px; overflow-y: auto; margin-top: 10px;"></div>
+                </div>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="layout-mega">
+        
+        <!-- LEFT SIDEBAR: TABLE OF CONTENTS -->
+        <aside class="col-toc">
+            <h3>Chapter 10 Index</h3>
+            <ul>
+                <li><a href="#introduction">1. The Digital Fortress</a></li>
+                <li><a href="#what-is-cybersecurity">2. What is Cybersecurity?</a></li>
+                <li><a href="#cia-triad">3. The CIA Triad</a></li>
+                <li><a href="#common-threats">4. Common Digital Threats</a></li>
+                <li><a href="#firewalls">5. Firewalls Explained</a></li>
+                <li><a href="#encryption">6. The Power of Encryption</a></li>
+                <li><a href="#ssl-tls">7. SSL/TLS and HTTPS</a></li>
+                <li><a href="#authentication">8. Identity & Authentication</a></li>
+                <li><a href="#zero-trust">9. Zero-Trust Architecture</a></li>
+                <li><a href="#vpn">10. VPNs (Virtual Private Networks)</a></li>
+                <li><a href="#patch-management">11. Updates and Patching</a></li>
+                <li><a href="#endpoint-security">12. Endpoint Security (EDR)</a></li>
+                <li><a href="#backups">13. The 3-2-1 Backup Rule</a></li>
+                <li><a href="#conclusion">14. Conclusion</a></li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <section class="col-main">
+            <article class="blog-container">
+
+                <header class="blog-header">
+                  <h1>Introduction to Cybersecurity: Firewalls, Encryption, and Zero-Trust Explained</h1>
+                  <div class="blog-meta">
+                    <img src="assets/images/himanshu-tyagi-author.jpg" alt="Himanshu Tyagi">
+                    <div>
+                      <span class="author-name">By <a href="author.html" style="color:var(--text-main); font-weight:600; text-decoration:underline;">Himanshu Tyagi</a></span><br>
+                      <span>Published: July 30, 2026 &nbsp;&bull;&nbsp; Computer Fundamentals (Chapter 10)</span>
+                    </div>
+                  </div>
+                  <img src="assets/images/cybersecurity-basics.webp" alt="Cybersecurity Basics Explained" class="article-banner">
+                </header>
+
+                <div class="blog-content">
+                    <h2 id="introduction" style="margin-top:0;">1. The Digital Fortress: Why Security Matters</h2>
+                    
+                    <p>In previous chapters, we explored how the Internet, Cloud Computing, and APIs connect the entire world together. We have built an incredibly fast, highly efficient global nervous system. However, this massive interconnectivity comes with a severe downside: if every computer in the world is connected, every computer in the world is potentially vulnerable.</p>
+
+                    <p>Fifty years ago, if someone wanted to steal a bank's money or a corporation's secret documents, they had to physically break into a concrete building, bypass armed guards, and crack a heavy steel safe. Today, highly valuable assets are no longer made of paper or gold; they are made of digital data (1s and 0s). Because this data is connected to the internet, unauthorized individuals can attempt to break into the bank's servers from the comfort of a living room thousands of miles away.</p>
+
+                    <p>To prevent these digital intrusions, the technology industry created the field of Cybersecurity. It is arguably the most critical pillar of modern computer science. A beautifully designed application and a lightning-fast database are completely worthless if they cannot keep user data secure. In this massive guide, we will explore the fundamental principles of digital defense in simple, human-friendly terms.</p>
+
+                    <h2 id="what-is-cybersecurity">2. What Exactly is Cybersecurity?</h2>
+
+                    <p>Cybersecurity is the practice of protecting computer systems, networks, devices, and programs from unauthorized access, disruption, or destruction. It involves multiple layers of defense spread across computers, programs, and the human beings who use them.</p>
+
+                    <p>A good cybersecurity strategy does not rely on a single magic shield. Instead, it relies on a concept called "Defense in Depth." Imagine a medieval castle. To protect the king, you don't just build one wooden door. You build a moat, followed by a massive stone wall, followed by an iron gate, followed by internal guards, and finally a locked safe room. If an intruder manages to bypass the moat, they still have to face the stone wall.</p>
+
+                    <p>In the digital world, Defense in Depth means using firewalls to protect the network perimeter, encryption to protect the database, and mandatory multi-factor authentication (MFA) to protect user accounts. If one layer fails, the next layer is there to stop the intrusion.</p>
+
+                    <h2 id="cia-triad">3. The CIA Triad: The Golden Rule of Security</h2>
+
+                    <p>Every single cybersecurity policy on earth is built upon three foundational pillars, known collectively as the <strong>CIA Triad</strong>. If a system fails to provide any one of these three things, it is considered insecure.</p>
+
+                    <ul>
+                        <li><strong>Confidentiality:</strong> Only authorized individuals should be able to view the data. If you check your bank balance, you should be the only one who can see it. We achieve confidentiality by using strong passwords and encrypting data so that even if it is intercepted, it cannot be read by strangers.</li>
+                        <li><strong>Integrity:</strong> Data must not be altered, modified, or corrupted by unauthorized individuals. If you transfer $100 to a friend, the system must guarantee that a malicious actor cannot secretly change the number to $10,000 while the data is traveling across the internet.</li>
+                        <li><strong>Availability:</strong> The system must be accessible to authorized users exactly when they need it. A bank website is not "secure" if they unplug all their servers and turn them off. While unplugging servers makes them impossible to breach, it destroys Availability. Defending against attacks that attempt to overload and crash servers (like DDoS attacks) is a critical part of maintaining availability.</li>
+                    </ul>
+
+                    <h2 id="common-threats">4. Understanding Common Digital Threats</h2>
+
+                    <p>To build a strong defense, you must understand how unauthorized individuals attempt to breach systems. While movies often portray these intrusions as rapid typing on a keyboard accompanied by green Matrix code, real-world threats are usually much more subtle.</p>
+
+                    <ul>
+                        <li><strong>Malware (Malicious Software):</strong> This is a broad term for any software designed to cause harm. It includes viruses (which attach themselves to clean files and spread) and worms (which replicate themselves across networks automatically).</li>
+                        <li><strong>Ransomware:</strong> A highly disruptive type of malware. Once it enters a computer network, it instantly locks and encrypts all the company's files. The unauthorized actors then demand a massive financial payment (usually in cryptocurrency) in exchange for the digital key to unlock the files. If the company does not have offline backups, they are completely paralyzed.</li>
+                        <li><strong>Social Engineering:</strong> This is the most common and effective method of breaching a system. Rather than using complex math to break a firewall, an intruder manipulates a human being. They might send a highly realistic, fake email pretending to be the company's IT department, tricking an employee into voluntarily handing over their password. Human error is always the weakest link in any security chain.</li>
+                    </ul>
+
+                    <h2 id="firewalls">5. The First Line of Defense: Firewalls</h2>
+
+                    <p>The concept of a Firewall is borrowed directly from physical architecture. In a building, a physical firewall is a thick, fire-resistant wall designed to stop a fire from spreading from one room to the rest of the building. In computer networking, a Firewall does the exact same thing for digital traffic.</p>
+
+                    <p>A Firewall can be a physical hardware device or a software program. It acts as a strict security guard standing at the single doorway between your private internal network (your office) and the chaotic public internet. </p>
+
+                    <p>Every single piece of data (called a packet) that tries to enter or leave the building must pass through the Firewall. The Firewall inspects the packet and compares it against a strict set of rules. For example, a company's firewall rule might say: <em>"Allow web browsing traffic on Port 80, but absolutely block any traffic attempting to access the internal database from the outside."</em> If a packet violates the rules, the Firewall silently drops it into the digital trash can, preventing the intrusion before it even reaches the internal computers.</p>
+
+                    <h2 id="encryption">6. The Power of Encryption (Symmetric vs. Asymmetric)</h2>
+
+                    <p>Even with the best firewalls, data eventually has to leave the building and travel across the public internet. If someone manages to intercept that data while it is traveling across a public Wi-Fi network, how do we stop them from reading it? The answer is <strong>Encryption</strong>.</p>
+
+                    <p>Encryption is the process of taking readable data (Plaintext) and passing it through a complex mathematical algorithm to scramble it into unreadable gibberish (Ciphertext). Only a person with the correct mathematical "Key" can unscramble it back into Plaintext.</p>
+
+                    <ul>
+                        <li><strong>Symmetric Encryption:</strong> Both the sender and the receiver use the exact same secret key. It is like locking a box with a physical key, and your friend having an identical copy of that same physical key. It is incredibly fast, but the problem is: how do you securely mail the key to your friend without someone intercepting it?</li>
+                        <li><strong>Asymmetric Encryption (Public Key Cryptography):</strong> This was a massive mathematical breakthrough. Instead of one key, every user generates a mathematically linked <em>pair</em> of keys: a <strong>Public Key</strong> and a <strong>Private Key</strong>. You share your Public Key with the entire world. Anyone can use your Public Key to lock a box, but <em>only</em> your Private Key (which you never share with anyone) can unlock it. This completely solves the problem of securely sending data across the internet.</li>
+                    </ul>
+
+                    <h2 id="ssl-tls">7. SSL/TLS and the Padlock in Your Browser</h2>
+
+                    <p>Have you ever noticed the little padlock icon next to a website's address in Google Chrome? That padlock indicates that the website is using <strong>HTTPS</strong> (HyperText Transfer Protocol Secure), which is powered by SSL/TLS encryption.</p>
+
+                    <p>When you connect to a banking website, your browser and the bank's server perform a lightning-fast "Digital Handshake." The server presents a Digital Certificate, proving it is the real bank and not a fake imposter. Then, using Asymmetric Encryption, your browser and the server securely agree on a temporary, one-time secret key. </p>
+
+                    <p>From that moment on, every single piece of data you send to the bank (including your password and account numbers) is heavily encrypted. Even if an intruder is secretly monitoring your Wi-Fi connection at a coffee shop, all they will see is a stream of meaningless, scrambled letters and numbers.</p>
+
+                    <h2 id="authentication">8. Identity: Passwords, 2FA, and Biometrics</h2>
+
+                    <p>For decades, the standard way to prove your identity on the internet was the password. However, passwords are fundamentally flawed. Humans are terrible at remembering complex passwords, so they tend to use simple ones (like "Password123") or use the exact same password for fifty different websites. If one website suffers a data breach, all fifty accounts are instantly compromised.</p>
+
+                    <p>Modern cybersecurity relies on <strong>Multi-Factor Authentication (MFA)</strong>, also known as 2FA. To grant access, the system requires two or more pieces of evidence from different categories:</p>
+                    <ol>
+                        <li><strong>Something you know:</strong> A password or a PIN code.</li>
+                        <li><strong>Something you have:</strong> A smartphone (receiving an SMS code, or using an authenticator app) or a physical hardware security key.</li>
+                        <li><strong>Something you are:</strong> Biometrics (a fingerprint scan or facial recognition).</li>
+                    </ol>
+                    <p>Even if an intruder completely steals your password, they cannot log into your account unless they also physically steal your smartphone or your fingerprint. MFA stops over 99% of automated credential attacks.</p>
+
+                    <h2 id="zero-trust">9. The Zero-Trust Architecture</h2>
+
+                    <p>Historically, corporate networks used a "Castle and Moat" security model. If you were outside the firewall (on the internet), you were considered dangerous. If you were inside the firewall (plugged into a desk at the office), you were trusted implicitly. Once you got past the front door, you could wander the castle freely.</p>
+
+                    <p>This model is now obsolete. What happens if an attacker compromises a single laptop inside the office? They have free reign over the entire network.</p>
+
+                    <p>The modern standard is the <strong>Zero-Trust Architecture</strong>. The philosophy is simple: <em>"Never trust, always verify."</em> Under Zero-Trust, the internal network is treated exactly like the dangerous public internet. Even if you are sitting inside the CEO's office, plugged directly into the wall, the system does not trust you. Every single time you try to access a new file, open an application, or talk to a server, the system explicitly re-verifies your identity, your device's security health, and your permission level. It creates micro-perimeters around every single digital asset.</p>
+
+                    <h2 id="vpn">10. Virtual Private Networks (VPNs)</h2>
+
+                    <p>With the massive rise of remote work, employees are no longer sitting behind the safety of the corporate physical firewall. They are working from home networks and public cafes. To secure this traffic, organizations use VPNs.</p>
+
+                    <p>A VPN creates an encrypted, private "tunnel" across the public internet. When a remote employee connects to the corporate VPN, their internet traffic is scrambled, routed securely across the internet, and injected directly into the corporate network. To the corporate servers, it appears as though the employee is sitting securely inside the physical office building, ensuring that sensitive corporate data is never exposed to the public internet.</p>
+
+                    <h2 id="patch-management">11. The Unsung Hero: Software Updates and Patching</h2>
+
+                    <p>It is not glamorous, but it is a statistical fact: the vast majority of successful digital breaches do not happen through brilliant, movie-style mathematical manipulation. They happen because an organization forgot to click "Update."</p>
+
+                    <p>Software is written by humans, and humans make mistakes. Complex software (like Windows or Linux) contains millions of lines of code. Occasionally, a flaw (a vulnerability) is discovered in that code that allows an attacker to bypass security. When the software company discovers the flaw, they release a "Patch" (a software update) to fix it.</p>
+
+                    <p>If an organization ignores the "Update Available" notification, their system remains vulnerable to a known exploit. Intruders run automated scanners across the internet, looking for servers running outdated software, and compromise them instantly. Strict, automated Patch Management is one of the most critical aspects of maintaining a secure network.</p>
+
+                    
+                    <h2 id="endpoint-security">12. Endpoint Security: Antivirus and EDR</h2>
+                    
+                    <p>While firewalls protect the perimeter of the network, you must also protect the individual devices themselves. In cybersecurity, laptops, smartphones, and desktop computers are referred to as "Endpoints." If a single endpoint is compromised, it can be used as a bridgehead to attack the rest of the network.</p>
+                    
+                    <p>Historically, this was handled by traditional Antivirus software. Antivirus works by maintaining a massive database (a dictionary) of known malware signatures. When you download a file, the antivirus scans it and compares it to the dictionary. If it finds a match, it deletes the file. However, this model is fundamentally flawed against modern threats. If a malicious actor creates a brand new piece of malware today (a "zero-day" threat), it will not be in the dictionary, and the antivirus will let it pass right through.</p>
+                    
+                    <p>Modern organizations use <strong>EDR (Endpoint Detection and Response)</strong> instead of traditional antivirus. EDR does not rely strictly on a dictionary. Instead, it uses Artificial Intelligence and behavioral monitoring. If a seemingly harmless PDF document suddenly tries to open a hidden command terminal and delete system files, the EDR software recognizes that this is highly suspicious behavior, instantly quarantines the file, and alerts the security team, even if it has never seen that specific piece of malware before.</p>
+
+                    <h2 id="backups">13. The Ultimate Fail-Safe: The 3-2-1 Backup Rule</h2>
+                    
+                    <p>No matter how much money a company spends on firewalls, encryption, zero-trust architecture, and EDR, there is a fundamental truth in cybersecurity: a determined attacker, given enough time and resources, will eventually get through. This is especially devastating in the case of Ransomware, where data is completely encrypted and locked away from the owners.</p>
+                    
+                    <p>When all preventative defenses fail, the only thing that will save a company (or your personal family photos) from total destruction is a robust Backup Strategy. The industry standard is known as the <strong>3-2-1 Rule</strong>.</p>
+                    
+                    <ul>
+                        <li><strong>3 Copies of Data:</strong> You must have the original production data, plus at least two complete backup copies.</li>
+                        <li><strong>2 Different Media Types:</strong> The backups should be stored on two different types of storage media to prevent a single hardware failure from destroying both (for example, one backup on a local external Hard Drive, and one backup on a remote Cloud Server).</li>
+                        <li><strong>1 Offsite (or Offline) Copy:</strong> This is the most critical step. At least one backup must be physically or logically separated from the main network. If ransomware spreads across your entire office network, it will destroy your local backups too. However, it cannot encrypt an offline hard drive sitting in a fireproof safe, or a highly secured, air-gapped cloud storage bucket.</li>
+                    </ul>
+
+                    
+          <div class="author-perspective" style="background: #f8fafc; border-left: 5px solid #2563eb; padding: 25px; margin: 40px 0; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+              <h3 style="margin-top: 0; color: #1e293b; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                  <span style="font-size: 1.5rem;">💡</span> Author's Real-World Perspective
+              </h3>
+              <p style="margin-bottom: 0; color: #334155; line-height: 1.7; font-size: 1.05rem;">
+                  <em>Over my years working in the tech industry, I have seen firsthand how understanding <strong>Introduction to Cybersecurity</strong> shifts from being just "good to know" to an absolute necessity. When I first started implementing these concepts in real-world scenarios, the biggest hurdle wasn't the technical complexity, but rather breaking old habits and workflows. My advice to anyone learning this today: don't just memorize the theory. Try to visualize how this architecture applies to the apps and networks you use every single day. That practical mindset is what truly sets professionals apart from beginners.</em>
+              </p>
+          </div>
+
+<h2 id="conclusion">14. Conclusion: A Shared Responsibility</h2>
+
+                    <p>Cybersecurity is not just a problem for IT professionals in a basement; it is a shared responsibility that affects every single person who uses a smartphone or a computer. The most advanced firewalls and billion-dollar Zero-Trust architectures can be completely undone if a single employee clicks a malicious link in a fake email.</p>
+
+                    <p>By understanding the fundamental principles of the CIA Triad, the necessity of Multi-Factor Authentication, the mathematical beauty of Encryption, and the importance of keeping software updated, you transform yourself from a vulnerable target into a hardened digital citizen. As our physical and digital lives continue to merge, this knowledge is no longer optional; it is essential for survival in the modern digital economy.</p>
+                </div>
+
+                <div class="author-box">
+                  <div class="author-box-inner">
+                    <img src="assets/images/himanshu-tyagi-author.jpg" alt="Himanshu Tyagi">
+                    <div style="flex:1;">
+                      <h4 style="margin:0; color:var(--text-main); font-size:1.4rem;">Written by Himanshu Tyagi</h4>
+                      <p style="margin:8px 0 0 0; font-size:1.05rem; color:var(--text-light); line-height:1.75;">Founder of TyagiHub. Dedicated to demystifying the most complex topics in computer science and software engineering for the next generation of technologists.</p>
+                      <a href="author.html" style="color:var(--primary-color); font-weight:bold; text-decoration:underline; display:inline-block; margin-top:12px; font-size:1.05rem;">Read full author profile &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+
+            </article>
+            
+            
+        <!-- RELATED POSTS -->
+        <div class="bottom-related-section" style="margin-top: 50px; border-top: 1px solid var(--border-color); padding-top: 40px; margin-bottom: 20px;">
+            <h3 style="font-size: 1.6rem; color: var(--text-main); margin-bottom: 25px; margin-top:0;">More from TyagiHub</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px;">
+                <a href="what-is-an-api-explained.html" style="text-decoration:none;">
+                    <img alt="Api Explained" src="assets/images/api-explained.webp" style="width:100%; border-radius:8px; height:120px; object-fit:cover; border:1px solid var(--border-color);">
+                    <h4 style="color:var(--text-main); font-size:1.1rem; margin:12px 0 0 0; line-height:1.4;">What is an API?</h4>
+                </a>
+                <a href="what-is-artificial-intelligence.html" style="text-decoration:none;">
+                    <img alt="Ai Explained" src="assets/images/ai-explained.webp" style="width:100%; border-radius:8px; height:120px; object-fit:cover; border:1px solid var(--border-color);">
+                    <h4 style="color:var(--text-main); font-size:1.1rem; margin:12px 0 0 0; line-height:1.4;">Artificial Intelligence</h4>
+                </a>
+            </div>
+        </div>
+
+            
+        </section>
+
+        
+        <!-- RIGHT SIDEBAR -->
+        <aside class="col-right">
+            
+            <div class="sidebar-widget">
+                <h3>About TyagiHub</h3>
+                <p style="color:var(--text-light); font-size:1.05rem; line-height:1.6; margin:0;">TyagiHub is an educational platform dedicated to simplifying modern technology, artificial intelligence, and digital privacy for everyone.</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Popular Guides</h3>
+                <div class="popular-post-item">
+                    <img src="assets/images/api-explained.webp" alt="API Explained">
+                    <div>
+                        <a href="what-is-an-api-explained.html" class="popular-post-title">What is an API?</a>
+                    </div>
+                </div>
+                <div class="popular-post-item">
+                    <img src="assets/images/ai-explained.webp" alt="AI Explained">
+                    <div>
+                        <a href="what-is-artificial-intelligence.html" class="popular-post-title">Artificial Intelligence Explained</a>
+                    </div>
+                </div>
+                <div class="popular-post-item">
+                    <img src="assets/images/cloud-computing.webp" alt="Cloud Computing">
+                    <div>
+                        <a href="cloud-computing-explained.html" class="popular-post-title">Cloud Computing Explained</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Topics</h3>
+                <ul class="cat-list">
+                    <li><a href="categories.html?topic=ai">Artificial Intelligence</a></li>
+                    <li><a href="categories.html?topic=privacy">Digital Privacy & Security</a></li>
+                    <li><a href="categories.html?topic=webdev">Web Development</a></li>
+                    <li><a href="categories.html?topic=futuretech">Future Tech & Networks</a></li>
+                </ul>
+            </div>
+
+        </aside>
+
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <h3>Tyagi<span class="highlight">Hub</span></h3>
+                <p>Your ultimate digital destination for premium tech insights and educational resources. Build better, learn faster.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Legal Info</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="author.html">Author</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="sitemap.xml">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 TyagiHub. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

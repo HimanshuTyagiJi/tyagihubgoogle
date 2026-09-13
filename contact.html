@@ -1,135 +1,128 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>संपर्क करें (Contact Us) - TyagiHub Blog</title>
+    <title>Contact Us | TyagiHub</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: #333; background-color: #f9f9f9; margin: 0; padding: 0; }
-        header { background: #fff; padding: 1rem 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        header h1 { margin: 0; font-size: 1.5rem; }
-        header h1 a { color: #2c3e50; text-decoration: none; }
-        nav { margin-top: 10px; }
-        nav a { color: #2c3e50; text-decoration: none; margin-left: 15px; font-weight: bold; padding: 8px 16px; background: #f8f9fa; border: 1px solid #eaeaea; border-radius: 6px; transition: all 0.3s; display: inline-block; }
-        nav a:hover { background: #3498db; color: #fff; border-color: #3498db; }
-        .page-container { max-width: 900px; margin: 3rem auto; padding: 3rem; background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .page-container h1 { color: #2c3e50; border-bottom: 2px solid #eaeaea; padding-bottom: 15px; margin-top: 0; font-size: 2.5rem; text-align: center; margin-bottom: 2rem; }
-        .page-container h2 { color: #34495e; font-size: 1.8rem; margin-top: 2.5rem; margin-bottom: 1rem; }
-        .page-container h3 { color: #3498db; font-size: 1.4rem; margin-top: 2rem; margin-bottom: 0.8rem; }
-        .page-container p { font-size: 1.15rem; line-height: 1.9; color: #444; margin-bottom: 1.5rem; text-align: justify; }
-        .page-container ul { font-size: 1.15rem; line-height: 1.9; color: #444; margin-bottom: 1.5rem; }
-        .page-container li { margin-bottom: 0.8rem; }
-        
-        .contact-form { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
-        .contact-form input, .contact-form textarea { padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 5px; font-family: inherit; }
-        .contact-form button { background: #3498db; color: #fff; border: none; padding: 1rem; font-size: 1.2rem; cursor: pointer; border-radius: 5px; transition: background 0.3s; font-weight: bold; }
-        .contact-form button:hover { background: #2980b9; }
-
-        @media (max-width: 768px) { 
-            header { flex-direction: column; text-align: center; padding: 1rem 0.5rem; } 
-            nav { margin-top: 15px; display: flex; gap: 8px 12px; justify-content: center; flex-wrap: wrap; padding: 0 0.5rem; } 
-            nav a { margin: 0; font-size: 0.95rem; padding: 6px 10px; background: #f8f9fa; border: 1px solid #eaeaea; border-radius: 5px; } 
-            .page-container, .post-container { padding: 1rem !important; margin: 1rem 0.5rem !important; box-sizing: border-box; } 
-            .post-section { padding: 1.2rem !important; margin-bottom: 1.5rem !important; }
-            .hero { padding: 2.5rem 1rem !important; }
-            .container { padding: 0 0.5rem !important; }
-            .grid { gap: 1.5rem !important; }
-        }
+        .page-container { max-width: 1000px; margin: 60px auto; padding: 50px; background: var(--bg-alt); border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .page-container h1 { color: var(--primary-color); font-size: 2.8rem; margin-top: 0; margin-bottom: 25px; border-bottom: 2px solid var(--border-color); padding-bottom: 15px; }
+        .page-container h2 { color: var(--text-main); font-size: 1.8rem; margin-top: 40px; margin-bottom: 15px; }
+        .page-container h3 { color: var(--text-main); font-size: 1.4rem; margin-top: 25px; margin-bottom: 10px; }
+        .page-container p { font-size: 1.15rem; line-height: 1.9; color: var(--text-light); margin-bottom: 20px; text-align: justify; }
+        .page-container ul, .page-container ol { margin-bottom: 25px; padding-left: 25px; }
+        .page-container li { font-size: 1.15rem; color: var(--text-light); line-height: 1.9; margin-bottom: 10px; }
+        .page-container a { color: var(--primary-color); text-decoration: none; font-weight: bold; }
+        .page-container a:hover { text-decoration: underline; }
     </style>
-    <link rel="canonical" href="https://tyagihub.in/contact.html" />
-    <meta name="robots" content="index, follow">
+
+    
     <meta name="google-adsense-account" content="ca-pub-7067722696020503">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://tyagihub.in/contact.html">
 </head>
 <body>
-    <header>
-        <h1><a href="index.html">TyagiHub Blog</a></h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="privacy-policy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-            <a href="disclaimer.html">Disclaimer</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    
-    <div class="page-container">
-        
-<!-- Google AdSense Ad Block -->
-<div style="text-align: center; margin: 2rem 0; padding: 1rem; border: 1px dashed #ccc; background: #fdfdfd;">
-    <span style="color: #999; font-size: 0.8rem; text-transform: uppercase;">Advertisement</span>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-7067722696020503"
-         data-ad-slot="XXXXXXXXXX"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-
-        <h1>संपर्क करें (Contact Us)</h1>
-        
-<p><strong>TyagiHub Blog</strong> में आपकी रुचि के लिए धन्यवाद! हम आपके फीडबैक, सवालों और सुझावों का हमेशा स्वागत करते हैं। यदि आपको हमारे किसी भी आर्टिकल (Article) से संबंधित कोई जानकारी चाहिए, या आप किसी विशिष्ट तकनीकी विषय (Technical Topic) पर हमसे गाइड चाहते हैं, तो आप नीचे दिए गए माध्यमों से हमसे संपर्क कर सकते हैं।</p>
-
-<div style="background: #f1f8ff; border-left: 4px solid #3498db; padding: 1.5rem; margin-bottom: 2rem; border-radius: 4px;">
-    <h3 style="margin-top: 0; color: #2c3e50;">संपर्क जानकारी (Contact Info)</h3>
-    <p style="margin: 0; font-size: 1.2rem;"><strong>Email:</strong> <a href="mailto:tyagisupport@gmail.com" style="color: #3498db; text-decoration: none;">tyagisupport@gmail.com</a></p>
-    <p style="margin: 10px 0 0 0; font-size: 1.2rem;"><strong>Response Time:</strong> हम 24 से 48 घंटों के भीतर सभी ईमेल्स का जवाब देने का प्रयास करते हैं।</p>
-</div>
-
-<h2>हमें मैसेज भेजें (Send us a Message)</h2>
-<p>आप नीचे दिए गए फॉर्म का उपयोग करके सीधा हमें संदेश भेज सकते हैं:</p>
-
-<div style="width: 100%; max-width: 800px; margin: 0 auto; text-align: center;">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4liJ9pGtUZFGnHuAHSfFiYFuGrTSUciBuIUh52VanlNGSOw/viewform?embedded=true" 
-            width="100%" 
-            height="850" 
-            frameborder="0" 
-            marginheight="0" 
-            marginwidth="0"
-            style="border-radius: 8px; border: 1px solid #eaeaea; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-        फ़ॉर्म लोड हो रहा है... (Loading form...)
-    </iframe>
-</div>
-
-<h3 style="margin-top: 3rem;">व्यावसायिक पूछताछ (Business Inquiries)</h3>
-<p>यदि आप स्पॉन्सरशिप (Sponsorship), विज्ञापन (Advertising) या किसी अन्य व्यावसायिक साझेदारी (Business Partnership) के लिए हमसे जुड़ना चाहते हैं, तो कृपया ईमेल के विषय में "Business Inquiry" लिखकर हमें मेल करें।</p>
-
-    </div>
-    
-    
-    
-    <footer style="background: #2c3e50; color: #ecf0f1; padding: 4rem 2rem 2rem; margin-top: 4rem; font-family: 'Segoe UI', sans-serif;">
-        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: left;">
-            <div>
-                <h3 style="color: #fff; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.4rem;">TyagiHub Blog</h3>
-                <p style="color: #bdc3c7; line-height: 1.6;">TyagiHub एक डिजिटल इकोसिस्टम है जो शिक्षा, साइबर सुरक्षा और आधुनिक तकनीकों पर केंद्रित है। सीखें, बनाएं और आगे बढ़ें।</p>
+    <header class="main-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">Tyagi<span class="highlight">Hub</span></span>
+                </a>
             </div>
-            <div>
-                <h3 style="color: #fff; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.4rem;">महत्वपूर्ण लिंक</h3>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 0.8rem;"><a href="index.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">होम (Home)</a></li>
-                    <li style="margin-bottom: 0.8rem;"><a href="about.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">हमारे बारे में (About Us)</a></li>
-                    <li style="margin-bottom: 0.8rem;"><a href="contact.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">संपर्क करें (Contact)</a></li>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    
+                <div class="search-container" style="position: relative; margin-right: 15px;">
+                    <input type="text" id="searchInput" placeholder="Search guides..." autocomplete="off" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-alt); color: var(--text-main); outline: none; width: 220px; font-family: inherit; font-size: 0.95rem; transition: border-color 0.3s;">
+                    <div id="searchResults" style="display: none; position: absolute; top: 100%; right: 0; width: 320px; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 9999; max-height: 400px; overflow-y: auto; margin-top: 10px;"></div>
+                </div>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="page-container">
+            <h1>Get in Touch with TyagiHub</h1>
+            
+    <p>Communication is the lifeblood of any thriving educational community. At TyagiHub, we deeply value the feedback, technical inquiries, and profound insights of our global readership. Whether you are a first-year university student struggling to grasp the complexities of a Relational Database, a senior backend developer wanting to point out a highly specific optimization in our code, or a multinational organization looking to collaborate on educational initiatives, our inbox is always open and monitored.</p>
+    
+    <h2>1. Primary Contact Channel and Email Protocols</h2>
+    <p>To ensure your message bypasses spam filters, reaches the correct department, and is processed as efficiently as possible, we mandate that all primary, serious communication be conducted via our official email channels. This allows us to track inquiries, forward highly technical questions to the appropriate author, and maintain a secure, written record of our correspondence.</p>
+    <div style="background: #e0f2fe; border-left: 5px solid #3b82f6; padding: 25px; border-radius: 6px; margin-bottom: 35px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <h3 style="margin-top: 0; color: #1e3a8a; font-size: 1.4rem;">Official Correspondence Email</h3>
+        <p style="margin: 0; font-size: 1.25rem;"><strong>Email:</strong> <a href="mailto:tyagisupport@gmail.com" style="color: #2563eb; text-decoration: underline;">tyagisupport@gmail.com</a></p>
+    </div>
+
+    <h2>2. Departmental Routing Guidelines</h2>
+    <p>We receive a remarkably high volume of emails daily from students, educators, and professionals across the globe. To manage expectations and ensure a rapid response, please review our standard response protocols and use the appropriate subject lines when drafting your email:</p>
+    <ul>
+        <li><strong>General Inquiries & Reader Feedback (Subject: "Reader Feedback"):</strong> We absolutely love hearing how our massive guides have helped you ace a university exam, nail a technical interview, or finally understand a complex topic like Artificial Intelligence. While our editorial team reads every single piece of feedback, the sheer volume prevents us from replying to all of them personally. Please know your words motivate us daily.</li>
+        <li><strong>Technical Corrections & Bug Reports (Subject: "Correction: [Article Title]"):</strong> Technology changes rapidly. If you spot a factual error, a typo, a broken hyperlink, or an outdated piece of code in one of our guides, please alert us immediately. We take our technical accuracy very seriously. Our engineering team will review the claim and, if verified, patch the error on the live site within 48 hours. We highly appreciate community QA!</li>
+        <li><strong>Business, Sponsorship, & Partnership Inquiries (Subject: "Business Inquiry"):</strong> For serious sponsorship opportunities, ethical advertising placements, or institutional partnerships (e.g., universities wanting to use our content in their curriculum), please direct your email to our management team. Include a detailed proposal. We typically respond to serious, well-formatted business proposals within 2-3 business days.</li>
+        <li><strong>DMCA and Legal Takedown Requests (Subject: "LEGAL: DMCA Request"):</strong> TyagiHub respects the intellectual property rights of all creators. If you believe your copyrighted work has been improperly used or hosted on our servers without fair use justification, please email our legal department with a formal DMCA notice including the exact URL and proof of ownership. We comply rapidly with all legitimate legal requests.</li>
+    </ul>
+
+    <h2>3. Guest Posting, SEO Backlinks, and Contribution Policy</h2>
+    <p>We receive dozens of emails daily asking for "guest posting opportunities" or "SEO link insertions." <strong>Please read carefully: At this time, TyagiHub's content is exclusively authored by our rigorous in-house editorial team.</strong> This strict policy is necessary to maintain our unyielding quality standards, the specific "Mega-Guide" formatting, and the pedagogical consistency our readers expect. We are not currently accepting unsolicited guest posts. Any automated emails requesting SEO backlinks, paid link placements, or low-quality guest posts will be automatically filtered, marked as spam, and permanently ignored.</p>
+
+    <h2>4. Security Vulnerability Reporting (Bug Bounty Info)</h2>
+    <p>As a platform that teaches cybersecurity, we take our own infrastructure security very seriously. If you are a security researcher, ethical hacker, or penetration tester and you believe you have discovered a vulnerability in the TyagiHub architecture (e.g., XSS, CSRF, server misconfigurations), we urge you to report it to us immediately using the subject line <em>"URGENT: Security Vulnerability."</em> Please do not publicly disclose the vulnerability until we have had reasonable time to patch it. While we do not currently operate a paid bug bounty program, we will happily provide a letter of recommendation and a public acknowledgment on our site for any verified, critical disclosures.</p>
+
+    <h2>5. Connect With Us on Social Media</h2>
+    <p>If you prefer faster, more casual interaction, or if you simply want to stay updated the very second we drop a new 2,000-word tech guide, you can follow TyagiHub and its founder across various social media platforms. We frequently post bite-sized tech facts, industry updates, and behind-the-scenes looks at our writing process.</p>
+    <ul>
+        <li><strong>Twitter / X:</strong> Follow our official handle for rapid-fire tech insights, industry commentary, and immediate updates on site maintenance.</li>
+        <li><strong>LinkedIn:</strong> Connect with our founder, Himanshu Tyagi, for professional networking, career-focused tech discussions, and deep-dive architectural posts.</li>
+        <li><strong>GitHub:</strong> Check out our open-source repositories, where we host the complete, executable versions of the code snippets used in our various tutorials.</li>
+    </ul>
+    
+    <h2>6. Office Hours, Availability, and Physical Location</h2>
+    <p>TyagiHub operates as a decentralized, digital-first organization. Our core editorial and engineering team operates on Indian Standard Time (IST), headquartered in the National Capital Region (NCR), India. While our globally distributed servers provide knowledge 24/7/365, our human support team generally processes emails and inquiries between 9:00 AM and 6:00 PM (IST), Monday through Friday. We are closed on major national holidays. We appreciate your patience, respect your inquiries, and look forward to connecting with you as we build the ultimate digital literacy platform.</p>
+
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <h3>Tyagi<span class="highlight">Hub</span></h3>
+                <p>Your ultimate digital destination for premium tech insights and educational resources. Build better, learn faster.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Legal Info</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
                 </ul>
             </div>
-            <div>
-                <h3 style="color: #fff; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.4rem;">कानूनी (Legal)</h3>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="margin-bottom: 0.8rem;"><a href="privacy-policy.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">प्राइवेसी पॉलिसी (Privacy)</a></li>
-                    <li style="margin-bottom: 0.8rem;"><a href="terms.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">नियम और शर्तें (Terms)</a></li>
-                    <li style="margin-bottom: 0.8rem;"><a href="disclaimer.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bdc3c7'">डिस्क्लेमर (Disclaimer)</a></li>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="author.html">Author</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="sitemap.xml">Sitemap</a></li>
                 </ul>
             </div>
         </div>
-        <div style="text-align: center; padding-top: 2rem; margin-top: 3rem; border-top: 1px solid #34495e; color: #95a5a6;">
-            <p style="margin: 0;">&copy; 2026 TyagiHub Blog. सर्वाधिकार सुरक्षित (All rights reserved).</p>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 TyagiHub. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
-
-
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
