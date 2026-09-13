@@ -336,3 +336,46 @@ ul { list-style: none; }
     white-space: normal; /* Allow some wrapping inside cells if needed, but the table can still scroll */
     min-width: 150px; /* Ensures columns don't crush to zero width */
 }
+
+
+/* --- Header Layout Updates for Mobile Search --- */
+.header-inner {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    margin-right: auto !important; /* Pushes nav-actions and menu to the right */
+}
+.nav-actions {
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .nav-actions {
+        margin-right: 15px;
+    }
+    .search-container {
+        margin-right: 0 !important;
+    }
+    #searchInput {
+        width: 140px !important;
+        padding: 6px 12px !important;
+        font-size: 0.85rem !important;
+    }
+    #searchResults {
+        width: 250px !important;
+        right: -30px !important;
+    }
+}
+
+/* --- Mobile Author Box Fix --- */
+@media (max-width: 768px) {
+    .author-box-inner {
+        flex-direction: column !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+    .author-box img {
+        margin: 0 auto !important;
+    }
+}
