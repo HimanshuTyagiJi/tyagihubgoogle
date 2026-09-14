@@ -89,7 +89,7 @@
             0%,100% { d:path("M0,50 L60,50 L70,20 L80,80 L90,50 L200,50"); }
             50% { d:path("M0,50 L60,50 L70,10 L80,90 L90,50 L200,50"); }
         }
-        .ecg-line { stroke:#10B981; stroke-width:2.5; fill:none; opacity:0.6; }
+        .ecg-line { stroke:#047857; stroke-width:2.5; fill:none; opacity:0.6; }
         @keyframes ecgMove { 0% { stroke-dashoffset:400; } 100% { stroke-dashoffset:0; } }
         .ecg-anim { stroke-dasharray:400; animation:ecgMove 3s linear infinite; }
 
@@ -113,14 +113,14 @@
         .scan-rect:nth-child(2n) { animation-delay:0.4s; }
         .scan-rect:nth-child(3n) { animation-delay:0.8s; }
         @keyframes detectBox { 0%,100%{ stroke-opacity:0.3; } 50%{ stroke-opacity:1; } }
-        .detect-box { stroke:#10B981; stroke-width:3; fill:none; stroke-dasharray:6 3; animation:detectBox 1.5s infinite; }
+        .detect-box { stroke:#047857; stroke-width:3; fill:none; stroke-dasharray:6 3; animation:detectBox 1.5s infinite; }
 
         .comparison-table { width:100%; border-collapse:collapse; margin:30px 0; font-size:1.05rem; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
         .comparison-table th, .comparison-table td { border:1px solid var(--border-color); padding:16px; text-align:left; vertical-align:top; }
         .comparison-table th { background-color:var(--primary-color); color:#fff; }
         .comparison-table tr:nth-child(even) { background-color:var(--bg-alt); }
 
-        .callout { background:#ecfdf5; border-left:4px solid #10B981; padding:20px 25px; border-radius:0 8px 8px 0; margin:30px 0; font-size:1.1rem; color:#065f46; line-height:1.85; }
+        .callout { background:#ecfdf5; border-left:4px solid #047857; padding:20px 25px; border-radius:0 8px 8px 0; margin:30px 0; font-size:1.1rem; color:#065f46; line-height:1.85; }
         .callout-warn { background:#fff7ed; border-left:4px solid #F59E0B; padding:20px 25px; border-radius:0 8px 8px 0; margin:30px 0; font-size:1.1rem; color:#92400e; line-height:1.85; }
 
         .related-box { background:var(--bg-alt); border-radius:12px; padding:30px; margin:40px 0; border:1px solid var(--border-color); }
@@ -213,7 +213,7 @@
               <span class="stat-num">9.4%</span>
               <span class="stat-label">Reduction in missed cancers by Google's AI vs. average radiologist (Nature, 2020)</span>
             </div>
-            <div class="stat-box" style="background:#10B981;">
+            <div class="stat-box" style="background:#047857;">
               <span class="stat-num">4x</span>
               <span class="stat-label">Faster drug candidate identification with AI-assisted molecular simulation</span>
             </div>
@@ -247,7 +247,7 @@
               <rect x="90" y="125" width="80" height="25" rx="3" fill="#374151" class="scan-rect"/>
               <!-- Detection box on anomaly -->
               <rect x="88" y="55" width="88" height="42" class="detect-box" rx="4"/>
-              <text x="135" y="108" text-anchor="middle" font-family="Arial" font-size="10" fill="#10B981" font-weight="bold">ANOMALY DETECTED</text>
+              <text x="135" y="108" text-anchor="middle" font-family="Arial" font-size="10" fill="#047857" font-weight="bold">ANOMALY DETECTED</text>
 
               <!-- Arrow -->
               <text x="220" y="95" font-size="28" fill="#4F46E5">&#8594;</text>
@@ -265,11 +265,11 @@
               </g>
 
               <!-- Arrow 2 -->
-              <text x="392" y="95" font-size="28" fill="#10B981">&#8594;</text>
+              <text x="392" y="95" font-size="28" fill="#047857">&#8594;</text>
 
               <!-- Result -->
               <g transform="translate(430, 45)">
-                <rect x="0" y="0" width="80" height="55" rx="10" fill="#10B981"/>
+                <rect x="0" y="0" width="80" height="55" rx="10" fill="#047857"/>
                 <text x="40" y="22" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="11" fill="#fff">Confidence</text>
                 <text x="40" y="40" text-anchor="middle" font-family="Arial" font-weight="900" font-size="20" fill="#fff">94%</text>
               </g>
