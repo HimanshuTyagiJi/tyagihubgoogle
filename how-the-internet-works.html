@@ -1,339 +1,254 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>How the Internet Works: A Complete Guide to IP, DNS, and Servers | TyagiHub</title>
-    <meta name="description" content="Ever wondered what happens when you type a URL into your browser? Discover the massive, invisible infrastructure of the internet in this comprehensive 2000-word guide.">
-    <meta name="keywords" content="how the internet works, what is an IP address, what is DNS, clients and servers, TCP/IP, underwater internet cables, computer fundamentals, TyagiHub">
-    <meta name="author" content="Himanshu Tyagi">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-
-    <link rel="canonical" href="https://tyagihub.in/how-the-internet-works.html">
-
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="How the Internet Works: A Complete Guide">
-    <meta property="og:description" content="A deep, 2000+ word educational dive into the global network that connects humanity. Learn about IP addresses, DNS, and physical infrastructure.">
-    <meta property="og:url" content="https://tyagihub.in/how-the-internet-works.html">
-    <meta property="og:site_name" content="TyagiHub">
-    <meta property="og:image" content="https://tyagihub.in/assets/images/how-internet-works.webp">
-    <meta property="og:image:width" content="800">
-    <meta property="og:image:height" content="450">
-    
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    
-    <meta name="google-adsense-account" content="ca-pub-7067722696020503">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
-    <meta property="article:published_time" content="2026-06-25T08:00:00+00:00">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>How the Internet Works: A Complete Guide to IP, DNS, and Servers | TyagiHub</title>
+<meta content="Ever wondered what happens when you type a URL into your browser? Discover the massive, invisible infrastructure of the internet in this comprehensive 2000-word guide." name="description"/>
+<meta content="how the internet works, what is an IP address, what is DNS, clients and servers, TCP/IP, underwater internet cables, computer fundamentals, TyagiHub" name="keywords"/>
+<meta content="Himanshu Tyagi" name="author"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<link href="https://tyagihub.in/how-the-internet-works.html" rel="canonical"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="article" property="og:type"/>
+<meta content="How the Internet Works: A Complete Guide" property="og:title"/>
+<meta content="A deep, 2000+ word educational dive into the global network that connects humanity. Learn about IP addresses, DNS, and physical infrastructure." property="og:description"/>
+<meta content="https://tyagihub.in/how-the-internet-works.html" property="og:url"/>
+<meta content="TyagiHub" property="og:site_name"/>
+<meta content="https://tyagihub.in/assets/images/how-internet-works.webp" property="og:image"/>
+<meta content="800" property="og:image:width"/>
+<meta content="450" property="og:image:height"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<meta content="ca-pub-7067722696020503" name="google-adsense-account"/>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503"></script>
+<meta content="2026-06-25T08:00:00+00:00" property="article:published_time"/>
 </head>
 <body>
-    <header class="main-header">
-        <div class="container header-inner">
-            <div class="logo">
-                <a href="index.html">
-                    <span class="logo-text">Tyagi<span class="highlight">Hub</span></span>
-                </a>
-            </div>
-            <div class="nav-actions">
-                    
-                <div class="search-container" style="position: relative; margin-right: 15px;">
-                    <input type="text" id="searchInput" placeholder="Search guides..." autocomplete="off" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-alt); color: var(--text-main); outline: none; width: 220px; font-family: inherit; font-size: 0.95rem; transition: border-color 0.3s;">
-                    <div id="searchResults" style="display: none; position: absolute; top: 100%; right: 0; width: 320px; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 9999; max-height: 400px; overflow-y: auto; margin-top: 10px;"></div>
-                </div>
-
-                </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
-                <svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-            </button>
-            <nav class="main-nav" id="mainNav">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="categories.html">Categories</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                
-            </nav>
-        </div>
-    </header>
-
-    <main class="layout-mega">
-        
-        
-        <aside class="col-toc">
-            <h3>Chapter 3 Index</h3>
-            <ul>
-                <li><a href="#introduction">1. The Invisible Network</a></li>
-                <li><a href="#internet-vs-web">2. The Internet vs. The Web</a></li>
-                <li><a href="#clients-servers">3. Clients and Servers</a></li>
-                <li><a href="#ip-addresses">4. IP Addresses: The Postal Code</a></li>
-                <li><a href="#dns-system">5. DNS: The Internet's Phonebook</a></li>
-                <li><a href="#packets-routing">6. Packets and Data Routing</a></li>
-                <li><a href="#tcp-ip">7. TCP/IP Protocol</a></li>
-                <li><a href="#physical-cables">8. Undersea Cables & Hardware</a></li>
-                <li><a href="#putting-it-together">9. Putting It All Together</a></li>
-                <li><a href="#deep-dark-web">10. Deep Web vs Dark Web</a></li>
-                <li><a href="#conclusion">11. Conclusion</a></li>
-            </ul>
-        </aside>
-
-        
-        <section class="col-main">
-            <article class="blog-container">
-
-                <header class="blog-header">
-                  <h1>How the Internet Works: A Complete Guide to IP, DNS, and Servers</h1>
-                  <div class="blog-meta">
-                    <div>
-                      <span class="author-name">By <a href="author.html" style="color:var(--text-main); font-weight:600; text-decoration:underline;">Himanshu Tyagi</a></span><br>
-                      <span>Published: June 25, 2026 &nbsp;&bull;&nbsp; Computer Fundamentals (Chapter 3)</span>
-                    </div>
-                  </div>
-                  <img loading="lazy" src="assets/images/how-internet-works.webp" alt="How the Internet Works Explained" class="article-banner" width="800" height="450">
-                </header>
-
-                <div class="blog-content">
-                    <h2 id="introduction" style="margin-top:0;">1. The Invisible Network Connecting Humanity</h2>
-                    
-                    <p>It is the most complex machine ever constructed by human beings, yet it is almost entirely invisible. Right now, as you read these words on your screen, you are participating in a massive, globally synchronized dance of light, electricity, and mathematics. You likely typed a simple web address or clicked a link, and within milliseconds, this page appeared. But what actually happened during those few milliseconds?</p>
-
-                    <p>For most people, the internet is treated like magic. It is simply a utility, much like the water that flows when you turn on a faucet or the electricity that powers your lights. However, unlike water or electricity, the internet is not a raw resource being pumped into your home. It is an active, conversational network of billions of computers constantly talking, requesting, verifying, and delivering data across continents.</p>
-
-                    <p>To truly master computer science or web development, or even just to be an educated citizen of the modern digital world, you must demystify this process. Understanding how the internet functions at a foundational level explains why websites go down, why hackers can intercept data, how governments censor information, and why a video might buffer on your smartphone. In this massive, comprehensive guide, we will break down the absolute fundamentals of the internet, step-by-step, using simple, human-friendly language and real-world analogies.</p>
-
-                    <h2 id="internet-vs-web">2. The Internet vs. The World Wide Web: A Crucial Distinction</h2>
-
-                    <p>Before we dive into the technical mechanics, we must correct a very common misconception. Most people use the terms "The Internet" and "The World Wide Web" interchangeably. In reality, they are two entirely different things.</p>
-
-                    <p><strong>The Internet</strong> is the physical, underlying infrastructure. It is the massive network of networks. It consists of the copper wires, the fiber-optic cables running across the ocean floor, the giant satellite dishes, the routers in your home, and the billions of computers connected to them. If you think of a global transportation system, the Internet is the physical roads, highways, train tracks, and airports.</p>
-
-                    <p><strong>The World Wide Web (WWW)</strong>, invented by Tim Berners-Lee in 1989, is just one of many services that <em>use</em> the Internet. The Web is the collection of websites, HTML documents, images, and videos that are linked together via hyperlinks. Returning to the transportation analogy, if the Internet is the physical highway system, the World Wide Web is the fleet of delivery trucks driving on those highways. </p>
-
-                    <p>Other things use the Internet without using the World Wide Web. When you send an email (using SMTP), when you transfer a file via FTP, or when you play a multiplayer online game, you are using the Internet's roads, but you are not using the World Wide Web's delivery trucks. The Web is just the most famous passenger on the Internet.</p>
-
-                    <h2 id="clients-servers">3. Clients and Servers: The Digital Restaurant</h2>
-
-                    <p>The entire architecture of the modern internet is built on a model known as the <strong>Client-Server Relationship</strong>. To understand this, let us use the analogy of a busy restaurant.</p>
-
-                    <p>When you sit down at a restaurant, you are the <strong>Client</strong>. You look at a menu, decide what you want, and place an order. You do not cook the food yourself; you simply make a request. In the digital world, your web browser (Google Chrome, Safari, Firefox) on your smartphone or laptop is the Client. When you type a URL or click a link, your Client is placing an order for a specific webpage.</p>
-
-                    <p>In the kitchen of the restaurant stands the Chef. The Chef receives your order, gathers the ingredients, cooks the meal, and hands it to a waiter to deliver back to your table. In the digital world, this Chef is the <strong>Server</strong>. A Server is not a magical cloud; it is literally just another computer. However, unlike your laptop, a Server is a highly powerful computer that sits in a massive, air-conditioned data center, running 24/7 without a monitor or keyboard. Its only job is to "serve" data to clients who request it. </p>
-
-                    <p>When your Client (browser) requests a webpage, the Server calculates the logic, pulls data from its database, constructs the HTML file, and sends it back across the internet to your screen. Every single interaction on the web is a conversation between a Client asking for data, and a Server fulfilling that request.</p>
-
-                    <h2 id="ip-addresses">4. IP Addresses: The Postal Code of the Web</h2>
-
-                    <p>If you want to send a physical letter to a friend on the other side of the country, you cannot simply write their name on the envelope and drop it in a mailbox. The postal service needs a specific, unique street address and zip code to route the letter correctly. The internet operates on the exact same principle.</p>
-
-                    <p>Every single device connected to the internet—your phone, your smart TV, your laptop, and every server in the world—is assigned a unique numerical label called an <strong>IP Address (Internet Protocol Address)</strong>. Without an IP address, a device cannot send or receive data, because the network would not know where to deliver the information.</p>
-
-                    <p>A traditional IP address (known as IPv4) looks like a string of four numbers separated by periods, such as <code>192.168.1.15</code> or <code>142.250.190.46</code>. Because the internet exploded in popularity, we actually ran out of these four-number combinations. To solve this, engineers created a new system called IPv6, which uses a much longer combination of numbers and letters, ensuring we will never run out of unique addresses again.</p>
-
-                    <p>When you request a website, your computer includes its own IP address as the "Return Address" on the digital envelope, so the Server knows exactly where to send the webpage data back to.</p>
-
-                    <h2 id="dns-system">5. DNS: The Internet's Phonebook</h2>
-
-                    <p>Here is a fundamental problem: computers love numbers, but human beings are terrible at remembering them. Imagine if, instead of typing <code>google.com</code> into your browser, you had to memorize and type <code>142.250.190.46</code> every single time you wanted to search for something. The internet would be unusable.</p>
-
-                    <p>To bridge the gap between human language and computer numbers, the internet relies on the <strong>DNS (Domain Name System)</strong>. You can think of DNS as a massive, globally distributed phonebook.</p>
-
-                    <p>When you type <code>tyagihub.in</code> into your browser and press Enter, your browser does not actually know where that server is located. Instead, the browser immediately contacts a DNS Resolver (usually provided by your Internet Service Provider). It essentially asks, "Hey, what is the numerical IP address for the name tyagihub.in?"</p>
-
-                    <p>The DNS Resolver looks up the name in its massive directory. Within milliseconds, it replies to your browser: "I found it! The IP address for tyagihub.in is 104.21.55.190."</p>
-
-                    <p>Armed with the actual numerical IP address, your browser can now send its request directly to the correct server. This entire phonebook lookup happens behind the scenes in the blink of an eye before the website even begins to load on your screen.</p>
-
-                    <h2 id="packets-routing">6. Packets and Data Routing: Breaking Things Down</h2>
-
-                    <p>When a server sends a webpage, an image, or a video back to your computer, it does not send it as one massive, solid block of data. If you are downloading a 2GB movie, sending it as a single chunk would clog up the network, and if even a single error occurred during transmission, the entire 2GB file would have to be re-sent from the beginning.</p>
-
-                    <p>Instead, the internet relies on <strong>Packet Switching</strong>. The server takes the large file and chops it up into thousands or millions of tiny, equal-sized pieces called "Packets."</p>
-
-                    <p>Imagine dismantling a Lego castle, putting each individual Lego brick into its own numbered envelope, and mailing them all to your friend. Each envelope (Packet) contains:</p>
-                    <ul>
-                        <li>A piece of the actual data (the Lego brick).</li>
-                        <li>The destination IP address (where it is going).</li>
-                        <li>The sender IP address (where it came from).</li>
-                        <li>A sequence number (e.g., "I am piece 45 of 10,000").</li>
-                    </ul>
-
-                    <p>Because the internet is a massive web of connections, these packets do not all travel the same route. Packet #1 might travel from New York to London via an undersea cable. Packet #2 might get routed through Canada because the New York cable was momentarily congested. They race across the globe independently, bouncing from router to router, finding the fastest available path at that exact millisecond.</p>
-
-                    <h2 id="tcp-ip">7. TCP/IP: The Rules of Communication</h2>
-
-                    <p>Because these packets take different routes, they often arrive at your computer completely out of order. Packet #99 might arrive before Packet #2. This is where the <strong>TCP (Transmission Control Protocol)</strong> comes in to save the day.</p>
-
-                    <p>TCP is a strict set of rules that governs how data is transmitted. When the disorganized packets arrive at your computer, the TCP software looks at the sequence numbers on the envelopes and carefully reassembles the Lego castle in the exact correct order. </p>
-
-                    <p>Furthermore, TCP is highly reliable. If TCP realizes that Packet #45 never arrived (perhaps it got lost at a broken router in the middle of the ocean), it will send a message back to the Server saying, "Hey, I am missing piece 45, please resend it." The server resends just that one missing piece. This guarantee of delivery is why a webpage loads perfectly every time, rather than missing random chunks of text.</p>
-
-                    <h2 id="physical-cables">8. The Physical Infrastructure: Undersea Cables</h2>
-
-                    <p>Despite the prevalence of Wi-Fi and cellular networks, the internet is overwhelmingly a physical, wired entity. Your smartphone might connect to a router via invisible radio waves (Wi-Fi), but the moment the signal hits the router, it travels through a physical copper or fiber-optic wire in your wall.</p>
-
-                    <p>That wire connects to a larger cable running down your street, which connects to a regional hub managed by your Internet Service Provider (ISP). But how does data travel from a server in California to a laptop in India? Not through satellites. Satellites are far too slow and have too much latency due to the distance to space.</p>
-
-                    <p>The global internet is powered by a massive network of <strong>Undersea Fiber-Optic Cables</strong>. These are thick, heavily armored cables resting at the bottom of the ocean, stretching across the Atlantic and Pacific. Inside these cables are glass threads as thin as human hair. Data is transmitted through these glass threads as pulses of laser light, traveling at near the speed of light.</p>
-
-                    <p>When you click a link hosted in another country, your request physically travels across the bottom of the ocean, hits the server, and the response travels back across the ocean floor to your screen, all in less than half a second. It is a modern engineering marvel that rivals the construction of the pyramids.</p>
-
-                    <h2 id="putting-it-together">9. Putting It All Together: A Millisecond Journey</h2>
-
-                    <p>Let us summarize the entire journey of a web request. What happens when you type a website address and press Enter?</p>
-
-                    <ol>
-                        <li><strong>The Request:</strong> You type a URL into your browser (the Client).</li>
-                        <li><strong>The Phonebook:</strong> Your computer checks the DNS to translate the domain name into a numerical IP address.</li>
-                        <li><strong>The Connection:</strong> Your computer forms a request and addresses it to the Server's IP address.</li>
-                        <li><strong>The Physical Journey:</strong> The request travels through your local router, into the ISP's physical cables, potentially across an undersea fiber-optic cable, until it reaches the Server in a data center.</li>
-                        <li><strong>The Processing:</strong> The Server receives the request, gathers the HTML, CSS, and images, and chops them up into thousands of tiny Packets.</li>
-                        <li><strong>The Return Trip:</strong> The Server addresses the Packets with your computer's IP address and fires them back across the internet. They take various optimal routes to reach you.</li>
-                        <li><strong>The Assembly:</strong> Your computer receives the Packets. The TCP protocol checks to ensure all pieces arrived and reassembles them in the correct order.</li>
-                        <li><strong>The Render:</strong> Finally, your browser reads the assembled HTML code and visually paints the webpage onto your screen.</li>
-                    </ol>
-
-                    <p>This entire process, involving millions of lines of code, physical laser pulses crossing oceans, and complex mathematical verifications, happens in roughly 300 to 800 milliseconds. Faster than the blink of a human eye.</p>
-
-                    
-                    <h2 id="deep-dark-web">10. The Deep Web vs. The Dark Web: A Crucial Distinction</h2>
-                    
-                    <p>When discussing how the internet works, it is impossible to ignore the terms 'Deep Web' and 'Dark Web', which are frequently sensationalized in the media. Understanding the mechanical difference between these layers of the internet solidifies your overall understanding of how search engines and web routing operate.</p>
-                    
-                    <p><strong>The Surface Web:</strong> This is the portion of the internet that you use every single day. It consists of any webpage that can be found and indexed by a standard search engine like Google or Bing. When a search engine's automated 'crawler' bot follows links from one page to another, it builds a map of the Surface Web. However, experts estimate that this surface layer represents less than 5% of the total data on the internet.</p>
-                    
-                    <p><strong>The Deep Web:</strong> This makes up the vast majority (around 90-95%) of the internet. The Deep Web is simply any webpage that is hidden behind a password, a paywall, or requires specific login credentials. It is not necessarily illegal or dangerous. Your personal Gmail inbox, your online banking dashboard, your company's internal employee portal, and Netflix's video database are all part of the Deep Web. Search engines are blocked from indexing these pages because they cannot log in. Without the Deep Web, digital privacy would not exist.</p>
-                    
-                    <p><strong>The Dark Web:</strong> This is a very small, specific subsection of the Deep Web. The Dark Web is built on hidden networks (known as darknets) that require specialized software, such as the Tor Browser, to access. Unlike the standard internet where your IP address is public, the Dark Web uses complex layers of encryption (onion routing) to completely anonymize both the user and the server hosting the website. While it is famous for illegal marketplaces, it is also a vital tool used by journalists, whistleblowers, and political dissidents in oppressive regimes to communicate without being tracked by their governments.</p>
-
-                    
-          <div class="author-perspective" style="background: #f8fafc; border-left: 5px solid #2563eb; padding: 25px; margin: 40px 0; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-              <h3 style="margin-top: 0; color: #1e293b; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-                  <span style="font-size: 1.5rem;">💡</span> Author's Real-World Perspective
+<header class="main-header">
+<div class="container header-inner">
+<div class="logo">
+<a href="index.html">
+<span class="logo-text">Tyagi<span class="highlight">Hub</span></span>
+</a>
+</div>
+<div class="nav-actions">
+<div class="search-container" style="position: relative; margin-right: 15px;">
+<input autocomplete="off" id="searchInput" placeholder="Search guides..." style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-alt); color: var(--text-main); outline: none; width: 220px; font-family: inherit; font-size: 0.95rem; transition: border-color 0.3s;" type="text"/>
+<div id="searchResults" style="display: none; position: absolute; top: 100%; right: 0; width: 320px; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 9999; max-height: 400px; overflow-y: auto; margin-top: 10px;"></div>
+</div>
+</div>
+<button aria-label="Toggle mobile menu" class="mobile-menu-btn" id="mobileMenuBtn">
+<svg class="svg-icon" viewbox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+</button>
+<nav class="main-nav" id="mainNav">
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="categories.html">Categories</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main class="layout-mega">
+<aside class="col-toc">
+<h3>Chapter 3 Index</h3>
+<ul>
+<li><a href="#introduction">1. The Invisible Network</a></li>
+<li><a href="#internet-vs-web">2. The Internet vs. The Web</a></li>
+<li><a href="#clients-servers">3. Clients and Servers</a></li>
+<li><a href="#ip-addresses">4. IP Addresses: The Postal Code</a></li>
+<li><a href="#dns-system">5. DNS: The Internet's Phonebook</a></li>
+<li><a href="#packets-routing">6. Packets and Data Routing</a></li>
+<li><a href="#tcp-ip">7. TCP/IP Protocol</a></li>
+<li><a href="#physical-cables">8. Undersea Cables &amp; Hardware</a></li>
+<li><a href="#putting-it-together">9. Putting It All Together</a></li>
+<li><a href="#deep-dark-web">10. Deep Web vs Dark Web</a></li>
+<li><a href="#conclusion">11. Conclusion</a></li>
+</ul>
+</aside>
+<section class="col-main">
+<article class="blog-container">
+<header class="blog-header">
+<h1>How the Internet Works: A Complete Guide to IP, DNS, and Servers</h1>
+<div class="blog-meta">
+<div>
+<span class="author-name">By <a href="author.html" style="color:var(--text-main); font-weight:600; text-decoration:underline;">Himanshu Tyagi</a></span><br/>
+<span>Published: June 25, 2026  •  Computer Fundamentals (Chapter 3)</span>
+</div>
+</div>
+<img alt="How the Internet Works Explained" class="article-banner" height="450" loading="lazy" src="assets/images/how-internet-works.webp" width="800"/>
+</header>
+<div class="blog-content">
+<h2 id="introduction" style="margin-top:0;">1. The Invisible Network Connecting Humanity</h2>
+<p>It is the most complex machine ever constructed by human beings, yet it is almost entirely invisible. Right now, as you read these words on your screen, you are participating in a massive, globally synchronized dance of light, electricity, and mathematics. You likely typed a simple web address or clicked a link, and within milliseconds, this page appeared. But what actually happened during those few milliseconds?</p>
+<p>For most people, the internet is treated like magic. It is simply a utility, much like the water that flows when you turn on a faucet or the electricity that powers your lights. However, unlike water or electricity, the internet is not a raw resource being pumped into your home. It is an active, conversational network of billions of computers constantly talking, requesting, verifying, and delivering data across continents.</p>
+<p>To truly master computer science or web development, or even just to be an educated citizen of the modern digital world, you must demystify this process. Understanding how the internet functions at a foundational level explains why websites go down, why hackers can intercept data, how governments censor information, and why a video might buffer on your smartphone. In this massive, comprehensive guide, we will break down the absolute fundamentals of the internet, step-by-step, using simple, human-friendly language and real-world analogies.</p>
+<h2 id="internet-vs-web">2. The Internet vs. The World Wide Web: A Crucial Distinction</h2>
+<p>Before we dive into the technical mechanics, we must correct a very common misconception. Most people use the terms "The Internet" and "The World Wide Web" interchangeably. In reality, they are two entirely different things.</p>
+<p><strong>The Internet</strong> is the physical, underlying infrastructure. It is the massive network of networks. It consists of the copper wires, the fiber-optic cables running across the ocean floor, the giant satellite dishes, the routers in your home, and the billions of computers connected to them. If you think of a global transportation system, the Internet is the physical roads, highways, train tracks, and airports.</p>
+<p><strong>The World Wide Web (WWW)</strong>, invented by Tim Berners-Lee in 1989, is just one of many services that <em>use</em> the Internet. The Web is the collection of websites, HTML documents, images, and videos that are linked together via hyperlinks. Returning to the transportation analogy, if the Internet is the physical highway system, the World Wide Web is the fleet of delivery trucks driving on those highways. </p>
+<p>Other things use the Internet without using the World Wide Web. When you send an email (using SMTP), when you transfer a file via FTP, or when you play a multiplayer online game, you are using the Internet's roads, but you are not using the World Wide Web's delivery trucks. The Web is just the most famous passenger on the Internet.</p>
+<h2 id="clients-servers">3. Clients and Servers: The Digital Restaurant</h2>
+<p>The entire architecture of the modern internet is built on a model known as the <strong>Client-Server Relationship</strong>. To understand this, let us use the analogy of a busy restaurant.</p>
+<p>When you sit down at a restaurant, you are the <strong>Client</strong>. You look at a menu, decide what you want, and place an order. You do not cook the food yourself; you simply make a request. In the digital world, your web browser (Google Chrome, Safari, Firefox) on your smartphone or laptop is the Client. When you type a URL or click a link, your Client is placing an order for a specific webpage.</p>
+<p>In the kitchen of the restaurant stands the Chef. The Chef receives your order, gathers the ingredients, cooks the meal, and hands it to a waiter to deliver back to your table. In the digital world, this Chef is the <strong>Server</strong>. A Server is not a magical cloud; it is literally just another computer. However, unlike your laptop, a Server is a highly powerful computer that sits in a massive, air-conditioned data center, running 24/7 without a monitor or keyboard. Its only job is to "serve" data to clients who request it. </p>
+<p>When your Client (browser) requests a webpage, the Server calculates the logic, pulls data from its database, constructs the HTML file, and sends it back across the internet to your screen. Every single interaction on the web is a conversation between a Client asking for data, and a Server fulfilling that request.</p>
+<h2 id="ip-addresses">4. IP Addresses: The Postal Code of the Web</h2>
+<p>If you want to send a physical letter to a friend on the other side of the country, you cannot simply write their name on the envelope and drop it in a mailbox. The postal service needs a specific, unique street address and zip code to route the letter correctly. The internet operates on the exact same principle.</p>
+<p>Every single device connected to the internet—your phone, your smart TV, your laptop, and every server in the world—is assigned a unique numerical label called an <strong>IP Address (Internet Protocol Address)</strong>. Without an IP address, a device cannot send or receive data, because the network would not know where to deliver the information.</p>
+<p>A traditional IP address (known as IPv4) looks like a string of four numbers separated by periods, such as <code>192.168.1.15</code> or <code>142.250.190.46</code>. Because the internet exploded in popularity, we actually ran out of these four-number combinations. To solve this, engineers created a new system called IPv6, which uses a much longer combination of numbers and letters, ensuring we will never run out of unique addresses again.</p>
+<p>When you request a website, your computer includes its own IP address as the "Return Address" on the digital envelope, so the Server knows exactly where to send the webpage data back to.</p>
+<h2 id="dns-system">5. DNS: The Internet's Phonebook</h2>
+<p>Here is a fundamental problem: computers love numbers, but human beings are terrible at remembering them. Imagine if, instead of typing <code>google.com</code> into your browser, you had to memorize and type <code>142.250.190.46</code> every single time you wanted to search for something. The internet would be unusable.</p>
+<p>To bridge the gap between human language and computer numbers, the internet relies on the <strong>DNS (Domain Name System)</strong>. You can think of DNS as a massive, globally distributed phonebook.</p>
+<p>When you type <code>tyagihub.in</code> into your browser and press Enter, your browser does not actually know where that server is located. Instead, the browser immediately contacts a DNS Resolver (usually provided by your Internet Service Provider). It essentially asks, "Hey, what is the numerical IP address for the name tyagihub.in?"</p>
+<p>The DNS Resolver looks up the name in its massive directory. Within milliseconds, it replies to your browser: "I found it! The IP address for tyagihub.in is 104.21.55.190."</p>
+<p>Armed with the actual numerical IP address, your browser can now send its request directly to the correct server. This entire phonebook lookup happens behind the scenes in the blink of an eye before the website even begins to load on your screen.</p>
+<h2 id="packets-routing">6. Packets and Data Routing: Breaking Things Down</h2>
+<p>When a server sends a webpage, an image, or a video back to your computer, it does not send it as one massive, solid block of data. If you are downloading a 2GB movie, sending it as a single chunk would clog up the network, and if even a single error occurred during transmission, the entire 2GB file would have to be re-sent from the beginning.</p>
+<p>Instead, the internet relies on <strong>Packet Switching</strong>. The server takes the large file and chops it up into thousands or millions of tiny, equal-sized pieces called "Packets."</p>
+<p>Imagine dismantling a Lego castle, putting each individual Lego brick into its own numbered envelope, and mailing them all to your friend. Each envelope (Packet) contains:</p>
+<ul>
+<li>A piece of the actual data (the Lego brick).</li>
+<li>The destination IP address (where it is going).</li>
+<li>The sender IP address (where it came from).</li>
+<li>A sequence number (e.g., "I am piece 45 of 10,000").</li>
+</ul>
+<p>Because the internet is a massive web of connections, these packets do not all travel the same route. Packet #1 might travel from New York to London via an undersea cable. Packet #2 might get routed through Canada because the New York cable was momentarily congested. They race across the globe independently, bouncing from router to router, finding the fastest available path at that exact millisecond.</p>
+<h2 id="tcp-ip">7. TCP/IP: The Rules of Communication</h2>
+<p>Because these packets take different routes, they often arrive at your computer completely out of order. Packet #99 might arrive before Packet #2. This is where the <strong>TCP (Transmission Control Protocol)</strong> comes in to save the day.</p>
+<p>TCP is a strict set of rules that governs how data is transmitted. When the disorganized packets arrive at your computer, the TCP software looks at the sequence numbers on the envelopes and carefully reassembles the Lego castle in the exact correct order. </p>
+<p>Furthermore, TCP is highly reliable. If TCP realizes that Packet #45 never arrived (perhaps it got lost at a broken router in the middle of the ocean), it will send a message back to the Server saying, "Hey, I am missing piece 45, please resend it." The server resends just that one missing piece. This guarantee of delivery is why a webpage loads perfectly every time, rather than missing random chunks of text.</p>
+<h2 id="physical-cables">8. The Physical Infrastructure: Undersea Cables</h2>
+<p>Despite the prevalence of Wi-Fi and cellular networks, the internet is overwhelmingly a physical, wired entity. Your smartphone might connect to a router via invisible radio waves (Wi-Fi), but the moment the signal hits the router, it travels through a physical copper or fiber-optic wire in your wall.</p>
+<p>That wire connects to a larger cable running down your street, which connects to a regional hub managed by your Internet Service Provider (ISP). But how does data travel from a server in California to a laptop in India? Not through satellites. Satellites are far too slow and have too much latency due to the distance to space.</p>
+<p>The global internet is powered by a massive network of <strong>Undersea Fiber-Optic Cables</strong>. These are thick, heavily armored cables resting at the bottom of the ocean, stretching across the Atlantic and Pacific. Inside these cables are glass threads as thin as human hair. Data is transmitted through these glass threads as pulses of laser light, traveling at near the speed of light.</p>
+<p>When you click a link hosted in another country, your request physically travels across the bottom of the ocean, hits the server, and the response travels back across the ocean floor to your screen, all in less than half a second. It is a modern engineering marvel that rivals the construction of the pyramids.</p>
+<h2 id="putting-it-together">9. Putting It All Together: A Millisecond Journey</h2>
+<p>Let us summarize the entire journey of a web request. What happens when you type a website address and press Enter?</p>
+<ol>
+<li><strong>The Request:</strong> You type a URL into your browser (the Client).</li>
+<li><strong>The Phonebook:</strong> Your computer checks the DNS to translate the domain name into a numerical IP address.</li>
+<li><strong>The Connection:</strong> Your computer forms a request and addresses it to the Server's IP address.</li>
+<li><strong>The Physical Journey:</strong> The request travels through your local router, into the ISP's physical cables, potentially across an undersea fiber-optic cable, until it reaches the Server in a data center.</li>
+<li><strong>The Processing:</strong> The Server receives the request, gathers the HTML, CSS, and images, and chops them up into thousands of tiny Packets.</li>
+<li><strong>The Return Trip:</strong> The Server addresses the Packets with your computer's IP address and fires them back across the internet. They take various optimal routes to reach you.</li>
+<li><strong>The Assembly:</strong> Your computer receives the Packets. The TCP protocol checks to ensure all pieces arrived and reassembles them in the correct order.</li>
+<li><strong>The Render:</strong> Finally, your browser reads the assembled HTML code and visually paints the webpage onto your screen.</li>
+</ol>
+<p>This entire process, involving millions of lines of code, physical laser pulses crossing oceans, and complex mathematical verifications, happens in roughly 300 to 800 milliseconds. Faster than the blink of a human eye.</p>
+<h2 id="deep-dark-web">10. The Deep Web vs. The Dark Web: A Crucial Distinction</h2>
+<p>When discussing how the internet works, it is impossible to ignore the terms 'Deep Web' and 'Dark Web', which are frequently sensationalized in the media. Understanding the mechanical difference between these layers of the internet solidifies your overall understanding of how search engines and web routing operate.</p>
+<p><strong>The Surface Web:</strong> This is the portion of the internet that you use every single day. It consists of any webpage that can be found and indexed by a standard search engine like Google or Bing. When a search engine's automated 'crawler' bot follows links from one page to another, it builds a map of the Surface Web. However, experts estimate that this surface layer represents less than 5% of the total data on the internet.</p>
+<p><strong>The Deep Web:</strong> This makes up the vast majority (around 90-95%) of the internet. The Deep Web is simply any webpage that is hidden behind a password, a paywall, or requires specific login credentials. It is not necessarily illegal or dangerous. Your personal Gmail inbox, your online banking dashboard, your company's internal employee portal, and Netflix's video database are all part of the Deep Web. Search engines are blocked from indexing these pages because they cannot log in. Without the Deep Web, digital privacy would not exist.</p>
+<p><strong>The Dark Web:</strong> This is a very small, specific subsection of the Deep Web. The Dark Web is built on hidden networks (known as darknets) that require specialized software, such as the Tor Browser, to access. Unlike the standard internet where your IP address is public, the Dark Web uses complex layers of encryption (onion routing) to completely anonymize both the user and the server hosting the website. While it is famous for illegal marketplaces, it is also a vital tool used by journalists, whistleblowers, and political dissidents in oppressive regimes to communicate without being tracked by their governments.</p>
+<div class="author-perspective" style="background: #f8fafc; border-left: 5px solid #2563eb; padding: 25px; margin: 40px 0; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+<h3 style="margin-top: 0; color: #1e293b; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+<span style="font-size: 1.5rem;">💡</span> Author's Real-World Perspective
               </h3>
-              <p style="margin-bottom: 0; color: #334155; line-height: 1.7; font-size: 1.05rem;">
-                  <em>Over my years working in the tech industry, I have seen firsthand how understanding <strong>How the Internet Works</strong> shifts from being just "good to know" to an absolute necessity. When I first started implementing these concepts in real-world scenarios, the biggest hurdle wasn't the technical complexity, but rather breaking old habits and workflows. My advice to anyone learning this today: don't just memorize the theory. Try to visualize how this architecture applies to the apps and networks you use every single day. That practical mindset is what truly sets professionals apart from beginners.</em>
-              </p>
-          </div>
-
+<p style="margin-bottom: 0; color: #334155; line-height: 1.7; font-size: 1.05rem;">
+<em>Over my years working in the tech industry, I have seen firsthand how understanding <strong>How the Internet Works</strong> shifts from being just "good to know" to an absolute necessity. When I first started implementing these concepts in real-world scenarios, the biggest hurdle wasn't the technical complexity, but rather breaking old habits and workflows. My advice to anyone learning this today: don't just memorize the theory. Try to visualize how this architecture applies to the apps and networks you use every single day. That practical mindset is what truly sets professionals apart from beginners.</em>
+</p>
+</div>
 <h2 id="conclusion">11. Conclusion: Why You Must Understand This</h2>
-
-                    <p>The internet is not a cloud floating above us; it is a physical, highly structured, and deeply logical system. By understanding the separation of Clients and Servers, the necessity of IP Addresses, the translation power of DNS, and the physical reality of fiber-optic cables, you strip away the illusion of magic.</p>
-
-                    <p>This knowledge empowers you. When your internet goes down, you now understand the difference between a local router failure and a DNS lookup error. As you continue to explore computer science, whether you delve into <a href="cybersecurity-fundamentals-explained.html">digital privacy</a>, learn how to build websites, or explore the frontiers of <a href="what-is-web3-explained.html">Web 3.0</a>, this foundational understanding of how data moves across the globe will be the bedrock upon which all your future knowledge is built.</p>
-                </div>
-
-                <div class="author-box">
-                  <div class="author-box-inner">
-                    <img loading="lazy" src="assets/images/himanshu-tyagi-author.jpg" alt="Himanshu Tyagi">
-                    <div style="flex:1;">
-                      <div style="margin:0; color:var(--text-main); font-size:1.4rem; font-weight:bold;">Written by Himanshu Tyagi</div>
-                      <p style="margin:8px 0 0 0; font-size:1.05rem; color:var(--text-light); line-height:1.75;">Founder of TyagiHub. Passionate about breaking down complex computer science concepts into simple, highly readable guides for students and professionals.</p>
-                      <a href="author.html" style="color:var(--primary-color); font-weight:bold; text-decoration:underline; display:inline-block; margin-top:12px; font-size:1.05rem;">Read full author profile &rarr;</a>
-                    </div>
-                  </div>
-                </div>
-
-            </article>
-            
-            
-        
-        <div class="bottom-related-section" style="margin-top: 50px; border-top: 1px solid var(--border-color); padding-top: 40px; margin-bottom: 20px;">
-            <h3 style="font-size: 1.6rem; color: var(--text-main); margin-bottom: 25px; margin-top:0;">More from TyagiHub</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px;">
-                <a href="computer-memory-and-storage.html" style="text-decoration:none;">
-                    <img loading="lazy" alt="Memory Storage" src="assets/images/memory-storage.webp" width="800" height="450" style="width:100%; border-radius:8px; height:120px; object-fit:cover; border:1px solid var(--border-color);">
-                    <h4 style="color:var(--text-main); font-size:1.1rem; margin:12px 0 0 0; line-height:1.4;">Computer Memory Explained</h4>
-                </a>
-                <a href="frontend-vs-backend-development.html" style="text-decoration:none;">
-                    <img loading="lazy" alt="Frontend Vs Backend" src="assets/images/frontend-vs-backend.webp" width="800" height="450" style="width:100%; border-radius:8px; height:120px; object-fit:cover; border:1px solid var(--border-color);">
-                    <h4 style="color:var(--text-main); font-size:1.1rem; margin:12px 0 0 0; line-height:1.4;">Frontend vs Backend</h4>
-                </a>
-            </div>
-        </div>
-
-            
-        </section>
-
-        
-        
-        <aside class="col-right">
-            
-            <div class="sidebar-widget">
-                <h3>About TyagiHub</h3>
-                <p style="color:var(--text-light); font-size:1.05rem; line-height:1.6; margin:0;">TyagiHub is an educational platform dedicated to simplifying modern technology, artificial intelligence, and digital privacy for everyone.</p>
-            </div>
-
-            <div class="sidebar-widget">
-                <h3>Popular Guides</h3>
-                <div class="popular-post-item">
-                    <img loading="lazy" src="assets/images/ml-banner.webp" alt="Machine Learning" width="800" height="450">
-                    <div>
-                        <a href="how-machine-learning-works.html" class="popular-post-title">How Machine Learning Works</a>
-                    </div>
-                </div>
-                <div class="popular-post-item">
-                    <img loading="lazy" src="assets/images/intro-to-computers.webp" alt="Intro to Computers" width="800" height="450">
-                    <div>
-                        <a href="introduction-to-computers.html" class="popular-post-title">Introduction to Computers</a>
-                    </div>
-                </div>
-                <div class="popular-post-item">
-                    <img loading="lazy" src="assets/images/memory-storage.webp" alt="Computer Memory" width="800" height="450">
-                    <div>
-                        <a href="computer-memory-and-storage.html" class="popular-post-title">How Computer Memory Works</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sidebar-widget">
-                <h3>Topics</h3>
-                <ul class="cat-list">
-                    <li><a href="categories.html?topic=ai">Artificial Intelligence</a></li>
-                    <li><a href="categories.html?topic=privacy">Digital Privacy & Security</a></li>
-                    <li><a href="categories.html?topic=webdev">Web Development</a></li>
-                    <li><a href="categories.html?topic=futuretech">Future Tech & Networks</a></li>
-                </ul>
-            </div>
-
-        </aside>
-
-
-    </main>
-
-    <footer class="main-footer">
-        <div class="container footer-grid">
-            <div class="footer-col brand-col">
-                <h3>Tyagi<span class="highlight">Hub</span></h3>
-                <p>Your ultimate digital destination for premium tech insights and educational resources. Build better, learn faster.</p>
-            </div>
-            <div class="footer-col">
-                <h3>Legal Info</h3>
-                <ul>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                    <li><a href="disclaimer.html">Disclaimer</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="author.html">Author</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="sitemap.xml">Sitemap</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2026 TyagiHub. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-    <script src="assets/js/main.js"></script>
+<p>The internet is not a cloud floating above us; it is a physical, highly structured, and deeply logical system. By understanding the separation of Clients and Servers, the necessity of IP Addresses, the translation power of DNS, and the physical reality of fiber-optic cables, you strip away the illusion of magic.</p>
+<p>This knowledge empowers you. When your internet goes down, you now understand the difference between a local router failure and a DNS lookup error. As you continue to explore computer science, whether you delve into <a href="cybersecurity-fundamentals-explained.html">digital privacy</a>, learn how to build websites, or explore the frontiers of <a href="what-is-web3-explained.html">Web 3.0</a>, this foundational understanding of how data moves across the globe will be the bedrock upon which all your future knowledge is built.</p>
+</div>
+<div class="author-box">
+<div class="author-box-inner">
+<img alt="Himanshu Tyagi" loading="lazy" src="assets/images/himanshu-tyagi-author.jpg"/>
+<div style="flex:1;">
+<div style="margin:0; color:var(--text-main); font-size:1.4rem; font-weight:bold;">Written by Himanshu Tyagi</div>
+<p style="margin:8px 0 0 0; font-size:1.05rem; color:var(--text-light); line-height:1.75;">Founder of TyagiHub. Passionate about breaking down complex computer science concepts into simple, highly readable guides for students and professionals.</p>
+<a href="author.html" style="color:var(--primary-color); font-weight:bold; text-decoration:underline; display:inline-block; margin-top:12px; font-size:1.05rem;">Read full author profile →</a>
+</div>
+</div>
+</div>
+</article>
+<div class="bottom-related-section" style="margin-top: 50px; border-top: 1px solid var(--border-color); padding-top: 40px; margin-bottom: 20px;">
+<h3 style="font-size: 1.6rem; color: var(--text-main); margin-bottom: 25px; margin-top:0;">More from TyagiHub</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px;">
+<a href="computer-memory-and-storage.html" style="text-decoration:none;">
+<img alt="How Computer Memory Works: RAM, ROM, and Storage Explained" height="450" loading="lazy" src="assets/images/memory-storage.webp" style="width:100%; border-radius:8px; height:120px; object-fit:cover; border:1px solid var(--border-color);" width="800"/>
+<h4 style="color:var(--text-main); font-size:1.1rem; margin:12px 0 0 0; line-height:1.4;">Computer Memory Explained</h4>
+</a>
+<a href="frontend-vs-backend-development.html" style="text-decoration:none;">
+<img alt="The Difference Between Frontend and Backend Web Development" height="450" loading="lazy" src="assets/images/frontend-vs-backend.webp" style="width:100%; border-radius:8px; height:120px; object-fit:cover; border:1px solid var(--border-color);" width="800"/>
+<h4 style="color:var(--text-main); font-size:1.1rem; margin:12px 0 0 0; line-height:1.4;">Frontend vs Backend</h4>
+</a>
+</div>
+</div>
+</section>
+<aside class="col-right">
+<div class="sidebar-widget">
+<h3>About TyagiHub</h3>
+<p style="color:var(--text-light); font-size:1.05rem; line-height:1.6; margin:0;">TyagiHub is an educational platform dedicated to simplifying modern technology, artificial intelligence, and digital privacy for everyone.</p>
+</div>
+<div class="sidebar-widget">
+<h3>Popular Guides</h3>
+<div class="popular-post-item">
+<img alt="How Machine Learning Works: A Simple Beginner's Guide" height="450" loading="lazy" src="assets/images/ml-banner.webp" width="800"/>
+<div>
+<a class="popular-post-title" href="how-machine-learning-works.html">How Machine Learning Works</a>
+</div>
+</div>
+<div class="popular-post-item">
+<img alt="Introduction to Computers: A Complete Beginner's Guide" height="450" loading="lazy" src="assets/images/intro-to-computers.webp" width="800"/>
+<div>
+<a class="popular-post-title" href="introduction-to-computers.html">Introduction to Computers</a>
+</div>
+</div>
+<div class="popular-post-item">
+<img alt="How Computer Memory Works: RAM, ROM, and Storage Explained" height="450" loading="lazy" src="assets/images/memory-storage.webp" width="800"/>
+<div>
+<a class="popular-post-title" href="computer-memory-and-storage.html">How Computer Memory Works</a>
+</div>
+</div>
+</div>
+<div class="sidebar-widget">
+<h3>Topics</h3>
+<ul class="cat-list">
+<li><a href="categories.html?topic=ai">Artificial Intelligence</a></li>
+<li><a href="categories.html?topic=privacy">Digital Privacy &amp; Security</a></li>
+<li><a href="categories.html?topic=webdev">Web Development</a></li>
+<li><a href="categories.html?topic=futuretech">Future Tech &amp; Networks</a></li>
+</ul>
+</div>
+</aside>
+</main>
+<footer class="main-footer">
+<div class="container footer-grid">
+<div class="footer-col brand-col">
+<h3>Tyagi<span class="highlight">Hub</span></h3>
+<p>Your ultimate digital destination for premium tech insights and educational resources. Build better, learn faster.</p>
+</div>
+<div class="footer-col">
+<h3>Legal Info</h3>
+<ul>
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+<li><a href="terms.html">Terms of Service</a></li>
+<li><a href="disclaimer.html">Disclaimer</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3>Company</h3>
+<ul>
+<li><a href="about.html">About Us</a></li>
+<li><a href="author.html">Author</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="sitemap.xml">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="container">
+<p>© 2026 TyagiHub. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

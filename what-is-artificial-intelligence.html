@@ -1,353 +1,266 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>What is Artificial Intelligence? ML vs Deep Learning | TyagiHub</title>
-    <meta name="description" content="A massive, 2000+ word deep dive into Artificial Intelligence. Understand Machine Learning, Deep Learning, Neural Networks, and Generative AI in simple human terms.">
-    <meta name="keywords" content="what is artificial intelligence, machine learning vs deep learning, neural networks explained, generative AI, how ChatGPT works, computer fundamentals, TyagiHub">
-    <meta name="author" content="Himanshu Tyagi">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-
-    <link rel="canonical" href="https://tyagihub.in/what-is-artificial-intelligence.html">
-
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="What is Artificial Intelligence? ML vs Deep Learning">
-    <meta property="og:description" content="Master modern technology with this comprehensive guide to Artificial Intelligence. Learn how machines think, learn, and generate content.">
-    <meta property="og:url" content="https://tyagihub.in/what-is-artificial-intelligence.html">
-    <meta property="og:site_name" content="TyagiHub">
-    <meta property="og:image" content="https://tyagihub.in/assets/images/ai-explained.webp">
-    <meta property="og:image:width" content="800">
-    <meta property="og:image:height" content="450">
-    
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    
-    <meta name="google-adsense-account" content="ca-pub-7067722696020503">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503" crossorigin="anonymous"></script>
-    <meta property="article:published_time" content="2026-04-16T08:00:00+00:00">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>What is Artificial Intelligence? ML vs Deep Learning | TyagiHub</title>
+<meta content="A massive, 2000+ word deep dive into Artificial Intelligence. Understand Machine Learning, Deep Learning, Neural Networks, and Generative AI in simple human terms." name="description"/>
+<meta content="what is artificial intelligence, machine learning vs deep learning, neural networks explained, generative AI, how ChatGPT works, computer fundamentals, TyagiHub" name="keywords"/>
+<meta content="Himanshu Tyagi" name="author"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<link href="https://tyagihub.in/what-is-artificial-intelligence.html" rel="canonical"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="article" property="og:type"/>
+<meta content="What is Artificial Intelligence? ML vs Deep Learning" property="og:title"/>
+<meta content="Master modern technology with this comprehensive guide to Artificial Intelligence. Learn how machines think, learn, and generate content." property="og:description"/>
+<meta content="https://tyagihub.in/what-is-artificial-intelligence.html" property="og:url"/>
+<meta content="TyagiHub" property="og:site_name"/>
+<meta content="https://tyagihub.in/assets/images/ai-explained.webp" property="og:image"/>
+<meta content="800" property="og:image:width"/>
+<meta content="450" property="og:image:height"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<meta content="ca-pub-7067722696020503" name="google-adsense-account"/>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503"></script>
+<meta content="2026-04-16T08:00:00+00:00" property="article:published_time"/>
 </head>
 <body>
-    <header class="main-header">
-        <div class="container header-inner">
-            <div class="logo">
-                <a href="index.html">
-                    <span class="logo-text">Tyagi<span class="highlight">Hub</span></span>
-                </a>
-            </div>
-            <div class="nav-actions">
-                    
-                <div class="search-container" style="position: relative; margin-right: 15px;">
-                    <input type="text" id="searchInput" placeholder="Search guides..." autocomplete="off" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-alt); color: var(--text-main); outline: none; width: 220px; font-family: inherit; font-size: 0.95rem; transition: border-color 0.3s;">
-                    <div id="searchResults" style="display: none; position: absolute; top: 100%; right: 0; width: 320px; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 9999; max-height: 400px; overflow-y: auto; margin-top: 10px;"></div>
-                </div>
-
-                </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
-                <svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-            </button>
-            <nav class="main-nav" id="mainNav">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="categories.html">Categories</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                
-            </nav>
-        </div>
-    </header>
-
-    <main class="layout-mega">
-        
-        
-        <aside class="col-toc">
-            <h3>Chapter 8 Index</h3>
-            <ul>
-                <li><a href="#introduction">1. The AI Revolution</a></li>
-                <li><a href="#what-is-ai">2. What Exactly is AI?</a></li>
-                <li><a href="#narrow-vs-agi">3. Narrow AI vs General AI</a></li>
-                <li><a href="#machine-learning">4. Machine Learning (ML)</a></li>
-                <li><a href="#how-ml-works">5. How ML Actually Works</a></li>
-                <li><a href="#supervised-unsupervised">6. Supervised vs Unsupervised</a></li>
-                <li><a href="#deep-learning">7. Deep Learning Explained</a></li>
-                <li><a href="#neural-networks">8. Neural Networks</a></li>
-                <li><a href="#generative-ai">9. Generative AI & ChatGPT</a></li>
-                <li><a href="#nlp-cv">10. NLP and Computer Vision</a></li>
-                <li><a href="#applications">11. Real-World Applications</a></li>
-                <li><a href="#dangers-ethics">12. Dangers and Ethics</a></li>
-                <li><a href="#human-jobs">13. Will AI Replace Jobs?</a></li>
-                <li><a href="#conclusion">14. Conclusion</a></li>
-            </ul>
-        </aside>
-
-        
-        <section class="col-main">
-            <article class="blog-container">
-
-                <header class="blog-header">
-                  <h1>What is Artificial Intelligence? Machine Learning vs Deep Learning Explained</h1>
-                  <div class="blog-meta">
-                    <div>
-                      <span class="author-name">By <a href="author.html" style="color:var(--text-main); font-weight:600; text-decoration:underline;">Himanshu Tyagi</a></span><br>
-                      <span>Published: April 16, 2026 &nbsp;&bull;&nbsp; Computer Fundamentals (Chapter 8)</span>
-                    </div>
-                  </div>
-                  <img loading="lazy" src="assets/images/ai-explained.webp" alt="Artificial Intelligence Explained" class="article-banner" width="800" height="450">
-                </header>
-
-                <div class="blog-content">
-
-                    <h2 id="introduction" style="margin-top:0;">1. The AI Revolution: From Sci-Fi to Reality</h2>
-                    
-                    <p>For decades, Artificial Intelligence existed purely in the realm of science fiction. We watched movies about sentient robots, highly intelligent supercomputers, and machines that could converse with humans as equals. It felt like a distant, futuristic dream. However, over the past few years, AI has violently crashed into our daily reality. </p>
-
-                    <p>Today, AI is no longer a theoretical concept trapped in a university research lab. It is actively curating your social media feeds, diagnosing diseases from X-rays faster than human doctors, driving cars on public highways, and writing essays for college students. It is arguably the most profound technological leap since the invention of the Internet itself.</p>
-
-                    <p>Despite its massive popularity, AI remains deeply misunderstood. The media often portrays it as either a magical solution to all human problems or a terrifying terminator waiting to take over the world. The truth, as always, lies in the science. In this comprehensive mega-guide, we will strip away the magic and the marketing hype. We will explain exactly how a machine "learns," the difference between Machine Learning and Deep Learning, and how modern chatbots actually generate text.</p>
-
-                    <h2 id="what-is-ai">2. What Exactly is Artificial Intelligence?</h2>
-
-                    <p>At its absolute core, Artificial Intelligence is not magic. It is just advanced mathematics and statistics running on incredibly fast silicon microchips. </p>
-
-                    <p><strong>Artificial Intelligence (AI)</strong> is a broad branch of computer science dedicated to creating systems capable of performing tasks that typically require human intelligence. These tasks include visual perception, speech recognition, decision-making, and translating languages.</p>
-
-                    <p>To understand AI, we must contrast it with traditional programming. In traditional programming, a human software engineer writes a rigid set of rules (an algorithm). The computer blindly follows those exact rules. For example, a traditional program for a self-driving car might say: <em>"IF the camera detects a red octagon, THEN apply the brakes."</em></p>
-
-                    <p>The problem with traditional programming is that the real world is incredibly messy. What if the stop sign is partially covered by a tree branch? What if it is raining and the camera is blurry? A human driver instantly recognizes it is still a stop sign. A traditional computer program, failing to see a perfect red octagon, would just keep driving. AI was invented to solve this exact problem: teaching computers to handle ambiguity and recognize patterns just like a human brain does.</p>
-
-                    <h2 id="narrow-vs-agi">3. Narrow AI vs. General AI (AGI)</h2>
-
-                    <p>Before we go deeper, it is critical to understand that not all AI is created equal. Scientists divide AI into two massive categories:</p>
-
-                    <ul>
-                        <li><strong>Narrow AI (Weak AI):</strong> This is the only type of AI that exists today. Narrow AI is highly specialized. It is trained to perform one specific task brilliantly, but it cannot do anything else. An AI trained to play chess can beat the world champion, but if you ask it to recommend a movie or tell a joke, it will completely fail. Siri, Alexa, self-driving cars, and even ChatGPT are all examples of Narrow AI. They are incredibly good at specific mathematical patterns, but they possess absolutely zero self-awareness, consciousness, or actual understanding of the world.</li>
-                        <li><strong>Artificial General Intelligence (AGI):</strong> This is the holy grail of computer science (and the plot of most sci-fi movies). AGI refers to a machine that possesses human-level cognitive abilities across <em>all</em> domains. An AGI could learn to play chess, write a symphony, invent a new recipe, and feel curiosity, all at the same time. Despite the massive leaps in technology, true AGI does not currently exist, and experts disagree on whether it will take ten years or a hundred years to achieve.</li>
-                    </ul>
-
-                    <h2 id="machine-learning">4. Machine Learning (ML): Teaching Computers to Learn</h2>
-
-                    <p>Artificial Intelligence is the broad umbrella term. <strong>Machine Learning (ML)</strong> is the specific technique used to achieve AI. You can think of AI as the goal, and Machine Learning as the method used to reach that goal.</p>
-
-                    <p>Remember how traditional programming works? <em>(Rules + Data = Answers)</em>. Machine Learning completely flips this equation upside down. In Machine Learning, the programmer provides the computer with <em>Data + Answers</em>, and forces the computer to figure out the <em>Rules</em> by itself.</p>
-
-                    <p>Let us use a simple example: We want to build an AI that can look at a photo and tell us if it is an Apple or an Orange. In traditional programming, a coder would try to write rules: "If it is perfectly round and red, it is an apple. If it is orange and bumpy, it is an orange." This will fail the moment someone shows the computer a green Granny Smith apple.</p>
-
-                    <p>In Machine Learning, we don't write any rules. Instead, we feed the computer 10,000 photos of apples (and tell it "These are answers: Apples") and 10,000 photos of oranges (and tell it "These are answers: Oranges"). The computer analyzes the millions of pixels, calculates statistical probabilities, and eventually figures out the mathematical difference between an apple and an orange entirely on its own.</p>
-
-                    <h2 id="how-ml-works">5. How Machine Learning Actually Works (Training Data)</h2>
-
-                    <p>The secret ingredient to Machine Learning is not necessarily brilliant code; it is massive amounts of data. This is why AI exploded in popularity recently: the internet generated enough data to finally train these models, and cloud computing provided the massive server power required to process it.</p>
-
-                    <p>The process of building an ML model involves three steps:</p>
-                    <ol>
-                        <li><strong>Training:</strong> You feed the algorithm massive amounts of historical data. The algorithm makes a guess. If it guesses wrong, a mathematical function (called a Loss Function) punishes it. The algorithm tweaks its internal math to try and get a better score on the next guess. It repeats this thousands of times until its accuracy is very high.</li>
-                        <li><strong>Validation:</strong> You test the AI on data it has never seen before to ensure it actually learned the core concept, rather than just memorizing the training data.</li>
-                        <li><strong>Inference:</strong> The fully trained, optimized model is deployed into the real world (like on your smartphone) to make instant predictions on new, live data.</li>
-                    </ol>
-
-                    <h2 id="supervised-unsupervised">6. Supervised vs. Unsupervised Learning</h2>
-
-                    <p>Within Machine Learning, there are two primary ways to train the computer:</p>
-
-                    <p><strong>Supervised Learning:</strong> This is like a teacher holding a student's hand. Every piece of data you give the computer is labeled with the correct answer. You give it historical data of a thousand houses (square footage, number of bedrooms) AND you tell the computer exactly how much each house sold for. The computer learns the relationship between the features and the price. Later, you give it a new house, and it predicts the price. (Used for prediction and classification).</p>
-
-                    <p><strong>Unsupervised Learning:</strong> This is like throwing a student into a library with no labels and telling them to organize the books. You give the computer a massive dataset of customer purchasing habits, but you don't give it any answers. The computer uses advanced statistics to find hidden clusters and patterns on its own. It might group customers into three distinct behavioral categories that a human marketer never would have noticed. (Used for clustering and anomaly detection).</p>
-
-                    <h2 id="deep-learning">7. Deep Learning: Mimicking the Human Brain</h2>
-
-                    <p>If AI is the broad umbrella, and Machine Learning is a subset of AI, then <strong>Deep Learning</strong> is a specialized, highly advanced subset of Machine Learning.</p>
-
-                    <p>Traditional Machine Learning is great, but it requires human intervention. If you want a traditional ML model to recognize a car, a human engineer first has to tell the computer what "features" to look for (e.g., look for wheels, look for windows). This is called Feature Engineering, and it is very time-consuming.</p>
-
-                    <p>Deep Learning eliminates the need for human feature engineering. You simply pour raw, unstructured data (like raw audio files or raw video pixels) into a Deep Learning model, and it is powerful enough to figure out the features entirely by itself. It does this using an architecture inspired by the human brain: the Neural Network.</p>
-
-                    <h2 id="neural-networks">8. What are Artificial Neural Networks?</h2>
-
-                    <p>The human brain contains roughly 86 billion neurons, interconnected by synapses. When you learn something new, the electrical connections between specific neurons grow stronger. Deep Learning attempts to replicate this mathematically using an <strong>Artificial Neural Network (ANN)</strong>.</p>
-
-                    <p>A Neural Network consists of thousands of artificial "neurons" arranged in layers:</p>
-                    <ul>
-                        <li><strong>The Input Layer:</strong> This receives the raw data (e.g., the pixels of an image).</li>
-                        <li><strong>The Hidden Layers:</strong> This is where the "Deep" in Deep Learning comes from. A model might have dozens or hundreds of hidden layers. Each layer performs a complex mathematical calculation on the data and passes the result to the next layer. The first layer might detect edges. The second layer combines edges to detect shapes. The third layer combines shapes to detect a human face.</li>
-                        <li><strong>The Output Layer:</strong> This delivers the final prediction (e.g., "This image is 98% likely to be a dog").</li>
-                    </ul>
-                    <p>During training, if the network guesses wrong, a process called <em>Backpropagation</em> sends a signal backward through the network, adjusting the "weights" (the mathematical importance) of every single artificial synapse. Over millions of iterations, the network wires itself to become incredibly accurate.</p>
-
-                    <h2 id="generative-ai">9. Generative AI and the ChatGPT Era</h2>
-
-                    <p>For most of its history, AI was purely analytical. It was used to classify data (e.g., "Is this email spam or not?") or predict data (e.g., "Will this stock go up?").</p>
-
-                    <p>Recently, a massive breakthrough occurred with the invention of <strong>Generative AI</strong>. Instead of just analyzing existing data, Generative AI uses its understanding of patterns to create entirely new, original content—including text, images, music, and computer code.</p>
-
-                    <p>The most famous example is ChatGPT, which is built on a specific type of neural network called a <strong>Transformer</strong> (specifically, a Large Language Model or LLM). ChatGPT does not "think" or "understand" what you are saying. It was simply trained on billions of pages of human text from the internet. When you ask it a question, it uses advanced probability to predict what the next logical word in the sentence should be, one word at a time. Because its training data is so vast, its predictions are incredibly accurate, creating the illusion of deep human comprehension and conversational intelligence.</p>
-
-                    
-                    <h2 id="nlp-cv">10. Two Major Subfields: NLP and Computer Vision</h2>
-                    
-                    <p>When Deep Learning is applied to specific types of human data, it branches into highly specialized subfields. The two most prominent are Natural Language Processing and Computer Vision.</p>
-                    
-                    <p><strong>Natural Language Processing (NLP):</strong> This is the branch of AI that focuses on the interaction between computers and human language. For decades, computers could only understand strict programming languages (like Python or C++). NLP aims to teach computers to read, decipher, and understand the nuances of human languages (like English or Hindi). NLP is the engine behind voice assistants (Siri, Alexa), real-time language translation apps (Google Translate), automated customer service chatbots, and sentiment analysis (where a company uses AI to scan thousands of Twitter posts to determine if the public sentiment around their brand is positive or negative).</p>
-                    
-                    <p><strong>Computer Vision (CV):</strong> While NLP deals with text and audio, Computer Vision deals with sight. It is the field of AI that trains computers to interpret and understand the visual world using digital images from cameras and videos. By using complex neural networks (specifically Convolutional Neural Networks, or CNNs), the computer learns to identify patterns, edges, and objects. Computer vision is what allows your smartphone to unlock using facial recognition, it allows Facebook to automatically tag your friends in photos, and it is the absolute critical technology that allows self-driving cars to distinguish between a plastic bag blowing in the wind and a child running across the street.</p>
-
-                    <h2 id="applications">11. Real-World Applications of AI</h2>
-
-                    <p>AI is already deeply embedded in the modern economy. Here are just a few ways it is used today:</p>
-
-                    <ul>
-                        <li><strong>Healthcare:</strong> Deep Learning models are analyzing MRI scans and X-rays to detect early signs of cancer with a higher accuracy rate than human radiologists.</li>
-                        <li><strong>Finance:</strong> Banks use unsupervised learning algorithms to instantly detect credit card fraud. If a card is suddenly used to buy electronics in another country, the AI flags it as an anomaly in milliseconds.</li>
-                        <li><strong>Autonomous Vehicles:</strong> Self-driving cars use a combination of computer vision (Deep Learning) and real-time sensor data to navigate highways, recognize pedestrians, and obey traffic laws.</li>
-                        <li><strong>Retail & Entertainment:</strong> The algorithms that recommend products on Amazon or movies on Netflix are powered by Machine Learning, analyzing your past behavior against millions of other users to find perfect statistical matches.</li>
-                    </ul>
-
-                    <h2 id="dangers-ethics">12. The Dangers and Ethical Concerns of AI</h2>
-
-                    <p>With massive power comes massive responsibility. The rapid advancement of AI has introduced several critical ethical concerns that society is currently struggling to solve:</p>
-
-                    <ul>
-                        <li><strong>Algorithmic Bias:</strong> An AI is only as good as the data it is trained on. If a company trains an HR hiring AI on ten years of resumes where they historically only hired men, the AI will learn the mathematical pattern that "men are better candidates" and automatically reject women. AI can accidentally scale and automate human prejudice.</li>
-                        <li><strong>Deepfakes & Misinformation:</strong> Generative AI can now create hyper-realistic, fake videos and audio of politicians or celebrities saying things they never said. This poses a massive threat to global elections and the concept of objective truth.</li>
-                        <li><strong>Copyright & Intellectual Property:</strong> AI image generators (like Midjourney) were trained on millions of copyrighted artworks without the original artists' permission. The legal battles over who owns the rights to AI-generated art are ongoing.</li>
-                    </ul>
-
-                    <h2 id="human-jobs">13. Will AI Replace Human Jobs?</h2>
-
-                    <p>This is the most common question surrounding Artificial Intelligence. The short answer is: AI will disrupt the job market, but it will not completely erase it.</p>
-
-                    <p>Historically, every major technological revolution (the Industrial Revolution, the invention of the computer) destroyed older, manual jobs but created entirely new categories of employment. AI will likely follow the same path. Routine, repetitive tasks (like basic data entry, basic copywriting, or rudimentary coding) will be heavily automated.</p>
-
-                    <p>However, AI lacks human empathy, emotional intelligence, complex strategic planning, and physical dexterity. Jobs requiring these traits (nurses, therapists, strategic business leaders, plumbers, and electricians) are highly secure. Furthermore, entirely new jobs are already being created, such as "Prompt Engineers" (experts at talking to AI) and "AI Ethics Managers." Ultimately, AI is a tool. In the near future, you will not be replaced by an AI; you will be replaced by a human who knows how to use AI better than you do.</p>
-
-                    
-          <div class="author-perspective" style="background: #f8fafc; border-left: 5px solid #2563eb; padding: 25px; margin: 40px 0; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-              <h3 style="margin-top: 0; color: #1e293b; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-                  <span style="font-size: 1.5rem;">💡</span> Author's Real-World Perspective
+<header class="main-header">
+<div class="container header-inner">
+<div class="logo">
+<a href="index.html">
+<span class="logo-text">Tyagi<span class="highlight">Hub</span></span>
+</a>
+</div>
+<div class="nav-actions">
+<div class="search-container" style="position: relative; margin-right: 15px;">
+<input autocomplete="off" id="searchInput" placeholder="Search guides..." style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-alt); color: var(--text-main); outline: none; width: 220px; font-family: inherit; font-size: 0.95rem; transition: border-color 0.3s;" type="text"/>
+<div id="searchResults" style="display: none; position: absolute; top: 100%; right: 0; width: 320px; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 9999; max-height: 400px; overflow-y: auto; margin-top: 10px;"></div>
+</div>
+</div>
+<button aria-label="Toggle mobile menu" class="mobile-menu-btn" id="mobileMenuBtn">
+<svg class="svg-icon" viewbox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+</button>
+<nav class="main-nav" id="mainNav">
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="categories.html">Categories</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main class="layout-mega">
+<aside class="col-toc">
+<h3>Chapter 8 Index</h3>
+<ul>
+<li><a href="#introduction">1. The AI Revolution</a></li>
+<li><a href="#what-is-ai">2. What Exactly is AI?</a></li>
+<li><a href="#narrow-vs-agi">3. Narrow AI vs General AI</a></li>
+<li><a href="#machine-learning">4. Machine Learning (ML)</a></li>
+<li><a href="#how-ml-works">5. How ML Actually Works</a></li>
+<li><a href="#supervised-unsupervised">6. Supervised vs Unsupervised</a></li>
+<li><a href="#deep-learning">7. Deep Learning Explained</a></li>
+<li><a href="#neural-networks">8. Neural Networks</a></li>
+<li><a href="#generative-ai">9. Generative AI &amp; ChatGPT</a></li>
+<li><a href="#nlp-cv">10. NLP and Computer Vision</a></li>
+<li><a href="#applications">11. Real-World Applications</a></li>
+<li><a href="#dangers-ethics">12. Dangers and Ethics</a></li>
+<li><a href="#human-jobs">13. Will AI Replace Jobs?</a></li>
+<li><a href="#conclusion">14. Conclusion</a></li>
+</ul>
+</aside>
+<section class="col-main">
+<article class="blog-container">
+<header class="blog-header">
+<h1>What is Artificial Intelligence? Machine Learning vs Deep Learning Explained</h1>
+<div class="blog-meta">
+<div>
+<span class="author-name">By <a href="author.html" style="color:var(--text-main); font-weight:600; text-decoration:underline;">Himanshu Tyagi</a></span><br/>
+<span>Published: April 16, 2026  •  Computer Fundamentals (Chapter 8)</span>
+</div>
+</div>
+<img alt="Artificial Intelligence Explained" class="article-banner" height="450" loading="lazy" src="assets/images/ai-explained.webp" width="800"/>
+</header>
+<div class="blog-content">
+<h2 id="introduction" style="margin-top:0;">1. The AI Revolution: From Sci-Fi to Reality</h2>
+<p>For decades, Artificial Intelligence existed purely in the realm of science fiction. We watched movies about sentient robots, highly intelligent supercomputers, and machines that could converse with humans as equals. It felt like a distant, futuristic dream. However, over the past few years, AI has violently crashed into our daily reality. </p>
+<p>Today, AI is no longer a theoretical concept trapped in a university research lab. It is actively curating your social media feeds, diagnosing diseases from X-rays faster than human doctors, driving cars on public highways, and writing essays for college students. It is arguably the most profound technological leap since the invention of the Internet itself.</p>
+<p>Despite its massive popularity, AI remains deeply misunderstood. The media often portrays it as either a magical solution to all human problems or a terrifying terminator waiting to take over the world. The truth, as always, lies in the science. In this comprehensive mega-guide, we will strip away the magic and the marketing hype. We will explain exactly how a machine "learns," the difference between Machine Learning and Deep Learning, and how modern chatbots actually generate text.</p>
+<h2 id="what-is-ai">2. What Exactly is Artificial Intelligence?</h2>
+<p>At its absolute core, Artificial Intelligence is not magic. It is just advanced mathematics and statistics running on incredibly fast silicon microchips. </p>
+<p><strong>Artificial Intelligence (AI)</strong> is a broad branch of computer science dedicated to creating systems capable of performing tasks that typically require human intelligence. These tasks include visual perception, speech recognition, decision-making, and translating languages.</p>
+<p>To understand AI, we must contrast it with traditional programming. In traditional programming, a human software engineer writes a rigid set of rules (an algorithm). The computer blindly follows those exact rules. For example, a traditional program for a self-driving car might say: <em>"IF the camera detects a red octagon, THEN apply the brakes."</em></p>
+<p>The problem with traditional programming is that the real world is incredibly messy. What if the stop sign is partially covered by a tree branch? What if it is raining and the camera is blurry? A human driver instantly recognizes it is still a stop sign. A traditional computer program, failing to see a perfect red octagon, would just keep driving. AI was invented to solve this exact problem: teaching computers to handle ambiguity and recognize patterns just like a human brain does.</p>
+<h2 id="narrow-vs-agi">3. Narrow AI vs. General AI (AGI)</h2>
+<p>Before we go deeper, it is critical to understand that not all AI is created equal. Scientists divide AI into two massive categories:</p>
+<ul>
+<li><strong>Narrow AI (Weak AI):</strong> This is the only type of AI that exists today. Narrow AI is highly specialized. It is trained to perform one specific task brilliantly, but it cannot do anything else. An AI trained to play chess can beat the world champion, but if you ask it to recommend a movie or tell a joke, it will completely fail. Siri, Alexa, self-driving cars, and even ChatGPT are all examples of Narrow AI. They are incredibly good at specific mathematical patterns, but they possess absolutely zero self-awareness, consciousness, or actual understanding of the world.</li>
+<li><strong>Artificial General Intelligence (AGI):</strong> This is the holy grail of computer science (and the plot of most sci-fi movies). AGI refers to a machine that possesses human-level cognitive abilities across <em>all</em> domains. An AGI could learn to play chess, write a symphony, invent a new recipe, and feel curiosity, all at the same time. Despite the massive leaps in technology, true AGI does not currently exist, and experts disagree on whether it will take ten years or a hundred years to achieve.</li>
+</ul>
+<h2 id="machine-learning">4. Machine Learning (ML): Teaching Computers to Learn</h2>
+<p>Artificial Intelligence is the broad umbrella term. <strong>Machine Learning (ML)</strong> is the specific technique used to achieve AI. You can think of AI as the goal, and Machine Learning as the method used to reach that goal.</p>
+<p>Remember how traditional programming works? <em>(Rules + Data = Answers)</em>. Machine Learning completely flips this equation upside down. In Machine Learning, the programmer provides the computer with <em>Data + Answers</em>, and forces the computer to figure out the <em>Rules</em> by itself.</p>
+<p>Let us use a simple example: We want to build an AI that can look at a photo and tell us if it is an Apple or an Orange. In traditional programming, a coder would try to write rules: "If it is perfectly round and red, it is an apple. If it is orange and bumpy, it is an orange." This will fail the moment someone shows the computer a green Granny Smith apple.</p>
+<p>In Machine Learning, we don't write any rules. Instead, we feed the computer 10,000 photos of apples (and tell it "These are answers: Apples") and 10,000 photos of oranges (and tell it "These are answers: Oranges"). The computer analyzes the millions of pixels, calculates statistical probabilities, and eventually figures out the mathematical difference between an apple and an orange entirely on its own.</p>
+<h2 id="how-ml-works">5. How Machine Learning Actually Works (Training Data)</h2>
+<p>The secret ingredient to Machine Learning is not necessarily brilliant code; it is massive amounts of data. This is why AI exploded in popularity recently: the internet generated enough data to finally train these models, and cloud computing provided the massive server power required to process it.</p>
+<p>The process of building an ML model involves three steps:</p>
+<ol>
+<li><strong>Training:</strong> You feed the algorithm massive amounts of historical data. The algorithm makes a guess. If it guesses wrong, a mathematical function (called a Loss Function) punishes it. The algorithm tweaks its internal math to try and get a better score on the next guess. It repeats this thousands of times until its accuracy is very high.</li>
+<li><strong>Validation:</strong> You test the AI on data it has never seen before to ensure it actually learned the core concept, rather than just memorizing the training data.</li>
+<li><strong>Inference:</strong> The fully trained, optimized model is deployed into the real world (like on your smartphone) to make instant predictions on new, live data.</li>
+</ol>
+<h2 id="supervised-unsupervised">6. Supervised vs. Unsupervised Learning</h2>
+<p>Within Machine Learning, there are two primary ways to train the computer:</p>
+<p><strong>Supervised Learning:</strong> This is like a teacher holding a student's hand. Every piece of data you give the computer is labeled with the correct answer. You give it historical data of a thousand houses (square footage, number of bedrooms) AND you tell the computer exactly how much each house sold for. The computer learns the relationship between the features and the price. Later, you give it a new house, and it predicts the price. (Used for prediction and classification).</p>
+<p><strong>Unsupervised Learning:</strong> This is like throwing a student into a library with no labels and telling them to organize the books. You give the computer a massive dataset of customer purchasing habits, but you don't give it any answers. The computer uses advanced statistics to find hidden clusters and patterns on its own. It might group customers into three distinct behavioral categories that a human marketer never would have noticed. (Used for clustering and anomaly detection).</p>
+<h2 id="deep-learning">7. Deep Learning: Mimicking the Human Brain</h2>
+<p>If AI is the broad umbrella, and Machine Learning is a subset of AI, then <strong>Deep Learning</strong> is a specialized, highly advanced subset of Machine Learning.</p>
+<p>Traditional Machine Learning is great, but it requires human intervention. If you want a traditional ML model to recognize a car, a human engineer first has to tell the computer what "features" to look for (e.g., look for wheels, look for windows). This is called Feature Engineering, and it is very time-consuming.</p>
+<p>Deep Learning eliminates the need for human feature engineering. You simply pour raw, unstructured data (like raw audio files or raw video pixels) into a Deep Learning model, and it is powerful enough to figure out the features entirely by itself. It does this using an architecture inspired by the human brain: the Neural Network.</p>
+<h2 id="neural-networks">8. What are Artificial Neural Networks?</h2>
+<p>The human brain contains roughly 86 billion neurons, interconnected by synapses. When you learn something new, the electrical connections between specific neurons grow stronger. Deep Learning attempts to replicate this mathematically using an <strong>Artificial Neural Network (ANN)</strong>.</p>
+<p>A Neural Network consists of thousands of artificial "neurons" arranged in layers:</p>
+<ul>
+<li><strong>The Input Layer:</strong> This receives the raw data (e.g., the pixels of an image).</li>
+<li><strong>The Hidden Layers:</strong> This is where the "Deep" in Deep Learning comes from. A model might have dozens or hundreds of hidden layers. Each layer performs a complex mathematical calculation on the data and passes the result to the next layer. The first layer might detect edges. The second layer combines edges to detect shapes. The third layer combines shapes to detect a human face.</li>
+<li><strong>The Output Layer:</strong> This delivers the final prediction (e.g., "This image is 98% likely to be a dog").</li>
+</ul>
+<p>During training, if the network guesses wrong, a process called <em>Backpropagation</em> sends a signal backward through the network, adjusting the "weights" (the mathematical importance) of every single artificial synapse. Over millions of iterations, the network wires itself to become incredibly accurate.</p>
+<h2 id="generative-ai">9. Generative AI and the ChatGPT Era</h2>
+<p>For most of its history, AI was purely analytical. It was used to classify data (e.g., "Is this email spam or not?") or predict data (e.g., "Will this stock go up?").</p>
+<p>Recently, a massive breakthrough occurred with the invention of <strong>Generative AI</strong>. Instead of just analyzing existing data, Generative AI uses its understanding of patterns to create entirely new, original content—including text, images, music, and computer code.</p>
+<p>The most famous example is ChatGPT, which is built on a specific type of neural network called a <strong>Transformer</strong> (specifically, a Large Language Model or LLM). ChatGPT does not "think" or "understand" what you are saying. It was simply trained on billions of pages of human text from the internet. When you ask it a question, it uses advanced probability to predict what the next logical word in the sentence should be, one word at a time. Because its training data is so vast, its predictions are incredibly accurate, creating the illusion of deep human comprehension and conversational intelligence.</p>
+<h2 id="nlp-cv">10. Two Major Subfields: NLP and Computer Vision</h2>
+<p>When Deep Learning is applied to specific types of human data, it branches into highly specialized subfields. The two most prominent are Natural Language Processing and Computer Vision.</p>
+<p><strong>Natural Language Processing (NLP):</strong> This is the branch of AI that focuses on the interaction between computers and human language. For decades, computers could only understand strict programming languages (like Python or C++). NLP aims to teach computers to read, decipher, and understand the nuances of human languages (like English or Hindi). NLP is the engine behind voice assistants (Siri, Alexa), real-time language translation apps (Google Translate), automated customer service chatbots, and sentiment analysis (where a company uses AI to scan thousands of Twitter posts to determine if the public sentiment around their brand is positive or negative).</p>
+<p><strong>Computer Vision (CV):</strong> While NLP deals with text and audio, Computer Vision deals with sight. It is the field of AI that trains computers to interpret and understand the visual world using digital images from cameras and videos. By using complex neural networks (specifically Convolutional Neural Networks, or CNNs), the computer learns to identify patterns, edges, and objects. Computer vision is what allows your smartphone to unlock using facial recognition, it allows Facebook to automatically tag your friends in photos, and it is the absolute critical technology that allows self-driving cars to distinguish between a plastic bag blowing in the wind and a child running across the street.</p>
+<h2 id="applications">11. Real-World Applications of AI</h2>
+<p>AI is already deeply embedded in the modern economy. Here are just a few ways it is used today:</p>
+<ul>
+<li><strong>Healthcare:</strong> Deep Learning models are analyzing MRI scans and X-rays to detect early signs of cancer with a higher accuracy rate than human radiologists.</li>
+<li><strong>Finance:</strong> Banks use unsupervised learning algorithms to instantly detect credit card fraud. If a card is suddenly used to buy electronics in another country, the AI flags it as an anomaly in milliseconds.</li>
+<li><strong>Autonomous Vehicles:</strong> Self-driving cars use a combination of computer vision (Deep Learning) and real-time sensor data to navigate highways, recognize pedestrians, and obey traffic laws.</li>
+<li><strong>Retail &amp; Entertainment:</strong> The algorithms that recommend products on Amazon or movies on Netflix are powered by Machine Learning, analyzing your past behavior against millions of other users to find perfect statistical matches.</li>
+</ul>
+<h2 id="dangers-ethics">12. The Dangers and Ethical Concerns of AI</h2>
+<p>With massive power comes massive responsibility. The rapid advancement of AI has introduced several critical ethical concerns that society is currently struggling to solve:</p>
+<ul>
+<li><strong>Algorithmic Bias:</strong> An AI is only as good as the data it is trained on. If a company trains an HR hiring AI on ten years of resumes where they historically only hired men, the AI will learn the mathematical pattern that "men are better candidates" and automatically reject women. AI can accidentally scale and automate human prejudice.</li>
+<li><strong>Deepfakes &amp; Misinformation:</strong> Generative AI can now create hyper-realistic, fake videos and audio of politicians or celebrities saying things they never said. This poses a massive threat to global elections and the concept of objective truth.</li>
+<li><strong>Copyright &amp; Intellectual Property:</strong> AI image generators (like Midjourney) were trained on millions of copyrighted artworks without the original artists' permission. The legal battles over who owns the rights to AI-generated art are ongoing.</li>
+</ul>
+<h2 id="human-jobs">13. Will AI Replace Human Jobs?</h2>
+<p>This is the most common question surrounding Artificial Intelligence. The short answer is: AI will disrupt the job market, but it will not completely erase it.</p>
+<p>Historically, every major technological revolution (the Industrial Revolution, the invention of the computer) destroyed older, manual jobs but created entirely new categories of employment. AI will likely follow the same path. Routine, repetitive tasks (like basic data entry, basic copywriting, or rudimentary coding) will be heavily automated.</p>
+<p>However, AI lacks human empathy, emotional intelligence, complex strategic planning, and physical dexterity. Jobs requiring these traits (nurses, therapists, strategic business leaders, plumbers, and electricians) are highly secure. Furthermore, entirely new jobs are already being created, such as "Prompt Engineers" (experts at talking to AI) and "AI Ethics Managers." Ultimately, AI is a tool. In the near future, you will not be replaced by an AI; you will be replaced by a human who knows how to use AI better than you do.</p>
+<div class="author-perspective" style="background: #f8fafc; border-left: 5px solid #2563eb; padding: 25px; margin: 40px 0; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+<h3 style="margin-top: 0; color: #1e293b; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+<span style="font-size: 1.5rem;">💡</span> Author's Real-World Perspective
               </h3>
-              <p style="margin-bottom: 0; color: #334155; line-height: 1.7; font-size: 1.05rem;">
-                  <em>Over my years working in the tech industry, I have seen firsthand how understanding <strong>What is Artificial Intelligence? Machine Learning vs Deep Learning Explained</strong> shifts from being just "good to know" to an absolute necessity. When I first started implementing these concepts in real-world scenarios, the biggest hurdle wasn't the technical complexity, but rather breaking old habits and workflows. My advice to anyone learning this today: don't just memorize the theory. Try to visualize how this architecture applies to the apps and networks you use every single day. That practical mindset is what truly sets professionals apart from beginners.</em>
-              </p>
-          </div>
-
+<p style="margin-bottom: 0; color: #334155; line-height: 1.7; font-size: 1.05rem;">
+<em>Over my years working in the tech industry, I have seen firsthand how understanding <strong>What is Artificial Intelligence? Machine Learning vs Deep Learning Explained</strong> shifts from being just "good to know" to an absolute necessity. When I first started implementing these concepts in real-world scenarios, the biggest hurdle wasn't the technical complexity, but rather breaking old habits and workflows. My advice to anyone learning this today: don't just memorize the theory. Try to visualize how this architecture applies to the apps and networks you use every single day. That practical mindset is what truly sets professionals apart from beginners.</em>
+</p>
+</div>
 <h2 id="conclusion">14. Conclusion: The New Electricity</h2>
-
-                    <p>Renowned computer scientist Andrew Ng famously stated, <em>"AI is the new electricity."</em> Just as electricity transformed every major industry a hundred years ago—from manufacturing to healthcare to transportation—Artificial Intelligence is poised to do the exact same thing in the 21st century.</p>
-
-                    <p>By understanding the fundamental mechanics of AI—knowing the difference between traditional algorithms, Machine Learning's statistical training, and Deep Learning's neural networks—you strip away the fear of the unknown. AI is not a magical, conscious entity. It is the pinnacle of human mathematics and computer science. By mastering how these tools work, you position yourself to ride the wave of the digital revolution, rather than being swept away by it.</p>
-                </div>
-
-                <div class="author-box">
-                  <div class="author-box-inner">
-                    <img loading="lazy" src="assets/images/himanshu-tyagi-author.jpg" alt="Himanshu Tyagi">
-                    <div style="flex:1;">
-                      <div style="margin:0; color:var(--text-main); font-size:1.4rem; font-weight:bold;">Written by Himanshu Tyagi</div>
-                      <p style="margin:8px 0 0 0; font-size:1.05rem; color:var(--text-light); line-height:1.75;">Founder of TyagiHub. Dedicated to demystifying the most complex topics in computer science and software engineering for the next generation of technologists.</p>
-                      <a href="author.html" style="color:var(--primary-color); font-weight:bold; text-decoration:underline; display:inline-block; margin-top:12px; font-size:1.05rem;">Read full author profile &rarr;</a>
-                    </div>
-                  </div>
-                </div>
-
-            </article>
-            
-            
-        
-        <div class="bottom-related-section" style="margin-top: 50px; border-top: 1px solid var(--border-color); padding-top: 40px; margin-bottom: 20px;">
-            <h3 style="font-size: 1.6rem; color: var(--text-main); margin-bottom: 25px; margin-top:0;">More from TyagiHub</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px;">
-                <a href="cloud-computing-explained.html" style="text-decoration:none;">
-                    <img loading="lazy" alt="Cloud Computing" src="assets/images/cloud-computing.webp" width="800" height="450" style="width:100%; border-radius:8px; height:120px; object-fit:cover; border:1px solid var(--border-color);">
-                    <h4 style="color:var(--text-main); font-size:1.1rem; margin:12px 0 0 0; line-height:1.4;">Cloud Computing</h4>
-                </a>
-                <a href="what-is-a-database-sql-vs-nosql.html" style="text-decoration:none;">
-                    <img loading="lazy" alt="Database Explained" src="assets/images/database-explained.webp" width="800" height="450" style="width:100%; border-radius:8px; height:120px; object-fit:cover; border:1px solid var(--border-color);">
-                    <h4 style="color:var(--text-main); font-size:1.1rem; margin:12px 0 0 0; line-height:1.4;">SQL vs NoSQL Databases</h4>
-                </a>
-            </div>
-        </div>
-
-            
-        </section>
-
-        
-        
-        <aside class="col-right">
-            
-            <div class="sidebar-widget">
-                <h3>About TyagiHub</h3>
-                <p style="color:var(--text-light); font-size:1.05rem; line-height:1.6; margin:0;">TyagiHub is an educational platform dedicated to simplifying modern technology, artificial intelligence, and digital privacy for everyone.</p>
-            </div>
-
-            <div class="sidebar-widget">
-                <h3>Popular Guides</h3>
-                <div class="popular-post-item">
-                    <img loading="lazy" src="assets/images/cloud-computing.webp" alt="Cloud Computing" width="800" height="450">
-                    <div>
-                        <a href="cloud-computing-explained.html" class="popular-post-title">Cloud Computing Explained</a>
-                    </div>
-                </div>
-                <div class="popular-post-item">
-                    <img loading="lazy" src="assets/images/database-explained.webp" alt="Databases Explained" width="800" height="450">
-                    <div>
-                        <a href="what-is-a-database-sql-vs-nosql.html" class="popular-post-title">SQL vs NoSQL Explained</a>
-                    </div>
-                </div>
-                <div class="popular-post-item">
-                    <img loading="lazy" src="assets/images/computer-networks.webp" alt="Computer Networks" width="800" height="450">
-                    <div>
-                        <a href="computer-networks-explained.html" class="popular-post-title">Computer Networks</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sidebar-widget">
-                <h3>Topics</h3>
-                <ul class="cat-list">
-                    <li><a href="categories.html?topic=ai">Artificial Intelligence</a></li>
-                    <li><a href="categories.html?topic=privacy">Digital Privacy & Security</a></li>
-                    <li><a href="categories.html?topic=webdev">Web Development</a></li>
-                    <li><a href="categories.html?topic=futuretech">Future Tech & Networks</a></li>
-                </ul>
-            </div>
-
-        </aside>
-
-
-    </main>
-
-    <footer class="main-footer">
-        <div class="container footer-grid">
-            <div class="footer-col brand-col">
-                <h3>Tyagi<span class="highlight">Hub</span></h3>
-                <p>Your ultimate digital destination for premium tech insights and educational resources. Build better, learn faster.</p>
-            </div>
-            <div class="footer-col">
-                <h3>Legal Info</h3>
-                <ul>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                    <li><a href="disclaimer.html">Disclaimer</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="author.html">Author</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="sitemap.xml">Sitemap</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2026 TyagiHub. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-    <script src="assets/js/main.js"></script>
+<p>Renowned computer scientist Andrew Ng famously stated, <em>"AI is the new electricity."</em> Just as electricity transformed every major industry a hundred years ago—from manufacturing to healthcare to transportation—Artificial Intelligence is poised to do the exact same thing in the 21st century.</p>
+<p>By understanding the fundamental mechanics of AI—knowing the difference between traditional algorithms, Machine Learning's statistical training, and Deep Learning's neural networks—you strip away the fear of the unknown. AI is not a magical, conscious entity. It is the pinnacle of human mathematics and computer science. By mastering how these tools work, you position yourself to ride the wave of the digital revolution, rather than being swept away by it.</p>
+</div>
+<div class="author-box">
+<div class="author-box-inner">
+<img alt="Himanshu Tyagi" loading="lazy" src="assets/images/himanshu-tyagi-author.jpg"/>
+<div style="flex:1;">
+<div style="margin:0; color:var(--text-main); font-size:1.4rem; font-weight:bold;">Written by Himanshu Tyagi</div>
+<p style="margin:8px 0 0 0; font-size:1.05rem; color:var(--text-light); line-height:1.75;">Founder of TyagiHub. Dedicated to demystifying the most complex topics in computer science and software engineering for the next generation of technologists.</p>
+<a href="author.html" style="color:var(--primary-color); font-weight:bold; text-decoration:underline; display:inline-block; margin-top:12px; font-size:1.05rem;">Read full author profile →</a>
+</div>
+</div>
+</div>
+</article>
+<div class="bottom-related-section" style="margin-top: 50px; border-top: 1px solid var(--border-color); padding-top: 40px; margin-bottom: 20px;">
+<h3 style="font-size: 1.6rem; color: var(--text-main); margin-bottom: 25px; margin-top:0;">More from TyagiHub</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px;">
+<a href="cloud-computing-explained.html" style="text-decoration:none;">
+<img alt="Cloud Computing Explained: IaaS, PaaS, and SaaS" height="450" loading="lazy" src="assets/images/cloud-computing.webp" style="width:100%; border-radius:8px; height:120px; object-fit:cover; border:1px solid var(--border-color);" width="800"/>
+<h4 style="color:var(--text-main); font-size:1.1rem; margin:12px 0 0 0; line-height:1.4;">Cloud Computing</h4>
+</a>
+<a href="what-is-a-database-sql-vs-nosql.html" style="text-decoration:none;">
+<img alt="What is a Database? SQL vs NoSQL Explained in Simple Terms" height="450" loading="lazy" src="assets/images/database-explained.webp" style="width:100%; border-radius:8px; height:120px; object-fit:cover; border:1px solid var(--border-color);" width="800"/>
+<h4 style="color:var(--text-main); font-size:1.1rem; margin:12px 0 0 0; line-height:1.4;">SQL vs NoSQL Databases</h4>
+</a>
+</div>
+</div>
+</section>
+<aside class="col-right">
+<div class="sidebar-widget">
+<h3>About TyagiHub</h3>
+<p style="color:var(--text-light); font-size:1.05rem; line-height:1.6; margin:0;">TyagiHub is an educational platform dedicated to simplifying modern technology, artificial intelligence, and digital privacy for everyone.</p>
+</div>
+<div class="sidebar-widget">
+<h3>Popular Guides</h3>
+<div class="popular-post-item">
+<img alt="Cloud Computing Explained: IaaS, PaaS, and SaaS" height="450" loading="lazy" src="assets/images/cloud-computing.webp" width="800"/>
+<div>
+<a class="popular-post-title" href="cloud-computing-explained.html">Cloud Computing Explained</a>
+</div>
+</div>
+<div class="popular-post-item">
+<img alt="What is a Database? SQL vs NoSQL Explained in Simple Terms" height="450" loading="lazy" src="assets/images/database-explained.webp" width="800"/>
+<div>
+<a class="popular-post-title" href="what-is-a-database-sql-vs-nosql.html">SQL vs NoSQL Explained</a>
+</div>
+</div>
+<div class="popular-post-item">
+<img alt="Computer Networks Explained: LAN, WAN, and Wi-Fi Basics" height="450" loading="lazy" src="assets/images/computer-networks.webp" width="800"/>
+<div>
+<a class="popular-post-title" href="computer-networks-explained.html">Computer Networks</a>
+</div>
+</div>
+</div>
+<div class="sidebar-widget">
+<h3>Topics</h3>
+<ul class="cat-list">
+<li><a href="categories.html?topic=ai">Artificial Intelligence</a></li>
+<li><a href="categories.html?topic=privacy">Digital Privacy &amp; Security</a></li>
+<li><a href="categories.html?topic=webdev">Web Development</a></li>
+<li><a href="categories.html?topic=futuretech">Future Tech &amp; Networks</a></li>
+</ul>
+</div>
+</aside>
+</main>
+<footer class="main-footer">
+<div class="container footer-grid">
+<div class="footer-col brand-col">
+<h3>Tyagi<span class="highlight">Hub</span></h3>
+<p>Your ultimate digital destination for premium tech insights and educational resources. Build better, learn faster.</p>
+</div>
+<div class="footer-col">
+<h3>Legal Info</h3>
+<ul>
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+<li><a href="terms.html">Terms of Service</a></li>
+<li><a href="disclaimer.html">Disclaimer</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3>Company</h3>
+<ul>
+<li><a href="about.html">About Us</a></li>
+<li><a href="author.html">Author</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="sitemap.xml">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="container">
+<p>© 2026 TyagiHub. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
