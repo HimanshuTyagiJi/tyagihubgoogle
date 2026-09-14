@@ -253,7 +253,7 @@
 <p>A hardware key (like a YubiKey or Google Titan) is a physical USB or NFC device that you must plug into your computer or tap against your phone to complete a login. There is no code to type. This method offers the absolute highest level of security. It completely neutralizes deceptive websites  because the hardware key cryptographically verifies the actual domain of the website before authenticating. If you are tricked into visiting a fake version of your bank's website, the hardware key simply will not provide the authentication response.</p>
 <h3>D. Push Notifications</h3>
 <p>Instead of typing a code, a prompt appears on your smartphone asking, "Are you trying to log in?" You simply tap "Yes" or "No." This is highly convenient and relies on a secure cryptographic connection between the service and their dedicated app on your phone (like Duo Mobile or Apple's native device prompts). However, it is susceptible to "prompt fatigue," where an unauthorized user sends repeated login requests until the frustrated user accidentally taps "Yes" just to make the notifications stop.</p>
-<table class="comparison-table">
+<div class="table-responsive-wrapper"><table class="comparison-table">
 <thead>
 <tr>
 <th>2FA Method</th>
@@ -283,7 +283,7 @@
 <td>SIM swapping, cellular network interception.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>4. How Authenticator Apps (TOTP) Actually Work</h2>
 <p>The technology powering authenticator apps is called <strong>Time-based One-Time Password (TOTP)</strong>. It is a brilliant piece of cryptographic engineering that operates entirely without an internet connection.</p>
 <p>When you enable 2FA on a website using an authenticator app, the website displays a QR code. That QR code contains a long, unique string of text known as a "secret seed." By scanning the QR code with your authenticator app, your phone and the website's server now share this identical secret seed.</p>

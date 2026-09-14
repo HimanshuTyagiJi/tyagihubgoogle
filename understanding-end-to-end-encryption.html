@@ -263,7 +263,7 @@
 <p>This is the most common vulnerability in E2EE implementations. You might use an E2EE messaging app, but if you have enabled the app to automatically back up your chat history to Google Drive or Apple iCloud, those backups are historically stored in standard cloud formats. The messaging company cannot read your chats, but the cloud storage provider potentially could. Modern messaging apps are beginning to offer "End-to-End Encrypted Backups" (where you set a separate password for the backup file), but this feature is often turned off by default and must be manually enabled by the user.</p>
 <h2>5. Comparing Major Messaging Applications</h2>
 <p>Not all messaging applications implement encryption equally. It is important to distinguish between apps that use E2EE by default for everything, and apps that only use it when specifically requested.</p>
-<table class="comparison-table">
+<div class="table-responsive-wrapper"><table class="comparison-table">
 <thead>
 <tr>
 <th>Messaging App</th>
@@ -298,7 +298,7 @@
 <td>Historically unencrypted by default, Meta rolled out default E2EE for personal chats in late 2023. Like WhatsApp, it still collects significant metadata for the parent company.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <div class="callout">
 <strong>The Telegram Misconception:</strong> Many users mistakenly believe Telegram is a fully encrypted alternative to WhatsApp. From a pure cryptographic standpoint, WhatsApp's default E2EE is technically more secure for message content than Telegram's default cloud-based storage. Telegram's popularity relies more on its stance against cooperating with institutional data requests rather than its default cryptographic architecture.
           </div>
