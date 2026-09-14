@@ -418,3 +418,15 @@ ul { list-style: none; }
         margin: 0 auto !important;
     }
 }
+
+
+/* --- Fix Footer Accessibility Contrast on Dark Background --- */
+.main-footer .highlight {
+    color: #A5B4FC !important; /* Lighter indigo for dark background */
+}
+.footer-col p {
+    color: #E5E7EB !important; /* Very light gray to guarantee AAA contrast */
+}
+.footer-bottom p {
+    color: #9CA3AF !important; 
+}
