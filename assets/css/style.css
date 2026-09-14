@@ -430,3 +430,18 @@ ul { list-style: none; }
 .footer-bottom p {
     color: #9CA3AF !important; 
 }
+
+
+/* --- Fix Image Aspect Ratio and Overflow --- */
+img {
+    height: auto;
+}
+.article-banner {
+    height: auto !important;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+.card-img-wrapper img {
+    height: 100% !important;
+    object-fit: cover;
+}
