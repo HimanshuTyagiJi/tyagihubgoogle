@@ -1,7 +1,7 @@
 
 /* Reset & Base Variables */
 :root {
-    --primary-color: #4F46E5;
+    --primary-color: #3730A3;
     --primary-hover: #4338CA;
     --text-main: #1F2937;
     --text-light: #4B5563;
@@ -9,7 +9,7 @@
     --bg-alt: #F3F4F6;
     --border-color: #E5E7EB;
     --footer-bg: #111827;
-    --footer-text: #9CA3AF;
+    --footer-text: #D1D5DB;
 }
 
 
