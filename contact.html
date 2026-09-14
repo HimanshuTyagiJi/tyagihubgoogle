@@ -28,30 +28,54 @@
 <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 </head>
 <body>
+
 <header class="main-header">
 <div class="container header-inner">
+<!-- Logo with Image -->
 <div class="logo">
-<a href="index.html"><span class="logo-text" style="color: #16a34a;" title="TyagiHub">TyagiHub</span></a>
+<a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+<img alt="TyagiHub Logo" class="header-logo-img" src="assets/images/header_logo.png" title="TyagiHub"/>
+</a>
 </div>
-<div class="nav-actions">
-<div class="search-container" style="position: relative; margin-right: 15px;">
-<input aria-label="Search TyagiHub" autocomplete="off" id="searchInput" placeholder="Search guides..." style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-alt); color: var(--text-main); outline: none; width: 220px; font-family: inherit; font-size: 0.95rem; transition: border-color 0.3s;" type="text"/>
-<div id="searchResults" style="display: none; position: absolute; top: 100%; right: 0; width: 320px; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 9999; max-height: 400px; overflow-y: auto; margin-top: 10px;"></div>
-</div>
-</div>
-<button aria-label="Toggle mobile menu" class="mobile-menu-btn" id="mobileMenuBtn">
-<svg class="svg-icon" viewbox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
-</button>
-<nav class="main-nav" id="mainNav">
-<ul class="nav-links">
+<!-- Desktop Nav -->
+<nav class="desktop-nav">
+<ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="categories.html">Categories</a></li>
 <li><a href="about.html">About</a></li>
 <li><a href="contact.html">Contact</a></li>
 </ul>
 </nav>
+<!-- Actions (Search & Hamburger) -->
+<div class="header-actions-wrapper">
+<button aria-label="Toggle Search" class="icon-btn" id="searchToggleBtn">
+<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+</button>
+<button aria-label="Open Menu" class="icon-btn hamburger-btn">
+<svg fill="currentColor" height="28" viewbox="0 0 24 24" width="28"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+</button>
+</div>
+</div>
+<!-- Collapsible Search Bar (Frees up mobile header space) -->
+<div class="search-dropdown-wrapper" id="searchDropdownWrapper">
+<div style="position: relative; max-width: 600px; margin: 0 auto;">
+<input aria-label="Search TyagiHub" autocomplete="off" id="searchInput" placeholder="Search guides..." type="text"/>
+<div id="searchResults" style="display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 9999; max-height: 400px; overflow-y: auto; margin-top: 10px;"></div>
+</div>
 </div>
 </header>
+<!-- Slide-out Menu (Right to Left) -->
+<div class="mobile-side-menu" id="mobileSideMenu">
+<button aria-label="Close Menu" class="close-menu-btn" id="closeMenuBtn">×</button>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="categories.html">Categories</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="menu-overlay" id="menuOverlay"></div>
+
 <main>
 <div class="page-container">
 <h1>Get in Touch with TyagiHub</h1>

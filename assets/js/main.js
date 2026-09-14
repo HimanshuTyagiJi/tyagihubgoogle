@@ -50,3 +50,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// --- MODERN RESPONSIVE UI LOGIC ---
+document.addEventListener('DOMContentLoaded', () => {
+    const searchToggleBtn = document.getElementById('searchToggleBtn');
+    const searchWrapper = document.getElementById('searchDropdownWrapper');
+    const sideMenu = document.getElementById('mobileSideMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+    
+    // Using querySelectorAll to catch all menu buttons if there are multiple
+    const menuButtons = document.querySelectorAll('.hamburger-btn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+
+    if(searchToggleBtn && searchWrapper) {
+        searchToggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            searchWrapper.classList.toggle('active');
+            if(searchWrapper.classList.contains('active')) {
+                document.getElementById('searchInput').focus();
+            }
+        });
+        
+        document.addEventListener('click', (e) => {
+            if(!searchWrapper.contains(e.target) && !searchToggleBtn.contains(e.target)) {
+                searchWrapper.classList.remove('active');
+            }
+        });
+        searchWrapper.addEventListener('click', (e) => e.stopPropagation());
+    }
+
+    function toggleMenu() {
+        if(sideMenu && menuOverlay) {
+            sideMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            document.body.style.overflow = sideMenu.classList.contains('active') ? 'hidden' : '';
+        }
+    }
+
+    menuButtons.forEach(btn => btn.addEventListener('click', toggleMenu));
+    if(closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+    if(menuOverlay) menuOverlay.addEventListener('click', toggleMenu);
+});
