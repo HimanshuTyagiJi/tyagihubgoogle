@@ -91,3 +91,31 @@ document.addEventListener('DOMContentLoaded', () => {
     if(closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
     if(menuOverlay) menuOverlay.addEventListener('click', toggleMenu);
 });
+
+// TOC FAB Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const fab = document.getElementById('tocFab');
+    const modal = document.getElementById('tocModal');
+    const closeBtn = document.getElementById('tocModalClose');
+    
+    if(fab && modal && closeBtn) {
+        fab.addEventListener('click', () => {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        const closeModal = () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+        
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if(e.target === modal) closeModal();
+        });
+        
+        modal.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', closeModal);
+        });
+    }
+});

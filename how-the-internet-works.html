@@ -30,13 +30,12 @@
 <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 </head>
 <body>
-
 <header class="main-header">
 <div class="container header-inner">
 <!-- Logo with Image -->
 <div class="logo">
 <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-<img alt="TyagiHub Logo" class="header-logo-img" src="assets/images/header_logo.svg" title="TyagiHub"/>
+<img alt="TyagiHub Logo" class="header-logo-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMjAgNTAiIHdpZHRoPSIyMjAiIGhlaWdodD0iNTAiPgogIDx0ZXh0IHg9IjAiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzOCIgZm9udC13ZWlnaHQ9IjgwMCIgZmlsbD0iIzE2YTM0YSIgbGV0dGVyLXNwYWNpbmc9Ii0xIj5UeWFnaUh1YjwvdGV4dD4KPC9zdmc+" style="object-fit: contain; height: 45px;" title="TyagiHub"/>
 </a>
 </div>
 <!-- Desktop Nav -->
@@ -77,7 +76,6 @@
 </ul>
 </div>
 <div class="menu-overlay" id="menuOverlay"></div>
-
 <main class="layout-mega">
 <aside class="col-toc">
 <div class="sidebar-heading" style="margin-top: 0; margin-bottom: 20px; font-size: 1.25rem; color: var(--text-main); border-bottom: 2px solid var(--primary-color); padding-bottom: 8px; font-weight: bold;">Chapter 3 Index</div>
@@ -255,5 +253,25 @@
 </div>
 </footer>
 <script src="assets/js/main.js"></script>
+<button class="toc-fab" id="tocFab">Chapters</button>
+<div class="toc-modal" id="tocModal">
+<div class="toc-modal-content">
+<button aria-label="Close Chapters" class="toc-modal-close" id="tocModalClose">×</button>
+<h3 style="margin-top:0; color:var(--text-main); font-size:1.5rem; margin-bottom:20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px;">Chapters</h3>
+<ul>
+<li><a href="#introduction">1. The Invisible Network</a></li>
+<li><a href="#internet-vs-web">2. The Internet vs. The Web</a></li>
+<li><a href="#clients-servers">3. Clients and Servers</a></li>
+<li><a href="#ip-addresses">4. IP Addresses: The Postal Code</a></li>
+<li><a href="#dns-system">5. DNS: The Internet's Phonebook</a></li>
+<li><a href="#packets-routing">6. Packets and Data Routing</a></li>
+<li><a href="#tcp-ip">7. TCP/IP Protocol</a></li>
+<li><a href="#physical-cables">8. Undersea Cables &amp; Hardware</a></li>
+<li><a href="#putting-it-together">9. Putting It All Together</a></li>
+<li><a href="#deep-dark-web">10. Deep Web vs Dark Web</a></li>
+<li><a href="#conclusion">11. Conclusion</a></li>
+</ul>
+</div>
+</div>
 </body>
 </html>

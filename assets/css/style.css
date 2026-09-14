@@ -488,3 +488,40 @@ img {
 
 .menu-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.5); z-index: 9999; display: none; opacity: 0; transition: opacity 0.3s ease; }
 .menu-overlay.active { display: block; opacity: 1; }
+
+/* Mobile TOC FAB */
+.toc-fab {
+    display: none;
+    position: fixed; bottom: 25px; right: 25px;
+    background: #16a34a; color: #fff;
+    padding: 14px 24px; border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 9000; border: none; font-weight: bold; font-size: 1.1rem; cursor: pointer;
+}
+@media (max-width: 900px) {
+    .col-toc { display: none !important; }
+    .toc-fab { display: block; }
+}
+
+/* Modal for TOC */
+.toc-modal {
+    display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.7); z-index: 10000;
+    align-items: center; justify-content: center;
+}
+.toc-modal.active { display: flex; animation: fadeIn 0.2s ease; }
+
+.toc-modal-content {
+    background: var(--bg-main); width: 90%; max-width: 400px;
+    border-radius: 12px; padding: 25px; position: relative;
+    max-height: 80vh; overflow-y: auto; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.toc-modal-close {
+    position: absolute; top: 15px; right: 20px; background: none; border: none;
+    font-size: 2rem; color: var(--text-main); cursor: pointer; line-height: 1;
+}
+.toc-modal-content ul { list-style: none; padding: 0; margin: 0; }
+.toc-modal-content ul li { margin-bottom: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
+.toc-modal-content ul li:last-child { border-bottom: none; }
+.toc-modal-content ul li a { color: var(--text-main); text-decoration: none; font-weight: 500; display: block; }
+.toc-modal-content ul li a:hover { color: var(--primary-color); }
