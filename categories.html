@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -11,12 +10,9 @@
         .cat-container { max-width: 1000px; margin: 50px auto; padding: 40px; background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); min-height: 60vh; }
         .cat-title { color: #111827; margin-bottom: 20px; font-size: 2.5rem; border-bottom: 3px solid var(--primary-color); padding-bottom: 10px; display: inline-block; }
         .cat-text { color: var(--text-light); font-size: 1.15rem; line-height: 1.95; margin-bottom: 25px; text-align: justify; }
-        
         .topic-section { display: none; margin-bottom: 60px; }
         .topic-section.active { display: block; animation: fadeIn 0.5s ease-in; }
-        
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
         /* Rich Card Grid System */
         .grid-container {
             display: grid;
@@ -67,8 +63,6 @@
         }
     </style>
 <link href="https://tyagihub.in/categories.html" rel="canonical"/>
-<meta content="ca-pub-7067722696020503" name="google-adsense-account"/>
-<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7067722696020503"></script>
 <meta content="website" property="og:type"/>
 <link href="favicon.ico" rel="icon" type="image/x-icon"/>
 <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
@@ -335,7 +329,6 @@
             const topic = params.get('topic');
             const sections = document.querySelectorAll('.topic-section');
             let found = false;
-
             if (topic) {
                 const target = document.getElementById('section-' + topic);
                 if (target) {
@@ -343,7 +336,6 @@
                     found = true;
                 }
             }
-            
             // If no topic matches, show all massive sections
             if (!found) {
                 sections.forEach(sec => sec.classList.add('active'));
