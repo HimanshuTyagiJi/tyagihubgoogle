@@ -85,21 +85,21 @@
 <aside class="col-toc">
 <div class="sidebar-heading" style="margin-top: 0; margin-bottom: 20px; font-size: 1.25rem; color: var(--text-main); border-bottom: 2px solid var(--primary-color); padding-bottom: 8px; font-weight: bold;">Chapter Index</div>
 <ul>
-<li><a href="#intro">1. The DSA Nightmare</a></li>
-<li><a href="#what-is-data-structure">2. What is a Data Structure?</a></li>
-<li><a href="#core-structures">3. The 5 Core Structures</a></li>
-<li><a href="#what-is-algorithm">4. What is an Algorithm?</a></li>
-<li><a href="#big-o">5. Big O Notation (Simplified)</a></li>
-<li><a href="#real-world-examples">6. Real-World Applications</a></li>
-<li><a href="#why-important">7. Why Google Obsesses Over It</a></li>
-<li><a href="#how-to-start">8. How to Start Learning?</a></li>
+<li><a href="#intro">1. The Foundation of Software Engineering</a></li>
+<li><a href="#what-is-data-structure">2. What Exactly is a Data Structure?</a></li>
+<li><a href="#core-structures">3. Deep Dive into Core Data Structures</a></li>
+<li><a href="#what-is-algorithm">4. Understanding Algorithms</a></li>
+<li><a href="#algorithm-types">5. Crucial Types of Algorithms</a></li>
+<li><a href="#big-o">6. Big O Notation Explained</a></li>
+<li><a href="#why-faang">7. Why Do Top Companies Ask DSA?</a></li>
+<li><a href="#master-dsa">8. How to Master DSA (Roadmap)</a></li>
 <li><a href="#faqs">9. Frequently Asked Questions (FAQ)</a></li>
 </ul>
 </aside>
 <section class="col-main">
 <article class="blog-container">
 <header class="blog-header">
-<h1>What are Data Structures and Algorithms (DSA)? A Complete Beginner's Guide</h1>
+<h1>What are Data Structures and Algorithms (DSA)? A Complete Technical Guide</h1>
 <div class="blog-meta">
 <div>
 <span class="author-name">By <a href="author.html" style="color:var(--text-main); font-weight:600; text-decoration:underline;">Himanshu Tyagi</a></span><br/>
@@ -109,93 +109,130 @@
 <img alt="Data Structures and Algorithms Explained" class="article-banner" height="450" loading="eager" src="assets/images/dsa-real-desk.jpg" width="800"/>
 </header>
 <div class="blog-content">
-<h2 id="intro" style="margin-top:0;">1. The DSA Nightmare (And Why It's Actually Easy)</h2>
-<p>Let's be totally honest with each other for a second. If you are a BCA, MCA, or B.Tech student right now, the acronym "DSA" has probably given you a headache at least once. I remember my college days clearly—whenever the professor mentioned Data Structures and Algorithms, half the class would instantly zone out.</p>
-<p>We all just wanted to build cool websites using React or create mobile apps. Nobody wanted to reverse a Linked List or sort a random array of numbers on a whiteboard. It felt like useless math.</p>
-<p>But here is the harsh reality: every major tech company (Google, Amazon, Microsoft, and even top startups in India) uses DSA as their primary filter for hiring Software Engineers. Why? Are they just trying to torture students? Not at all. In this guide, I am going to break down DSA using simple, everyday language. No confusing jargon, I promise. By the end of this article, you will understand exactly why DSA is the most powerful tool in a developer's toolkit.</p>
+<h2 id="intro" style="margin-top:0;">1. The Foundation of Software Engineering</h2>
+<p>If you are studying Computer Science, BCA, MCA, or preparing for a software engineering interview, you have undoubtedly encountered the term "DSA" (Data Structures and Algorithms). For many beginners, DSA feels like an unnecessary hurdle—a purely academic subject filled with complex mathematical formulas and dry concepts that seem entirely disconnected from building actual websites or mobile applications.</p>
+<p>However, this is a massive misconception. Data Structures and Algorithms form the very DNA of computer science. While frameworks like React, Node.js, and Django change every few years, the fundamental principles of how a computer processes, stores, and retrieves data never change. Whether you are building a small personal blog or engineering a system like Netflix that streams 4K video to millions of concurrent users, the underlying logic is entirely dictated by DSA.</p>
+<p>In this comprehensive guide, we are going to strip away the academic jargon and explore Data Structures and Algorithms in a clear, professional, and practical manner. By the end of this article, you will understand exactly how these concepts work, why they are so crucial for high-paying tech jobs, and how you can begin mastering them today.</p>
 
 <h2 id="what-is-data-structure">2. What Exactly is a Data Structure?</h2>
-<p>Let's forget computers for a minute. Imagine your own bedroom.</p>
-<p>If you take all your clothes, books, shoes, and gadgets and throw them into one giant pile on your floor, you are technically "storing" your items. But what happens when you are getting late for college and need to find one specific pair of black socks? You will have to dig through the entire pile, which might take 20 minutes.</p>
-<p>Now, imagine you buy a proper wooden wardrobe. You hang your shirts on the left, fold your pants on the right, and put your socks in a dedicated drawer. Now, finding that same pair of black socks takes exactly 2 seconds.</p>
-<p><strong>This is exactly what a Data Structure is.</strong> It is simply a specific way of organizing, storing, and managing data in a computer's memory so that the data can be accessed, updated, or deleted as fast as possible.</p>
+<p>In the simplest terms, a <strong>Data Structure</strong> is a specialized format for organizing, processing, retrieving, and storing data in a computer's memory. It is a logical model that dictates how data elements are connected to one another and what operations can be performed on them.</p>
+<p>To understand why this is important, imagine a massive corporate database containing millions of customer records. If this data is just dumped into memory without any organization, searching for a single customer's purchase history would require the computer to scan every single record one by one—a process that could take minutes or even hours. However, by using a highly optimized data structure (like a B-Tree or a Hash Table), the computer can locate that exact customer record in a fraction of a millisecond.</p>
+<p>Different applications require different data structures. Choosing the right data structure can be the difference between a software program that runs instantly and one that crashes under heavy load.</p>
 
-<h2 id="core-structures">3. The 5 Core Data Structures You Must Know</h2>
-<p>Depending on what type of data a software is handling, it needs a different type of "wardrobe." Here are the main ones we use in the industry:</p>
+<h2 id="core-structures">3. Deep Dive into Core Data Structures</h2>
+<p>Data structures are broadly categorized into two types: <strong>Linear</strong> (where data elements are arranged sequentially) and <strong>Non-Linear</strong> (where data elements are connected hierarchically or in a network). Let's explore the most critical ones used in the industry.</p>
+
+<h3>3.1. Arrays and Strings</h3>
+<p>An Array is the most fundamental linear data structure. It stores a collection of elements (usually of the same data type) in contiguous (adjacent) memory locations. Because the memory is contiguous, arrays allow for instantly accessing any element if you know its index.</p>
+<p><strong>Pros:</strong> Extremely fast data retrieval (O(1) time complexity) and simple to implement.<br/>
+<strong>Cons:</strong> Arrays have a fixed size. If you create an array of 10 elements, you cannot simply add an 11th element without creating an entirely new, larger array and copying the data over.</p>
+
+<h3>3.2. Linked Lists</h3>
+<p>A Linked List solves the sizing problem of Arrays. Instead of storing data in contiguous memory blocks, a Linked List stores data in separate "nodes." Each node contains two things: the actual data, and a "pointer" (a memory address) linking to the next node in the sequence.</p>
+<p><strong>Pros:</strong> Dynamic size. You can easily add or remove nodes without reallocating the entire structure.<br/>
+<strong>Cons:</strong> Slower retrieval. To find the 100th element, the computer must traverse the list from node 1 to node 100 sequentially.</p>
+
+<h3>3.3. Stacks (LIFO)</h3>
+<p>A Stack is a linear data structure that follows the <strong>LIFO (Last In, First Out)</strong> principle. Imagine a stack of books on a desk; the last book you place on the top of the stack is the first one you must remove.</p>
+<p><strong>Real-World Use Case:</strong> The "Undo" feature (Ctrl+Z) in text editors like MS Word uses a stack. Every action you take is pushed onto the stack. When you hit undo, the most recent action is popped off the top.</p>
+
+<h3>3.4. Queues (FIFO)</h3>
+<p>A Queue is a linear data structure that follows the <strong>FIFO (First In, First Out)</strong> principle. It operates exactly like a physical line of people waiting to buy movie tickets—the first person in line is served first.</p>
+<p><strong>Real-World Use Case:</strong> Printer spoolers. When multiple computers send documents to a single printer, the documents are placed in a queue and printed in the exact order they were received.</p>
+
+<h3>3.5. Hash Tables (Dictionaries)</h3>
+<p>A Hash Table (or Hash Map) is an incredibly powerful data structure that stores data in key-value pairs. It uses a mathematical "hash function" to convert a key (like a username) into a specific memory index, allowing for near-instantaneous data retrieval.</p>
+<p><strong>Real-World Use Case:</strong> Database indexing and caching. When you log into a website, the system uses a hash table to instantly verify your username and password against millions of records.</p>
+
+<h3>3.6. Trees and Graphs</h3>
+<p>Trees and Graphs are non-linear data structures. A <strong>Tree</strong> consists of a root node that branches out into child nodes (resembling an inverted tree). The most common variation is the Binary Search Tree (BST), which is heavily used for fast searching and sorting.<br/>
+A <strong>Graph</strong> is a network of interconnected nodes (called vertices) and the lines connecting them (called edges).</p>
+<p><strong>Real-World Use Case:</strong> The Document Object Model (DOM) of every website is structured as a Tree. Meanwhile, Google Maps uses Graphs to calculate the shortest path between two cities, and Facebook uses Graphs to map friend connections.</p>
+
+<h2 id="what-is-algorithm">4. Understanding Algorithms</h2>
+<p>If a data structure is the physical container that holds the data, then an <strong>Algorithm</strong> is the precise set of instructions used to manipulate that data to solve a specific problem.</p>
+<p>Algorithms are language-agnostic. Whether you write code in Python, Java, C++, or JavaScript, the underlying algorithm remains identical. A good algorithm must be finite (it must eventually stop running), unambiguous (each step must be clear), and efficient (it should use minimal CPU time and memory).</p>
+
+<h2 id="algorithm-types">5. Crucial Types of Algorithms</h2>
+<p>Software engineers must be familiar with several fundamental categories of algorithms to write scalable code.</p>
+
+<h3>5.1. Searching Algorithms</h3>
+<p>These algorithms are designed to retrieve an element from a data structure. The most basic is <strong>Linear Search</strong>, which checks every single item one by one. A far more powerful approach is <strong>Binary Search</strong>, which can only be used on sorted data. Binary search repeatedly divides the dataset in half, allowing a computer to find a specific number out of a billion records in just 30 steps!</p>
+
+<h3>5.2. Sorting Algorithms</h3>
+<p>Sorting algorithms arrange data in a specific order (ascending or descending). While simple algorithms like <strong>Bubble Sort</strong> or <strong>Insertion Sort</strong> are easy to write, they are incredibly slow for large datasets. Production-level systems rely on highly optimized algorithms like <strong>Merge Sort</strong> and <strong>Quick Sort</strong>.</p>
+
+<h3>5.3. Dynamic Programming (DP)</h3>
+<p>Dynamic programming is an advanced algorithmic technique used to solve complex problems by breaking them down into simpler subproblems. Crucially, DP stores the results of these subproblems (a process called memoization) so the computer doesn't have to waste time recalculating the same values repeatedly.</p>
+
+<h2 id="big-o">6. Big O Notation: Measuring Efficiency</h2>
+<p>When you write code, how do you mathematically prove that your algorithm is fast? This is where <strong>Big O Notation</strong> comes in. Big O is a mathematical notation that describes the limiting behavior of a function when the argument tends towards a particular value or infinity.</p>
+<p>In simple terms, Big O describes the worst-case scenario for how long an algorithm takes to run (Time Complexity) or how much memory it uses (Space Complexity) as the size of the input data grows.</p>
 <ul>
-<li><strong>Arrays:</strong> Imagine a pillbox with Monday to Sunday labeled on it. Items are stored right next to each other in a fixed, continuous line. It's super fast to read (you know exactly where Wednesday is), but hard to resize.</li>
-<li><strong>Linked Lists:</strong> Think of a Treasure Hunt. You open box A, and inside is your data, plus a piece of paper pointing to the location of Box B. Box B points to Box C. They aren't stored next to each other, but they are linked.</li>
-<li><strong>Stacks (LIFO):</strong> Have you seen a stack of heavy plates at a wedding buffet? You can only take the plate on the very top. If a waiter brings a clean plate, he puts it on top. This is called <em>Last In, First Out (LIFO)</em>.</li>
-<li><strong>Queues (FIFO):</strong> Think of a line outside a movie theater. The first person who stands in the line gets their ticket first. <em>First In, First Out (FIFO)</em>.</li>
-<li><strong>Trees & Graphs:</strong> These are non-linear. Think of a family tree, or a corporate chart showing the CEO at the top, managers below, and employees at the bottom. Graphs are like cities connected by highways.</li>
+<li><strong>O(1) - Constant Time:</strong> The algorithm takes the exact same amount of time regardless of data size. (e.g., accessing an array by its index).</li>
+<li><strong>O(log n) - Logarithmic Time:</strong> Highly efficient. The processing time increases very slowly as data grows. (e.g., Binary Search).</li>
+<li><strong>O(n) - Linear Time:</strong> The processing time grows at the exact same rate as the data. (e.g., a simple loop iterating through an array).</li>
+<li><strong>O(n²) - Quadratic Time:</strong> Very inefficient for large data. If the data doubles, the processing time quadruples. (e.g., nested loops).</li>
 </ul>
-
-<h2 id="what-is-algorithm">4. What is an Algorithm?</h2>
-<p>If the Data Structure is the "wardrobe," then the <strong>Algorithm</strong> is the instruction manual on how to find your clothes inside it.</p>
-<p>An algorithm is simply a step-by-step set of instructions to solve a specific problem. You use algorithms every single day! Making a cup of tea is an algorithm: 1. Boil water, 2. Add tea leaves, 3. Add milk and sugar, 4. Strain and serve. If you mess up the steps (put milk before boiling water), the outcome is ruined.</p>
-<p>In programming, we write algorithms to search for data (like finding a contact in your phonebook) or sort data (like sorting Amazon products from lowest to highest price).</p>
-
-<h2 id="big-o">5. Don't Be Scared of Big O Notation</h2>
-<p>When you start learning DSA, you will immediately see things like <strong>O(n)</strong> or <strong>O(1)</strong>. Students panic when they see this, thinking it's advanced calculus. It's not.</p>
-<p>Big O Notation is just a way for developers to grade how fast an algorithm is. Think of it like a car's mileage. If I write an algorithm to find a number, and my algorithm takes 10 seconds, but your algorithm takes 2 seconds, your code has a better "Big O". We use it to ensure our code won't crash when millions of users use our app at the same time.</p>
-
-<h2 id="real-world-examples">6. Real-World Applications (Why We Actually Use It)</h2>
-<p>Still think DSA is just for passing exams? Look at the apps on your smartphone right now:</p>
-<ul>
-<li><strong>Google Maps (Graphs):</strong> Maps use a <strong>Graph</strong> data structure. The cities are "nodes" and the roads are "edges". To find the shortest route between your house and the airport, Google runs <em>Dijkstra's Algorithm</em>.</li>
-<li><strong>Microsoft Word "Undo" Button (Stacks):</strong> Ever pressed Ctrl+Z? Software programs use a <strong>Stack</strong> to remember your actions. Your last action is put on top. When you hit Undo, it simply "pops" that top action off the stack.</li>
-<li><strong>Spotify Playlists (Linked Lists):</strong> When you hit "Next Track", the music player is simply jumping to the next node in a Circular Linked List.</li>
-</ul>
-
-<h2 id="why-important">7. Why Google and Amazon Obsess Over It</h2>
-<p>So, why do top product-based companies ask DSA questions in interviews instead of asking you to build a webpage?</p>
-<p>Because frameworks like React, Angular, or Django change every 3-4 years. But the core logic of computer science never changes. Companies like Amazon handle massive scale. If an Amazon engineer writes a bad algorithm for processing the shopping cart, the checkout page might take an extra 2 seconds to load. For Amazon, a 2-second delay means millions of dollars lost in abandoned carts.</p>
-<p>They test you on DSA to ensure you know how to write code that is not just "working," but mathematically efficient and scalable.</p>
-
-<h2 id="how-to-start">8. How to Start Learning DSA Today?</h2>
-<p>If you are a beginner, here is my personal roadmap for you:</p>
-<ol>
-<li><strong>Pick one language and stick to it:</strong> C++, Java, or Python. Do not keep switching languages. Language doesn't matter; logic does.</li>
-<li><strong>Learn the Basics First:</strong> Understand Arrays, Loops, and Functions thoroughly before touching anything advanced.</li>
-<li><strong>Start with Arrays and Strings:</strong> Solve basic problems like "Reverse a string" or "Find the maximum number in an array".</li>
-<li><strong>Practice Consistently:</strong> Websites like LeetCode, GeeksforGeeks, and HackerRank are your best friends. Solve 1-2 easy problems daily.</li>
-</ol>
 
 <div class="author-perspective" style="background: #f8fafc; border-left: 5px solid #2563eb; padding: 25px; margin: 40px 0; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
 <h3 style="margin-top: 0; color: #1e293b; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-<span style="font-size: 1.5rem;">💡</span> Author's Real-World Perspective
+<span style="font-size: 1.5rem;">💡</span> Professional Insight
 </h3>
 <p style="margin-bottom: 0; color: #334155; line-height: 1.7; font-size: 1.05rem;">
-<em>Trust me guys, when I first encountered DSA, I hated it. It felt so abstract. I wanted to build cool UI interfaces, not sort numbers! But once I started building complex software that dealt with thousands of real users, my servers started crashing because my database queries were too slow. That's when it hit me: building a website is easy, but making it fast, robust, and scalable requires a deep understanding of Data Structures. Don't just memorize the code—understand the logic behind it!</em>
+<em>During my early career, I wrote a database query script that ran perfectly in testing with 100 users. It used an O(n²) algorithm. When we deployed it to production with 50,000 users, the server completely crashed due to CPU overload. That was the day I realized DSA is not just theory for interviews—it is the absolute line between a junior coder and a senior software engineer. Optimized algorithms save companies millions of dollars in server costs.</em>
 </p>
 </div>
+
+<h2 id="why-faang">7. Why Do Top Companies (FAANG) Obsess Over DSA?</h2>
+<p>Many developers complain that companies like Google, Meta, Amazon, and Microsoft ask incredibly difficult DSA questions during interviews, rather than testing candidates on practical web development frameworks. There are three major reasons for this:</p>
+<ol>
+<li><strong>Frameworks Expire, Logic Doesn't:</strong> React, Vue, and Angular might be replaced by new technologies in five years. However, a developer who deeply understands memory management, algorithm optimization, and data structures can easily learn any new framework in a matter of weeks.</li>
+<li><strong>Massive Scale:</strong> When you work at Google, your code might be executed 5 billion times a day. If your algorithm is even 1 millisecond slower than it needs to be, that adds up to massive server latency, wasted electricity, and degraded user experience.</li>
+<li><strong>Problem Solving Ability:</strong> DSA problems evaluate your raw analytical skills. They show interviewers how you approach abstract problems, how you handle edge cases, and whether you can write clean, bug-free logic under pressure.</li>
+</ol>
+
+<h2 id="master-dsa">8. How to Master DSA (A Step-by-Step Roadmap)</h2>
+<p>Mastering DSA requires time, patience, and consistent practice. Here is a proven roadmap for beginners:</p>
+<ol>
+<li><strong>Choose a Programming Language:</strong> Pick one language (C++, Java, or Python are highly recommended) and master its syntax. Do not keep switching languages. The underlying logic is what matters.</li>
+<li><strong>Master Space and Time Complexity:</strong> Before writing complex code, ensure you completely understand Big O Notation. You must be able to look at a block of code and immediately know its time complexity.</li>
+<li><strong>Learn Data Structures Sequentially:</strong> Start with Arrays and Strings. Move to Linked Lists, then Stacks and Queues. Only after mastering linear structures should you attempt Trees, Graphs, and Tries.</li>
+<li><strong>Practice on Coding Platforms:</strong> Create an account on LeetCode, HackerRank, or GeeksforGeeks. Start with "Easy" problems to build confidence. Aim to solve 1-2 problems consistently every single day.</li>
+<li><strong>Understand the "Why":</strong> Never memorize a solution. If you look at a solution to a problem, take the time to dry-run it on a piece of paper to understand exactly why the algorithm works.</li>
+</ol>
 
 <div class="faq-section" id="faqs">
 <h2>9. Frequently Asked Questions (FAQ)</h2>
 
 <div class="faq-item">
 <h3 class="faq-question"><span>💬</span> Is strong mathematics required to learn DSA?</h3>
-<p class="faq-answer">Not at all! This is a massive myth. Basic 10th-grade arithmetic and simple logic are more than enough for 90% of DSA concepts. You just need a problem-solving mindset, not a PhD in Calculus.</p>
+<p class="faq-answer">No, this is a common myth. While advanced competitive programming requires discrete mathematics, standard software engineering DSA interviews mostly require basic high-school algebra, logical reasoning, and a strong problem-solving mindset.</p>
 </div>
 
 <div class="faq-item">
-<h3 class="faq-question"><span>💬</span> Which programming language is best for DSA?</h3>
-<p class="faq-answer">C++, Java, and Python are the holy trinity for DSA. C++ is the fastest and most popular in competitive programming. Java is widely used in enterprise companies. Python is the easiest to read. Pick whichever you are most comfortable with.</p>
+<h3 class="faq-question"><span>💬</span> Which programming language is best for DSA interviews?</h3>
+<p class="faq-answer">C++, Java, and Python are the industry standards. C++ is preferred in competitive programming for its execution speed and Standard Template Library (STL). Java is the backbone of enterprise software. Python is excellent because its concise syntax allows you to write less code on a whiteboard.</p>
 </div>
 
 <div class="faq-item">
 <h3 class="faq-question"><span>💬</span> Can I get a software job without knowing DSA?</h3>
-<p class="faq-answer">Yes, absolutely. Many service-based companies and web development agencies hire based on development skills (like React, Node.js, PHP). However, if you want high-paying packages at product-based giants (FAANG), DSA is non-negotiable.</p>
+<p class="faq-answer">Yes. Many service-based IT companies, digital agencies, and early-stage startups prioritize practical development skills (like building a full-stack web app) over deep DSA knowledge. However, if your goal is to secure high-paying roles at top-tier product-based companies, mastering DSA is non-negotiable.</p>
 </div>
 
 <div class="faq-item">
-<h3 class="faq-question"><span>💬</span> How long does it take to master DSA?</h3>
-<p class="faq-answer">If you are a complete beginner, it takes about 3 to 5 months of consistent practice (2-3 hours daily) to get comfortable with medium-level problems on LeetCode. It is a marathon, not a sprint.</p>
+<h3 class="faq-question"><span>💬</span> How many months does it take to learn DSA?</h3>
+<p class="faq-answer">For a complete beginner dedicating 2-3 hours a day, it typically takes about 3 to 5 months to develop a strong grasp of core concepts and become comfortable solving medium-level LeetCode problems.</p>
+</div>
+
+<div class="faq-item">
+<h3 class="faq-question"><span>💬</span> What is the difference between an Array and a Linked List?</h3>
+<p class="faq-answer">An Array stores data in contiguous memory blocks, allowing fast O(1) access but making resizing computationally expensive. A Linked List stores data in non-contiguous memory nodes connected via pointers, making resizing and insertions fast, but requires O(n) time for data access.</p>
 </div>
 
 </div>
 
-<p>Learning Data Structures and Algorithms is like going to the gym for your brain. It hurts at first, but it builds your fundamental problem-solving muscles. Stick with it, practice daily, and I promise you will become an incredible Software Engineer.</p>
+<p>Learning Data Structures and Algorithms can be intimidating at first. It requires rewiring how your brain approaches problems. However, once the concepts "click", you will transform from someone who just writes code into a highly capable software engineer equipped to solve the world's most complex technical challenges.</p>
 </div>
 <div class="author-box">
 <div class="author-box-inner">
@@ -231,9 +268,9 @@
 <div class="sidebar-title" style="margin-top: 0; margin-bottom: 20px; font-size: 1.25rem; color: var(--text-main); border-bottom: 2px solid var(--primary-color); padding-bottom: 8px; font-weight: bold;">Topics</div>
 <ul class="cat-list">
 <li><a href="categories.html?topic=ai">Artificial Intelligence</a></li>
-<li><a href="categories.html?topic=privacy">Digital Privacy &amp; Security</a></li>
+<li><a href="categories.html?topic=privacy">Digital Privacy & Security</a></li>
 <li><a href="categories.html?topic=webdev">Web Development</a></li>
-<li><a href="categories.html?topic=futuretech">Future Tech &amp; Networks</a></li>
+<li><a href="categories.html?topic=futuretech">Future Tech & Networks</a></li>
 </ul>
 </div>
 </aside>
@@ -276,9 +313,9 @@
 <h3 style="margin-top:0; color:var(--text-main); font-size:1.5rem; margin-bottom:20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px;">Topics</h3>
 <ul class="cat-list">
 <li><a href="categories.html?topic=ai">Artificial Intelligence</a></li>
-<li><a href="categories.html?topic=privacy">Digital Privacy &amp; Security</a></li>
+<li><a href="categories.html?topic=privacy">Digital Privacy & Security</a></li>
 <li><a href="categories.html?topic=webdev">Web Development</a></li>
-<li><a href="categories.html?topic=futuretech">Future Tech &amp; Networks</a></li>
+<li><a href="categories.html?topic=futuretech">Future Tech & Networks</a></li>
 </ul>
 </div>
 </div>
